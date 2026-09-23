@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+:root {
+  /* Surface & Background Colors */
+  --bg-primary: #050b07;       /* Deepest obsidian black with subtle green undertone */
+  --bg-secondary: #0a140e;     /* Deep forest dark surface */
+  --bg-card: #0f1f16;          /* Clean card surface */
+  --bg-card-hover: #162c20;    /* Interactive card surface on hover */
+  --bg-elevated: #1a3526;      /* Elevated dropdowns/modals */
+
+  /* Text & Foreground */
+  --text-primary: #f8fafc;     /* Crisp white */
+  --text-secondary: #cbd5e1;   /* Silver slate */
+  --text-muted: #64748b;       /* Muted neutral */
+  --text-inverse: #050b07;     /* Inverse on light badges/buttons */
+
+  /* Brand Accents - Renewable & Solar */
+  --solar-green: #10b981;      /* Core emerald clean energy green */
+  --solar-green-dark: #065f46; /* Deep forest accent */
+  --solar-lime: #22c55e;       /* Eco-energy lime */
+  --solar-lime-bright: #84cc16;/* High-energy lime highlight */
+  --solar-gold: #f59e0b;       /* Pure solar sunlight warmth */
+  --solar-gold-light: #fbbf24; /* Radiant solar flare */
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(255, 255, 255, 0.14);
+  --border-emerald: rgba(16, 185, 129, 0.25);
+  --border-gold: rgba(245, 158, 11, 0.25);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(10, 20, 14, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 16px;
+
+  /* Shadows & Glows */
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  --glow-emerald: 0 0 35px -5px rgba(16, 185, 129, 0.22);
+  --glow-lime: 0 0 30px -5px rgba(132, 204, 22, 0.22);
+  --glow-gold: 0 0 30px -5px rgba(245, 158, 11, 0.25);
+}
+
+@theme {
+  --font-sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-solar-bg-primary: var(--bg-primary);
+  --color-solar-bg-secondary: var(--bg-secondary);
+  --color-solar-bg-card: var(--bg-card);
+  --color-solar-bg-card-hover: var(--bg-card-hover);
+  --color-solar-bg-elevated: var(--bg-elevated);
+
+  --color-solar-text-primary: var(--text-primary);
+  --color-solar-text-secondary: var(--text-secondary);
+  --color-solar-text-muted: var(--text-muted);
+  --color-solar-text-inverse: var(--text-inverse);
+
+  --color-solar-green: var(--solar-green);
+  --color-solar-green-dark: var(--solar-green-dark);
+  --color-solar-lime: var(--solar-lime);
+  --color-solar-lime-bright: var(--solar-lime-bright);
+  --color-solar-gold: var(--solar-gold);
+  --color-solar-gold-light: var(--solar-gold-light);
+
+  --color-solar-border-subtle: var(--border-subtle);
+  --color-solar-border-light: var(--border-light);
+  --color-solar-border-emerald: var(--border-emerald);
+  --color-solar-border-gold: var(--border-gold);
+}
+
+/* Core Resets & Smooth Scrolling */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Text Selection Styling */
+::selection {
+  background-color: rgba(16, 185, 129, 0.35);
+  color: #ffffff;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050b07;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #162c20;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Reusable Glassmorphism & Cinematic Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--border-subtle);
+}
+
+.glass-panel-elevated {
+  background: rgba(15, 31, 22, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-emerald);
+}
+
+/* Reusable Gradients */
+.gradient-text-solar {
+  background: linear-gradient(135deg, #ffffff 30%, #a3e635 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-gold {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 60%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-emerald {
+  background: linear-gradient(135deg, #4ade80 0%, #10b981 50%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Solar Energy Ambient Glows */
+.glow-emerald {
+  box-shadow: var(--glow-emerald);
+}
+
+.glow-lime {
+  box-shadow: var(--glow-lime);
+}
+
+.glow-gold {
+  box-shadow: var(--glow-gold);
+}
+
+/* Ambient Lighting & Background Canvas */
+.solar-ambient-bg {
+  position: relative;
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 50% -10%, rgba(16, 185, 129, 0.13) 0%, transparent 60%),
+    radial-gradient(circle at 90% 25%, rgba(245, 158, 11, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 10% 60%, rgba(34, 197, 94, 0.05) 0%, transparent 50%);
+}
+
