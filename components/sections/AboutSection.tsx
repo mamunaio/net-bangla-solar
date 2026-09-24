@@ -109,7 +109,7 @@ export function AboutSection() {
       id="about"
       ref={sectionRef}
       aria-label="About Net Bangla Solar"
-      className="relative py-20 lg:py-32 overflow-hidden scroll-mt-24 lg:scroll-mt-28"
+      className="relative py-12 sm:py-16 lg:py-20 overflow-hidden scroll-mt-24 lg:scroll-mt-28"
     >
       {/* Ambient background lighting */}
       <div
@@ -121,9 +121,9 @@ export function AboutSection() {
         className="pointer-events-none absolute bottom-1/4 right-5 w-[500px] h-[400px] rounded-full bg-amber-500/[0.03] blur-[140px] -z-10"
       />
 
-      <Container className="relative z-10 space-y-12 lg:space-y-16">
+      <Container className="relative z-10 space-y-10 lg:space-y-12">
         {/* 2-COLUMN MAIN COMPOSITION */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* LEFT COLUMN: Editorial Typography & Company Description */}
           <div ref={introRef} className="lg:col-span-7 space-y-6 text-left">
             {/* Section Eyebrow */}

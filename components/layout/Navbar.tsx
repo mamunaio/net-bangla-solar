@@ -8,6 +8,7 @@ import {
   Menu,
   Sparkles,
 } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { Container } from "@/components/ui/Container";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { cn } from "@/lib/utils";
@@ -80,18 +81,19 @@ export function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-40 transition-all duration-300 ease-in-out",
           isScrolled
-            ? "h-[72px] bg-[#050b07]/90 backdrop-blur-xl border-b border-emerald-500/15 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.8)]"
-            : "h-20 bg-transparent border-b border-white/[0.05] backdrop-blur-[2px]"
+            ? "h-16 sm:h-[72px] bg-[#050b07]/90 backdrop-blur-xl border-b border-emerald-500/15 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.8)]"
+            : "h-16 sm:h-20 bg-transparent border-b border-white/[0.05] backdrop-blur-[2px]"
         )}
       >
-        <Container className="h-full flex items-center justify-between">
+        <Container className="h-full flex items-center justify-between gap-2 sm:gap-4">
           {/* Brand Logo & Name */}
           <Link
             href="#home"
             aria-label="Net Bangla Solar — back to home"
-            className="group flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-xl"
+            className="group flex items-center gap-2 sm:gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-xl shrink-0 min-w-0"
           >
-            <div className="relative h-11 w-[132px] sm:w-[146px] overflow-hidden rounded-lg bg-white border border-white/15 shadow-[0_8px_24px_-12px_rgba(68,191,202,0.9)] transition-all duration-300 group-hover:border-emerald-400/60">
+            {/* Mobile-optimized responsive logo: 110px on mobile, 132px on tablet, 146px on desktop */}
+            <div className="relative h-9 w-[112px] sm:h-10 sm:w-[130px] lg:h-11 lg:w-[146px] overflow-hidden rounded-lg bg-white border border-white/15 shadow-[0_4px_16px_-6px_rgba(68,191,202,0.8)] transition-all duration-300 group-hover:border-emerald-400/60 shrink-0">
               <Image
                 src="/images/Net Bangla Solar Logo.jpeg"
                 alt="Net Bangla Solar Logo"
@@ -102,11 +104,12 @@ export function Navbar() {
               />
             </div>
 
-            <div className="hidden xl:flex flex-col text-left border-l border-white/10 pl-2.5">
-              <span className="text-[12px] font-bold text-white tracking-wide leading-tight group-hover:text-emerald-300 transition-colors">
+            {/* Compact Brand Typography */}
+            <div className="hidden min-[440px]:flex xl:flex flex-col text-left border-l border-white/10 pl-2 sm:pl-2.5">
+              <span className="text-[11px] sm:text-[12px] font-bold text-white tracking-wide leading-tight group-hover:text-emerald-300 transition-colors whitespace-nowrap">
                 Net Bangla Solar
               </span>
-              <span className="text-[9px] text-slate-400 leading-tight mt-0.5 whitespace-nowrap">
+              <span className="text-[8px] sm:text-[9px] text-slate-400 leading-tight mt-0.5 whitespace-nowrap">
                 A Division of Net Bangla Limited
               </span>
             </div>
@@ -200,7 +203,10 @@ export function Navbar() {
           </nav>
 
           {/* Right Action Area */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+            {/* Theme Toggle (Compact 36px control, accessible across all viewports) */}
+            <ThemeToggle className="w-9 h-9 sm:w-9 sm:h-9 shrink-0" />
+
             {/* Primary CTA (Desktop / Tablet) */}
             <Link
               href="#quote"
@@ -210,15 +216,15 @@ export function Navbar() {
               <span>Get a Free Solar Quote</span>
             </Link>
 
-            {/* Mobile Hamburger Toggle */}
+            {/* Mobile Hamburger Toggle (36px matching ThemeToggle, always visible without clipping) */}
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open navigation menu"
               aria-expanded={mobileMenuOpen}
-              className="lg:hidden p-2.5 rounded-xl border border-white/10 bg-white/5 text-solar-text-secondary hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+              className="lg:hidden w-9 h-9 rounded-xl border border-white/10 bg-white/5 text-solar-text-secondary hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 flex items-center justify-center shrink-0"
             >
-              <Menu className="w-5 h-5" />
+              <Menu className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
         </Container>

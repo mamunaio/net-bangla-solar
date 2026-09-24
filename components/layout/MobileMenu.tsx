@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { X, ArrowRight, ChevronDown } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -64,13 +65,13 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
       {/* Glass Menu Container */}
       <div className="relative z-10 flex flex-col w-full h-full max-h-[100dvh] bg-[#070e09]/95 backdrop-blur-2xl border-b border-white/10 px-6 py-5 overflow-y-auto">
         {/* Header Bar */}
-        <div className="flex items-center justify-between pb-6 border-b border-white/10">
+        <div className="flex items-center justify-between pb-5 border-b border-white/10 gap-2">
           <Link
             href="#home"
             onClick={onClose}
-            className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg p-1"
+            className="flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg p-0.5 min-w-0"
           >
-            <div className="relative h-11 w-[132px] overflow-hidden rounded-lg bg-white border border-white/15">
+            <div className="relative h-9 w-[112px] sm:h-10 sm:w-[130px] overflow-hidden rounded-lg bg-white border border-white/15 shrink-0">
               <Image
                 src="/images/Net Bangla Solar Logo.jpeg"
                 alt="Net Bangla Solar Logo"
@@ -80,25 +81,30 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
                 className="absolute inset-x-0 top-1/2 h-auto w-full -translate-y-1/2"
               />
             </div>
-            <div className="flex flex-col text-left">
-              <span className="text-xs font-bold text-white tracking-wide leading-tight">
+            <div className="hidden min-[400px]:flex flex-col text-left border-l border-white/10 pl-2">
+              <span className="text-[11px] font-bold text-white tracking-wide leading-tight whitespace-nowrap">
                 Net Bangla Solar
               </span>
-              <span className="text-[9px] text-slate-400 mt-0.5 leading-tight">
+              <span className="text-[8px] text-slate-400 mt-0.5 leading-tight whitespace-nowrap">
                 A Division of Net Bangla Limited
               </span>
             </div>
           </Link>
 
-          {/* Close Button */}
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="Close navigation menu"
-            className="p-2.5 rounded-xl border border-white/10 bg-white/5 text-solar-text-secondary hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
-          >
-            <X className="w-5 h-5" />
-          </button>
+          {/* Action Area: Theme Toggle + Close Button */}
+          <div className="flex items-center gap-2 shrink-0">
+            <ThemeToggle className="w-9 h-9 shrink-0" />
+
+            {/* Close Button */}
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label="Close navigation menu"
+              className="w-9 h-9 rounded-xl border border-white/10 bg-white/5 text-solar-text-secondary hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 flex items-center justify-center shrink-0"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
         </div>
 
         {/* Navigation Links */}

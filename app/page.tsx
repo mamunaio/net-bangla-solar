@@ -2,9 +2,12 @@ import { Hero } from "@/components/sections/Hero";
 import { ImpactStats } from "@/components/sections/ImpactStats";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { SolutionsSection } from "@/components/sections/SolutionsSection";
+import { TechnologySection } from "@/components/sections/TechnologySection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { FAQSection } from "@/components/sections/FAQSection";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/layout/Footer";
 
@@ -16,9 +19,12 @@ export default function Home() {
         <ImpactStats />
         <AboutSection />
         <SolutionsSection />
+        <TechnologySection />
         <ProjectsSection />
         <ProcessSection />
+        <WhyChooseUs />
         <TestimonialsSection />
+        <FAQSection />
         <FinalCTA />
       </main>
       <Footer />

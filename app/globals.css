@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  /* Surface & Background Colors */
+  /* Default: Dark Theme (Preserves original palette strictly) */
   --bg-primary: #050b07;       /* Deepest obsidian black with subtle green undertone */
   --bg-secondary: #0a140e;     /* Deep forest dark surface */
-  --bg-card: #0f1f16;          /* Clean card surface */
-  --bg-card-hover: #162c20;    /* Interactive card surface on hover */
-  --bg-elevated: #1a3526;      /* Elevated dropdowns/modals */
+  --bg-card: #09170f;          /* Clean card surface */
+  --bg-card-hover: #0f2418;    /* Interactive card surface on hover */
+  --bg-elevated: #0e2217;      /* Elevated dropdowns/modals */
 
   /* Text & Foreground */
   --text-primary: #f8fafc;     /* Crisp white */
@@ -38,6 +38,46 @@
   --glow-emerald: 0 0 35px -5px rgba(16, 185, 129, 0.22);
   --glow-lime: 0 0 30px -5px rgba(132, 204, 22, 0.22);
   --glow-gold: 0 0 30px -5px rgba(245, 158, 11, 0.25);
+}
+
+html.light {
+  /* Premium Enterprise Light Theme */
+  --bg-primary: #f6f8f6;       /* Crisp warm off-white */
+  --bg-secondary: #ffffff;     /* Pure white for prominent sections */
+  --bg-card: #ffffff;          /* Clean white card surface */
+  --bg-card-hover: #f0f5f1;    /* Subtle green-tinted hover */
+  --bg-elevated: #ffffff;      /* Pure white for elevated overlays */
+
+  /* Text & Foreground */
+  --text-primary: #091a10;     /* Deep rich obsidian charcoal */
+  --text-secondary: #334155;   /* Slate for maximum readability */
+  --text-muted: #64748b;       /* Muted neutral slate */
+  --text-inverse: #ffffff;     /* White on dark badges/buttons */
+
+  /* Brand Accents */
+  --solar-green: #059669;      /* Deep enterprise emerald */
+  --solar-green-dark: #047857;
+  --solar-lime: #16a34a;       /* Clean forest lime */
+  --solar-lime-bright: #65a30d;
+  --solar-gold: #d97706;       /* Warm solar amber */
+  --solar-gold-light: #b45309;
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-light: rgba(0, 0, 0, 0.14);
+  --border-emerald: rgba(5, 150, 105, 0.3);
+  --border-gold: rgba(217, 119, 6, 0.3);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-blur: 16px;
+
+  /* Shadows & Glows */
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+  --glow-emerald: 0 0 30px -5px rgba(5, 150, 105, 0.15);
+  --glow-lime: 0 0 25px -5px rgba(22, 163, 74, 0.12);
+  --glow-gold: 0 0 25px -5px rgba(217, 119, 6, 0.15);
 }
 
 @theme {
@@ -80,12 +120,17 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+html.light {
+  color-scheme: light;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-sans);
   min-height: 100vh;
   overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Text Selection Styling */
@@ -101,17 +146,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #050b07;
+  background: var(--bg-primary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #162c20;
+  background: var(--solar-green-dark);
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #10b981;
+  background: var(--solar-green);
 }
 
 /* Reusable Glassmorphism & Cinematic Utilities */
@@ -123,7 +168,7 @@ body {
 }
 
 .glass-panel-elevated {
-  background: rgba(15, 31, 22, 0.85);
+  background: var(--bg-elevated);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-emerald);
@@ -136,14 +181,32 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+html.light .gradient-text-solar {
+  background: linear-gradient(135deg, #091b10 30%, #16a34a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .gradient-text-gold {
   background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 60%, #d97706 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+html.light .gradient-text-gold {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 60%, #92400e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .gradient-text-emerald {
   background: linear-gradient(135deg, #4ade80 0%, #10b981 50%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html.light .gradient-text-emerald {
+  background: linear-gradient(135deg, #059669 0%, #047857 60%, #065f46 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -171,3 +234,107 @@ body {
     radial-gradient(circle at 10% 60%, rgba(34, 197, 94, 0.05) 0%, transparent 50%);
 }
 
+html.light .solar-ambient-bg {
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 50% -10%, rgba(16, 185, 129, 0.06) 0%, transparent 60%),
+    radial-gradient(circle at 90% 25%, rgba(245, 158, 11, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 10% 60%, rgba(34, 197, 94, 0.03) 0%, transparent 50%);
+}
+
+/* Light Mode Global Component Adaptations */
+html.light header {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light header a,
+html.light header button {
+  color: #1e293b;
+}
+
+html.light header a:hover {
+  color: #059669;
+}
+
+html.light header nav {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Light Mode Card Surfaces */
+html.light .bg-\[\#06120a\],
+html.light .bg-\[\#07130b\],
+html.light .bg-\[\#07150c\],
+html.light .bg-\[\#07160d\],
+html.light .bg-\[\#06110b\],
+html.light .bg-\[\#041209\],
+html.light .bg-\[\#070e09\],
+html.light .bg-\[\#050b07\],
+html.light .bg-\[\#030704\],
+html.light .bg-\[\#020603\] {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.09) !important;
+  color: #1e293b !important;
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.06) !important;
+}
+
+html.light .text-white {
+  color: #091b10 !important;
+}
+
+html.light .text-slate-300,
+html.light .text-slate-400,
+html.light .text-solar-text-secondary {
+  color: #334155 !important;
+}
+
+html.light .text-slate-500,
+html.light .text-solar-text-muted {
+  color: #64748b !important;
+}
+
+html.light .border-white\/10,
+html.light .border-white\/15,
+html.light .border-white\/5,
+html.light .border-white\/\[0\.08\],
+html.light .border-white\/\[0\.06\] {
+  border-color: rgba(0, 0, 0, 0.09) !important;
+}
+
+html.light .bg-black\/50,
+html.light .bg-black\/60,
+html.light .bg-black\/70,
+html.light .bg-black\/40 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  color: #091b10 !important;
+}
+
+html.light .bg-white\/\[0\.03\],
+html.light .bg-white\/\[0\.04\],
+html.light .bg-white\/\[0\.05\],
+html.light .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+html.light .bg-gradient-to-b.from-\[\#091e13\]\/90 {
+  background: linear-gradient(180deg, #f0f7f2 0%, #ffffff 100%) !important;
+  border-color: rgba(5, 150, 105, 0.25) !important;
+}
+
+html.light footer {
+  background-color: #f1f5f2 !important;
+  border-top-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Reduced Motion Respect */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

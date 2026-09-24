@@ -87,6 +87,7 @@ const solutions: SolutionItem[] = [
     icon: Building2,
     gridClass: "lg:col-span-4",
     heightClass: "min-h-[420px] sm:min-h-[460px] lg:min-h-[480px]",
+    tag: "Net Metered",
   },
   {
     id: "residential",
@@ -104,6 +105,7 @@ const solutions: SolutionItem[] = [
     icon: Home,
     gridClass: "lg:col-span-4",
     heightClass: "min-h-[420px] sm:min-h-[460px] lg:min-h-[480px]",
+    tag: "Home Energy",
   },
   {
     id: "agricultural",
@@ -114,13 +116,14 @@ const solutions: SolutionItem[] = [
     keyPoints: [
       "Solar irrigation pumps",
       "Off-grid reliability",
-      "Fuel-free operations",
+      "Fuel dependency reduction",
     ],
     image: "/images/solar-agricultural.jpg",
     alt: "Solar-Powered Irrigation System in Green Agricultural Fields",
     icon: Sprout,
     gridClass: "lg:col-span-4",
     heightClass: "min-h-[420px] sm:min-h-[460px] lg:min-h-[480px]",
+    tag: "Solar Irrigation",
   },
 ];
 
@@ -210,20 +213,10 @@ export function SolutionsSection() {
                   item.heightClass
                 )}
               >
-                {/* Full Bleed Image Background with Resilient CSS Fallback */}
-                <div className="absolute inset-0 -z-10 overflow-hidden bg-gradient-to-br from-[#06180d] via-[#030e06] to-[#020603]">
-                  {/* Atmospheric radial glow and geometric solar grid */}
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,#10b98120_1px,transparent_1px),linear-gradient(to_bottom,#10b98120_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"
-                  />
-                  <div
-                    aria-hidden="true"
-                    className="absolute -top-12 -right-12 w-64 h-64 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none"
-                  />
-
+                {/* Full Bleed Image Background (z-0 sits above card background) */}
+                <div className="absolute inset-0 z-0 overflow-hidden">
                   {failedImages[item.id] ? (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#06180d] via-[#030e06] to-[#020603]">
                       <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-3">
                         <IconComponent className="w-8 h-8 text-emerald-400" />
                       </div>
@@ -244,27 +237,27 @@ export function SolutionsSection() {
                     />
                   )}
 
-                  {/* Single Clean Vignette Overlay (Leaves image bright and clear while guaranteeing text contrast) */}
+                  {/* Natural Light Gradient Overlay: Keeps real photographs clearly visible while ensuring text contrast */}
                   <div
                     aria-hidden="true"
-                    className="absolute inset-0 bg-gradient-to-t from-[#040e08]/95 via-[#040e08]/30 to-transparent pointer-events-none"
+                    className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none"
                   />
                 </div>
 
                 {/* Top Area: Index Number, Tag & Icon Badge */}
                 <div className="relative z-10 flex items-center justify-between gap-4">
-                  <span className="text-xs font-mono font-medium tracking-widest text-emerald-400/90 bg-black/50 px-3 py-1 rounded-full border border-white/10 backdrop-blur-md">
+                  <span className="text-xs font-mono font-medium tracking-widest text-emerald-400/90 bg-black/60 px-3 py-1 rounded-full border border-white/10 backdrop-blur-md">
                     {item.index}
                   </span>
 
                   <div className="flex items-center gap-2">
                     {item.tag && (
-                      <span className="text-[10px] uppercase tracking-wider font-semibold text-emerald-300 px-2.5 py-1 rounded-full bg-black/60 border border-emerald-500/30 backdrop-blur-md">
+                      <span className="text-[10px] uppercase tracking-wider font-semibold text-emerald-300 px-2.5 py-1 rounded-full bg-black/70 border border-emerald-500/40 backdrop-blur-md">
                         {item.tag}
                       </span>
                     )}
                     <div
-                      className="flex items-center justify-center w-10 h-10 rounded-xl glass-panel border border-white/10 text-emerald-400 group-hover:border-emerald-400/50 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.3)] transition-all duration-300"
+                      className="flex items-center justify-center w-10 h-10 rounded-xl bg-black/60 border border-white/10 text-emerald-400 backdrop-blur-md group-hover:border-emerald-400/50 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.3)] transition-all duration-300"
                       aria-hidden="true"
                     >
                       <IconComponent className="w-5 h-5" />
@@ -275,10 +268,10 @@ export function SolutionsSection() {
                 {/* Bottom Area: Title, Description, Key Points, and Explore Link */}
                 <div className="relative z-10 space-y-4 pt-20 transition-transform duration-500 ease-out group-hover:-translate-y-1">
                   <div className="space-y-2">
-                    <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white group-hover:text-emerald-300 transition-colors">
+                    <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white group-hover:text-emerald-300 transition-colors drop-shadow-md">
                       {item.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-solar-text-secondary leading-relaxed max-w-xl">
+                    <p className="text-sm sm:text-base text-slate-200 leading-relaxed max-w-xl drop-shadow">
                       {item.description}
                     </p>
                   </div>
@@ -290,7 +283,7 @@ export function SolutionsSection() {
                         {item.keyPoints.map((point) => (
                           <li
                             key={point}
-                            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-black/50 border border-white/10 text-[11px] sm:text-xs text-slate-200 font-medium backdrop-blur-md hover:border-emerald-500/30 transition-colors"
+                            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-black/60 border border-white/15 text-[11px] sm:text-xs text-slate-100 font-medium backdrop-blur-md hover:border-emerald-500/40 transition-colors shadow-sm"
                           >
                             <CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" />
                             <span>{point}</span>
@@ -300,7 +293,7 @@ export function SolutionsSection() {
                     </div>
                   )}
 
-                  <div className="pt-3 flex items-center justify-between border-t border-white/10">
+                  <div className="pt-3 flex items-center justify-between border-t border-white/15">
                     <Link
                       href="#quote"
                       className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-emerald-400 group-hover:text-emerald-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg p-0.5"

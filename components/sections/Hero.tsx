@@ -307,40 +307,39 @@ export function Hero() {
                 ))}
 
                 {/* Atmospheric Controlled Vignette Overlay (Leaves image vibrant and clear) */}
+                {/* Atmospheric Controlled Vignette Overlay */}
                 <div
                   aria-hidden="true"
-                  className="absolute inset-0 bg-gradient-to-t from-[#030805]/95 via-transparent to-black/15 pointer-events-none"
+                  className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"
                 />
 
-                <div className="absolute inset-x-0 bottom-0 z-10 p-5 sm:p-6">
-                  <div className="max-w-md">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-emerald-300">
-                      {heroSlides[activeSlide].label}
-                    </span>
-                    <p className="mt-1.5 text-sm sm:text-base font-semibold leading-snug text-white">
-                      {heroSlides[activeSlide].title}
-                    </p>
-                  </div>
+                {/* Top-Left Slide Category Badge */}
+                <div className="absolute top-4 left-4 sm:top-5 sm:left-5 z-10 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 border border-white/15 backdrop-blur-md">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-300">
+                    {heroSlides[activeSlide].label}
+                  </span>
+                  <span className="text-white/40 text-xs" aria-hidden="true">&bull;</span>
+                  <span className="text-[10px] font-mono text-slate-300">
+                    0{activeSlide + 1} / 0{heroSlides.length}
+                  </span>
+                </div>
 
-                  <div className="mt-4 flex items-center gap-2" role="group" aria-label="Select hero project image">
-                    {heroSlides.map((slide, index) => (
-                      <button
-                        key={slide.src}
-                        type="button"
-                        onClick={() => setActiveSlide(index)}
-                        aria-label={`Show image ${index + 1}: ${slide.label}`}
-                        aria-current={activeSlide === index ? "true" : undefined}
-                        className={`h-1.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050b07] ${
-                          activeSlide === index
-                            ? "w-9 bg-emerald-300"
-                            : "w-4 bg-white/35 hover:bg-white/60"
-                        }`}
-                      />
-                    ))}
-                    <span className="ml-1 text-[10px] font-mono text-white/60">
-                      0{activeSlide + 1} / 0{heroSlides.length}
-                    </span>
-                  </div>
+                {/* Bottom-Right Slide Indicators */}
+                <div className="absolute bottom-4 right-4 sm:bottom-5 sm:right-5 z-10 flex items-center gap-1.5 bg-black/60 px-3 py-2 rounded-xl border border-white/15 backdrop-blur-md" role="group" aria-label="Select hero project image">
+                  {heroSlides.map((slide, index) => (
+                    <button
+                      key={slide.src}
+                      type="button"
+                      onClick={() => setActiveSlide(index)}
+                      aria-label={`Show image ${index + 1}: ${slide.label}`}
+                      aria-current={activeSlide === index ? "true" : undefined}
+                      className={`h-1.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 ${
+                        activeSlide === index
+                          ? "w-7 bg-emerald-300"
+                          : "w-3 bg-white/40 hover:bg-white/70"
+                      }`}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
@@ -348,7 +347,7 @@ export function Hero() {
             {/* Floating Glassmorphism Non-Numerical Credibility Card */}
             <div
               ref={impactCardRef}
-              className="relative sm:absolute -mt-6 sm:mt-0 sm:-bottom-6 sm:-left-6 lg:-bottom-8 lg:-left-8 z-20 glass-panel-elevated p-4 sm:p-5 rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.8)] border border-emerald-500/30 w-full max-w-[280px]"
+              className="relative sm:absolute -mt-6 sm:mt-0 sm:-bottom-6 sm:-left-6 lg:-bottom-7 lg:-left-7 z-20 glass-panel-elevated p-4 sm:p-5 rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.8)] border border-emerald-500/30 w-full max-w-[280px]"
             >
               <div className="flex items-center justify-between gap-3 pb-2.5 border-b border-white/10">
                 <span className="text-[11px] uppercase tracking-wider text-emerald-400 font-semibold">
@@ -357,13 +356,13 @@ export function Hero() {
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
               </div>
 
-              <div className="pt-3 space-y-1">
+              <div className="pt-2.5 space-y-1">
                 <p className="text-xs sm:text-sm font-medium text-white leading-snug">
                   Designed, installed and supported across Bangladesh
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 pt-3 mt-1 border-t border-white/5 text-[11px] text-slate-400 font-medium">
+              <div className="flex items-center gap-2 pt-2.5 mt-1 border-t border-white/5 text-[11px] text-slate-400 font-medium">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
