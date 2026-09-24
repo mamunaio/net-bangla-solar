@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -18,7 +18,6 @@ import {
   Wrench,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { gsap } from "@/lib/gsap";
 import { cn } from "@/lib/utils";
 
 interface SolutionItem {
@@ -31,7 +30,7 @@ interface SolutionItem {
   alt: string;
   icon: React.ElementType;
   gridClass: string;
-  imageAspect: string;
+  heightClass: string;
   tag?: string;
 }
 
@@ -41,18 +40,17 @@ const solutions: SolutionItem[] = [
     index: "01",
     title: "Power Solaroof",
     description:
-      "Integrated solar roofing engineered to serve as the roof structure while generating clean electricity.",
+      "Integrated solar roofing engineered to serve as the structural roof while generating clean, continuous electricity.",
     keyPoints: [
       "Structural roof integration",
       "Maximum surface utilization",
-      "Weather-resistant design",
-      "Thermal insulation",
+      "Weather-resistant engineering",
     ],
     image: "/images/power-solaroof.jpg",
     alt: "Power Solaroof integrated solar roofing system on modern facility",
     icon: PanelsTopLeft,
     gridClass: "lg:col-span-7",
-    imageAspect: "aspect-[16/9] sm:aspect-[16/10] lg:aspect-[16/9]",
+    heightClass: "min-h-[460px] sm:min-h-[500px] lg:min-h-[520px]",
     tag: "Integrated Roofing",
   },
   {
@@ -63,14 +61,14 @@ const solutions: SolutionItem[] = [
       "High-yield photovoltaic systems engineered for factories, manufacturing facilities, and heavy continuous power demands.",
     keyPoints: [
       "Large-scale PV deployment",
-      "Peak-load considerations",
-      "Industrial mounting requirements",
+      "Peak-load reduction",
+      "Industrial-grade mounting",
     ],
     image: "/images/solar-industrial.jpg",
     alt: "Solar-Powered Industrial Factory Complex Rooftop Installation",
     icon: Factory,
     gridClass: "lg:col-span-5",
-    imageAspect: "aspect-[16/9] sm:aspect-[16/10] lg:aspect-[16/9]",
+    heightClass: "min-h-[460px] sm:min-h-[500px] lg:min-h-[520px]",
     tag: "High Capacity",
   },
   {
@@ -81,48 +79,48 @@ const solutions: SolutionItem[] = [
       "Solar systems designed for offices, institutions, retail facilities, and commercial properties.",
     keyPoints: [
       "Net metering support",
-      "Operational cost reduction",
-      "Scalable system layouts",
+      "Operating cost savings",
+      "Scalable system layout",
     ],
     image: "/images/solar-commercial.jpg",
     alt: "Solar-Powered Commercial Facility at Sunset Rooftop Installation",
     icon: Building2,
     gridClass: "lg:col-span-4",
-    imageAspect: "aspect-[16/10]",
+    heightClass: "min-h-[420px] sm:min-h-[460px] lg:min-h-[480px]",
   },
   {
     id: "residential",
     index: "04",
     title: "Residential Solar Solutions",
     description:
-      "Custom rooftop solar systems designed for homes, with on-grid, off-grid, and hybrid configurations.",
+      "Custom rooftop solar systems designed for modern homes, with on-grid, off-grid, and hybrid configurations.",
     keyPoints: [
-      "Reduced electricity costs",
-      "Backup capability",
-      "Low-maintenance systems",
+      "Reduced monthly bills",
+      "Backup power capability",
+      "Low maintenance",
     ],
     image: "/images/solar-residential.jpg",
     alt: "Solar-Powered Modern Garden Home rooftop solar installation",
     icon: Home,
     gridClass: "lg:col-span-4",
-    imageAspect: "aspect-[16/10]",
+    heightClass: "min-h-[420px] sm:min-h-[460px] lg:min-h-[480px]",
   },
   {
     id: "agricultural",
     index: "05",
     title: "Agricultural Solar Solutions",
     description:
-      "Solar-powered energy systems for agricultural operations, including irrigation and rural applications.",
+      "Solar-powered energy systems for agricultural operations, rural irrigation pumps, and agribusiness facilities.",
     keyPoints: [
-      "Solar irrigation pumping",
-      "Off-grid applications",
-      "Farm energy systems",
+      "Solar irrigation pumps",
+      "Off-grid reliability",
+      "Fuel-free operations",
     ],
     image: "/images/solar-agricultural.jpg",
     alt: "Solar-Powered Irrigation System in Green Agricultural Fields",
     icon: Sprout,
     gridClass: "lg:col-span-4",
-    imageAspect: "aspect-[16/10]",
+    heightClass: "min-h-[420px] sm:min-h-[460px] lg:min-h-[480px]",
   },
 ];
 
@@ -160,69 +158,11 @@ const technicalCapabilities = [
 ];
 
 export function SolutionsSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headerRef = useRef<HTMLDivElement>(null);
-  const cardsGridRef = useRef<HTMLDivElement>(null);
-  const capabilitiesRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    const ctx = gsap.context(() => {
-      if (prefersReducedMotion) {
-        gsap.set([headerRef.current, cardsGridRef.current, capabilitiesRef.current], {
-          opacity: 1,
-          y: 0,
-        });
-        return;
-      }
-
-      gsap.from(headerRef.current, {
-        opacity: 0,
-        y: 28,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: headerRef.current,
-          start: "top 85%",
-          once: true,
-        },
-      });
-
-      gsap.from(cardsGridRef.current, {
-        opacity: 0,
-        y: 35,
-        duration: 0.85,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: cardsGridRef.current,
-          start: "top 82%",
-          once: true,
-        },
-      });
-
-      gsap.from(capabilitiesRef.current, {
-        opacity: 0,
-        y: 24,
-        duration: 0.75,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: capabilitiesRef.current,
-          start: "top 85%",
-          once: true,
-        },
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  const [failedImages, setFailedImages] = useState<Record<string, boolean>>({});
 
   return (
     <section
       id="solutions"
-      ref={sectionRef}
       aria-label="Solar Solutions for Every Scale"
       className="relative py-20 lg:py-32 overflow-hidden scroll-mt-24 lg:scroll-mt-28"
     >
@@ -238,7 +178,7 @@ export function SolutionsSection() {
 
       <Container className="relative z-10 space-y-12 md:space-y-16">
         {/* SECTION INTRO */}
-        <div ref={headerRef} className="max-w-3xl space-y-4 text-left">
+        <div className="max-w-3xl space-y-4 text-left">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wider uppercase">
             <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
             <span>OUR SOLUTIONS</span>
@@ -256,11 +196,8 @@ export function SolutionsSection() {
           </p>
         </div>
 
-        {/* PRIMARY SOLUTION CARDS (EXACTLY 5 CARDS) */}
-        <div
-          ref={cardsGridRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch"
-        >
+        {/* PRIMARY SOLUTION CARDS (FULL-BLEED CINEMATIC CARDS) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           {solutions.map((item) => {
             const IconComponent = item.icon;
 
@@ -268,74 +205,102 @@ export function SolutionsSection() {
               <div
                 key={item.id}
                 className={cn(
-                  "group relative rounded-3xl overflow-hidden border border-white/10 hover:border-emerald-400/40 bg-[#07150c]/90 backdrop-blur-xl transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.7)] hover:shadow-[0_0_40px_-5px_rgba(16,185,129,0.25)] flex flex-col justify-between p-5 sm:p-6 lg:p-7",
-                  item.gridClass
+                  "group relative rounded-3xl overflow-hidden border border-white/10 hover:border-emerald-500/40 bg-[#06120a] transition-all duration-500 hover:shadow-[0_0_35px_-5px_rgba(16,185,129,0.25)] flex flex-col justify-between p-6 sm:p-8",
+                  item.gridClass,
+                  item.heightClass
                 )}
               >
-                {/* 1. TOP DEDICATED IMAGE CONTAINER (100% visible, no text overlapping) */}
-                <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 group-hover:border-emerald-500/30 transition-colors duration-500 bg-[#050e08]">
-                  <div className={cn("relative w-full overflow-hidden", item.imageAspect)}>
+                {/* Full Bleed Image Background with Resilient CSS Fallback */}
+                <div className="absolute inset-0 -z-10 overflow-hidden bg-gradient-to-br from-[#06180d] via-[#030e06] to-[#020603]">
+                  {/* Atmospheric radial glow and geometric solar grid */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,#10b98120_1px,transparent_1px),linear-gradient(to_bottom,#10b98120_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="absolute -top-12 -right-12 w-64 h-64 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none"
+                  />
+
+                  {failedImages[item.id] ? (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                      <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-3">
+                        <IconComponent className="w-8 h-8 text-emerald-400" />
+                      </div>
+                      <span className="text-emerald-400 font-semibold text-sm tracking-wider uppercase">
+                        {item.title}
+                      </span>
+                    </div>
+                  ) : (
                     <Image
                       src={item.image}
                       alt={item.alt}
                       fill
-                      unoptimized
-                      priority={item.id === "solaroof" || item.id === "industrial"}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 750px"
                       className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                      onError={() =>
+                        setFailedImages((prev) => ({ ...prev, [item.id]: true }))
+                      }
                     />
+                  )}
 
-                    {/* Subtle top image corner badges */}
-                    <div className="absolute top-3 left-3 z-10">
-                      <span className="text-xs font-mono font-bold tracking-wider text-emerald-300 bg-black/75 px-3 py-1 rounded-full border border-white/20 backdrop-blur-md shadow-md">
-                        {item.index}
+                  {/* Single Clean Vignette Overlay (Leaves image bright and clear while guaranteeing text contrast) */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 bg-gradient-to-t from-[#040e08]/95 via-[#040e08]/30 to-transparent pointer-events-none"
+                  />
+                </div>
+
+                {/* Top Area: Index Number, Tag & Icon Badge */}
+                <div className="relative z-10 flex items-center justify-between gap-4">
+                  <span className="text-xs font-mono font-medium tracking-widest text-emerald-400/90 bg-black/50 px-3 py-1 rounded-full border border-white/10 backdrop-blur-md">
+                    {item.index}
+                  </span>
+
+                  <div className="flex items-center gap-2">
+                    {item.tag && (
+                      <span className="text-[10px] uppercase tracking-wider font-semibold text-emerald-300 px-2.5 py-1 rounded-full bg-black/60 border border-emerald-500/30 backdrop-blur-md">
+                        {item.tag}
                       </span>
-                    </div>
-
-                    <div className="absolute top-3 right-3 z-10 flex items-center gap-2">
-                      {item.tag && (
-                        <span className="text-[10px] uppercase tracking-wider font-semibold text-emerald-300 px-2.5 py-1 rounded-full bg-black/75 border border-emerald-400/30 backdrop-blur-md shadow-sm">
-                          {item.tag}
-                        </span>
-                      )}
-                      <div
-                        className="flex items-center justify-center w-8 h-8 rounded-xl bg-black/75 border border-white/20 text-emerald-400 backdrop-blur-md shadow-md"
-                        aria-hidden="true"
-                      >
-                        <IconComponent className="w-4 h-4" />
-                      </div>
+                    )}
+                    <div
+                      className="flex items-center justify-center w-10 h-10 rounded-xl glass-panel border border-white/10 text-emerald-400 group-hover:border-emerald-400/50 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.3)] transition-all duration-300"
+                      aria-hidden="true"
+                    >
+                      <IconComponent className="w-5 h-5" />
                     </div>
                   </div>
                 </div>
 
-                {/* 2. BOTTOM DEDICATED CONTENT CONTAINER (Clean, high-contrast, perfectly legible) */}
-                <div className="relative z-10 flex-1 flex flex-col justify-between space-y-4 pt-5 text-left">
+                {/* Bottom Area: Title, Description, Key Points, and Explore Link */}
+                <div className="relative z-10 space-y-4 pt-20 transition-transform duration-500 ease-out group-hover:-translate-y-1">
                   <div className="space-y-2">
-                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-emerald-300 transition-colors">
+                    <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white group-hover:text-emerald-300 transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    <p className="text-sm sm:text-base text-solar-text-secondary leading-relaxed max-w-xl">
                       {item.description}
                     </p>
                   </div>
 
-                  {/* Documented Key Points */}
-                  <div className="pt-1">
-                    <ul className="flex flex-wrap gap-1.5 sm:gap-2">
-                      {item.keyPoints.map((point) => (
-                        <li
-                          key={point}
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/[0.03] border border-white/10 text-[11px] sm:text-xs text-slate-300 font-medium hover:border-emerald-500/30 transition-colors"
-                        >
-                          <CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  {/* Key Points / Features */}
+                  {item.keyPoints && item.keyPoints.length > 0 && (
+                    <div className="pt-1">
+                      <ul className="flex flex-wrap gap-1.5 sm:gap-2">
+                        {item.keyPoints.map((point) => (
+                          <li
+                            key={point}
+                            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-black/50 border border-white/10 text-[11px] sm:text-xs text-slate-200 font-medium backdrop-blur-md hover:border-emerald-500/30 transition-colors"
+                          >
+                            <CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
-                  {/* Action Link Row */}
-                  <div className="pt-3 border-t border-white/10 flex items-center justify-between">
+                  <div className="pt-3 flex items-center justify-between border-t border-white/10">
                     <Link
                       href="#quote"
                       className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-emerald-400 group-hover:text-emerald-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg p-0.5"
@@ -352,10 +317,7 @@ export function SolutionsSection() {
         </div>
 
         {/* TECHNICAL CAPABILITIES (COMPACT SUPPORTING STRIP) */}
-        <div
-          ref={capabilitiesRef}
-          className="rounded-3xl border border-white/10 bg-[#07130b]/75 p-6 sm:p-8 backdrop-blur-xl space-y-6"
-        >
+        <div className="rounded-3xl border border-white/10 bg-[#07130b]/75 p-6 sm:p-8 backdrop-blur-xl space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-white/10 pb-4">
             <div>
               <span className="text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-emerald-400">
