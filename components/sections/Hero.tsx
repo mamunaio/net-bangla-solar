@@ -6,15 +6,37 @@ import Link from "next/link";
 import {
   ArrowRight,
   ArrowUpRight,
+  ShieldCheck,
   Sun,
-  TrendingUp,
   Zap,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { gsap } from "@/lib/gsap";
 
+const heroSlides = [
+  {
+    src: "/images/profile-rooftop-solar-01.jpg",
+    alt: "Completed rooftop solar power installation in Bangladesh by Net Bangla Limited",
+    label: "Rooftop Solar",
+    title: "Turning unused roofs into productive energy assets",
+  },
+  {
+    src: "/images/profile-rooftop-solar-02.jpg",
+    alt: "Large on-grid rooftop solar array installed by Net Bangla Limited",
+    label: "On-Grid Systems",
+    title: "Engineered for reliable daytime power generation",
+  },
+  {
+    src: "/images/profile-rooftop-solar-03.jpg",
+    alt: "Solar photovoltaic modules on engineered mounting structure",
+    label: "Structural Engineering",
+    title: "Built for performance, safety, and long-term value",
+  },
+] as const;
+
 export function Hero() {
-  const [imageError, setImageError] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [failedImages, setFailedImages] = useState<Record<number, boolean>>({});
   const containerRef = useRef<HTMLElement>(null);
   const eyebrowRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
@@ -22,7 +44,6 @@ export function Hero() {
   const ctasRef = useRef<HTMLDivElement>(null);
   const trustRef = useRef<HTMLDivElement>(null);
   const imageWrapperRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLImageElement>(null);
   const impactCardRef = useRef<HTMLDivElement>(null);
   const energyBadgeRef = useRef<HTMLDivElement>(null);
 
@@ -42,7 +63,7 @@ export function Hero() {
             paragraphRef.current,
             ctasRef.current,
             trustRef.current,
-            imageRef.current,
+            imageWrapperRef.current,
             impactCardRef.current,
             energyBadgeRef.current,
           ],
@@ -98,7 +119,7 @@ export function Hero() {
           "-=0.35"
         )
         .from(
-          imageRef.current,
+          imageWrapperRef.current,
           {
             opacity: 0,
             scale: 1.04,
@@ -130,11 +151,25 @@ export function Hero() {
     return () => ctx.revert();
   }, []);
 
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion) return;
+
+    const intervalId = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % heroSlides.length);
+    }, 6000);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
   return (
     <section
       id="home"
       ref={containerRef}
-      aria-label="Hero - Net Bangla Solar Company"
+      aria-label="Hero - Net Bangla Solar"
       className="relative min-h-[760px] lg:min-h-[850px] flex items-center pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden scroll-mt-28"
     >
       {/* Background radial lighting */}
@@ -159,31 +194,32 @@ export function Hero() {
             <div ref={eyebrowRef}>
               <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wider uppercase shadow-[0_0_15px_rgba(16,185,129,0.15)]">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] animate-pulse" />
-                <span>Powering a Cleaner Future</span>
+                <span>NET BANGLA SOLAR &bull; A DIVISION OF NET BANGLA LIMITED</span>
               </div>
             </div>
 
             {/* Main Headline */}
             <h1
               ref={headlineRef}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-[clamp(46px,5.2vw,80px)] font-bold tracking-tight text-white leading-[1.08]"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[clamp(44px,5vw,76px)] font-bold tracking-tight text-white leading-[1.1]"
             >
-              Powering a{" "}
-              <span className="gradient-text-solar block sm:inline">
-                Brighter Tomorrow.
+              Empowering Bangladesh with{" "}
+              <span className="gradient-text-solar">
+                Reliable, Sustainable Solar Energy
               </span>
             </h1>
 
-            {/* Supporting Paragraph */}
+            {/* Supporting Subheadline */}
             <p
               ref={paragraphRef}
               className="text-solar-text-secondary text-base sm:text-lg md:text-xl max-w-xl leading-relaxed"
             >
-              Smart solar solutions engineered for a cleaner, more resilient
-              Bangladesh.
+              Tailored Solar PV Systems Designed for Homes, Farms, Factories, and
+              Commercial Structures. Over 12 Years of Engineering and
+              Infrastructure Integrity.
             </p>
 
-            {/* CTA Buttons - Standardized rounded-xl */}
+            {/* CTA Buttons */}
             <div
               ref={ctasRef}
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2"
@@ -193,16 +229,16 @@ export function Hero() {
                 href="#quote"
                 className="group relative inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl text-sm font-semibold text-black bg-gradient-to-r from-emerald-400 via-lime-400 to-emerald-300 hover:from-emerald-300 hover:to-lime-300 shadow-[0_0_25px_rgba(34,197,94,0.4)] hover:shadow-[0_0_35px_rgba(34,197,94,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
               >
-                <span>Get a Solar Quote</span>
+                <span>Request a Free Consultation</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
 
               {/* Secondary CTA */}
               <Link
-                href="#solutions"
+                href="#projects"
                 className="group inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-medium text-white/90 hover:text-white glass-panel hover:bg-white/[0.08] border-white/10 hover:border-emerald-500/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
               >
-                <span>Explore Our Solutions</span>
+                <span>View Our Projects</span>
                 <ArrowUpRight className="w-4 h-4 text-solar-text-muted transition-transform duration-300 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </div>
@@ -212,8 +248,10 @@ export function Hero() {
               ref={trustRef}
               className="pt-2 flex items-center gap-2 text-xs uppercase tracking-widest text-solar-text-muted font-medium"
             >
-              <Zap className="w-3.5 h-3.5 text-amber-400" />
-              <span>Residential • Commercial • Industrial</span>
+              <Zap className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+              <span>
+                Residential &bull; Commercial &bull; Industrial &bull; Agricultural
+              </span>
             </div>
           </div>
 
@@ -230,66 +268,107 @@ export function Hero() {
 
             {/* Main Cinematic Image Card with Fallback Surface */}
             <div className="relative w-full overflow-hidden rounded-3xl lg:rounded-[2.5rem] border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.8)] bg-gradient-to-br from-[#0c2c1a] via-[#06180e] to-black">
-              <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] w-full">
-                {imageError ? (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-gradient-to-br from-[#0d331d] via-[#071a0f] to-[#030a05]">
-                    <Sun className="w-16 h-16 text-amber-400/80 mb-3 animate-spin-slow" />
-                    <span className="text-emerald-400 font-bold text-sm tracking-wider uppercase">
-                      Solar Infrastructure
-                    </span>
-                    <span className="text-slate-400 text-xs mt-1">
-                      Powering a Cleaner Tomorrow
-                    </span>
+              <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] w-full bg-[#071a0f]">
+                {heroSlides.map((slide, index) => (
+                  <div
+                    key={slide.src}
+                    aria-hidden={activeSlide !== index}
+                    className={`absolute inset-0 transition-opacity duration-1000 ease-out ${
+                      activeSlide === index ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    {failedImages[index] ? (
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-gradient-to-br from-[#0d331d] via-[#071a0f] to-[#030a05]">
+                        <Sun className="w-16 h-16 text-amber-400/80 mb-3 animate-spin-slow" />
+                        <span className="text-emerald-400 font-bold text-sm tracking-wider uppercase">
+                          Solar Infrastructure
+                        </span>
+                      </div>
+                    ) : (
+                      <Image
+                        src={slide.src}
+                        alt={slide.alt}
+                        fill
+                        priority={index === 0}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 650px"
+                        className={`object-cover transition-transform duration-[6500ms] ease-linear ${
+                          index === 0
+                            ? "object-top scale-[1.28]"
+                            : activeSlide === index
+                              ? "object-center scale-[1.04]"
+                              : "object-center scale-100"
+                        }`}
+                        onError={() =>
+                          setFailedImages((current) => ({ ...current, [index]: true }))
+                        }
+                      />
+                    )}
                   </div>
-                ) : (
-                  <Image
-                    ref={imageRef}
-                    src="/images/solar-hero.jpg"
-                    alt="Industrial solar panels generating clean energy at sunset"
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 650px"
-                    className="object-cover object-center transition-transform duration-700"
-                    onError={() => setImageError(true)}
-                  />
-                )}
+                ))}
 
                 {/* Atmospheric Controlled Vignette Overlay (Leaves image vibrant and clear) */}
                 <div
                   aria-hidden="true"
-                  className="absolute inset-0 bg-gradient-to-t from-[#050b07]/80 via-transparent to-black/15 pointer-events-none"
+                  className="absolute inset-0 bg-gradient-to-t from-[#030805]/95 via-transparent to-black/15 pointer-events-none"
                 />
+
+                <div className="absolute inset-x-0 bottom-0 z-10 p-5 sm:p-6">
+                  <div className="max-w-md">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-emerald-300">
+                      {heroSlides[activeSlide].label}
+                    </span>
+                    <p className="mt-1.5 text-sm sm:text-base font-semibold leading-snug text-white">
+                      {heroSlides[activeSlide].title}
+                    </p>
+                  </div>
+
+                  <div className="mt-4 flex items-center gap-2" role="group" aria-label="Select hero project image">
+                    {heroSlides.map((slide, index) => (
+                      <button
+                        key={slide.src}
+                        type="button"
+                        onClick={() => setActiveSlide(index)}
+                        aria-label={`Show image ${index + 1}: ${slide.label}`}
+                        aria-current={activeSlide === index ? "true" : undefined}
+                        className={`h-1.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050b07] ${
+                          activeSlide === index
+                            ? "w-9 bg-emerald-300"
+                            : "w-4 bg-white/35 hover:bg-white/60"
+                        }`}
+                      />
+                    ))}
+                    <span className="ml-1 text-[10px] font-mono text-white/60">
+                      0{activeSlide + 1} / 0{heroSlides.length}
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Floating Glassmorphism Impact Card */}
+            {/* Floating Glassmorphism Non-Numerical Credibility Card */}
             <div
               ref={impactCardRef}
-              className="relative sm:absolute -mt-6 sm:mt-0 sm:-bottom-6 sm:-left-6 lg:-bottom-8 lg:-left-8 z-20 glass-panel-elevated p-4 sm:p-5 rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.8)] border border-emerald-500/30 w-full max-w-[260px]"
+              className="relative sm:absolute -mt-6 sm:mt-0 sm:-bottom-6 sm:-left-6 lg:-bottom-8 lg:-left-8 z-20 glass-panel-elevated p-4 sm:p-5 rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.8)] border border-emerald-500/30 w-full max-w-[280px]"
             >
               <div className="flex items-center justify-between gap-3 pb-2.5 border-b border-white/10">
-                <span className="text-[11px] uppercase tracking-wider text-solar-text-muted font-medium">
-                  Clean Energy Impact
+                <span className="text-[11px] uppercase tracking-wider text-emerald-400 font-semibold">
+                  ENGINEERING-LED SOLAR
                 </span>
-                <TrendingUp className="w-4 h-4 text-emerald-400" />
+                <ShieldCheck className="w-4 h-4 text-emerald-400" />
               </div>
 
               <div className="pt-3 space-y-1">
-                <div className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white flex items-baseline gap-1">
-                  <span>25+</span>
-                  <span className="text-emerald-400 text-lg">MW</span>
-                </div>
-                <p className="text-xs text-solar-text-secondary leading-snug">
-                  Solar capacity delivered
+                <p className="text-xs sm:text-sm font-medium text-white leading-snug">
+                  Designed, installed and supported across Bangladesh
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 pt-3 mt-1 border-t border-white/5 text-[11px] text-emerald-400 font-medium">
+              <div className="flex items-center gap-2 pt-3 mt-1 border-t border-white/5 text-[11px] text-slate-400 font-medium">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                 </span>
-                <span>Growing every year</span>
+                <span>Backed by Net Bangla Limited</span>
               </div>
             </div>
 
