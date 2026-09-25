@@ -102,6 +102,15 @@ export function Navbar() {
   const [activeSection, setActiveSection] = useState<string>("home");
 
   useEffect(() => {
+    // Automatically close any open dropdowns and blur active element on route change
+    setServicesDropdownOpen(false);
+    setMobileMenuOpen(false);
+    if (typeof document !== "undefined") {
+      (document.activeElement as HTMLElement)?.blur();
+    }
+  }, [pathname]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
@@ -205,6 +214,7 @@ export function Navbar() {
                       <Link
                         href={item.href}
                         role="button"
+                        onClick={() => setServicesDropdownOpen(false)}
                         aria-haspopup="true"
                         aria-expanded={servicesDropdownOpen}
                         className={cn(
@@ -216,13 +226,21 @@ export function Navbar() {
                       >
                         <span>{item.label}</span>
                         <ChevronDown className={cn(
-                          "h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180",
+                          "h-3.5 w-3.5 transition-transform duration-200",
+                          servicesDropdownOpen ? "rotate-180" : "",
                           active ? "text-slate-950" : "text-slate-400 group-hover:text-amber-700"
                         )} />
                       </Link>
 
                       {/* Mega Dropdown Menu */}
-                      <div className="invisible absolute left-1/2 top-full z-50 w-[740px] xl:w-[780px] -translate-x-1/2 pt-2 opacity-0 transition-all duration-200 ease-out group-hover:visible group-hover:pt-3 group-hover:opacity-100 group-focus-within:visible group-focus-within:pt-3 group-focus-within:opacity-100">
+                      <div
+                        className={cn(
+                          "absolute left-1/2 top-full z-50 w-[740px] xl:w-[780px] -translate-x-1/2 transition-all duration-200 ease-out",
+                          servicesDropdownOpen
+                            ? "visible pt-3 opacity-100 pointer-events-auto"
+                            : "invisible pt-2 opacity-0 pointer-events-none"
+                        )}
+                      >
                         <div
                           role="menu"
                           aria-label="Solar Solutions Submenu"
@@ -250,6 +268,12 @@ export function Navbar() {
                                     key={child.label}
                                     href={child.href}
                                     role="menuitem"
+                                    onClick={() => {
+                                      setServicesDropdownOpen(false);
+                                      if (typeof document !== "undefined") {
+                                        (document.activeElement as HTMLElement)?.blur();
+                                      }
+                                    }}
                                     className="group/item flex items-start gap-3 rounded-2xl p-2.5 transition-all duration-150 hover:bg-amber-50/80 hover:border-amber-200/80 border border-transparent focus:outline-none focus-visible:bg-amber-50"
                                   >
                                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-700 group-hover/item:bg-amber-500 group-hover/item:text-slate-950 transition-all duration-150 mt-0.5">
@@ -301,7 +325,13 @@ export function Navbar() {
 
                               <Link
                                 href="/calculator"
-                                className="mt-4 inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 text-xs font-bold shadow-xs hover:shadow-sm transition-all"
+                                onClick={() => {
+                                  setServicesDropdownOpen(false);
+                                  if (typeof document !== "undefined") {
+                                    (document.activeElement as HTMLElement)?.blur();
+                                  }
+                                }}
+                                className="mt-4 inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 text-xs font-bold shadow-xs hover:shadow-sm transition-all cursor-pointer"
                               >
                                 <Calculator className="w-4 h-4" />
                                 <span>Calculate Rooftop ROI</span>
@@ -316,6 +346,12 @@ export function Navbar() {
                             </span>
                             <Link
                               href="/contact"
+                              onClick={() => {
+                                setServicesDropdownOpen(false);
+                                if (typeof document !== "undefined") {
+                                  (document.activeElement as HTMLElement)?.blur();
+                                }
+                              }}
                               className="inline-flex items-center gap-1 font-bold text-xs text-amber-700 hover:text-amber-800 transition-colors"
                             >
                               <span>Consult Solar Engineers</span>
