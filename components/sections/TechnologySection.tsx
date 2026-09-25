@@ -9,6 +9,7 @@ import {
   Network,
   Sprout,
   Sun,
+  ArrowUpRight,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
@@ -137,44 +138,59 @@ export function TechnologySection() {
             return (
               <div
                 key={tech.id}
-                className={`group relative rounded-3xl p-6 sm:p-8 bg-white border border-slate-200/80 hover:border-amber-500/40 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-sm hover:shadow-[0_14px_35px_-8px_rgba(245,158,11,0.12)] flex flex-col justify-between text-left space-y-6 overflow-hidden ${tech.gridClass}`}
+                className={`group relative rounded-3xl p-6 sm:p-8 bg-white border border-slate-200/90 hover:border-amber-400 transition-all duration-300 ease-out hover:-translate-y-1.5 shadow-sm hover:shadow-[0_20px_45px_-10px_rgba(245,158,11,0.20),0_4px_16px_rgba(0,0,0,0.04)] flex flex-col justify-between text-left space-y-6 overflow-hidden cursor-default ${tech.gridClass}`}
               >
-                {/* Subtle Top Ambient Glow on Card Hover */}
+                {/* Subtle Inner Ambient Glow on Hover */}
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none absolute -top-12 -right-12 w-36 h-36 rounded-full bg-amber-500/10 blur-2xl group-hover:bg-amber-500/20 transition-colors duration-300"
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-500/[0.05] via-amber-400/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 />
 
-                {/* Top Row: Number Badge & Icon */}
+                {/* Top Golden Shimmer Line on Hover */}
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+
+                {/* Top Ambient Orb */}
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -top-12 -right-12 w-36 h-36 rounded-full bg-amber-500/10 blur-2xl group-hover:bg-amber-500/25 transition-colors duration-300"
+                />
+
+                {/* Top Row: Number Badge & Glowing Dynamic Icon */}
                 <div className="relative z-10 flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold tracking-wider text-amber-700 bg-amber-50/90 px-3 py-1 rounded-full border border-amber-200">
+                  <span className="text-xs font-mono font-bold tracking-wider text-amber-800 bg-amber-50 group-hover:bg-amber-100/90 px-3 py-1 rounded-full border border-amber-200 group-hover:border-amber-300 transition-colors duration-200 shadow-2xs">
                     {tech.number} / ARCHITECTURE
                   </span>
                   <div
-                    className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-amber-600 group-hover:border-amber-400 group-hover:bg-amber-500/10 group-hover:text-amber-700 transition-all duration-200"
+                    className="flex h-11 w-11 items-center justify-center rounded-2xl border border-amber-500/20 bg-slate-50 text-amber-600 group-hover:border-amber-500 group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-[0_0_18px_rgba(245,158,11,0.45)] transition-all duration-300 ease-out shadow-2xs"
                     aria-hidden="true"
                   >
-                    <IconComponent className="h-5 w-5 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-105" />
+                    <IconComponent className="h-5 w-5 transition-transform duration-300" />
                   </div>
                 </div>
 
                 {/* Content Area: Title, Description & Technical Labels */}
                 <div className="relative z-10 space-y-4 flex-1 pt-1">
                   <div className="space-y-2">
-                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 group-hover:text-amber-600 transition-colors">
-                      {tech.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                    <div className="flex items-center justify-between gap-2">
+                      <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 group-hover:text-amber-800 transition-colors duration-200">
+                        {tech.title}
+                      </h3>
+                      <ArrowUpRight className="w-5 h-5 text-amber-600 opacity-0 -translate-x-1.5 translate-y-1.5 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 shrink-0" />
+                    </div>
+                    <p className="text-sm sm:text-base text-slate-600 group-hover:text-slate-700 leading-relaxed transition-colors duration-200">
                       {tech.description}
                     </p>
                   </div>
 
                   {/* Technical Metadata Labels */}
-                  <div className="pt-2 border-t border-slate-100 flex flex-wrap gap-1.5 sm:gap-2">
+                  <div className="pt-3 border-t border-slate-100 flex flex-wrap gap-1.5 sm:gap-2">
                     {tech.labels.map((label) => (
                       <span
                         key={label}
-                        className="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200 text-xs font-mono font-semibold tracking-wider text-slate-700"
+                        className="inline-flex items-center px-2.5 py-1 rounded-lg bg-slate-50 group-hover:bg-amber-50/70 border border-slate-200 group-hover:border-amber-200/90 text-xs font-mono font-semibold tracking-wider text-slate-700 group-hover:text-amber-900 transition-all duration-200"
                       >
                         {label}
                       </span>
@@ -187,17 +203,23 @@ export function TechnologySection() {
         </div>
 
         {/* SUPPORTING APPLICATIONS (COMPACT SECONDARY ROW) */}
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 lg:p-10 shadow-sm space-y-6 text-left">
+        <div className="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 lg:p-10 shadow-sm space-y-6 text-left relative overflow-hidden">
+          {/* Subtle Ambient Glow */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-amber-400/[0.06] blur-[100px]"
+          />
+
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 pb-4">
             <div>
-              <span className="text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-amber-600">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-amber-700">
                 ADDITIONAL SYSTEM APPLICATIONS
               </span>
-              <h3 className="mt-1 text-lg sm:text-xl font-bold text-slate-900">
+              <h3 className="mt-1 text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
                 Dedicated Standalone &amp; Agricultural Deployments
               </h3>
             </div>
-            <span className="text-xs text-slate-500 font-mono">
+            <span className="text-xs sm:text-sm text-slate-500 font-mono font-medium">
               Engineered for Specialized Requirements
             </span>
           </div>
@@ -208,21 +230,32 @@ export function TechnologySection() {
               return (
                 <div
                   key={app.title}
-                  className="flex items-start gap-4 rounded-2xl border border-slate-200/80 bg-slate-50/70 p-5 hover:border-amber-500/40 hover:bg-amber-50/30 transition-all duration-200"
+                  className="group relative flex items-start gap-4.5 rounded-2xl border border-slate-200/90 bg-slate-50/60 hover:bg-white p-5 hover:border-amber-400 hover:-translate-y-1 hover:shadow-[0_14px_30px_-6px_rgba(245,158,11,0.18),0_4px_12px_rgba(0,0,0,0.03)] transition-all duration-300 ease-out cursor-default overflow-hidden"
                 >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-amber-500/25 bg-amber-500/10 text-amber-600">
-                    <IconComponent className="h-5 w-5" />
+                  {/* Subtle Inner Ambient Glow on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/[0.05] via-amber-400/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                  {/* Top Amber Shimmer Line */}
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                  {/* Dynamic Glowing Icon Badge */}
+                  <div className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-amber-500/25 bg-amber-500/10 text-amber-600 group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:border-amber-500 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-[0_0_16px_rgba(245,158,11,0.40)] transition-all duration-300 ease-out shadow-2xs mt-0.5">
+                    <IconComponent className="h-5 w-5 transition-transform duration-300" />
                   </div>
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <h4 className="text-sm sm:text-base font-semibold text-slate-900">
-                        {app.title}
-                      </h4>
-                      <span className="text-[9px] font-mono font-semibold px-2 py-0.5 rounded bg-amber-100 border border-amber-200 text-amber-800">
-                        {app.tag}
-                      </span>
+
+                  <div className="relative z-10 space-y-1.5 flex-1 min-w-0">
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <h4 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-amber-800 transition-colors duration-200">
+                          {app.title}
+                        </h4>
+                        <span className="text-[9.5px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-amber-100/90 border border-amber-300/80 text-amber-800">
+                          {app.tag}
+                        </span>
+                      </div>
+                      <ArrowUpRight className="w-4 h-4 text-amber-600 opacity-0 -translate-x-1.5 translate-y-1.5 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 shrink-0" />
                     </div>
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-600 group-hover:text-slate-700 leading-relaxed transition-colors duration-200">
                       {app.description}
                     </p>
                   </div>

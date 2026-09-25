@@ -135,10 +135,10 @@ export function FAQSection() {
                 <div
                   key={item.id}
                   className={cn(
-                    "rounded-3xl border transition-all duration-200 ease-out overflow-hidden shadow-sm",
+                    "rounded-3xl border transition-all duration-300 ease-out overflow-hidden shadow-sm",
                     isOpen
-                      ? "bg-amber-50/40 border-amber-500/40 shadow-md"
-                      : "bg-white border-slate-200/80 hover:border-amber-500/30 hover:bg-slate-50/50"
+                      ? "bg-amber-50/40 border-amber-500/50 shadow-md ring-1 ring-amber-400/20"
+                      : "bg-white border-slate-200/90 hover:border-amber-400 hover:bg-slate-50/60 hover:-translate-y-0.5 hover:shadow-md"
                   )}
                 >
                   <button
@@ -147,44 +147,76 @@ export function FAQSection() {
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => toggleFAQ(idx)}
-                    className="w-full p-6 sm:p-7 flex items-center justify-between gap-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-3xl group"
+                    className="w-full p-6 sm:p-7 flex items-center justify-between gap-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-3xl group cursor-pointer"
                   >
                     <div className="flex items-center gap-3.5 sm:gap-4 flex-1">
-                      <span className="text-xs font-mono font-bold tracking-wider text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200 shrink-0">
+                      <span
+                        className={cn(
+                          "text-xs font-mono font-bold tracking-wider px-2.5 py-1 rounded-full border shrink-0 transition-colors duration-200 shadow-2xs",
+                          isOpen
+                            ? "bg-amber-500 text-slate-950 border-amber-500"
+                            : "text-amber-800 bg-amber-50 border-amber-200 group-hover:bg-amber-100 group-hover:border-amber-300"
+                        )}
+                      >
                         {item.number}
                       </span>
-                      <h3 className="text-base sm:text-lg font-bold tracking-tight text-slate-900 group-hover:text-amber-600 transition-colors duration-200">
+                      <h3
+                        className={cn(
+                          "text-base sm:text-lg font-bold tracking-tight transition-colors duration-200",
+                          isOpen
+                            ? "text-amber-900"
+                            : "text-slate-900 group-hover:text-amber-700"
+                        )}
+                      >
                         {item.question}
                       </h3>
                     </div>
 
                     <div
                       className={cn(
-                        "w-8 h-8 rounded-full flex items-center justify-center shrink-0 border transition-all duration-200 ease-out",
+                        "w-9 h-9 rounded-full flex items-center justify-center shrink-0 border transition-all duration-300 ease-out shadow-2xs",
                         isOpen
-                          ? "bg-amber-500/20 border-amber-500/40 text-amber-800 rotate-180"
-                          : "bg-slate-50 border-slate-200 text-slate-500 group-hover:text-amber-600 group-hover:border-amber-400"
+                          ? "bg-amber-500 border-amber-500 text-slate-950 scale-105 shadow-sm"
+                          : "bg-slate-50 border-slate-200 text-slate-500 group-hover:text-slate-950 group-hover:bg-amber-500 group-hover:border-amber-500 group-hover:scale-105"
                       )}
                       aria-hidden="true"
                     >
-                      <ChevronDown className="w-4 h-4" />
+                      <ChevronDown
+                        className={cn(
+                          "w-4 h-4 transition-transform duration-300 ease-out",
+                          isOpen ? "rotate-180" : "rotate-0"
+                        )}
+                      />
                     </div>
                   </button>
 
-                  {/* Accordion Content Panel */}
+                  {/* Silky Smooth Animated Content Panel (CSS Grid Transition) */}
                   <div
                     id={panelId}
                     role="region"
                     aria-labelledby={buttonId}
-                    hidden={!isOpen}
                     className={cn(
-                      "px-6 pb-6 sm:px-7 sm:pb-7 pt-0 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100",
-                      !isOpen && "hidden"
+                      "faq-accordion-grid",
+                      isOpen && "is-open"
                     )}
+                    style={{
+                      gridTemplateRows: isOpen ? "1fr" : "0fr",
+                    }}
                   >
-                    <div className="pt-4 flex items-start gap-3">
-                      <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0 mt-1" />
-                      <p>{item.answer}</p>
+                    <div className="faq-accordion-inner">
+                      <div
+                        className={cn(
+                          "px-6 pb-6 sm:px-7 sm:pb-7 pt-1 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-amber-200/40 transition-all duration-300 ease-out transform",
+                          isOpen
+                            ? "translate-y-0 opacity-100"
+                            : "-translate-y-2 opacity-0"
+                        )}
+                      >
+                        <div className="pt-3.5 flex items-start gap-3">
+                          <ShieldCheck className="w-4.5 h-4.5 text-amber-600 shrink-0 mt-0.5" />
+                          <p className="leading-relaxed">{item.answer}</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

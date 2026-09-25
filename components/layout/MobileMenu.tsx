@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { X, ArrowRight, ChevronDown, Zap, PhoneCall, ShieldCheck } from "lucide-react";
+import { useQuoteModal } from "@/components/providers/QuoteModalProvider";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -20,6 +21,7 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
+  const { openQuoteModal } = useQuoteModal();
   const [servicesExpanded, setServicesExpanded] = useState(true);
 
   // Lock body scroll when mobile menu is open
@@ -197,14 +199,26 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
           </Link>
 
           <Link
-            href="#quote"
+            href="/calculator"
             onClick={onClose}
-            className="group relative flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-2xl font-bold text-sm text-white bg-gradient-to-r from-amber-500 via-amber-500 to-amber-600 shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 active:scale-[0.99] transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 overflow-hidden"
+            className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl text-xs font-bold text-slate-950 bg-amber-400 hover:bg-amber-500 transition-all border border-amber-500 shadow-2xs"
+          >
+            <Zap className="w-4 h-4 text-slate-950" />
+            <span>Calculate Rooftop ROI</span>
+          </Link>
+
+          <button
+            type="button"
+            onClick={() => {
+              onClose();
+              openQuoteModal();
+            }}
+            className="group relative flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-2xl font-bold text-sm text-white bg-gradient-to-r from-amber-500 via-amber-500 to-amber-600 shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 active:scale-[0.99] transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 overflow-hidden cursor-pointer"
           >
             <Zap className="w-4 h-4 text-white" />
             <span>Get a Free Solar Quote</span>
             <ArrowRight className="w-4 h-4 ml-1" />
-          </Link>
+          </button>
 
           <p className="text-center text-[11px] text-slate-500">
             A renewable energy division of Net Bangla Limited.

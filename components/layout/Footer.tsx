@@ -11,25 +11,28 @@ import { Container } from "@/components/ui/Container";
 // Official navigation columns
 const companyLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "#about" },
-  { label: "Why Choose Us", href: "#why-choose-us" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "About Us", href: "/about" },
+  { label: "Why Choose Us", href: "/why-choose-us" },
+  { label: "Solar ROI Calculator", href: "/calculator" },
+  { label: "Portfolio & Case Studies", href: "/portfolio" },
+  { label: "FAQ & Knowledge Hub", href: "/faq" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const solutionLinks = [
-  { label: "Power Solaroof", href: "#solutions" },
-  { label: "Residential Solar Solutions", href: "#solutions" },
-  { label: "Commercial Solar Solutions", href: "#solutions" },
-  { label: "Industrial Solar Solutions", href: "#solutions" },
-  { label: "Agricultural Solar Solutions", href: "#solutions" },
+  { label: "Power Solaroof™ BIPV", href: "/solutions/power-solaroof" },
+  { label: "Industrial Megawatt Solar EPC", href: "/solutions/industrial-solar-epc" },
+  { label: "Commercial Rooftop Solar", href: "/solutions/commercial-rooftop" },
+  { label: "Residential Hybrid Solar", href: "/solutions/residential-solar" },
+  { label: "Agricultural Solar Irrigation", href: "/solutions/agricultural-solar" },
 ];
 
 const applicationLinks = [
-  { label: "Industrial Rooftops", href: "#projects" },
-  { label: "Commercial Buildings", href: "#projects" },
-  { label: "Residential Solar", href: "#projects" },
-  { label: "Agricultural Solar", href: "#projects" },
+  { label: "Industrial Rooftops (MWp)", href: "/portfolio" },
+  { label: "Commercial Buildings", href: "/portfolio" },
+  { label: "Government & Defense Facilities", href: "/portfolio" },
+  { label: "Residential Luxury Villas", href: "/portfolio" },
+  { label: "Agricultural & Agri-Pumps", href: "/portfolio" },
 ];
 
 // Documented institutional memberships & registrations

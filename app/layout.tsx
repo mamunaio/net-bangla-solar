@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Sora, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { QuoteModalProvider } from "@/components/providers/QuoteModalProvider";
+import { QuoteModal } from "@/components/ui/QuoteModal";
 import { Navbar } from "@/components/layout/Navbar";
 import "./globals.css";
 
@@ -165,8 +167,11 @@ export default function RootLayout({
       </head>
       <body className="bg-solar-bg-primary text-solar-text-primary antialiased min-h-screen relative selection:bg-amber-500/25 selection:text-amber-950 transition-colors duration-200">
         <ThemeProvider>
-          <Navbar />
-          {children}
+          <QuoteModalProvider>
+            <Navbar />
+            {children}
+            <QuoteModal />
+          </QuoteModalProvider>
         </ThemeProvider>
       </body>
     </html>

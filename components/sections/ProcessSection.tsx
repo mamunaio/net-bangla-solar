@@ -9,6 +9,7 @@ import {
   PlugZap,
   ScanSearch,
   ShieldCheck,
+  ArrowUpRight,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
@@ -121,39 +122,54 @@ export function ProcessSection() {
               return (
                 <div
                   key={stepItem.id}
-                  className="group relative rounded-3xl p-6 sm:p-7 bg-white border border-slate-200 hover:border-amber-500/40 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-sm hover:shadow-[0_14px_35px_-8px_rgba(245,158,11,0.12)] flex flex-col justify-between text-left space-y-6 overflow-hidden"
+                  className="group relative rounded-3xl p-6 sm:p-7 bg-white border border-slate-200/90 hover:border-amber-400 transition-all duration-300 ease-out hover:-translate-y-2 shadow-sm hover:shadow-[0_20px_45px_-10px_rgba(245,158,11,0.22),0_4px_16px_rgba(0,0,0,0.04)] flex flex-col justify-between text-left space-y-6 overflow-hidden cursor-default"
                 >
-                  {/* Subtle Top Ambient Glow on Card Hover */}
+                  {/* Subtle Inner Ambient Glow on Hover */}
                   <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute -top-12 -right-12 w-32 h-32 rounded-full bg-amber-500/10 blur-2xl group-hover:bg-amber-500/20 transition-colors duration-300"
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-500/[0.05] via-amber-400/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   />
 
-                  {/* Header Row: Step Badge, Phase Label & Icon */}
+                  {/* Top Golden Shimmer Line on Hover */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+
+                  {/* Top Ambient Orb */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -top-12 -right-12 w-32 h-32 rounded-full bg-amber-500/10 blur-2xl group-hover:bg-amber-500/25 transition-colors duration-300"
+                  />
+
+                  {/* Header Row: Step Badge, Phase Label & Dynamic Glowing Icon */}
                   <div className="relative z-10 flex items-center justify-between gap-3">
                     <div className="flex items-center gap-2">
-                      <span className="text-xs font-mono font-bold tracking-widest text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+                      <span className="text-xs font-mono font-bold tracking-widest text-amber-800 bg-amber-50 group-hover:bg-amber-100/90 px-3 py-1 rounded-full border border-amber-200 group-hover:border-amber-300 transition-colors duration-200 shadow-2xs">
                         {stepItem.step}
                       </span>
-                      <span className="text-[10px] font-mono uppercase tracking-wider font-semibold text-amber-800 bg-amber-100/70 px-2 py-0.5 rounded border border-amber-200">
+                      <span className="text-[10px] font-mono uppercase tracking-wider font-semibold text-amber-800 bg-amber-100/80 group-hover:bg-amber-500 group-hover:text-slate-950 px-2 py-0.5 rounded border border-amber-200 group-hover:border-amber-500 transition-all duration-200">
                         {stepItem.phase}
                       </span>
                     </div>
 
                     <div
-                      className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-amber-600 group-hover:border-amber-400 group-hover:bg-amber-50 group-hover:text-amber-700 transition-all duration-200"
+                      className="flex h-11 w-11 items-center justify-center rounded-2xl border border-amber-500/20 bg-slate-50 text-amber-600 group-hover:border-amber-500 group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-[0_0_18px_rgba(245,158,11,0.45)] transition-all duration-300 ease-out shadow-2xs"
                       aria-hidden="true"
                     >
-                      <IconComponent className="h-5 w-5 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-105" />
+                      <IconComponent className="h-5 w-5 transition-transform duration-300" />
                     </div>
                   </div>
 
                   {/* Content Area: Title & Description */}
-                  <div className="relative z-10 space-y-2.5 flex-1 pt-2">
-                    <h3 className="text-lg sm:text-xl font-bold tracking-tight text-slate-900 group-hover:text-amber-600 transition-colors">
-                      {stepItem.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  <div className="relative z-10 space-y-2.5 flex-1 pt-1">
+                    <div className="flex items-center justify-between gap-1.5">
+                      <h3 className="text-lg sm:text-xl font-bold tracking-tight text-slate-900 group-hover:text-amber-800 transition-colors duration-200">
+                        {stepItem.title}
+                      </h3>
+                      <ArrowUpRight className="w-4 h-4 text-amber-600 opacity-0 -translate-x-1.5 translate-y-1.5 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 shrink-0" />
+                    </div>
+                    <p className="text-sm sm:text-base text-slate-600 group-hover:text-slate-700 leading-relaxed transition-colors duration-200">
                       {stepItem.description}
                     </p>
                   </div>
@@ -164,10 +180,16 @@ export function ProcessSection() {
         </div>
 
         {/* POST-COMMISSIONING SUPPORT */}
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 lg:p-10 shadow-sm space-y-6">
+        <div className="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 lg:p-10 shadow-sm space-y-6 relative overflow-hidden">
+          {/* Subtle Ambient Glow */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-amber-400/[0.06] blur-[110px]"
+          />
+
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-slate-100 pb-5">
             <div className="space-y-1.5 text-left">
-              <div className="inline-flex items-center gap-2 text-[11px] font-mono font-bold tracking-[0.2em] text-amber-600 uppercase">
+              <div className="inline-flex items-center gap-2 text-[11px] font-mono font-bold tracking-[0.2em] text-amber-700 uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
                 <span>ONGOING SUPPORT</span>
               </div>
@@ -181,45 +203,69 @@ export function ProcessSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
-            <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
-              <div className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-amber-600 shrink-0">
-                <Activity className="w-4 h-4" />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 pt-1">
+            {/* Card 1 */}
+            <div className="group/card relative flex items-start gap-4 p-4.5 sm:p-5 rounded-2xl bg-slate-50/70 hover:bg-white border border-slate-200/90 hover:border-amber-400 hover:-translate-y-1 hover:shadow-[0_12px_28px_-6px_rgba(245,158,11,0.18),0_4px_12px_rgba(0,0,0,0.03)] transition-all duration-300 ease-out overflow-hidden cursor-default text-left">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"
+              />
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-amber-600 group-hover/card:bg-amber-500 group-hover/card:text-slate-950 group-hover/card:border-amber-500 group-hover/card:scale-110 group-hover/card:rotate-6 group-hover/card:shadow-[0_0_14px_rgba(245,158,11,0.40)] transition-all duration-300 shrink-0 shadow-2xs mt-0.5">
+                <Activity className="w-5 h-5 transition-transform duration-300" />
               </div>
-              <div className="text-left space-y-0.5">
-                <h4 className="text-xs sm:text-sm font-semibold text-slate-900">
-                  Telemetry &amp; Monitoring
-                </h4>
-                <p className="text-[11px] text-slate-500">
-                  Continuous performance tracking
+              <div className="space-y-1 flex-1 min-w-0">
+                <div className="flex items-center justify-between gap-1">
+                  <h4 className="text-sm sm:text-base font-bold text-slate-900 group-hover/card:text-amber-800 transition-colors duration-200">
+                    Telemetry &amp; Monitoring
+                  </h4>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-amber-600 opacity-0 -translate-x-1 translate-y-1 group-hover/card:opacity-100 group-hover/card:translate-x-0 group-hover/card:translate-y-0 transition-all duration-200 shrink-0" />
+                </div>
+                <p className="text-xs sm:text-[13px] text-slate-600 group-hover/card:text-slate-700 leading-relaxed transition-colors duration-200">
+                  Continuous performance tracking &amp; load analytics
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
-              <div className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-amber-600 shrink-0">
-                <ShieldCheck className="w-4 h-4" />
+            {/* Card 2 */}
+            <div className="group/card relative flex items-start gap-4 p-4.5 sm:p-5 rounded-2xl bg-slate-50/70 hover:bg-white border border-slate-200/90 hover:border-amber-400 hover:-translate-y-1 hover:shadow-[0_12px_28px_-6px_rgba(245,158,11,0.18),0_4px_12px_rgba(0,0,0,0.03)] transition-all duration-300 ease-out overflow-hidden cursor-default text-left">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"
+              />
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-amber-600 group-hover/card:bg-amber-500 group-hover/card:text-slate-950 group-hover/card:border-amber-500 group-hover/card:scale-110 group-hover/card:rotate-6 group-hover/card:shadow-[0_0_14px_rgba(245,158,11,0.40)] transition-all duration-300 shrink-0 shadow-2xs mt-0.5">
+                <ShieldCheck className="w-5 h-5 transition-transform duration-300" />
               </div>
-              <div className="text-left space-y-0.5">
-                <h4 className="text-xs sm:text-sm font-semibold text-slate-900">
-                  Scheduled Maintenance
-                </h4>
-                <p className="text-[11px] text-slate-500">
-                  Physical &amp; electrical inspections
+              <div className="space-y-1 flex-1 min-w-0">
+                <div className="flex items-center justify-between gap-1">
+                  <h4 className="text-sm sm:text-base font-bold text-slate-900 group-hover/card:text-amber-800 transition-colors duration-200">
+                    Scheduled Maintenance
+                  </h4>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-amber-600 opacity-0 -translate-x-1 translate-y-1 group-hover/card:opacity-100 group-hover/card:translate-x-0 group-hover/card:translate-y-0 transition-all duration-200 shrink-0" />
+                </div>
+                <p className="text-xs sm:text-[13px] text-slate-600 group-hover/card:text-slate-700 leading-relaxed transition-colors duration-200">
+                  Periodic physical &amp; electrical safety inspections
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
-              <div className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-amber-600 shrink-0">
-                <Cpu className="w-4 h-4" />
+            {/* Card 3 */}
+            <div className="group/card relative flex items-start gap-4 p-4.5 sm:p-5 rounded-2xl bg-slate-50/70 hover:bg-white border border-slate-200/90 hover:border-amber-400 hover:-translate-y-1 hover:shadow-[0_12px_28px_-6px_rgba(245,158,11,0.18),0_4px_12px_rgba(0,0,0,0.03)] transition-all duration-300 ease-out overflow-hidden cursor-default text-left">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"
+              />
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-amber-600 group-hover/card:bg-amber-500 group-hover/card:text-slate-950 group-hover/card:border-amber-500 group-hover/card:scale-110 group-hover/card:rotate-6 group-hover/card:shadow-[0_0_14px_rgba(245,158,11,0.40)] transition-all duration-300 shrink-0 shadow-2xs mt-0.5">
+                <Cpu className="w-5 h-5 transition-transform duration-300" />
               </div>
-              <div className="text-left space-y-0.5">
-                <h4 className="text-xs sm:text-sm font-semibold text-slate-900">
-                  Technical Diagnostics
-                </h4>
-                <p className="text-[11px] text-slate-500">
-                  Proactive EPC support
+              <div className="space-y-1 flex-1 min-w-0">
+                <div className="flex items-center justify-between gap-1">
+                  <h4 className="text-sm sm:text-base font-bold text-slate-900 group-hover/card:text-amber-800 transition-colors duration-200">
+                    Technical Diagnostics
+                  </h4>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-amber-600 opacity-0 -translate-x-1 translate-y-1 group-hover/card:opacity-100 group-hover/card:translate-x-0 group-hover/card:translate-y-0 transition-all duration-200 shrink-0" />
+                </div>
+                <p className="text-xs sm:text-[13px] text-slate-600 group-hover/card:text-slate-700 leading-relaxed transition-colors duration-200">
+                  Proactive inverter &amp; telemetry EPC support
                 </p>
               </div>
             </div>

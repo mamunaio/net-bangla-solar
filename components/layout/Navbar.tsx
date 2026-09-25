@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import {
   ChevronDown,
   Menu,
@@ -21,6 +22,7 @@ import {
   Calculator,
 } from "lucide-react";
 import { MobileMenu } from "@/components/layout/MobileMenu";
+import { useQuoteModal } from "@/components/providers/QuoteModalProvider";
 import { cn } from "@/lib/utils";
 
 interface SubItem {
@@ -35,61 +37,65 @@ interface NavItem {
   label: string;
   href: string;
   sectionId: string;
+  route: string;
   children?: SubItem[];
 }
 
 const navItems: NavItem[] = [
-  { label: "Home", href: "#home", sectionId: "home" },
-  { label: "About Us", href: "#about", sectionId: "about" },
+  { label: "Home", href: "/", sectionId: "home", route: "/" },
+  { label: "About Us", href: "/about", sectionId: "about", route: "/about" },
   {
     label: "Solutions",
-    href: "#solutions",
+    href: "/solutions",
     sectionId: "solutions",
+    route: "/solutions",
     children: [
       {
         label: "Power Solaroof™",
-        href: "#solutions",
+        href: "/solutions/power-solaroof",
         description: "Integrated solar roofing engineered for industrial durability",
         badge: "BIPV GRADE",
         icon: PanelsTopLeft,
       },
       {
         label: "Industrial Solar EPC",
-        href: "#solutions",
+        href: "/solutions/industrial-solar-epc",
         description: "MWp scale high-yield turnkey factory installations",
         badge: "100 kWp - 5 MWp",
         icon: Factory,
       },
       {
         label: "Commercial Rooftop",
-        href: "#solutions",
+        href: "/solutions/commercial-rooftop",
         description: "Net-metered power offset for commercial establishments",
         badge: "NET METERED",
         icon: Building2,
       },
       {
         label: "Residential Solar",
-        href: "#solutions",
+        href: "/solutions/residential-solar",
         description: "Hybrid & on-grid smart rooftop systems for premium homes",
         badge: "HYBRID / ON-GRID",
         icon: Home,
       },
       {
         label: "Agricultural Solar",
-        href: "#solutions",
+        href: "/solutions/agricultural-solar",
         description: "High-volume solar irrigation & remote farm power",
         badge: "DIRECT DC PUMP",
         icon: Sprout,
       },
     ],
   },
-  { label: "Portfolio", href: "#projects", sectionId: "projects" },
-  { label: "Why Choose Us", href: "#why-choose-us", sectionId: "why-choose-us" },
-  { label: "FAQ", href: "#faq", sectionId: "faq" },
-  { label: "Contact", href: "#contact", sectionId: "contact" },
+  { label: "Portfolio", href: "/portfolio", sectionId: "projects", route: "/portfolio" },
+  { label: "Why Choose Us", href: "/why-choose-us", sectionId: "why-choose-us", route: "/why-choose-us" },
+  { label: "FAQ", href: "/faq", sectionId: "faq", route: "/faq" },
+  { label: "Contact", href: "/contact", sectionId: "contact", route: "/contact" },
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
+  const { openQuoteModal } = useQuoteModal();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -99,23 +105,25 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      const sectionIds = [
-        "home",
-        "about",
-        "solutions",
-        "projects",
-        "why-choose-us",
-        "faq",
-        "contact",
-      ];
-      const scrollPosition = window.scrollY + 200;
+      if (pathname === "/") {
+        const sectionIds = [
+          "home",
+          "about",
+          "solutions",
+          "projects",
+          "why-choose-us",
+          "faq",
+          "contact",
+        ];
+        const scrollPosition = window.scrollY + 200;
 
-      for (let i = sectionIds.length - 1; i >= 0; i--) {
-        const id = sectionIds[i];
-        const el = document.getElementById(id);
-        if (el && el.offsetTop <= scrollPosition) {
-          setActiveSection(id);
-          break;
+        for (let i = sectionIds.length - 1; i >= 0; i--) {
+          const id = sectionIds[i];
+          const el = document.getElementById(id);
+          if (el && el.offsetTop <= scrollPosition) {
+            setActiveSection(id);
+            break;
+          }
         }
       }
     };
@@ -123,7 +131,7 @@ export function Navbar() {
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   return (
     <>
@@ -148,7 +156,7 @@ export function Navbar() {
           <div className="flex items-center justify-between gap-2 sm:gap-4 flex-nowrap">
             {/* 1. BRAND LOGO AREA */}
             <Link
-              href="#home"
+              href="/"
               aria-label="Net Bangla Solar — Home"
               className="group flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl shrink-0"
             >
@@ -182,7 +190,9 @@ export function Navbar() {
               className="hidden lg:flex items-center gap-0.5 xl:gap-1 shrink-0 flex-nowrap"
             >
               {navItems.map((item) => {
-                const active = activeSection === item.sectionId;
+                const isDedicatedRoute = item.route !== "/" && (pathname === item.route || pathname?.startsWith(item.route));
+                const isHomeActive = pathname === "/" && (activeSection === item.sectionId || (item.route === "/" && activeSection === "home"));
+                const active = isDedicatedRoute || isHomeActive;
 
                 if (item.children) {
                   return (
@@ -290,7 +300,7 @@ export function Navbar() {
                               </div>
 
                               <Link
-                                href="#quote"
+                                href="/calculator"
                                 className="mt-4 inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 text-xs font-bold shadow-xs hover:shadow-sm transition-all"
                               >
                                 <Calculator className="w-4 h-4" />
@@ -305,7 +315,7 @@ export function Navbar() {
                               Need custom industrial plant engineering?
                             </span>
                             <Link
-                              href="#contact"
+                              href="/contact"
                               className="inline-flex items-center gap-1 font-bold text-xs text-amber-700 hover:text-amber-800 transition-colors"
                             >
                               <span>Consult Solar Engineers</span>
@@ -338,9 +348,10 @@ export function Navbar() {
             {/* 3. RIGHT ACTION CONTROLS */}
             <div className="flex items-center gap-2 sm:gap-2.5 shrink-0 flex-nowrap">
               {/* Radiant Solar Gold Primary CTA Button */}
-              <Link
-                href="#quote"
-                className="group relative inline-flex items-center gap-1.5 px-4 sm:px-4.5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 hover:from-amber-500 hover:to-amber-600 shadow-[0_3px_12px_rgba(245,158,11,0.30)] hover:shadow-[0_4px_18px_rgba(245,158,11,0.45)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 shrink-0 overflow-hidden whitespace-nowrap"
+              <button
+                type="button"
+                onClick={() => openQuoteModal()}
+                className="group relative inline-flex items-center gap-1.5 px-4 sm:px-4.5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 hover:from-amber-500 hover:to-amber-600 shadow-[0_3px_12px_rgba(245,158,11,0.30)] hover:shadow-[0_4px_18px_rgba(245,158,11,0.45)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 shrink-0 overflow-hidden whitespace-nowrap cursor-pointer"
               >
                 {/* Shimmer Light Sweep on Hover */}
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out pointer-events-none" />
@@ -348,7 +359,7 @@ export function Navbar() {
                 <Zap className="w-3.5 h-3.5 text-slate-950 shrink-0" />
                 <span className="hidden sm:inline">Get a Free Solar Quote</span>
                 <span className="sm:hidden">Free Quote</span>
-              </Link>
+              </button>
 
               {/* Mobile Hamburger Toggle Button */}
               <button
@@ -369,12 +380,16 @@ export function Navbar() {
       <MobileMenu
         isOpen={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
-        items={navItems.map((item) => ({
-          label: item.label,
-          href: item.href,
-          isActive: activeSection === item.sectionId,
-          children: item.children?.map((c) => ({ label: c.label, href: c.href })),
-        }))}
+        items={navItems.map((item) => {
+          const isDedicatedRoute = item.route !== "/" && (pathname === item.route || pathname?.startsWith(item.route));
+          const isHomeActive = pathname === "/" && (activeSection === item.sectionId || (item.route === "/" && activeSection === "home"));
+          return {
+            label: item.label,
+            href: item.href,
+            isActive: isDedicatedRoute || isHomeActive,
+            children: item.children?.map((c) => ({ label: c.label, href: c.href })),
+          };
+        })}
       />
     </>
   );

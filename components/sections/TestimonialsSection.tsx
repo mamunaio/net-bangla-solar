@@ -8,6 +8,7 @@ import {
   Home,
   Landmark,
   Sprout,
+  ArrowUpRight,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
@@ -110,7 +111,7 @@ export function TestimonialsSection() {
         {/* MAIN COMPOSITION: LEFT EDITORIAL STATEMENT / RIGHT SECTOR GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           {/* LEFT: Large Editorial Statement Panel */}
-          <div className="lg:col-span-5 flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 relative overflow-hidden shadow-sm text-left">
+          <div className="lg:col-span-5 flex flex-col justify-between rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 relative overflow-hidden shadow-sm text-left hover:border-amber-400/80 transition-all duration-300 group">
             {/* Ambient Background Glow */}
             <div
               aria-hidden="true"
@@ -118,7 +119,7 @@ export function TestimonialsSection() {
             />
 
             <div className="relative z-10 space-y-4">
-              <span className="text-[11px] font-mono font-bold tracking-[0.2em] text-amber-600 uppercase">
+              <span className="text-[11px] font-mono font-bold tracking-[0.2em] text-amber-700 uppercase">
                 ENGINEERED FOR DIFFERENT ENERGY ENVIRONMENTS
               </span>
 
@@ -165,21 +166,20 @@ export function TestimonialsSection() {
                 COVERAGE SPECTRUM
               </span>
               <div className="flex flex-wrap gap-2">
-                <span className="px-2.5 py-1 rounded-md bg-amber-50 border border-amber-200 text-[10px] font-mono text-amber-800 font-semibold">
-                  PUBLIC SECTOR
-                </span>
-                <span className="px-2.5 py-1 rounded-md bg-amber-50 border border-amber-200 text-[10px] font-mono text-amber-800 font-semibold">
-                  INDUSTRIAL &amp; TEXTILES
-                </span>
-                <span className="px-2.5 py-1 rounded-md bg-amber-50 border border-amber-200 text-[10px] font-mono text-amber-800 font-semibold">
-                  COMMERCIAL
-                </span>
-                <span className="px-2.5 py-1 rounded-md bg-amber-50 border border-amber-200 text-[10px] font-mono text-amber-800 font-semibold">
-                  AGRI-TECH
-                </span>
-                <span className="px-2.5 py-1 rounded-md bg-amber-50 border border-amber-200 text-[10px] font-mono text-amber-800 font-semibold">
-                  RESIDENTIAL
-                </span>
+                {[
+                  "PUBLIC SECTOR",
+                  "INDUSTRIAL & TEXTILES",
+                  "COMMERCIAL",
+                  "AGRI-TECH",
+                  "RESIDENTIAL",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 rounded-lg bg-amber-50 hover:bg-amber-100 border border-amber-200 hover:border-amber-300 text-[10.5px] font-mono text-amber-800 hover:text-amber-900 font-semibold transition-all duration-200 shadow-2xs"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
@@ -193,34 +193,56 @@ export function TestimonialsSection() {
               return (
                 <div
                   key={sector.id}
-                  className={`group relative rounded-3xl p-6 bg-white border border-slate-200 hover:border-amber-500/40 transition-all duration-300 ease-out hover:-translate-y-0.5 flex flex-col justify-between text-left space-y-4 shadow-sm hover:shadow-[0_12px_30px_-6px_rgba(245,158,11,0.12)] ${isWide ? "sm:col-span-2" : ""
-                    }`}
+                  className={`group relative rounded-3xl p-6 bg-white border border-slate-200/90 hover:border-amber-400 transition-all duration-300 ease-out hover:-translate-y-1.5 flex flex-col justify-between text-left space-y-4 shadow-sm hover:shadow-[0_16px_36px_-8px_rgba(245,158,11,0.20),0_4px_12px_rgba(0,0,0,0.04)] overflow-hidden cursor-default ${
+                    isWide ? "sm:col-span-2" : ""
+                  }`}
                 >
-                  {/* Top Bar: Number Badge, Tag & Icon */}
-                  <div className="flex items-center justify-between">
+                  {/* Subtle Inner Ambient Glow on Hover */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-500/[0.05] via-amber-400/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+
+                  {/* Top Golden Shimmer Line on Hover */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+
+                  {/* Top Ambient Orb */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -top-12 -right-12 w-32 h-32 rounded-full bg-amber-500/10 blur-2xl group-hover:bg-amber-500/25 transition-colors duration-300"
+                  />
+
+                  {/* Top Bar: Number Badge, Tag & Dynamic Glowing Icon */}
+                  <div className="relative z-10 flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <span className="text-xs font-mono font-bold tracking-wider text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+                      <span className="text-xs font-mono font-bold tracking-wider text-amber-800 bg-amber-50 group-hover:bg-amber-100/90 px-3 py-1 rounded-full border border-amber-200 group-hover:border-amber-300 transition-colors duration-200 shadow-2xs">
                         {sector.number}
                       </span>
-                      <span className="text-[10px] font-mono uppercase tracking-wider font-semibold text-amber-800 bg-amber-100/70 px-2 py-0.5 rounded border border-amber-200">
+                      <span className="text-[10px] font-mono uppercase tracking-wider font-semibold text-amber-800 bg-amber-100/80 group-hover:bg-amber-500 group-hover:text-slate-950 px-2.5 py-0.5 rounded border border-amber-200 group-hover:border-amber-500 transition-all duration-200">
                         {sector.tag}
                       </span>
                     </div>
 
                     <div
-                      className="flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-amber-600 group-hover:border-amber-400 group-hover:bg-amber-50 group-hover:text-amber-700 transition-all duration-200"
+                      className="flex h-10 w-10 items-center justify-center rounded-xl border border-amber-500/20 bg-slate-50 text-amber-600 group-hover:border-amber-500 group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-[0_0_16px_rgba(245,158,11,0.45)] transition-all duration-300 ease-out shadow-2xs"
                       aria-hidden="true"
                     >
-                      <IconComponent className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                      <IconComponent className="h-5 w-5 transition-transform duration-300" />
                     </div>
                   </div>
 
                   {/* Body: Title & Factual Description */}
-                  <div className="space-y-2 flex-1 pt-1">
-                    <h3 className="text-base sm:text-lg font-bold tracking-tight text-slate-900 group-hover:text-amber-600 transition-colors">
-                      {sector.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  <div className="relative z-10 space-y-2 flex-1 pt-1">
+                    <div className="flex items-center justify-between gap-1.5">
+                      <h3 className="text-base sm:text-lg font-bold tracking-tight text-slate-900 group-hover:text-amber-800 transition-colors duration-200">
+                        {sector.title}
+                      </h3>
+                      <ArrowUpRight className="w-4 h-4 text-amber-600 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 shrink-0" />
+                    </div>
+                    <p className="text-sm sm:text-base text-slate-600 group-hover:text-slate-700 leading-relaxed transition-colors duration-200">
                       {sector.description}
                     </p>
                   </div>
@@ -229,7 +251,6 @@ export function TestimonialsSection() {
             })}
           </div>
         </div>
-
       </Container>
     </section>
   );

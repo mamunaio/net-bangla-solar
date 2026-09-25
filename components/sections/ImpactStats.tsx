@@ -117,7 +117,7 @@ export function ImpactStats() {
                 <div
                   key={item.id}
                   className={cn(
-                    "relative flex flex-col justify-between p-2 sm:p-3 lg:px-7",
+                    "group relative flex flex-col justify-between p-3 sm:p-4 lg:px-6 rounded-2xl transition-all duration-300 hover:bg-amber-50/40 hover:-translate-y-0.5",
                     // Desktop vertical divider
                     !isLast && "lg:border-r lg:border-slate-100",
                     // Mobile & Tablet subtle divider
@@ -126,11 +126,11 @@ export function ImpactStats() {
                 >
                   {/* Top: Small uppercase label & Icon */}
                   <div className="flex items-center justify-between gap-2 pb-2.5">
-                    <span className="text-[11px] font-mono font-bold tracking-wider text-amber-700 uppercase">
+                    <span className="text-[11px] font-mono font-bold tracking-wider text-amber-700 uppercase group-hover:text-amber-800 transition-colors">
                       {item.label}
                     </span>
                     <div
-                      className="flex items-center justify-center w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-600 shadow-2xs"
+                      className="flex items-center justify-center w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-600 shadow-2xs group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300"
                       aria-hidden="true"
                     >
                       <IconComponent className="w-4 h-4" />
