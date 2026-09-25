@@ -231,13 +231,6 @@ export function TestimonialsSection() {
           </div>
         </div>
 
-        {/* RESTRAINED SUPPORTING LINE */}
-        <div className="pt-2 text-center">
-          <p className="text-xs font-mono text-slate-500 max-w-2xl mx-auto leading-relaxed">
-            * Sector coverage reflects the applications and client environments
-            documented in the supplied company profile.
-          </p>
-        </div>
       </Container>
     </section>
   );
