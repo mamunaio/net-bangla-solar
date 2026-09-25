@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { X, ArrowRight, ChevronDown, Zap, PhoneCall, ShieldCheck } from "lucide-react";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -90,10 +89,8 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
             </div>
           </Link>
 
-          {/* Action Area: Theme Toggle + Close Button */}
+          {/* Action Area: Close Button */}
           <div className="flex items-center gap-2 shrink-0">
-            <ThemeToggle className="w-9 h-9 shrink-0 rounded-full border border-slate-200/80 dark:border-white/10 bg-slate-50 dark:bg-slate-800" />
-
             {/* Close Button */}
             <button
               type="button"

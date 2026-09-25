@@ -20,7 +20,6 @@ import {
   CheckCircle2,
   Calculator,
 } from "lucide-react";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { cn } from "@/lib/utils";
 
@@ -338,20 +337,17 @@ export function Navbar() {
 
             {/* 3. RIGHT ACTION CONTROLS */}
             <div className="flex items-center gap-2 sm:gap-2.5 shrink-0 flex-nowrap">
-              {/* Theme Toggle */}
-              <ThemeToggle className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border border-slate-200/90 bg-slate-50 hover:bg-amber-50 text-slate-700 hover:text-amber-700 shadow-2xs shrink-0 transition-all hover:scale-105 active:scale-95" />
-
               {/* Radiant Solar Gold Primary CTA Button */}
               <Link
                 href="#quote"
-                className="group relative inline-flex items-center gap-1.5 px-3.5 sm:px-4.5 xl:px-5 py-2 xl:py-2.5 rounded-full text-xs sm:text-xs xl:text-sm font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 hover:from-amber-500 hover:to-amber-600 shadow-[0_4px_16px_rgba(245,158,11,0.35)] hover:shadow-[0_6px_22px_rgba(245,158,11,0.50)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 shrink-0 overflow-hidden whitespace-nowrap"
+                className="group relative inline-flex items-center gap-1.5 px-4 sm:px-4.5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 hover:from-amber-500 hover:to-amber-600 shadow-[0_3px_12px_rgba(245,158,11,0.30)] hover:shadow-[0_4px_18px_rgba(245,158,11,0.45)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 shrink-0 overflow-hidden whitespace-nowrap"
               >
                 {/* Shimmer Light Sweep on Hover */}
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out pointer-events-none" />
 
                 <Zap className="w-3.5 h-3.5 text-slate-950 shrink-0" />
-                <span className="hidden xl:inline">Get a Free Solar Quote</span>
-                <span className="xl:hidden">Free Quote</span>
+                <span className="hidden sm:inline">Get a Free Solar Quote</span>
+                <span className="sm:hidden">Free Quote</span>
               </Link>
 
               {/* Mobile Hamburger Toggle Button */}
@@ -360,9 +356,9 @@ export function Navbar() {
                 onClick={() => setMobileMenuOpen(true)}
                 aria-label="Open navigation menu"
                 aria-expanded={mobileMenuOpen}
-                className="lg:hidden w-9 h-9 rounded-full border border-slate-200/90 hover:border-amber-400 bg-slate-50 hover:bg-amber-50 text-slate-700 hover:text-amber-700 shadow-2xs transition-all duration-150 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 flex items-center justify-center shrink-0"
+                className="lg:hidden w-8.5 h-8.5 rounded-full border border-slate-200/90 hover:border-amber-400 bg-slate-50 hover:bg-amber-50 text-slate-700 hover:text-amber-700 shadow-2xs transition-all duration-150 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 flex items-center justify-center shrink-0"
               >
-                <Menu className="w-4.5 h-4.5" />
+                <Menu className="w-4 h-4" />
               </button>
             </div>
           </div>
