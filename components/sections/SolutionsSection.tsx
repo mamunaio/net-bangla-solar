@@ -167,32 +167,28 @@ export function SolutionsSection() {
     <section
       id="solutions"
       aria-label="Solar Solutions for Every Scale"
-      className="relative py-20 lg:py-32 overflow-hidden scroll-mt-24 lg:scroll-mt-28"
+      className="relative py-12 sm:py-16 lg:py-20 overflow-hidden scroll-mt-24 lg:scroll-mt-28 bg-white"
     >
       {/* Background ambient lighting */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[550px] rounded-full bg-emerald-500/[0.07] blur-[170px] -z-10"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute bottom-10 left-10 w-[500px] h-[400px] rounded-full bg-amber-500/[0.03] blur-[140px] -z-10"
+        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[550px] rounded-full bg-amber-500/[0.05] blur-[170px] -z-10"
       />
 
       <Container className="relative z-10 space-y-12 md:space-y-16">
         {/* SECTION INTRO */}
         <div className="max-w-3xl space-y-4 text-left">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wider uppercase">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
             <span>OUR SOLUTIONS</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.15]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
             Solar Solutions Engineered{" "}
             <span className="gradient-text-solar">for Every Scale</span>
           </h2>
 
-          <p className="text-solar-text-secondary text-base sm:text-lg max-w-2xl leading-relaxed">
+          <p className="text-slate-600 text-base sm:text-lg max-w-2xl leading-relaxed">
             From integrated solar roofing to residential, commercial, industrial,
             and agricultural systems, Net Bangla Solar designs and delivers
             solutions around real energy requirements.
@@ -208,19 +204,19 @@ export function SolutionsSection() {
               <div
                 key={item.id}
                 className={cn(
-                  "group relative rounded-3xl overflow-hidden border border-white/10 hover:border-emerald-500/40 bg-[#06120a] transition-all duration-500 hover:shadow-[0_0_35px_-5px_rgba(16,185,129,0.25)] flex flex-col justify-between p-6 sm:p-8",
+                  "group relative rounded-3xl overflow-hidden border border-slate-200 hover:border-amber-500/50 bg-white transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_16px_40px_-8px_rgba(0,0,0,0.12),0_0_20px_rgba(245,158,11,0.20)] flex flex-col justify-between p-6 sm:p-8",
                   item.gridClass,
                   item.heightClass
                 )}
               >
-                {/* Full Bleed Image Background (z-0 sits above card background) */}
+                {/* Full Bleed Image Background */}
                 <div className="absolute inset-0 z-0 overflow-hidden">
                   {failedImages[item.id] ? (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#06180d] via-[#030e06] to-[#020603]">
-                      <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-3">
-                        <IconComponent className="w-8 h-8 text-emerald-400" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-slate-50">
+                      <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-3">
+                        <IconComponent className="w-8 h-8 text-amber-500" />
                       </div>
-                      <span className="text-emerald-400 font-semibold text-sm tracking-wider uppercase">
+                      <span className="text-amber-700 font-semibold text-sm tracking-wider uppercase">
                         {item.title}
                       </span>
                     </div>
@@ -230,34 +226,34 @@ export function SolutionsSection() {
                       alt={item.alt}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 750px"
-                      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                      className="object-cover object-center transition-transform duration-300 ease-out group-hover:scale-[1.02]"
                       onError={() =>
                         setFailedImages((prev) => ({ ...prev, [item.id]: true }))
                       }
                     />
                   )}
 
-                  {/* Natural Light Gradient Overlay: Keeps real photographs clearly visible while ensuring text contrast */}
+                  {/* Natural Light Gradient Overlay */}
                   <div
                     aria-hidden="true"
-                    className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none"
+                    className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none"
                   />
                 </div>
 
                 {/* Top Area: Index Number, Tag & Icon Badge */}
                 <div className="relative z-10 flex items-center justify-between gap-4">
-                  <span className="text-xs font-mono font-medium tracking-widest text-emerald-400/90 bg-black/60 px-3 py-1 rounded-full border border-white/10 backdrop-blur-md">
+                  <span className="text-xs font-mono font-bold tracking-widest text-amber-800 bg-white/95 px-3 py-1 rounded-full border border-slate-200/90 backdrop-blur-md shadow-sm">
                     {item.index}
                   </span>
 
                   <div className="flex items-center gap-2">
                     {item.tag && (
-                      <span className="text-[10px] uppercase tracking-wider font-semibold text-emerald-300 px-2.5 py-1 rounded-full bg-black/70 border border-emerald-500/40 backdrop-blur-md">
+                      <span className="text-[10px] uppercase tracking-wider font-bold text-amber-800 px-2.5 py-1 rounded-full bg-white/95 border border-amber-300 backdrop-blur-md shadow-sm">
                         {item.tag}
                       </span>
                     )}
                     <div
-                      className="flex items-center justify-center w-10 h-10 rounded-xl bg-black/60 border border-white/10 text-emerald-400 backdrop-blur-md group-hover:border-emerald-400/50 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.3)] transition-all duration-300"
+                      className="flex items-center justify-center w-10 h-10 rounded-xl bg-white/95 border border-slate-200/90 text-amber-600 backdrop-blur-md group-hover:border-amber-400 group-hover:bg-amber-500 group-hover:text-slate-950 transition-all duration-300 shadow-sm"
                       aria-hidden="true"
                     >
                       <IconComponent className="w-5 h-5" />
@@ -266,12 +262,12 @@ export function SolutionsSection() {
                 </div>
 
                 {/* Bottom Area: Title, Description, Key Points, and Explore Link */}
-                <div className="relative z-10 space-y-4 pt-20 transition-transform duration-500 ease-out group-hover:-translate-y-1">
+                <div className="relative z-10 space-y-4 pt-20 transition-transform duration-300 ease-out group-hover:-translate-y-0.5">
                   <div className="space-y-2">
-                    <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white group-hover:text-emerald-300 transition-colors drop-shadow-md">
+                    <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white group-hover:text-amber-300 transition-colors drop-shadow-md">
                       {item.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-slate-200 leading-relaxed max-w-xl drop-shadow">
+                    <p className="text-sm sm:text-base text-slate-100 leading-relaxed max-w-xl drop-shadow">
                       {item.description}
                     </p>
                   </div>
@@ -283,9 +279,9 @@ export function SolutionsSection() {
                         {item.keyPoints.map((point) => (
                           <li
                             key={point}
-                            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-black/60 border border-white/15 text-[11px] sm:text-xs text-slate-100 font-medium backdrop-blur-md hover:border-emerald-500/40 transition-colors shadow-sm"
+                            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/90 border border-white/40 text-[11px] sm:text-xs text-slate-900 font-semibold backdrop-blur-md hover:border-amber-400 transition-colors shadow-sm"
                           >
-                            <CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" />
+                            <CheckCircle2 className="w-3 h-3 text-amber-600 shrink-0" />
                             <span>{point}</span>
                           </li>
                         ))}
@@ -293,10 +289,10 @@ export function SolutionsSection() {
                     </div>
                   )}
 
-                  <div className="pt-3 flex items-center justify-between border-t border-white/15">
+                  <div className="pt-3 flex items-center justify-between border-t border-white/20">
                     <Link
                       href="#quote"
-                      className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-emerald-400 group-hover:text-emerald-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg p-0.5"
+                      className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-amber-300 group-hover:text-amber-200 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-lg p-0.5"
                       aria-label={`Discuss ${item.title} project`}
                     >
                       <span>Discuss your project</span>
@@ -310,17 +306,17 @@ export function SolutionsSection() {
         </div>
 
         {/* TECHNICAL CAPABILITIES (COMPACT SUPPORTING STRIP) */}
-        <div className="rounded-3xl border border-white/10 bg-[#07130b]/75 p-6 sm:p-8 backdrop-blur-xl space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-white/10 pb-4">
+        <div className="rounded-3xl border border-slate-200 bg-[#F8FAFC] p-6 sm:p-8 space-y-6 shadow-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-200 pb-4">
             <div>
-              <span className="text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-emerald-400">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-amber-600">
                 TECHNICAL CAPABILITIES
               </span>
-              <h3 className="mt-1 text-lg sm:text-xl font-bold text-white">
+              <h3 className="mt-1 text-lg sm:text-xl font-bold text-slate-900">
                 Engineering, Grid Integration &amp; Storage Architecture
               </h3>
             </div>
-            <span className="text-xs text-slate-400 font-mono">
+            <span className="text-xs text-slate-500 font-mono">
               Turnkey EPC &bull; End-to-End Support
             </span>
           </div>
@@ -331,16 +327,16 @@ export function SolutionsSection() {
               return (
                 <div
                   key={capability.title}
-                  className="flex items-start gap-3.5 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 hover:border-emerald-500/25 transition-colors"
+                  className="flex items-start gap-3.5 rounded-2xl border border-slate-200/80 bg-white p-4 hover:border-amber-500/40 hover:shadow-sm transition-all"
                 >
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-emerald-500/25 bg-emerald-500/10 text-emerald-400">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-amber-500/25 bg-amber-500/10 text-amber-600">
                     <IconComponent className="h-4 w-4" />
                   </div>
                   <div className="space-y-0.5 text-left">
-                    <h4 className="text-sm font-semibold text-white">
+                    <h4 className="text-sm font-bold text-slate-900">
                       {capability.title}
                     </h4>
-                    <p className="text-xs text-slate-400 leading-snug">
+                    <p className="text-xs text-slate-500 leading-snug">
                       {capability.detail}
                     </p>
                   </div>

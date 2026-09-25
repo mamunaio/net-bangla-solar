@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { X, ArrowRight, ChevronDown } from "lucide-react";
+import { X, ArrowRight, ChevronDown, Zap, PhoneCall, ShieldCheck } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { cn } from "@/lib/utils";
 
@@ -57,21 +57,21 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
     >
       {/* Backdrop overlay */}
       <div
-        className="fixed inset-0 bg-[#050b07]/80 backdrop-blur-md"
+        className="fixed inset-0 bg-slate-950/60 backdrop-blur-md"
         onClick={onClose}
         aria-hidden="true"
       />
 
       {/* Glass Menu Container */}
-      <div className="relative z-10 flex flex-col w-full h-full max-h-[100dvh] bg-[#070e09]/95 backdrop-blur-2xl border-b border-white/10 px-6 py-5 overflow-y-auto">
+      <div className="relative z-10 flex flex-col w-full h-full max-h-[100dvh] bg-white/98 dark:bg-slate-900/98 backdrop-blur-3xl border-b border-slate-200/80 dark:border-white/10 px-5 sm:px-6 py-5 overflow-y-auto shadow-2xl">
         {/* Header Bar */}
-        <div className="flex items-center justify-between pb-5 border-b border-white/10 gap-2">
+        <div className="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800 gap-3">
           <Link
             href="#home"
             onClick={onClose}
-            className="flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg p-0.5 min-w-0"
+            className="group flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl min-w-0"
           >
-            <div className="relative h-9 w-[112px] sm:h-10 sm:w-[130px] overflow-hidden rounded-lg bg-white border border-white/15 shrink-0">
+            <div className="relative h-[32px] w-[120px] overflow-hidden rounded-xl bg-white border border-slate-200/90 shadow-2xs shrink-0">
               <Image
                 src="/images/Net Bangla Solar Logo.jpeg"
                 alt="Net Bangla Solar Logo"
@@ -81,26 +81,25 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
                 className="absolute inset-x-0 top-1/2 h-auto w-full -translate-y-1/2"
               />
             </div>
-            <div className="hidden min-[400px]:flex flex-col text-left border-l border-white/10 pl-2">
-              <span className="text-[11px] font-bold text-white tracking-wide leading-tight whitespace-nowrap">
-                Net Bangla Solar
+            <div className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-[8.5px] font-mono font-bold">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-500"></span>
               </span>
-              <span className="text-[8px] text-slate-400 mt-0.5 leading-tight whitespace-nowrap">
-                A Division of Net Bangla Limited
-              </span>
+              <span>EPC LIVE</span>
             </div>
           </Link>
 
           {/* Action Area: Theme Toggle + Close Button */}
           <div className="flex items-center gap-2 shrink-0">
-            <ThemeToggle className="w-9 h-9 shrink-0" />
+            <ThemeToggle className="w-9 h-9 shrink-0 rounded-full border border-slate-200/80 dark:border-white/10 bg-slate-50 dark:bg-slate-800" />
 
             {/* Close Button */}
             <button
               type="button"
               onClick={onClose}
               aria-label="Close navigation menu"
-              className="w-9 h-9 rounded-xl border border-white/10 bg-white/5 text-solar-text-secondary hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 flex items-center justify-center shrink-0"
+              className="w-9 h-9 rounded-full border border-slate-200/80 dark:border-white/10 hover:border-amber-400 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-amber-600 transition-colors duration-150 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 flex items-center justify-center shrink-0 shadow-2xs"
             >
               <X className="w-4 h-4" />
             </button>
@@ -108,7 +107,7 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
         </div>
 
         {/* Navigation Links */}
-        <nav className="flex flex-col gap-2 py-8 flex-1" aria-label="Mobile Navigation Links">
+        <nav className="flex flex-col gap-1.5 py-6 flex-1" aria-label="Mobile Navigation Links">
           {items.map((item) => {
             const active = item.isActive;
 
@@ -120,14 +119,14 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
                       href={item.href}
                       onClick={onClose}
                       className={cn(
-                        "flex-1 flex items-center justify-between px-4 py-3.5 rounded-xl text-base font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300",
+                        "flex-1 flex items-center justify-between px-4 py-3 rounded-2xl text-base font-bold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400",
                         active
-                          ? "bg-emerald-500/10 text-white border border-emerald-500/25 shadow-[0_0_20px_-5px_rgba(16,185,129,0.2)]"
-                          : "text-solar-text-secondary hover:text-white hover:bg-white/5"
+                          ? "bg-amber-500/15 text-amber-700 dark:text-amber-400 border border-amber-500/30"
+                          : "text-slate-800 dark:text-slate-100 hover:text-amber-600 hover:bg-slate-50 dark:hover:bg-slate-800/50"
                       )}
                     >
-                      <span className="flex items-center gap-3">
-                        {active && <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />}
+                      <span className="flex items-center gap-2.5">
+                        {active && <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />}
                         {item.label}
                       </span>
                     </Link>
@@ -137,28 +136,28 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
                       onClick={() => setServicesExpanded(!servicesExpanded)}
                       aria-label="Toggle services menu"
                       aria-expanded={servicesExpanded}
-                      className="p-3.5 text-slate-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg"
+                      className="p-3 text-slate-500 hover:text-amber-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl"
                     >
                       <ChevronDown
                         className={cn(
                           "w-4 h-4 transition-transform duration-200",
-                          servicesExpanded && "rotate-180 text-emerald-400"
+                          servicesExpanded && "rotate-180 text-amber-600"
                         )}
                       />
                     </button>
                   </div>
 
                   {servicesExpanded && (
-                    <div className="ml-4 mt-1 grid border-l border-emerald-500/20 pl-3 space-y-1">
+                    <div className="ml-4 mt-1.5 grid border-l-2 border-amber-400/40 pl-3 space-y-1">
                       {item.children.map((child) => (
                         <Link
                           key={child.label}
                           href={child.href}
                           onClick={onClose}
-                          className="rounded-lg px-3 py-2 text-sm text-slate-300 transition-colors hover:bg-emerald-500/10 hover:text-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 flex items-center justify-between"
+                          className="rounded-xl px-3 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors hover:bg-amber-500/10 hover:text-amber-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 flex items-center justify-between"
                         >
                           <span>{child.label}</span>
-                          <span aria-hidden="true" className="text-emerald-400/50 text-xs">↗</span>
+                          <span aria-hidden="true" className="text-amber-500 text-xs">↗</span>
                         </Link>
                       ))}
                     </div>
@@ -173,34 +172,44 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
                 href={item.href}
                 onClick={onClose}
                 className={cn(
-                  "flex items-center justify-between px-4 py-3.5 rounded-xl text-base font-medium transition-all duration-200 group focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300",
+                  "flex items-center justify-between px-4 py-3 rounded-2xl text-base font-bold transition-all duration-200 group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400",
                   active
-                    ? "bg-emerald-500/10 text-white border border-emerald-500/25 shadow-[0_0_20px_-5px_rgba(16,185,129,0.2)]"
-                    : "text-solar-text-secondary hover:text-white hover:bg-white/5"
+                    ? "bg-amber-500/15 text-amber-700 dark:text-amber-400 border border-amber-500/30"
+                    : "text-slate-800 dark:text-slate-100 hover:text-amber-600 hover:bg-slate-50 dark:hover:bg-slate-800/50"
                 )}
               >
-                <span className="flex items-center gap-3">
-                  {active && <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />}
+                <span className="flex items-center gap-2.5">
+                  {active && <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />}
                   {item.label}
                 </span>
-                <ArrowRight className={cn("w-4 h-4", active ? "text-emerald-300" : "text-white/30")} />
+                <ArrowRight className={cn("w-4 h-4", active ? "text-amber-600" : "text-slate-400 group-hover:text-amber-600 group-hover:translate-x-0.5 transition-all")} />
               </Link>
             );
           })}
         </nav>
 
-        {/* Bottom CTA & Info */}
-        <div className="pt-6 border-t border-white/10 space-y-4">
+        {/* Bottom Hotline & Primary CTA */}
+        <div className="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-3">
+          <Link
+            href="#contact"
+            onClick={onClose}
+            className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-amber-500/10 hover:text-amber-600 transition-all border border-slate-200/80 dark:border-slate-700"
+          >
+            <PhoneCall className="w-3.5 h-3.5 text-amber-500" />
+            <span>Hotline: +880 1711-000000</span>
+          </Link>
+
           <Link
             href="#quote"
             onClick={onClose}
-            className="flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl font-semibold text-sm text-black bg-gradient-to-r from-emerald-400 via-lime-400 to-emerald-300 shadow-[0_0_25px_rgba(34,197,94,0.35)] hover:shadow-[0_0_35px_rgba(34,197,94,0.5)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+            className="group relative flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-2xl font-bold text-sm text-white bg-gradient-to-r from-amber-500 via-amber-500 to-amber-600 shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 active:scale-[0.99] transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 overflow-hidden"
           >
+            <Zap className="w-4 h-4 text-white" />
             <span>Get a Free Solar Quote</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 ml-1" />
           </Link>
 
-          <p className="text-center text-xs text-solar-text-muted">
+          <p className="text-center text-[11px] text-slate-500">
             A renewable energy division of Net Bangla Limited.
           </p>
         </div>
@@ -210,3 +219,4 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
 }
 
 export default MobileMenu;
+

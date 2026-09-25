@@ -1,87 +1,92 @@
 @import "tailwindcss";
 
 :root {
-  /* Default: Dark Theme (Preserves original palette strictly) */
-  --bg-primary: #050b07;       /* Deepest obsidian black with subtle green undertone */
-  --bg-secondary: #0a140e;     /* Deep forest dark surface */
-  --bg-card: #09170f;          /* Clean card surface */
-  --bg-card-hover: #0f2418;    /* Interactive card surface on hover */
-  --bg-elevated: #0e2217;      /* Elevated dropdowns/modals */
+  /* Default: Clean Enterprise White & Vibrant Solar Energy Theme */
+  --bg-primary: #FFFFFF;       /* Pure Crisp White */
+  --bg-secondary: #F8FAFC;     /* Clean Platinum Slate */
+  --bg-elevated: #FFFFFF;      /* Elevated Pure White */
+  --bg-card: #FFFFFF;          /* Card surface: Pure White */
+  --bg-card-hover: #F8FAFC;    /* Interactive Card Hover */
 
   /* Text & Foreground */
-  --text-primary: #f8fafc;     /* Crisp white */
-  --text-secondary: #cbd5e1;   /* Silver slate */
-  --text-muted: #64748b;       /* Muted neutral */
-  --text-inverse: #050b07;     /* Inverse on light badges/buttons */
+  --text-primary: #0F172A;     /* Primary text: Deep Obsidian Slate */
+  --text-secondary: #475569;   /* Secondary text: Balanced Slate */
+  --text-muted: #64748B;       /* Muted text: Neutral Slate */
+  --text-inverse: #FFFFFF;     /* Inverse text: Pure White */
 
-  /* Brand Accents - Renewable & Solar */
-  --solar-green: #10b981;      /* Core emerald clean energy green */
-  --solar-green-dark: #065f46; /* Deep forest accent */
-  --solar-lime: #22c55e;       /* Eco-energy lime */
-  --solar-lime-bright: #84cc16;/* High-energy lime highlight */
-  --solar-gold: #f59e0b;       /* Pure solar sunlight warmth */
-  --solar-gold-light: #fbbf24; /* Radiant solar flare */
+  /* Primary Solar Brand Accents - Vibrant Solar Gold & Amber Sun */
+  --solar-gold: #F59E0B;       /* Radiant Solar Gold (Amber 500) */
+  --solar-gold-bright: #FBBF24;/* Bright Sunburst (Amber 400) */
+  --solar-gold-dark: #D97706;  /* Deep Warm Amber (Amber 600) */
+
+  /* Secondary Solar Accents - Solar PV Sky Blue */
+  --solar-sky: #0284C7;        /* Sky Blue */
+  --solar-sky-bright: #0EA5E9; /* Electric Sky */
+  --solar-sky-dark: #0369A1;   /* Deep Sky */
 
   /* Borders & Dividers */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-light: rgba(255, 255, 255, 0.14);
-  --border-emerald: rgba(16, 185, 129, 0.25);
-  --border-gold: rgba(245, 158, 11, 0.25);
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.14);
+  --border-gold: rgba(245, 158, 11, 0.40);
+  --border-sky: rgba(2, 132, 199, 0.30);
 
   /* Glassmorphism */
-  --glass-bg: rgba(10, 20, 14, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.90);
+  --glass-border: rgba(15, 23, 42, 0.08);
   --glass-blur: 16px;
 
   /* Shadows & Glows */
-  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
-  --glow-emerald: 0 0 35px -5px rgba(16, 185, 129, 0.22);
-  --glow-lime: 0 0 30px -5px rgba(132, 204, 22, 0.22);
-  --glow-gold: 0 0 30px -5px rgba(245, 158, 11, 0.25);
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  --shadow-card-hover: 0 14px 34px -4px rgba(0, 0, 0, 0.08), 0 0 20px -2px rgba(245, 158, 11, 0.20);
+  --glow-gold: 0 0 25px -5px rgba(245, 158, 11, 0.22);
+  --glow-sky: 0 0 25px -5px rgba(2, 132, 199, 0.15);
+  --glow-cta: 0 4px 22px rgba(245, 158, 11, 0.35);
+  --glow-cta-hover: 0 6px 30px rgba(245, 158, 11, 0.50);
+
+  /* Micro-Interaction Timings & Curves */
+  --ease-epc: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-card: 250ms;
+  --duration-image: 300ms;
 }
 
-html.light {
-  /* Premium Enterprise Light Theme */
-  --bg-primary: #f6f8f6;       /* Crisp warm off-white */
-  --bg-secondary: #ffffff;     /* Pure white for prominent sections */
-  --bg-card: #ffffff;          /* Clean white card surface */
-  --bg-card-hover: #f0f5f1;    /* Subtle green-tinted hover */
-  --bg-elevated: #ffffff;      /* Pure white for elevated overlays */
+html.dark {
+  /* Optional Dark Mode */
+  --bg-primary: #080B11;
+  --bg-secondary: #0E131F;
+  --bg-elevated: #1E273D;
+  --bg-card: #121826;
+  --bg-card-hover: #182032;
 
-  /* Text & Foreground */
-  --text-primary: #091a10;     /* Deep rich obsidian charcoal */
-  --text-secondary: #334155;   /* Slate for maximum readability */
-  --text-muted: #64748b;       /* Muted neutral slate */
-  --text-inverse: #ffffff;     /* White on dark badges/buttons */
+  --text-primary: #FFFFFF;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-inverse: #080B11;
 
-  /* Brand Accents */
-  --solar-green: #059669;      /* Deep enterprise emerald */
-  --solar-green-dark: #047857;
-  --solar-lime: #16a34a;       /* Clean forest lime */
-  --solar-lime-bright: #65a30d;
-  --solar-gold: #d97706;       /* Warm solar amber */
-  --solar-gold-light: #b45309;
+  --solar-gold: #F59E0B;
+  --solar-gold-bright: #FBBF24;
+  --solar-gold-dark: #D97706;
 
-  /* Borders & Dividers */
-  --border-subtle: rgba(0, 0, 0, 0.08);
-  --border-light: rgba(0, 0, 0, 0.14);
-  --border-emerald: rgba(5, 150, 105, 0.3);
-  --border-gold: rgba(217, 119, 6, 0.3);
+  --solar-sky: #38BDF8;
+  --solar-sky-bright: #7DD3FC;
+  --solar-sky-dark: #0284C7;
 
-  /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.88);
-  --glass-border: rgba(0, 0, 0, 0.08);
-  --glass-blur: 16px;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --border-gold: rgba(245, 158, 11, 0.40);
+  --border-sky: rgba(56, 189, 248, 0.35);
 
-  /* Shadows & Glows */
-  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
-  --glow-emerald: 0 0 30px -5px rgba(5, 150, 105, 0.15);
-  --glow-lime: 0 0 25px -5px rgba(22, 163, 74, 0.12);
-  --glow-gold: 0 0 25px -5px rgba(217, 119, 6, 0.15);
+  --glass-bg: rgba(18, 24, 38, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.10);
+
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  --shadow-card-hover: 0 16px 36px -8px rgba(0, 0, 0, 0.85), 0 0 25px -2px rgba(245, 158, 11, 0.22);
 }
 
 @theme {
   --font-sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   --color-solar-bg-primary: var(--bg-primary);
   --color-solar-bg-secondary: var(--bg-secondary);
@@ -94,17 +99,18 @@ html.light {
   --color-solar-text-muted: var(--text-muted);
   --color-solar-text-inverse: var(--text-inverse);
 
-  --color-solar-green: var(--solar-green);
-  --color-solar-green-dark: var(--solar-green-dark);
-  --color-solar-lime: var(--solar-lime);
-  --color-solar-lime-bright: var(--solar-lime-bright);
   --color-solar-gold: var(--solar-gold);
-  --color-solar-gold-light: var(--solar-gold-light);
+  --color-solar-gold-bright: var(--solar-gold-bright);
+  --color-solar-gold-dark: var(--solar-gold-dark);
+
+  --color-solar-sky: var(--solar-sky);
+  --color-solar-sky-bright: var(--solar-sky-bright);
+  --color-solar-sky-dark: var(--solar-sky-dark);
 
   --color-solar-border-subtle: var(--border-subtle);
-  --color-solar-border-light: var(--border-light);
-  --color-solar-border-emerald: var(--border-emerald);
+  --color-solar-border-strong: var(--border-strong);
   --color-solar-border-gold: var(--border-gold);
+  --color-solar-border-sky: var(--border-sky);
 }
 
 /* Core Resets & Smooth Scrolling */
@@ -114,14 +120,14 @@ html.light {
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-html.light {
-  color-scheme: light;
+html.dark {
+  color-scheme: dark;
 }
 
 body {
@@ -133,10 +139,8 @@ body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Text Selection Styling */
-::selection {
-  background-color: rgba(16, 185, 129, 0.35);
-  color: #ffffff;
+.font-mono, [class*="font-mono"] {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 /* Custom Sleek Scrollbar */
@@ -146,17 +150,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--solar-green-dark);
+  background: #CBD5E1;
   border-radius: 4px;
-  border: 1px solid var(--border-subtle);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--solar-green);
+  background: var(--solar-gold);
 }
 
 /* Reusable Glassmorphism & Cinematic Utilities */
@@ -168,60 +171,51 @@ body {
 }
 
 .glass-panel-elevated {
-  background: var(--bg-elevated);
+  background: #FFFFFF;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border-emerald);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
 }
 
-/* Reusable Gradients */
-.gradient-text-solar {
-  background: linear-gradient(135deg, #ffffff 30%, #a3e635 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-html.light .gradient-text-solar {
-  background: linear-gradient(135deg, #091b10 30%, #16a34a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
+/* Reusable Gradients - Solar Energy Sunburst */
+.gradient-text-solar,
 .gradient-text-gold {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 60%, #d97706 100%);
+  background: linear-gradient(135deg, #0F172A 15%, #D97706 65%, #F59E0B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-html.light .gradient-text-gold {
-  background: linear-gradient(135deg, #b45309 0%, #d97706 60%, #92400e 100%);
+html.dark .gradient-text-solar,
+html.dark .gradient-text-gold {
+  background: linear-gradient(135deg, #FFFFFF 15%, #FDE047 60%, #F59E0B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gradient-text-emerald {
-  background: linear-gradient(135deg, #4ade80 0%, #10b981 50%, #059669 100%);
+.gradient-text-sky {
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 60%, #1E40AF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-html.light .gradient-text-emerald {
-  background: linear-gradient(135deg, #059669 0%, #047857 60%, #065f46 100%);
+html.dark .gradient-text-sky {
+  background: linear-gradient(135deg, #BAE6FD 0%, #38BDF8 50%, #0284C7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* Solar Energy Ambient Glows */
-.glow-emerald {
-  box-shadow: var(--glow-emerald);
-}
-
-.glow-lime {
-  box-shadow: var(--glow-lime);
-}
-
-.glow-gold {
+.glow-solar, .glow-gold {
   box-shadow: var(--glow-gold);
+}
+
+.glow-sky {
+  box-shadow: var(--glow-sky);
+}
+
+.glow-cta {
+  box-shadow: var(--glow-cta);
 }
 
 /* Ambient Lighting & Background Canvas */
@@ -229,112 +223,149 @@ html.light .gradient-text-emerald {
   position: relative;
   background-color: var(--bg-primary);
   background-image: 
-    radial-gradient(circle at 50% -10%, rgba(16, 185, 129, 0.13) 0%, transparent 60%),
-    radial-gradient(circle at 90% 25%, rgba(245, 158, 11, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 10% 60%, rgba(34, 197, 94, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 50% -10%, rgba(245, 158, 11, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 85% 25%, rgba(2, 132, 199, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 15% 60%, rgba(245, 158, 11, 0.04) 0%, transparent 50%);
 }
 
-html.light .solar-ambient-bg {
-  background-color: var(--bg-primary);
-  background-image: 
-    radial-gradient(circle at 50% -10%, rgba(16, 185, 129, 0.06) 0%, transparent 60%),
-    radial-gradient(circle at 90% 25%, rgba(245, 158, 11, 0.03) 0%, transparent 40%),
-    radial-gradient(circle at 10% 60%, rgba(34, 197, 94, 0.03) 0%, transparent 50%);
+/* Default White Card Surface Mappings for all existing section card classes */
+.bg-\[\#121826\],
+.bg-\[\#131C31\],
+.bg-\[\#0A1124\],
+.bg-\[\#070D1D\],
+.bg-\[\#111C38\],
+.bg-\[\#0B1120\],
+.bg-\[\#080D1A\],
+.bg-\[\#0F172A\] {
+  background-color: #FFFFFF !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  color: #0F172A !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03) !important;
 }
 
-/* Light Mode Global Component Adaptations */
-html.light header {
-  background-color: rgba(255, 255, 255, 0.92) !important;
-  border-bottom-color: rgba(0, 0, 0, 0.08) !important;
-  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.05) !important;
+/* Solar Glass & Modern Elevation Utilities */
+.nav-glass-container {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.07), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
 }
 
-html.light header a,
-html.light header button {
-  color: #1e293b;
+html.dark .nav-glass-container {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(255, 255, 255, 0.10);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
 }
 
-html.light header a:hover {
-  color: #059669;
+footer {
+  background-color: #F8FAFC;
+  border-top-color: rgba(15, 23, 42, 0.08);
 }
 
-html.light header nav {
-  background-color: rgba(0, 0, 0, 0.03) !important;
-  border-color: rgba(0, 0, 0, 0.08) !important;
+/* ==========================================================================
+   MICRO-INTERACTIONS & HOVER SYSTEM (VIBRANT SOLAR GOLD & CLEAN WHITE)
+   ========================================================================== */
+
+/* Standard UI Transitions */
+a, button, input, select, textarea {
+  transition-timing-function: var(--ease-epc);
 }
 
-/* Light Mode Card Surfaces */
-html.light .bg-\[\#06120a\],
-html.light .bg-\[\#07130b\],
-html.light .bg-\[\#07150c\],
-html.light .bg-\[\#07160d\],
-html.light .bg-\[\#06110b\],
-html.light .bg-\[\#041209\],
-html.light .bg-\[\#070e09\],
-html.light .bg-\[\#050b07\],
-html.light .bg-\[\#030704\],
-html.light .bg-\[\#020603\] {
-  background-color: #ffffff !important;
-  border-color: rgba(0, 0, 0, 0.09) !important;
-  color: #1e293b !important;
-  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.06) !important;
+/* Focus Visibility & Accessibility Rings */
+:focus-visible {
+  outline: none;
+  ring: 2px;
+  ring-offset: 2px;
 }
 
-html.light .text-white {
-  color: #091b10 !important;
+/* Primary CTA Button Interaction System - Radiant Solar Gold */
+.btn-primary-solar,
+[class*="bg-[#F59E0B]"],
+[class*="bg-[#FF6B00]"] {
+  background-color: #F59E0B !important;
+  color: #0F172A !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35), inset 0 1px 0 0 rgba(255, 255, 255, 0.50) !important;
+  transition: transform var(--duration-normal) var(--ease-epc),
+              background-color var(--duration-normal) var(--ease-epc),
+              box-shadow var(--duration-normal) var(--ease-epc) !important;
 }
 
-html.light .text-slate-300,
-html.light .text-slate-400,
-html.light .text-solar-text-secondary {
-  color: #334155 !important;
-}
-
-html.light .text-slate-500,
-html.light .text-solar-text-muted {
-  color: #64748b !important;
-}
-
-html.light .border-white\/10,
-html.light .border-white\/15,
-html.light .border-white\/5,
-html.light .border-white\/\[0\.08\],
-html.light .border-white\/\[0\.06\] {
-  border-color: rgba(0, 0, 0, 0.09) !important;
-}
-
-html.light .bg-black\/50,
-html.light .bg-black\/60,
-html.light .bg-black\/70,
-html.light .bg-black\/40 {
-  background-color: rgba(255, 255, 255, 0.95) !important;
-  border-color: rgba(0, 0, 0, 0.12) !important;
-  color: #091b10 !important;
-}
-
-html.light .bg-white\/\[0\.03\],
-html.light .bg-white\/\[0\.04\],
-html.light .bg-white\/\[0\.05\],
-html.light .bg-white\/5 {
-  background-color: rgba(0, 0, 0, 0.03) !important;
-}
-
-html.light .bg-gradient-to-b.from-\[\#091e13\]\/90 {
-  background: linear-gradient(180deg, #f0f7f2 0%, #ffffff 100%) !important;
-  border-color: rgba(5, 150, 105, 0.25) !important;
-}
-
-html.light footer {
-  background-color: #f1f5f2 !important;
-  border-top-color: rgba(0, 0, 0, 0.08) !important;
-}
-
-/* Reduced Motion Respect */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary-solar:hover,
+  [class*="bg-[#F59E0B]"]:hover,
+  [class*="bg-[#FF6B00]"]:hover {
+    background-color: #FBBF24 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 28px rgba(245, 158, 11, 0.48), inset 0 1px 0 0 rgba(255, 255, 255, 0.65) !important;
   }
+}
+
+.btn-primary-solar:active,
+[class*="bg-[#F59E0B]"]:active,
+[class*="bg-[#FF6B00]"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.25) !important;
+}
+
+/* Glassmorphic / Secondary Button System (.btn-glass) */
+.btn-glass,
+.btn-secondary-solar {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  color: #0F172A !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  transition: transform var(--duration-normal) var(--ease-epc),
+              border-color var(--duration-normal) var(--ease-epc),
+              color var(--duration-normal) var(--ease-epc),
+              background-color var(--duration-normal) var(--ease-epc),
+              box-shadow var(--duration-normal) var(--ease-epc) !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-glass:hover,
+  .btn-secondary-solar:hover {
+    background: #F8FAFC !important;
+    border-color: rgba(245, 158, 11, 0.50) !important;
+    color: #D97706 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px -2px rgba(245, 158, 11, 0.20) !important;
+  }
+}
+
+/* Card Interaction System */
+.card-epc-interactive {
+  transition: transform var(--duration-card) var(--ease-epc),
+              border-color var(--duration-card) var(--ease-epc),
+              box-shadow var(--duration-card) var(--ease-epc) !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-epc-interactive:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-gold) !important;
+    box-shadow: var(--shadow-card-hover) !important;
+  }
+}
+
+/* Form Input Interactions */
+input, textarea, select {
+  background-color: #FFFFFF !important;
+  border-color: rgba(15, 23, 42, 0.15) !important;
+  color: #0F172A !important;
+  transition: border-color var(--duration-fast) ease-out,
+              box-shadow var(--duration-fast) ease-out,
+              background-color var(--duration-fast) ease-out !important;
+}
+
+input:hover:not(:focus):not(:disabled),
+textarea:hover:not(:focus):not(:disabled),
+select:hover:not(:focus):not(:disabled) {
+  border-color: rgba(15, 23, 42, 0.25) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #F59E0B !important;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.20) !important;
 }

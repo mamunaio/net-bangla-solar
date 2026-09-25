@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useCallback, useSyncExternalStore } from "react";
 
-type Theme = "dark" | "light";
+type Theme = "light" | "dark";
 
 interface ThemeContextType {
   theme: Theme;
@@ -13,18 +13,22 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 function getSnapshot(): Theme {
-  if (typeof window === "undefined") return "dark";
+  if (typeof window === "undefined") return "light";
   try {
     const saved = localStorage.getItem("netbangla-theme");
-    if (saved === "light" || saved === "dark") return saved;
+    if (saved === "light") return saved;
+    // If previously saved dark, reset to light
+    if (saved === "dark") {
+      localStorage.setItem("netbangla-theme", "light");
+    }
   } catch {
     // Ignore
   }
-  return "dark";
+  return "light";
 }
 
 function getServerSnapshot(): Theme {
-  return "dark";
+  return "light";
 }
 
 const listeners = new Set<() => void>();
@@ -60,7 +64,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   const toggleTheme = useCallback(() => {
     const current = getSnapshot();
-    const next: Theme = current === "dark" ? "light" : "dark";
+    const next: Theme = current === "light" ? "dark" : "light";
     try {
       localStorage.setItem("netbangla-theme", next);
     } catch {

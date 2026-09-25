@@ -63,16 +63,16 @@ export function FAQSection() {
     <section
       id="faq"
       aria-label="Frequently Asked Questions - Solar Engineering & Technical Answers"
-      className="relative py-12 sm:py-16 lg:py-20 overflow-hidden scroll-mt-24 lg:scroll-mt-28"
+      className="relative py-12 sm:py-16 lg:py-20 overflow-hidden scroll-mt-24 lg:scroll-mt-28 bg-white"
     >
       {/* Ambient background lighting */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[500px] rounded-full bg-emerald-500/[0.05] blur-[160px] -z-10"
+        className="pointer-events-none absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[500px] rounded-full bg-amber-400/[0.07] blur-[160px] -z-10"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-1/4 right-10 w-[500px] h-[400px] rounded-full bg-amber-500/[0.03] blur-[140px] -z-10"
+        className="pointer-events-none absolute bottom-1/4 right-10 w-[500px] h-[400px] rounded-full bg-sky-400/[0.05] blur-[140px] -z-10"
       />
 
       <Container className="relative z-10 space-y-10 lg:space-y-12">
@@ -80,33 +80,33 @@ export function FAQSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* LEFT COLUMN: Section Intro & Quick Inquire Callout */}
           <div className="lg:col-span-5 space-y-6 text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wider uppercase">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase">
+              <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
               <span>FREQUENTLY ASKED QUESTIONS</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight text-white leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight text-slate-900 leading-[1.15]">
               Technical Questions,{" "}
               <span className="gradient-text-solar">Clearly Answered</span>
             </h2>
 
-            <p className="text-solar-text-secondary text-base lg:text-lg leading-relaxed">
+            <p className="text-slate-600 text-base lg:text-lg leading-relaxed">
               Clear answers to common questions about net metering, system
               performance, equipment lifespan, and solar irrigation
               applications.
             </p>
 
             {/* Inquire Card */}
-            <div className="p-6 rounded-3xl bg-[#07160d]/80 border border-white/10 backdrop-blur-xl space-y-4">
+            <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 space-y-4 shadow-sm">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center text-emerald-400">
+                <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-amber-600">
                   <HelpCircle className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-base font-bold text-white">
+                  <h3 className="text-sm sm:text-base font-bold text-slate-900">
                     Have a specific technical question?
                   </h3>
-                  <p className="text-xs text-slate-400">
+                  <p className="text-xs text-slate-500">
                     Our engineering team is ready to assist.
                   </p>
                 </div>
@@ -115,7 +115,7 @@ export function FAQSection() {
               <div className="pt-2">
                 <Link
                   href="#contact"
-                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-amber-600 hover:text-amber-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-lg"
                 >
                   <span>Talk with our solar engineers</span>
                   <ArrowUpRight className="w-4 h-4" />
@@ -135,10 +135,10 @@ export function FAQSection() {
                 <div
                   key={item.id}
                   className={cn(
-                    "rounded-3xl border transition-all duration-300 overflow-hidden",
+                    "rounded-3xl border transition-all duration-200 ease-out overflow-hidden shadow-sm",
                     isOpen
-                      ? "bg-[#07150c] border-emerald-500/40 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.8),0_0_20px_rgba(16,185,129,0.1)]"
-                      : "bg-[#06120a] border-white/10 hover:border-emerald-500/25 hover:bg-[#06130b]"
+                      ? "bg-amber-50/40 border-amber-500/40 shadow-md"
+                      : "bg-white border-slate-200/80 hover:border-amber-500/30 hover:bg-slate-50/50"
                   )}
                 >
                   <button
@@ -147,23 +147,23 @@ export function FAQSection() {
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => toggleFAQ(idx)}
-                    className="w-full p-6 sm:p-7 flex items-center justify-between gap-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-3xl"
+                    className="w-full p-6 sm:p-7 flex items-center justify-between gap-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-3xl group"
                   >
                     <div className="flex items-center gap-3.5 sm:gap-4 flex-1">
-                      <span className="text-xs font-mono font-bold tracking-wider text-emerald-400/90 bg-black/60 px-2.5 py-1 rounded-full border border-white/10 shrink-0">
+                      <span className="text-xs font-mono font-bold tracking-wider text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200 shrink-0">
                         {item.number}
                       </span>
-                      <h3 className="text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-emerald-300 transition-colors">
+                      <h3 className="text-base sm:text-lg font-bold tracking-tight text-slate-900 group-hover:text-amber-600 transition-colors duration-200">
                         {item.question}
                       </h3>
                     </div>
 
                     <div
                       className={cn(
-                        "w-8 h-8 rounded-full flex items-center justify-center shrink-0 border transition-all duration-300",
+                        "w-8 h-8 rounded-full flex items-center justify-center shrink-0 border transition-all duration-200 ease-out",
                         isOpen
-                          ? "bg-emerald-500/20 border-emerald-500/40 text-emerald-300 rotate-180"
-                          : "bg-white/[0.04] border-white/10 text-slate-400"
+                          ? "bg-amber-500/20 border-amber-500/40 text-amber-800 rotate-180"
+                          : "bg-slate-50 border-slate-200 text-slate-500 group-hover:text-amber-600 group-hover:border-amber-400"
                       )}
                       aria-hidden="true"
                     >
@@ -178,12 +178,12 @@ export function FAQSection() {
                     aria-labelledby={buttonId}
                     hidden={!isOpen}
                     className={cn(
-                      "px-6 pb-6 sm:px-7 sm:pb-7 pt-0 text-solar-text-secondary text-sm sm:text-base leading-relaxed border-t border-white/[0.06]",
+                      "px-6 pb-6 sm:px-7 sm:pb-7 pt-0 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100",
                       !isOpen && "hidden"
                     )}
                   >
                     <div className="pt-4 flex items-start gap-3">
-                      <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
+                      <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0 mt-1" />
                       <p>{item.answer}</p>
                     </div>
                   </div>

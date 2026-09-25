@@ -171,136 +171,144 @@ export function FinalCTA() {
     <section
       id="contact"
       aria-label="Solar Engineering Consultation and Contact"
-      className="relative py-12 sm:py-16 lg:py-20 overflow-hidden scroll-mt-24 lg:scroll-mt-28"
+      className="relative py-12 sm:py-16 lg:py-20 overflow-hidden scroll-mt-24 lg:scroll-mt-28 bg-[#F8FAFC]"
     >
       {/* Background Ambient Glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 w-[850px] max-w-full h-[550px] rounded-full bg-emerald-500/[0.06] blur-[160px] -z-10"
+        className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 w-[850px] max-w-full h-[550px] rounded-full bg-amber-400/[0.08] blur-[160px] -z-10"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-1/4 right-1/4 w-[500px] h-[350px] rounded-full bg-sky-400/[0.05] blur-[140px] -z-10"
       />
 
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* LEFT COLUMN: Official Engineering & Contact Context */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
+          <div className="lg:col-span-5 flex flex-col justify-between space-y-8 text-left">
             <div>
               {/* Eyebrow */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-widest uppercase mb-6 shadow-[0_0_20px_rgba(16,185,129,0.15)]">
-                <SunMedium className="w-3.5 h-3.5 text-amber-400" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-widest uppercase mb-6">
+                <SunMedium className="w-3.5 h-3.5 text-amber-600" />
                 <span>START YOUR SOLAR PROJECT</span>
               </div>
 
               {/* Main Heading */}
-              <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15] mb-5">
+              <h2 className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15] mb-5">
                 Get in Touch with Our{" "}
                 <span className="gradient-text-solar">Solar Engineers</span>
               </h2>
 
               {/* Supporting Copy */}
-              <p className="text-solar-text-secondary text-base sm:text-lg leading-relaxed mb-8">
+              <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
                 Tell us about your property, energy requirements, and project
                 needs. Our team can assess the application and guide the next
                 steps for your solar system.
               </p>
 
               {/* Documented Engineering & Corporate Credentials Card */}
-              <div className="p-6 rounded-2xl bg-[#041209]/80 border border-emerald-500/20 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.4)] space-y-5">
-                <div className="flex items-center gap-3 pb-4 border-b border-white/10">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
-                    <ShieldCheck className="w-5 h-5" />
+              <div className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200/90 shadow-[0_10px_35px_-10px_rgba(0,0,0,0.06)] space-y-6">
+                <div className="flex items-center gap-3.5 pb-5 border-b border-slate-100">
+                  <div className="w-12 h-12 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-600 shrink-0 shadow-2xs">
+                    <ShieldCheck className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-white text-base font-semibold leading-snug">
+                    <h3 className="text-slate-900 text-lg sm:text-xl font-extrabold tracking-tight leading-snug">
                       NET BANGLA SOLAR
                     </h3>
-                    <p className="text-slate-400 text-xs">
+                    <p className="text-slate-500 text-sm font-medium mt-0.5">
                       A Division of Net Bangla Limited
                     </p>
                   </div>
                 </div>
 
-                <div className="space-y-3.5 text-xs text-slate-300">
-                  <div className="flex items-start gap-2.5">
-                    <Building2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div className="space-y-4 text-slate-700">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0 mt-0.5">
+                      <Building2 className="w-4.5 h-4.5" />
+                    </div>
                     <div>
-                      <span className="text-slate-400">Engineering Supervision:</span>
-                      <p className="text-white font-medium">
+                      <span className="text-slate-500 text-xs sm:text-[13px] font-semibold uppercase tracking-wider block">
+                        Engineering Supervision:
+                      </span>
+                      <p className="text-slate-900 font-bold text-sm sm:text-base mt-0.5">
                         Engr. Md. Mamunur Rahman (CEO)
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-2.5">
-                    <Layers className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0 mt-0.5">
+                      <Layers className="w-4.5 h-4.5" />
+                    </div>
                     <div>
-                      <span className="text-slate-400">Operational Profile:</span>
-                      <p className="text-white font-medium">
-                        Turnkey Solar EPC • Established May 28, 2014
+                      <span className="text-slate-500 text-xs sm:text-[13px] font-semibold uppercase tracking-wider block">
+                        Operational Profile:
+                      </span>
+                      <p className="text-slate-900 font-bold text-sm sm:text-base mt-0.5">
+                        Turnkey Solar EPC &bull; Established May 28, 2014
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-2.5">
-                    <Mail className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0 mt-0.5">
+                      <Mail className="w-4.5 h-4.5" />
+                    </div>
                     <div>
-                      <span className="text-slate-400">Official Engineering Inquiries:</span>
-                      <div className="flex flex-col sm:flex-row sm:gap-3 mt-0.5">
-                        <a
-                          href="mailto:mamun@netbanglaltd.com"
-                          className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2 transition-colors"
-                        >
-                          mamun@netbanglaltd.com
-                        </a>
-                        <a
-                          href="mailto:info@netbanglaltd.com"
-                          className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2 transition-colors"
-                        >
-                          info@netbanglaltd.com
-                        </a>
-                      </div>
+                      <span className="text-slate-500 text-xs sm:text-[13px] font-semibold uppercase tracking-wider block">
+                        Official Inquiries:
+                      </span>
+                      <a
+                        href="mailto:info@netbanglaltd.com"
+                        className="inline-flex items-center gap-1.5 text-slate-900 hover:text-amber-700 font-bold text-sm sm:text-base mt-0.5 transition-colors group"
+                      >
+                        <span>info@netbanglaltd.com</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 text-amber-600 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      </a>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-2.5">
-                    <Globe className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0 mt-0.5">
+                      <Globe className="w-4.5 h-4.5" />
+                    </div>
                     <div>
-                      <span className="text-slate-400">Official Website:</span>
-                      <p className="text-slate-200 font-mono">netbanglaenergy.com</p>
+                      <span className="text-slate-500 text-xs sm:text-[13px] font-semibold uppercase tracking-wider block">
+                        Official Website:
+                      </span>
+                      <a
+                        href="https://netbanglaenergy.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-slate-900 hover:text-amber-700 font-mono font-bold text-sm sm:text-base mt-0.5 transition-colors"
+                      >
+                        <span>netbanglaenergy.com</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 text-amber-600" />
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Factual Context Strip */}
-            <div className="inline-flex flex-wrap items-center gap-2 text-xs font-mono tracking-wider text-slate-400 pt-2 border-t border-white/10">
-              <span className="text-emerald-400 font-semibold">12+ Years Heritage</span>
-              <span aria-hidden="true" className="text-slate-600">
-                &bull;
-              </span>
-              <span className="text-slate-300">Net Metering Systems</span>
-              <span aria-hidden="true" className="text-slate-600">
-                &bull;
-              </span>
-              <span className="text-emerald-300 font-semibold">Commercial & Industrial EPC</span>
             </div>
           </div>
 
           {/* RIGHT COLUMN: Official Consultation / Quote Form Area */}
           <div
             id="quote"
-            className="lg:col-span-7 rounded-3xl border border-emerald-500/25 bg-gradient-to-b from-[#091e13]/90 via-[#05130b]/95 to-[#020804] p-6 sm:p-8 md:p-10 shadow-[0_0_80px_-20px_rgba(16,185,129,0.2)] backdrop-blur-2xl scroll-mt-24 lg:scroll-mt-28"
+            className="lg:col-span-7 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 md:p-10 shadow-sm scroll-mt-24 lg:scroll-mt-28 text-left"
           >
             {/* Form Header */}
-            <div className="mb-8 pb-6 border-b border-white/10">
-              <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2">
-                <SunMedium className="w-4 h-4 text-amber-400" />
+            <div className="mb-8 pb-6 border-b border-slate-100">
+              <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-amber-700 mb-2">
+                <SunMedium className="w-4 h-4 text-amber-600" />
                 <span>SOLAR CONSULTATION REQUEST</span>
               </div>
-              <h3 className="text-white text-2xl sm:text-3xl font-bold tracking-tight mb-2">
+              <h3 className="text-slate-900 text-2xl sm:text-3xl font-bold tracking-tight mb-2">
                 Request a Solar Consultation
               </h3>
-              <p className="text-solar-text-secondary text-sm sm:text-base leading-relaxed">
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                 Share your property details and energy requirements with our
                 solar engineering team. We&apos;ll use the information to
                 understand your application and determine the appropriate next
@@ -315,9 +323,9 @@ export function FinalCTA() {
                 <div>
                   <label
                     htmlFor="consultation-name"
-                    className="block text-sm font-medium text-slate-200 mb-2"
+                    className="block text-sm font-semibold text-slate-700 mb-2"
                   >
-                    Full Name <span className="text-emerald-400">*</span>
+                    Full Name <span className="text-amber-600">*</span>
                   </label>
                   <div className="relative">
                     <input
@@ -335,17 +343,17 @@ export function FinalCTA() {
                         errors.fullName ? "name-error" : undefined
                       }
                       placeholder="e.g. Engr. Rafiqul Islam"
-                      className={`w-full px-4 py-3.5 rounded-xl bg-black/50 border text-sm text-white placeholder-slate-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#05130b] transition-colors ${
+                      className={`w-full px-4 py-3.5 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 transition-colors ${
                         errors.fullName
-                          ? "border-rose-500/80 focus:border-rose-500"
-                          : "border-white/15 hover:border-white/25 focus:border-emerald-400"
+                          ? "border-rose-500 focus:border-rose-500"
+                          : "border-slate-200 hover:border-slate-300 focus:border-amber-500"
                       }`}
                     />
                   </div>
                   {errors.fullName && (
                     <p
                       id="name-error"
-                      className="mt-1.5 text-xs text-rose-400 flex items-center gap-1.5"
+                      className="mt-1.5 text-xs text-rose-600 flex items-center gap-1.5"
                     >
                       <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                       <span>{errors.fullName}</span>
@@ -359,9 +367,9 @@ export function FinalCTA() {
                   <div>
                     <label
                       htmlFor="consultation-phone"
-                      className="block text-sm font-medium text-slate-200 mb-2"
+                      className="block text-sm font-semibold text-slate-700 mb-2"
                     >
-                      Phone <span className="text-emerald-400">*</span>
+                      Phone <span className="text-amber-600">*</span>
                     </label>
                     <input
                       id="consultation-phone"
@@ -378,16 +386,16 @@ export function FinalCTA() {
                         errors.phone ? "phone-error" : undefined
                       }
                       placeholder="e.g. +880 1700-000000"
-                      className={`w-full px-4 py-3.5 rounded-xl bg-black/50 border text-sm text-white placeholder-slate-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#05130b] transition-colors ${
+                      className={`w-full px-4 py-3.5 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 transition-colors ${
                         errors.phone
-                          ? "border-rose-500/80 focus:border-rose-500"
-                          : "border-white/15 hover:border-white/25 focus:border-emerald-400"
+                          ? "border-rose-500 focus:border-rose-500"
+                          : "border-slate-200 hover:border-slate-300 focus:border-amber-500"
                       }`}
                     />
                     {errors.phone && (
                       <p
                         id="phone-error"
-                        className="mt-1.5 text-xs text-rose-400 flex items-center gap-1.5"
+                        className="mt-1.5 text-xs text-rose-600 flex items-center gap-1.5"
                       >
                         <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                         <span>{errors.phone}</span>
@@ -399,9 +407,9 @@ export function FinalCTA() {
                   <div>
                     <label
                       htmlFor="consultation-email"
-                      className="block text-sm font-medium text-slate-200 mb-2"
+                      className="block text-sm font-semibold text-slate-700 mb-2"
                     >
-                      Email <span className="text-emerald-400">*</span>
+                      Email <span className="text-amber-600">*</span>
                     </label>
                     <input
                       id="consultation-email"
@@ -418,16 +426,16 @@ export function FinalCTA() {
                         errors.email ? "email-error" : undefined
                       }
                       placeholder="e.g. contact@company.com"
-                      className={`w-full px-4 py-3.5 rounded-xl bg-black/50 border text-sm text-white placeholder-slate-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#05130b] transition-colors ${
+                      className={`w-full px-4 py-3.5 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 transition-colors ${
                         errors.email
-                          ? "border-rose-500/80 focus:border-rose-500"
-                          : "border-white/15 hover:border-white/25 focus:border-emerald-400"
+                          ? "border-rose-500 focus:border-rose-500"
+                          : "border-slate-200 hover:border-slate-300 focus:border-amber-500"
                       }`}
                     />
                     {errors.email && (
                       <p
                         id="email-error"
-                        className="mt-1.5 text-xs text-rose-400 flex items-center gap-1.5"
+                        className="mt-1.5 text-xs text-rose-600 flex items-center gap-1.5"
                       >
                         <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                         <span>{errors.email}</span>
@@ -442,9 +450,9 @@ export function FinalCTA() {
                   <div>
                     <label
                       htmlFor="consultation-property"
-                      className="block text-sm font-medium text-slate-200 mb-2"
+                      className="block text-sm font-semibold text-slate-700 mb-2"
                     >
-                      Property Type <span className="text-emerald-400">*</span>
+                      Property Type <span className="text-amber-600">*</span>
                     </label>
                     <select
                       id="consultation-property"
@@ -458,20 +466,20 @@ export function FinalCTA() {
                       aria-describedby={
                         errors.propertyType ? "property-error" : undefined
                       }
-                      className={`w-full px-4 py-3.5 rounded-xl bg-black/70 border text-sm text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#05130b] transition-colors ${
+                      className={`w-full px-4 py-3.5 rounded-xl bg-slate-50 border text-sm text-slate-900 focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 transition-colors ${
                         errors.propertyType
-                          ? "border-rose-500/80 focus:border-rose-500"
-                          : "border-white/15 hover:border-white/25 focus:border-emerald-400"
+                          ? "border-rose-500 focus:border-rose-500"
+                          : "border-slate-200 hover:border-slate-300 focus:border-amber-500"
                       }`}
                     >
-                      <option value="" disabled className="bg-[#05130b] text-slate-400">
+                      <option value="" disabled className="text-slate-400">
                         Select Property Type
                       </option>
                       {PROPERTY_TYPES.map((type) => (
                         <option
                           key={type}
                           value={type}
-                          className="bg-[#05130b] text-white"
+                          className="text-slate-900"
                         >
                           {type}
                         </option>
@@ -480,7 +488,7 @@ export function FinalCTA() {
                     {errors.propertyType && (
                       <p
                         id="property-error"
-                        className="mt-1.5 text-xs text-rose-400 flex items-center gap-1.5"
+                        className="mt-1.5 text-xs text-rose-600 flex items-center gap-1.5"
                       >
                         <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                         <span>{errors.propertyType}</span>
@@ -492,9 +500,9 @@ export function FinalCTA() {
                   <div>
                     <label
                       htmlFor="consultation-location"
-                      className="block text-sm font-medium text-slate-200 mb-2"
+                      className="block text-sm font-semibold text-slate-700 mb-2"
                     >
-                      Location / Address <span className="text-emerald-400">*</span>
+                      Location / Address <span className="text-amber-600">*</span>
                     </label>
                     <input
                       id="consultation-location"
@@ -510,16 +518,16 @@ export function FinalCTA() {
                         errors.location ? "location-error" : undefined
                       }
                       placeholder="e.g. Gazipur / Savar / Dhaka"
-                      className={`w-full px-4 py-3.5 rounded-xl bg-black/50 border text-sm text-white placeholder-slate-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#05130b] transition-colors ${
+                      className={`w-full px-4 py-3.5 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 transition-colors ${
                         errors.location
-                          ? "border-rose-500/80 focus:border-rose-500"
-                          : "border-white/15 hover:border-white/25 focus:border-emerald-400"
+                          ? "border-rose-500 focus:border-rose-500"
+                          : "border-slate-200 hover:border-slate-300 focus:border-amber-500"
                       }`}
                     />
                     {errors.location && (
                       <p
                         id="location-error"
-                        className="mt-1.5 text-xs text-rose-400 flex items-center gap-1.5"
+                        className="mt-1.5 text-xs text-rose-600 flex items-center gap-1.5"
                       >
                         <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                         <span>{errors.location}</span>
@@ -533,11 +541,11 @@ export function FinalCTA() {
                   <div className="flex items-center justify-between mb-2">
                     <label
                       htmlFor="consultation-message"
-                      className="block text-sm font-medium text-slate-200"
+                      className="block text-sm font-semibold text-slate-700"
                     >
                       Message / Energy Requirements
                     </label>
-                    <span className="text-xs text-slate-400 font-normal">
+                    <span className="text-xs text-slate-500 font-normal">
                       Optional
                     </span>
                   </div>
@@ -548,7 +556,7 @@ export function FinalCTA() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us about your current energy requirements, facility, load, or solar project."
-                    className="w-full px-4 py-3.5 rounded-xl bg-black/50 border border-white/15 hover:border-white/25 focus:border-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#05130b] text-sm text-white placeholder-slate-500 transition-colors resize-y"
+                    className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 focus:bg-white focus:border-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 text-sm text-slate-900 placeholder-slate-400 transition-colors resize-y"
                   />
                 </div>
 
@@ -556,62 +564,59 @@ export function FinalCTA() {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full group inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-base font-semibold text-black bg-gradient-to-r from-emerald-400 via-lime-400 to-emerald-300 hover:from-emerald-300 hover:to-lime-300 shadow-[0_0_30px_rgba(34,197,94,0.35)] hover:shadow-[0_0_45px_rgba(34,197,94,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#05130b]"
+                    className="w-full group inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-base font-bold text-white bg-amber-500 hover:bg-amber-600 shadow-md hover:shadow-lg shadow-amber-500/20 hover:-translate-y-[1px] active:translate-y-0 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
                   >
                     <span>Request a Solar Consultation</span>
-                    <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    <Send className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
                   </button>
                 </div>
               </form>
             ) : (
               /* Verified Submission State & Email Direct Routing */
-              <div className="p-6 sm:p-8 rounded-2xl bg-black/60 border border-emerald-500/30 space-y-6 animate-in fade-in duration-300">
+              <div className="p-6 sm:p-8 rounded-2xl bg-amber-50/60 border border-amber-200 space-y-6 animate-in fade-in duration-300">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-600 shrink-0">
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-white text-xl font-bold mb-1">
+                    <h4 className="text-slate-900 text-xl font-bold mb-1">
                       Consultation Inquiry Verified
                     </h4>
-                    <p className="text-slate-300 text-sm leading-relaxed">
-                      Your project inquiry fields have been validated. Live direct
-                      database/API submission is currently in configuration. You
-                      can immediately transmit these structured specifications
-                      directly to our engineering desk via email.
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      Your project inquiry fields have been validated. You can immediately transmit these structured specifications directly to our engineering desk via email.
                     </p>
                   </div>
                 </div>
 
                 {/* Structured Summary of User's Inputs */}
-                <div className="p-4 rounded-xl bg-[#041209] border border-white/10 space-y-2 text-xs font-mono text-slate-300">
-                  <div className="text-emerald-400 font-semibold mb-2">
+                <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-2 text-xs font-mono text-slate-700 shadow-sm">
+                  <div className="text-amber-700 font-bold mb-2">
                     Inquiry Payload Summary:
                   </div>
                   <p>
                     <span className="text-slate-500">Name:</span>{" "}
-                    <span className="text-white">{formData.fullName}</span>
+                    <span className="text-slate-900 font-semibold">{formData.fullName}</span>
                   </p>
                   <p>
                     <span className="text-slate-500">Phone:</span>{" "}
-                    <span className="text-white">{formData.phone}</span>
+                    <span className="text-slate-900 font-semibold">{formData.phone}</span>
                   </p>
                   <p>
                     <span className="text-slate-500">Email:</span>{" "}
-                    <span className="text-white">{formData.email}</span>
+                    <span className="text-slate-900 font-semibold">{formData.email}</span>
                   </p>
                   <p>
                     <span className="text-slate-500">Property Type:</span>{" "}
-                    <span className="text-white">{formData.propertyType}</span>
+                    <span className="text-slate-900 font-semibold">{formData.propertyType}</span>
                   </p>
                   <p>
                     <span className="text-slate-500">Location:</span>{" "}
-                    <span className="text-white">{formData.location}</span>
+                    <span className="text-slate-900 font-semibold">{formData.location}</span>
                   </p>
                   {formData.message && (
                     <p>
                       <span className="text-slate-500">Requirements:</span>{" "}
-                      <span className="text-white">{formData.message}</span>
+                      <span className="text-slate-900 font-semibold">{formData.message}</span>
                     </p>
                   )}
                 </div>
@@ -621,7 +626,7 @@ export function FinalCTA() {
                   <button
                     type="button"
                     onClick={handleSendViaEmail}
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-black bg-gradient-to-r from-emerald-400 to-lime-400 hover:from-emerald-300 hover:to-lime-300 shadow-[0_0_20px_rgba(34,197,94,0.3)] transition-all duration-300"
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-amber-500 hover:bg-amber-600 shadow-md hover:shadow-lg shadow-amber-500/20 hover:-translate-y-[1px] active:translate-y-0 transition-all duration-200 ease-out"
                   >
                     <Mail className="w-4 h-4" />
                     <span>Send via Email Client</span>
@@ -631,7 +636,7 @@ export function FinalCTA() {
                   <button
                     type="button"
                     onClick={handleResetForm}
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-medium text-slate-300 hover:text-white bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 transition-colors"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 shadow-sm"
                   >
                     <RotateCcw className="w-4 h-4" />
                     <span>Edit Inquiry Details</span>

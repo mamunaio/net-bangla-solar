@@ -65,32 +65,32 @@ export function ProcessSection() {
     <section
       id="process"
       aria-label="How We Deliver - Solar Engineering & Commissioning Process"
-      className="relative py-20 lg:py-32 overflow-hidden scroll-mt-24 lg:scroll-mt-28"
+      className="relative py-20 lg:py-32 overflow-hidden scroll-mt-24 lg:scroll-mt-28 bg-[#F8FAFC]"
     >
       {/* Background ambient lighting */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[500px] rounded-full bg-emerald-500/[0.06] blur-[160px] -z-10"
+        className="pointer-events-none absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[500px] rounded-full bg-amber-400/[0.07] blur-[160px] -z-10"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-1/4 right-10 w-[500px] h-[400px] rounded-full bg-amber-500/[0.03] blur-[140px] -z-10"
+        className="pointer-events-none absolute bottom-1/4 right-10 w-[500px] h-[400px] rounded-full bg-sky-400/[0.05] blur-[140px] -z-10"
       />
 
       <Container className="relative z-10 space-y-12 md:space-y-16">
         {/* SECTION INTRO */}
         <div className="max-w-3xl space-y-4 text-left">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wider uppercase">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase">
+            <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
             <span>HOW WE DELIVER</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.15]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 leading-[1.15]">
             From Site Assessment to{" "}
             <span className="gradient-text-solar">Solar Commissioning</span>
           </h2>
 
-          <p className="text-solar-text-secondary text-base sm:text-lg max-w-2xl leading-relaxed">
+          <p className="text-slate-600 text-base sm:text-lg max-w-2xl leading-relaxed">
             Every solar project is engineered around the site&apos;s physical
             conditions, energy requirements, structural constraints, and grid
             environment.
@@ -104,13 +104,13 @@ export function ProcessSection() {
             aria-hidden="true"
             className="hidden lg:block absolute top-[44px] left-[7%] right-[7%] h-[2px] z-0 overflow-hidden"
           >
-            <div className="w-full h-full bg-gradient-to-r from-emerald-500/40 via-emerald-500/20 to-emerald-400/40" />
+            <div className="w-full h-full bg-gradient-to-r from-amber-500/40 via-amber-500/20 to-amber-400/40" />
           </div>
 
           {/* MOBILE / TABLET VERTICAL CONNECTING LINE */}
           <div
             aria-hidden="true"
-            className="lg:hidden absolute top-8 bottom-8 left-[31px] w-[2px] bg-gradient-to-b from-emerald-500/50 via-emerald-500/20 to-emerald-400/40 z-0"
+            className="lg:hidden absolute top-8 bottom-8 left-[31px] w-[2px] bg-gradient-to-b from-amber-500/50 via-amber-500/20 to-amber-400/40 z-0"
           />
 
           {/* 4 PRIMARY PROCESS STEPS */}
@@ -121,39 +121,39 @@ export function ProcessSection() {
               return (
                 <div
                   key={stepItem.id}
-                  className="group relative rounded-3xl p-6 sm:p-7 bg-[#06120a] border border-white/10 hover:border-emerald-500/40 transition-all duration-500 hover:shadow-[0_15px_35px_-5px_rgba(0,0,0,0.8),0_0_25px_rgba(16,185,129,0.15)] flex flex-col justify-between text-left space-y-6 overflow-hidden"
+                  className="group relative rounded-3xl p-6 sm:p-7 bg-white border border-slate-200 hover:border-amber-500/40 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-sm hover:shadow-[0_14px_35px_-8px_rgba(245,158,11,0.12)] flex flex-col justify-between text-left space-y-6 overflow-hidden"
                 >
                   {/* Subtle Top Ambient Glow on Card Hover */}
                   <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute -top-12 -right-12 w-32 h-32 rounded-full bg-emerald-500/10 blur-2xl group-hover:bg-emerald-500/20 transition-colors duration-500"
+                    className="pointer-events-none absolute -top-12 -right-12 w-32 h-32 rounded-full bg-amber-500/10 blur-2xl group-hover:bg-amber-500/20 transition-colors duration-300"
                   />
 
                   {/* Header Row: Step Badge, Phase Label & Icon */}
                   <div className="relative z-10 flex items-center justify-between gap-3">
                     <div className="flex items-center gap-2">
-                      <span className="text-xs font-mono font-bold tracking-widest text-emerald-300 bg-black/60 px-3 py-1 rounded-full border border-white/15 backdrop-blur-md">
+                      <span className="text-xs font-mono font-bold tracking-widest text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
                         {stepItem.step}
                       </span>
-                      <span className="text-[10px] font-mono uppercase tracking-wider font-semibold text-emerald-400/90 bg-emerald-950/50 px-2 py-0.5 rounded border border-emerald-500/25">
+                      <span className="text-[10px] font-mono uppercase tracking-wider font-semibold text-amber-800 bg-amber-100/70 px-2 py-0.5 rounded border border-amber-200">
                         {stepItem.phase}
                       </span>
                     </div>
 
                     <div
-                      className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-emerald-400 group-hover:border-emerald-500/40 group-hover:bg-emerald-500/10 group-hover:text-emerald-300 transition-all duration-300"
+                      className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-amber-600 group-hover:border-amber-400 group-hover:bg-amber-50 group-hover:text-amber-700 transition-all duration-200"
                       aria-hidden="true"
                     >
-                      <IconComponent className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+                      <IconComponent className="h-5 w-5 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-105" />
                     </div>
                   </div>
 
                   {/* Content Area: Title & Description */}
                   <div className="relative z-10 space-y-2.5 flex-1 pt-2">
-                    <h3 className="text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-emerald-300 transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold tracking-tight text-slate-900 group-hover:text-amber-600 transition-colors">
                       {stepItem.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-solar-text-secondary leading-relaxed">
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                       {stepItem.description}
                     </p>
                   </div>
@@ -163,62 +163,62 @@ export function ProcessSection() {
           </div>
         </div>
 
-        {/* POST-COMMISSIONING SUPPORT (UNNUMBERED LIFECYCLE STATEMENT) */}
-        <div className="rounded-3xl border border-white/10 bg-[#07150c]/80 p-6 sm:p-8 lg:p-10 backdrop-blur-xl space-y-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-white/10 pb-5">
+        {/* POST-COMMISSIONING SUPPORT */}
+        <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 lg:p-10 shadow-sm space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-slate-100 pb-5">
             <div className="space-y-1.5 text-left">
-              <div className="inline-flex items-center gap-2 text-[11px] font-mono font-bold tracking-[0.2em] text-emerald-400 uppercase">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              <div className="inline-flex items-center gap-2 text-[11px] font-mono font-bold tracking-[0.2em] text-amber-600 uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
                 <span>ONGOING SUPPORT</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
                 Lifecycle Performance &amp; Preventive Maintenance
               </h3>
             </div>
-            <p className="text-xs sm:text-sm text-solar-text-secondary max-w-md leading-relaxed text-left md:text-right">
+            <p className="text-xs sm:text-sm text-slate-600 max-w-md leading-relaxed text-left md:text-right">
               System monitoring, preventive maintenance, and technical support
               continue beyond commissioning.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
-            <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
-              <div className="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center text-emerald-400 shrink-0">
+            <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-amber-600 shrink-0">
                 <Activity className="w-4 h-4" />
               </div>
               <div className="text-left space-y-0.5">
-                <h4 className="text-xs sm:text-sm font-semibold text-white">
+                <h4 className="text-xs sm:text-sm font-semibold text-slate-900">
                   Telemetry &amp; Monitoring
                 </h4>
-                <p className="text-[11px] text-slate-400">
+                <p className="text-[11px] text-slate-500">
                   Continuous performance tracking
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
-              <div className="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center text-emerald-400 shrink-0">
+            <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-amber-600 shrink-0">
                 <ShieldCheck className="w-4 h-4" />
               </div>
               <div className="text-left space-y-0.5">
-                <h4 className="text-xs sm:text-sm font-semibold text-white">
+                <h4 className="text-xs sm:text-sm font-semibold text-slate-900">
                   Scheduled Maintenance
                 </h4>
-                <p className="text-[11px] text-slate-400">
+                <p className="text-[11px] text-slate-500">
                   Physical &amp; electrical inspections
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
-              <div className="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center text-emerald-400 shrink-0">
+            <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-amber-600 shrink-0">
                 <Cpu className="w-4 h-4" />
               </div>
               <div className="text-left space-y-0.5">
-                <h4 className="text-xs sm:text-sm font-semibold text-white">
+                <h4 className="text-xs sm:text-sm font-semibold text-slate-900">
                   Technical Diagnostics
                 </h4>
-                <p className="text-[11px] text-slate-400">
+                <p className="text-[11px] text-slate-500">
                   Proactive EPC support
                 </p>
               </div>

@@ -88,26 +88,27 @@ export function ImpactStats() {
     <section
       ref={sectionRef}
       aria-label="Institutional Credentials and Memberships"
-      className="relative py-6 sm:py-8 lg:py-10 overflow-hidden"
+      className="relative py-6 sm:py-8 lg:py-10 overflow-hidden bg-white -mt-4 sm:-mt-6 z-20"
     >
       <Container>
         {/* COMPACT HORIZONTAL TRUST & CREDENTIALS STRIP */}
         <div
           ref={stripCardRef}
-          className="relative rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-7 bg-[#07130b]/80 backdrop-blur-xl border border-white/10 shadow-[0_15px_35px_-5px_rgba(0,0,0,0.7)] overflow-hidden"
+          className="relative rounded-3xl p-6 sm:p-7 lg:p-8 bg-white border border-slate-200/90 shadow-[0_10px_35px_-10px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.02)] overflow-hidden"
         >
-          {/* Subtle Ambient Background Light */}
+          {/* Subtle Ambient Background Shimmer */}
+          <div className="absolute inset-x-12 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-amber-400/60 to-transparent pointer-events-none" />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -top-12 -right-12 w-48 h-48 rounded-full bg-emerald-500/[0.06] blur-[60px]"
+            className="pointer-events-none absolute -top-12 -right-12 w-48 h-48 rounded-full bg-amber-400/[0.06] blur-[60px]"
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -bottom-12 -left-12 w-48 h-48 rounded-full bg-emerald-600/[0.04] blur-[60px]"
+            className="pointer-events-none absolute -bottom-12 -left-12 w-48 h-48 rounded-full bg-sky-400/[0.04] blur-[60px]"
           />
 
           {/* 4-COLUMN HORIZONTAL GRID */}
-          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-0">
+          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0">
             {credentialsData.map((item, idx) => {
               const IconComponent = item.icon;
               const isLast = idx === credentialsData.length - 1;
@@ -116,36 +117,36 @@ export function ImpactStats() {
                 <div
                   key={item.id}
                   className={cn(
-                    "relative flex flex-col justify-between p-3.5 sm:p-4 lg:px-6",
+                    "relative flex flex-col justify-between p-2 sm:p-3 lg:px-7",
                     // Desktop vertical divider
-                    !isLast && "lg:border-r lg:border-white/10",
+                    !isLast && "lg:border-r lg:border-slate-100",
                     // Mobile & Tablet subtle divider
-                    idx < 3 && "border-b border-white/[0.06] sm:border-b-0"
+                    idx < 3 && "border-b border-slate-100 sm:border-b-0 pb-4 sm:pb-3"
                   )}
                 >
                   {/* Top: Small uppercase label & Icon */}
-                  <div className="flex items-center justify-between gap-2 pb-2">
-                    <span className="text-[10px] sm:text-[11px] font-mono font-semibold tracking-wider text-emerald-400 uppercase">
+                  <div className="flex items-center justify-between gap-2 pb-2.5">
+                    <span className="text-[11px] font-mono font-bold tracking-wider text-amber-700 uppercase">
                       {item.label}
                     </span>
                     <div
-                      className="flex items-center justify-center w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.15)]"
+                      className="flex items-center justify-center w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-600 shadow-2xs"
                       aria-hidden="true"
                     >
-                      <IconComponent className="w-3.5 h-3.5" />
+                      <IconComponent className="w-4 h-4" />
                     </div>
                   </div>
 
                   {/* Middle: Main credential / value */}
                   <div className="py-0.5">
-                    <div className="text-base sm:text-lg font-bold text-white tracking-tight leading-snug">
+                    <div className="text-base sm:text-lg font-bold text-slate-900 tracking-tight leading-snug">
                       {item.value}
                     </div>
                   </div>
 
                   {/* Bottom: Supporting Identifier */}
-                  <div className="pt-1">
-                    <span className="text-xs text-slate-400 font-mono">
+                  <div className="pt-1.5">
+                    <span className="text-xs text-slate-500 font-mono font-medium">
                       {item.supporting}
                     </span>
                   </div>

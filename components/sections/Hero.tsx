@@ -15,22 +15,22 @@ import { gsap } from "@/lib/gsap";
 
 const heroSlides = [
   {
-    src: "/images/profile-rooftop-solar-01.jpg",
-    alt: "Completed rooftop solar power installation in Bangladesh by Net Bangla Limited",
-    label: "Rooftop Solar",
-    title: "Turning unused roofs into productive energy assets",
+    src: "/images/hero-solar-01.jpg",
+    alt: "Completed rooftop solar power installation engineered by Net Bangla Solar",
+    label: "Rooftop Solar EPC",
+    title: "Engineered rooftop photovoltaic systems across Bangladesh",
   },
   {
-    src: "/images/profile-rooftop-solar-02.jpg",
-    alt: "Large on-grid rooftop solar array installed by Net Bangla Limited",
-    label: "On-Grid Systems",
-    title: "Engineered for reliable daytime power generation",
+    src: "/images/hero-solar-02.jpg",
+    alt: "Rooftop solar panel array on commercial facility in Bangladesh",
+    label: "Commercial & Industrial PV",
+    title: "Maximizing roof space for clean daytime electricity generation",
   },
   {
-    src: "/images/profile-rooftop-solar-03.jpg",
-    alt: "Solar photovoltaic modules on engineered mounting structure",
-    label: "Structural Engineering",
-    title: "Built for performance, safety, and long-term value",
+    src: "/images/hero-solar-03.jpg",
+    alt: "Rooftop solar photovoltaic modules on robust mounting structure",
+    label: "Structural & Electrical Integrity",
+    title: "Built for high performance, safety, and long-term durability",
   },
 ] as const;
 
@@ -170,20 +170,20 @@ export function Hero() {
       id="home"
       ref={containerRef}
       aria-label="Hero - Net Bangla Solar"
-      className="relative min-h-[760px] lg:min-h-[850px] flex items-center pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden scroll-mt-28"
+      className="relative min-h-[760px] lg:min-h-[850px] flex items-center pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden scroll-mt-28 bg-white"
     >
       {/* Background radial lighting */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/4 w-[700px] h-[600px] rounded-full bg-emerald-500/[0.12] blur-[150px] -z-10"
+        className="pointer-events-none absolute -top-40 left-1/4 w-[700px] h-[600px] rounded-full bg-amber-500/[0.08] blur-[150px] -z-10"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/4 right-5 w-[600px] h-[600px] rounded-full bg-amber-500/[0.06] blur-[140px] -z-10"
+        className="pointer-events-none absolute top-1/4 right-5 w-[600px] h-[600px] rounded-full bg-sky-500/[0.05] blur-[140px] -z-10"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] rounded-full bg-emerald-600/[0.05] blur-[160px] -z-10"
+        className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] rounded-full bg-amber-500/[0.04] blur-[160px] -z-10"
       />
 
       <Container className="relative z-10">
@@ -192,8 +192,8 @@ export function Hero() {
           <div className="lg:col-span-7 xl:col-span-6 space-y-6 md:space-y-8 text-left">
             {/* Eyebrow */}
             <div ref={eyebrowRef}>
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wider uppercase shadow-[0_0_15px_rgba(16,185,129,0.15)]">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] animate-pulse" />
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b] animate-pulse" />
                 <span>NET BANGLA SOLAR &bull; A DIVISION OF NET BANGLA LIMITED</span>
               </div>
             </div>
@@ -201,7 +201,7 @@ export function Hero() {
             {/* Main Headline */}
             <h1
               ref={headlineRef}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-[clamp(44px,5vw,76px)] font-bold tracking-tight text-white leading-[1.1]"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[clamp(44px,5vw,76px)] font-extrabold tracking-tight text-slate-900 leading-[1.1]"
             >
               Empowering Bangladesh with{" "}
               <span className="gradient-text-solar">
@@ -212,7 +212,7 @@ export function Hero() {
             {/* Supporting Subheadline */}
             <p
               ref={paragraphRef}
-              className="text-solar-text-secondary text-base sm:text-lg md:text-xl max-w-xl leading-relaxed"
+              className="text-slate-600 text-base sm:text-lg md:text-xl max-w-xl leading-relaxed"
             >
               Tailored Solar PV Systems Designed for Homes, Farms, Factories, and
               Commercial Structures. Over 12 Years of Engineering and
@@ -227,28 +227,28 @@ export function Hero() {
               {/* Primary CTA */}
               <Link
                 href="#quote"
-                className="group relative inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl text-sm font-semibold text-black bg-gradient-to-r from-emerald-400 via-lime-400 to-emerald-300 hover:from-emerald-300 hover:to-lime-300 shadow-[0_0_25px_rgba(34,197,94,0.4)] hover:shadow-[0_0_35px_rgba(34,197,94,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+                className="group relative inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl text-sm font-bold text-slate-950 bg-[#F59E0B] hover:bg-[#D97706] shadow-[0_4px_20px_rgba(245,158,11,0.30)] hover:shadow-[0_6px_25px_rgba(245,158,11,0.45)] hover:-translate-y-[1px] active:translate-y-0 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
               >
                 <span>Request a Free Consultation</span>
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
 
               {/* Secondary CTA */}
               <Link
                 href="#projects"
-                className="group inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-medium text-white/90 hover:text-white glass-panel hover:bg-white/[0.08] border-white/10 hover:border-emerald-500/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+                className="group inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold text-slate-800 btn-glass focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
               >
                 <span>View Our Projects</span>
-                <ArrowUpRight className="w-4 h-4 text-solar-text-muted transition-transform duration-300 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight className="w-4 h-4 text-slate-400 transition-transform duration-200 group-hover:text-amber-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </div>
 
             {/* Trust / Market Coverage Micro-Line */}
             <div
               ref={trustRef}
-              className="pt-2 flex items-center gap-2 text-xs uppercase tracking-widest text-solar-text-muted font-medium"
+              className="pt-2 flex items-center gap-2 text-xs uppercase tracking-widest text-slate-500 font-semibold"
             >
-              <Zap className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+              <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
               <span>
                 Residential &bull; Commercial &bull; Industrial &bull; Agricultural
               </span>
@@ -263,12 +263,12 @@ export function Hero() {
             {/* Ambient Image Glow Background */}
             <div
               aria-hidden="true"
-              className="absolute -inset-4 bg-gradient-to-tr from-emerald-600/20 via-emerald-500/10 to-amber-500/15 rounded-[2.5rem] blur-2xl -z-10"
+              className="absolute -inset-4 bg-gradient-to-tr from-amber-500/15 via-orange-500/10 to-sky-500/10 rounded-[2.5rem] blur-2xl -z-10"
             />
 
             {/* Main Cinematic Image Card with Fallback Surface */}
-            <div className="relative w-full overflow-hidden rounded-3xl lg:rounded-[2.5rem] border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.8)] bg-gradient-to-br from-[#0c2c1a] via-[#06180e] to-black">
-              <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] w-full bg-[#071a0f]">
+            <div className="relative w-full overflow-hidden rounded-3xl lg:rounded-[2.5rem] border border-slate-200 shadow-[0_20px_50px_rgba(0,0,0,0.08)] bg-white">
+              <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] w-full bg-slate-100">
                 {heroSlides.map((slide, index) => (
                   <div
                     key={slide.src}
@@ -278,9 +278,9 @@ export function Hero() {
                     }`}
                   >
                     {failedImages[index] ? (
-                      <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-gradient-to-br from-[#0d331d] via-[#071a0f] to-[#030a05]">
-                        <Sun className="w-16 h-16 text-amber-400/80 mb-3 animate-spin-slow" />
-                        <span className="text-emerald-400 font-bold text-sm tracking-wider uppercase">
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-slate-50">
+                        <Sun className="w-16 h-16 text-amber-500/80 mb-3 animate-spin-slow" />
+                        <span className="text-amber-600 font-bold text-sm tracking-wider uppercase">
                           Solar Infrastructure
                         </span>
                       </div>
@@ -291,12 +291,10 @@ export function Hero() {
                         fill
                         priority={index === 0}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 650px"
-                        className={`object-cover transition-transform duration-[6500ms] ease-linear ${
-                          index === 0
-                            ? "object-top scale-[1.28]"
-                            : activeSlide === index
-                              ? "object-center scale-[1.04]"
-                              : "object-center scale-100"
+                        className={`object-cover object-center transition-transform duration-[6500ms] ease-linear ${
+                          activeSlide === index
+                            ? "scale-[1.04]"
+                            : "scale-100"
                         }`}
                         onError={() =>
                           setFailedImages((current) => ({ ...current, [index]: true }))
@@ -306,7 +304,6 @@ export function Hero() {
                   </div>
                 ))}
 
-                {/* Atmospheric Controlled Vignette Overlay (Leaves image vibrant and clear) */}
                 {/* Atmospheric Controlled Vignette Overlay */}
                 <div
                   aria-hidden="true"
@@ -314,12 +311,12 @@ export function Hero() {
                 />
 
                 {/* Top-Left Slide Category Badge */}
-                <div className="absolute top-4 left-4 sm:top-5 sm:left-5 z-10 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 border border-white/15 backdrop-blur-md">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-300">
+                <div className="absolute top-4 left-4 sm:top-5 sm:left-5 z-10 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 border border-slate-200 backdrop-blur-md shadow-sm">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-700">
                     {heroSlides[activeSlide].label}
                   </span>
-                  <span className="text-white/40 text-xs" aria-hidden="true">&bull;</span>
-                  <span className="text-[10px] font-mono text-slate-300">
+                  <span className="text-slate-400 text-xs" aria-hidden="true">&bull;</span>
+                  <span className="text-[10px] font-mono font-semibold text-slate-700">
                     0{activeSlide + 1} / 0{heroSlides.length}
                   </span>
                 </div>
@@ -333,9 +330,9 @@ export function Hero() {
                       onClick={() => setActiveSlide(index)}
                       aria-label={`Show image ${index + 1}: ${slide.label}`}
                       aria-current={activeSlide === index ? "true" : undefined}
-                      className={`h-1.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 ${
+                      className={`h-1.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 ${
                         activeSlide === index
-                          ? "w-7 bg-emerald-300"
+                          ? "w-7 bg-amber-400"
                           : "w-3 bg-white/40 hover:bg-white/70"
                       }`}
                     />
@@ -347,25 +344,25 @@ export function Hero() {
             {/* Floating Glassmorphism Non-Numerical Credibility Card */}
             <div
               ref={impactCardRef}
-              className="relative sm:absolute -mt-6 sm:mt-0 sm:-bottom-6 sm:-left-6 lg:-bottom-7 lg:-left-7 z-20 glass-panel-elevated p-4 sm:p-5 rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.8)] border border-emerald-500/30 w-full max-w-[280px]"
+              className="relative sm:absolute -mt-6 sm:mt-0 sm:-bottom-6 sm:-left-6 lg:-bottom-7 lg:-left-7 z-20 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.10)] border border-slate-200/80 w-full max-w-[280px]"
             >
-              <div className="flex items-center justify-between gap-3 pb-2.5 border-b border-white/10">
-                <span className="text-[11px] uppercase tracking-wider text-emerald-400 font-semibold">
+              <div className="flex items-center justify-between gap-3 pb-2.5 border-b border-slate-100">
+                <span className="text-[11px] uppercase tracking-wider text-amber-600 font-bold">
                   ENGINEERING-LED SOLAR
                 </span>
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                <ShieldCheck className="w-4 h-4 text-amber-500" />
               </div>
 
-              <div className="pt-2.5 space-y-1">
-                <p className="text-xs sm:text-sm font-medium text-white leading-snug">
+              <div className="pt-2.5 space-y-1 text-left">
+                <p className="text-xs sm:text-sm font-semibold text-slate-900 leading-snug">
                   Designed, installed and supported across Bangladesh
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 pt-2.5 mt-1 border-t border-white/5 text-[11px] text-slate-400 font-medium">
+              <div className="flex items-center gap-2 pt-2.5 mt-1 border-t border-slate-100 text-[11px] text-slate-500 font-medium text-left">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500" />
                 </span>
                 <span>Backed by Net Bangla Limited</span>
               </div>
@@ -374,7 +371,7 @@ export function Hero() {
             {/* Secondary Floating Energy Badge */}
             <div
               ref={energyBadgeRef}
-              className="absolute -top-4 -right-4 sm:-top-5 sm:-right-5 z-20 flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-2xl glass-panel border border-amber-500/30 shadow-[0_0_20px_rgba(245,158,11,0.25)] text-amber-400"
+              className="absolute -top-4 -right-4 sm:-top-5 sm:-right-5 z-20 flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white border border-amber-500/30 shadow-[0_0_20px_rgba(245,158,11,0.20)] text-amber-500"
               aria-hidden="true"
             >
               <Sun className="w-6 h-6 animate-[spin_20s_linear_infinite]" />
