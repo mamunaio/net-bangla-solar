@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   SunMedium,
   Building2,
@@ -13,6 +13,8 @@ import {
   Layers,
   ArrowUpRight,
   RotateCcw,
+  ChevronDown,
+  Check,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
@@ -54,6 +56,35 @@ export function FinalCTA() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsDropdownOpen(false);
+      }
+    }
+
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("keydown", handleKeyDown);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isDropdownOpen]);
 
   const validate = (data: FormData): FormErrors => {
     const newErrors: FormErrors = {};
@@ -115,6 +146,18 @@ export function FinalCTA() {
       ...prev,
       [name]: validationErrors[name as keyof FormErrors],
     }));
+  };
+
+  const handleSelectPropertyType = (type: string) => {
+    const updated = { ...formData, propertyType: type };
+    setFormData(updated);
+    setTouched((prev) => ({ ...prev, propertyType: true }));
+    const validationErrors = validate(updated);
+    setErrors((prev) => ({
+      ...prev,
+      propertyType: validationErrors.propertyType,
+    }));
+    setIsDropdownOpen(false);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -446,45 +489,85 @@ export function FinalCTA() {
 
                 {/* Grid for Field 4 & Field 5: Property Type & Location */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  {/* Field 4: Property Type */}
-                  <div>
+                  {/* Field 4: Property Type (Custom Luxury Dropdown) */}
+                  <div className="relative" ref={dropdownRef}>
                     <label
-                      htmlFor="consultation-property"
-                      className="block text-sm font-semibold text-slate-700 mb-2"
+                      id="consultation-property-label"
+                      className="block text-sm font-semibold text-slate-700 mb-2 cursor-pointer select-none"
+                      onClick={() => setIsDropdownOpen((prev) => !prev)}
                     >
                       Property Type <span className="text-amber-600">*</span>
                     </label>
-                    <select
+
+                    {/* Trigger Button */}
+                    <button
+                      type="button"
                       id="consultation-property"
-                      name="propertyType"
-                      required
-                      value={formData.propertyType}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      aria-required="true"
-                      aria-invalid={!!errors.propertyType}
-                      aria-describedby={
-                        errors.propertyType ? "property-error" : undefined
-                      }
-                      className={`w-full px-4 py-3.5 rounded-xl bg-slate-50 border text-sm text-slate-900 focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 transition-colors ${
+                      aria-haspopup="listbox"
+                      aria-expanded={isDropdownOpen}
+                      aria-labelledby="consultation-property-label consultation-property"
+                      onClick={() => {
+                        setIsDropdownOpen((prev) => !prev);
+                        if (!touched.propertyType) {
+                          setTouched((prev) => ({ ...prev, propertyType: true }));
+                        }
+                      }}
+                      className={`w-full px-4 py-3.5 rounded-xl bg-slate-50 border text-sm text-left flex items-center justify-between transition-all duration-200 focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 ${
                         errors.propertyType
                           ? "border-rose-500 focus:border-rose-500"
-                          : "border-slate-200 hover:border-slate-300 focus:border-amber-500"
+                          : isDropdownOpen
+                          ? "border-amber-500 bg-white ring-2 ring-amber-400/30 shadow-xs"
+                          : "border-slate-200 hover:border-slate-300"
                       }`}
                     >
-                      <option value="" disabled className="text-slate-400">
-                        Select Property Type
-                      </option>
-                      {PROPERTY_TYPES.map((type) => (
-                        <option
-                          key={type}
-                          value={type}
-                          className="text-slate-900"
-                        >
-                          {type}
-                        </option>
-                      ))}
-                    </select>
+                      <span
+                        className={
+                          formData.propertyType
+                            ? "text-slate-900 font-medium"
+                            : "text-slate-400"
+                        }
+                      >
+                        {formData.propertyType || "Select Property Type"}
+                      </span>
+                      <ChevronDown
+                        className={`w-4 h-4 text-slate-400 transition-transform duration-200 shrink-0 ${
+                          isDropdownOpen ? "rotate-180 text-amber-600" : ""
+                        }`}
+                      />
+                    </button>
+
+                    {/* Floating Luxury Dropdown Menu */}
+                    {isDropdownOpen && (
+                      <div
+                        role="listbox"
+                        aria-labelledby="consultation-property-label"
+                        className="absolute left-0 right-0 z-50 mt-2 p-1.5 bg-white/98 backdrop-blur-md rounded-2xl border border-slate-200 shadow-[0_16px_40px_-8px_rgba(0,0,0,0.14)] animate-in fade-in zoom-in-95 duration-150 space-y-1"
+                      >
+                        {PROPERTY_TYPES.map((type) => {
+                          const isSelected = formData.propertyType === type;
+                          return (
+                            <button
+                              key={type}
+                              type="button"
+                              role="option"
+                              aria-selected={isSelected}
+                              onClick={() => handleSelectPropertyType(type)}
+                              className={`w-full px-3.5 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between transition-all text-left ${
+                                isSelected
+                                  ? "bg-amber-500/10 text-amber-900 border border-amber-500/25 shadow-2xs"
+                                  : "text-slate-700 hover:bg-amber-50/80 hover:text-amber-800"
+                              }`}
+                            >
+                              <span>{type}</span>
+                              {isSelected && (
+                                <Check className="w-4 h-4 text-amber-600 shrink-0" />
+                              )}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    )}
+
                     {errors.propertyType && (
                       <p
                         id="property-error"
