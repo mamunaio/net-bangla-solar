@@ -107,7 +107,7 @@ export function Footer() {
               aria-label="Net Bangla Solar - Back to top"
             >
               {/* Brand Logo Icon */}
-              <div className="w-11 h-11 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shadow-2xs group-hover:border-amber-400 group-hover:bg-amber-500/20 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shadow-2xs group-hover:border-amber-400 group-hover:bg-amber-500/20 transition-all">
                 <SunMedium className="w-6 h-6 text-amber-600 group-hover:rotate-45 transition-transform duration-500" />
               </div>
 
@@ -122,55 +122,66 @@ export function Footer() {
               </div>
             </Link>
 
-            {/* Official Positioning & Description */}
-            <div className="space-y-2.5">
-              <p className="text-xs sm:text-sm font-mono text-amber-800 font-bold tracking-wide uppercase bg-amber-50 inline-block px-2.5 py-1 rounded border border-amber-200/80">
-                Turnkey Solar EPC &bull; Established May 28, 2014
-              </p>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-sm">
-                Engineering reliable solar infrastructure for residential,
-                commercial, industrial, agricultural, and institutional
-                applications across Bangladesh.
-              </p>
-            </div>
+            {/* Official Description */}
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-sm">
+              Turnkey Solar EPC established on May 28, 2014. Engineering reliable solar infrastructure for residential, commercial, industrial, and agricultural facilities across Bangladesh.
+            </p>
 
             {/* Documented Contact Details */}
-            <div className="space-y-3 pt-3 border-t border-slate-200 text-sm">
-              <div className="flex items-center gap-3 text-slate-700">
-                <div className="w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
-                  <Building2 className="w-4 h-4" />
+            <div className="space-y-3.5 pt-4 border-t border-slate-200">
+              {/* Engineering Supervision */}
+              <div className="flex items-start gap-3 text-slate-700">
+                <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0 mt-0.5">
+                  <Building2 className="w-4.5 h-4.5" />
                 </div>
-                <span>
-                  <strong className="text-slate-900 font-bold">CEO:</strong> Engr. Md. Mamunur Rahman
-                </span>
+                <div>
+                  <span className="text-slate-500 text-xs font-semibold uppercase tracking-wider block">
+                    Engineering Supervision:
+                  </span>
+                  <p className="text-slate-900 font-bold text-sm sm:text-base mt-0.5">
+                    Engr. Md. Mamunur Rahman (CEO)
+                  </p>
+                </div>
               </div>
 
+              {/* Official Email */}
               <div className="flex items-start gap-3 text-slate-700">
-                <div className="w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0 mt-0.5">
-                  <Mail className="w-4 h-4" />
+                <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0 mt-0.5">
+                  <Mail className="w-4.5 h-4.5" />
                 </div>
-                <div className="flex flex-wrap gap-x-3 gap-y-1">
-                  <a
-                    href="mailto:mamun@netbanglaltd.com"
-                    className="text-amber-700 hover:text-amber-800 font-bold transition-colors break-all focus:outline-none focus-visible:underline"
-                  >
-                    mamun@netbanglaltd.com
-                  </a>
-                  <span className="text-slate-400 hidden sm:inline" aria-hidden="true">&bull;</span>
+                <div>
+                  <span className="text-slate-500 text-xs font-semibold uppercase tracking-wider block">
+                    Official Inquiries:
+                  </span>
                   <a
                     href="mailto:info@netbanglaltd.com"
-                    className="text-amber-700 hover:text-amber-800 font-bold transition-colors break-all focus:outline-none focus-visible:underline"
+                    className="inline-flex items-center gap-1.5 text-slate-900 hover:text-amber-700 font-bold text-sm sm:text-base mt-0.5 transition-colors group"
                   >
-                    info@netbanglaltd.com
+                    <span>info@netbanglaltd.com</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-amber-600 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 text-slate-700">
-                <div className="w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
-                  <Globe className="w-4 h-4" />
+              {/* Official Website */}
+              <div className="flex items-start gap-3 text-slate-700">
+                <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0 mt-0.5">
+                  <Globe className="w-4.5 h-4.5" />
                 </div>
-                <span className="font-mono font-bold text-slate-800">netbanglaenergy.com</span>
+                <div>
+                  <span className="text-slate-500 text-xs font-semibold uppercase tracking-wider block">
+                    Official Website:
+                  </span>
+                  <a
+                    href="https://netbanglaenergy.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-slate-900 hover:text-amber-700 font-bold text-sm sm:text-base mt-0.5 transition-colors group"
+                  >
+                    <span>netbanglaenergy.com</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-amber-600 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -188,7 +199,7 @@ export function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="group inline-flex items-center text-slate-600 hover:text-amber-700 transition-colors duration-200 focus:outline-none focus-visible:text-amber-700 focus-visible:underline font-semibold"
+                    className="group inline-flex items-center text-slate-600 hover:text-amber-700 transition-colors duration-200 focus:outline-none focus-visible:text-amber-700 focus-visible:underline font-medium"
                   >
                     <span className="group-hover:translate-x-1 transition-transform duration-200">
                       {item.label}
@@ -207,12 +218,12 @@ export function Footer() {
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
               Solutions
             </h3>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-3 text-sm sm:text-base">
               {solutionLinks.map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="group inline-flex items-center text-slate-600 hover:text-amber-600 transition-colors duration-200 focus:outline-none focus-visible:text-amber-600 focus-visible:underline font-medium"
+                    className="group inline-flex items-center text-slate-600 hover:text-amber-700 transition-colors duration-200 focus:outline-none focus-visible:text-amber-700 focus-visible:underline font-medium"
                   >
                     <span className="group-hover:translate-x-1 transition-transform duration-200">
                       {item.label}
@@ -228,15 +239,15 @@ export function Footer() {
             aria-label="Applications Navigation"
             className="lg:col-span-2 space-y-4 text-left"
           >
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
               Applications
             </h3>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-3 text-sm sm:text-base">
               {applicationLinks.map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="group inline-flex items-center text-slate-600 hover:text-amber-600 transition-colors duration-200 focus:outline-none focus-visible:text-amber-600 focus-visible:underline font-medium"
+                    className="group inline-flex items-center text-slate-600 hover:text-amber-700 transition-colors duration-200 focus:outline-none focus-visible:text-amber-700 focus-visible:underline font-medium"
                   >
                     <span className="group-hover:translate-x-1 transition-transform duration-200">
                       {item.label}

@@ -193,9 +193,8 @@ export function TestimonialsSection() {
               return (
                 <div
                   key={sector.id}
-                  className={`group relative rounded-3xl p-6 bg-white border border-slate-200 hover:border-amber-500/40 transition-all duration-300 ease-out hover:-translate-y-0.5 flex flex-col justify-between text-left space-y-4 shadow-sm hover:shadow-[0_12px_30px_-6px_rgba(245,158,11,0.12)] ${
-                    isWide ? "sm:col-span-2" : ""
-                  }`}
+                  className={`group relative rounded-3xl p-6 bg-white border border-slate-200 hover:border-amber-500/40 transition-all duration-300 ease-out hover:-translate-y-0.5 flex flex-col justify-between text-left space-y-4 shadow-sm hover:shadow-[0_12px_30px_-6px_rgba(245,158,11,0.12)] ${isWide ? "sm:col-span-2" : ""
+                    }`}
                 >
                   {/* Top Bar: Number Badge, Tag & Icon */}
                   <div className="flex items-center justify-between">
