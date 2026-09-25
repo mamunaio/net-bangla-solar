@@ -4,11 +4,7 @@ import React from "react";
 import Link from "next/link";
 import {
   SunMedium,
-  Mail,
-  Globe,
   ShieldCheck,
-  Building2,
-  ArrowUpRight,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
@@ -71,35 +67,10 @@ export function Footer() {
       />
 
       <Container>
-        {/* Compact Footer Consultation CTA Banner */}
-        <div className="mb-14 p-6 sm:p-8 rounded-2xl bg-white border border-amber-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-sm">
-          <div className="space-y-1 max-w-xl text-left">
-            <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-700">
-              <SunMedium className="w-3.5 h-3.5 text-amber-600" />
-              <span>Turnkey Solar Consultation</span>
-            </div>
-            <h3 className="text-slate-900 text-lg sm:text-xl font-bold tracking-tight">
-              Ready to assess your facility for solar energy?
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-600">
-              Consult directly with our solar engineers for site assessment and load feasibility.
-            </p>
-          </div>
-
-          <Link
-            href="#quote"
-            className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-white bg-amber-500 hover:bg-amber-600 shadow-md hover:shadow-lg shadow-amber-500/20 hover:-translate-y-[1px] active:translate-y-0 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 shrink-0"
-            aria-label="Get a Free Solar Quote"
-          >
-            <span>Get a Free Solar Quote</span>
-            <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
-        </div>
-
         {/* Main Footer Multi-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12">
-          {/* 1. BRAND & CONTACT AREA (5 columns on Desktop) */}
-          <div className="lg:col-span-5 space-y-6 text-left">
+          {/* 1. BRAND AREA (5 columns on Desktop) */}
+          <div className="lg:col-span-5 space-y-5 text-left">
             {/* Brand Typography */}
             <Link
               href="/"
@@ -124,64 +95,14 @@ export function Footer() {
 
             {/* Official Description */}
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-sm">
-              Turnkey Solar EPC established on May 28, 2014. Engineering reliable solar infrastructure for residential, commercial, industrial, and agricultural facilities across Bangladesh.
+              Delivering high-efficiency turnkey solar EPC engineering, net metering systems, and clean energy infrastructure for residential, commercial, and industrial facilities across Bangladesh.
             </p>
 
-            {/* Documented Contact Details */}
-            <div className="space-y-3.5 pt-4 border-t border-slate-200">
-              {/* Engineering Supervision */}
-              <div className="flex items-start gap-3 text-slate-700">
-                <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0 mt-0.5">
-                  <Building2 className="w-4.5 h-4.5" />
-                </div>
-                <div>
-                  <span className="text-slate-500 text-xs font-semibold uppercase tracking-wider block">
-                    Engineering Supervision:
-                  </span>
-                  <p className="text-slate-900 font-bold text-sm sm:text-base mt-0.5">
-                    Engr. Md. Mamunur Rahman (CEO)
-                  </p>
-                </div>
-              </div>
-
-              {/* Official Email */}
-              <div className="flex items-start gap-3 text-slate-700">
-                <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0 mt-0.5">
-                  <Mail className="w-4.5 h-4.5" />
-                </div>
-                <div>
-                  <span className="text-slate-500 text-xs font-semibold uppercase tracking-wider block">
-                    Official Inquiries:
-                  </span>
-                  <a
-                    href="mailto:info@netbanglaltd.com"
-                    className="inline-flex items-center gap-1.5 text-slate-900 hover:text-amber-700 font-bold text-sm sm:text-base mt-0.5 transition-colors group"
-                  >
-                    <span>info@netbanglaltd.com</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-amber-600 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Official Website */}
-              <div className="flex items-start gap-3 text-slate-700">
-                <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0 mt-0.5">
-                  <Globe className="w-4.5 h-4.5" />
-                </div>
-                <div>
-                  <span className="text-slate-500 text-xs font-semibold uppercase tracking-wider block">
-                    Official Website:
-                  </span>
-                  <a
-                    href="https://netbanglaenergy.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-slate-900 hover:text-amber-700 font-bold text-sm sm:text-base mt-0.5 transition-colors group"
-                  >
-                    <span>netbanglaenergy.com</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-amber-600 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </a>
-                </div>
+            {/* Corporate Heritage Badge */}
+            <div className="pt-1">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-semibold text-amber-800">
+                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+                <span>Turnkey Solar EPC &bull; Est. May 28, 2014</span>
               </div>
             </div>
           </div>
