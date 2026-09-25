@@ -306,37 +306,55 @@ export function SolutionsSection() {
         </div>
 
         {/* TECHNICAL CAPABILITIES (COMPACT SUPPORTING STRIP) */}
-        <div className="rounded-3xl border border-slate-200 bg-[#F8FAFC] p-6 sm:p-8 space-y-6 shadow-sm">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-200 pb-4">
+        <div className="rounded-3xl border border-slate-200 bg-[#F8FAFC] p-6 sm:p-8 md:p-10 space-y-6 shadow-sm relative overflow-hidden">
+          {/* Subtle Ambient Background Light */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-24 -right-24 w-80 h-80 rounded-full bg-amber-400/[0.08] blur-[120px]"
+          />
+
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-200/90 pb-5">
             <div>
-              <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-amber-600">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-amber-700">
                 TECHNICAL CAPABILITIES
               </span>
-              <h3 className="mt-1 text-lg sm:text-xl font-bold text-slate-900">
+              <h3 className="mt-1 text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
                 Engineering, Grid Integration &amp; Storage Architecture
               </h3>
             </div>
-            <span className="text-xs text-slate-500 font-mono">
+            <span className="text-xs sm:text-sm text-slate-500 font-mono font-medium">
               Turnkey EPC &bull; End-to-End Support
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {technicalCapabilities.map((capability) => {
               const IconComponent = capability.icon;
               return (
                 <div
                   key={capability.title}
-                  className="flex items-start gap-3.5 rounded-2xl border border-slate-200/80 bg-white p-4 hover:border-amber-500/40 hover:shadow-sm transition-all"
+                  className="group relative flex items-start gap-4 rounded-2xl border border-slate-200/90 bg-white p-4.5 sm:p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-amber-400 hover:shadow-[0_14px_30px_-6px_rgba(245,158,11,0.20),0_4px_12px_rgba(0,0,0,0.03)] cursor-default overflow-hidden"
                 >
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-amber-500/25 bg-amber-500/10 text-amber-600">
-                    <IconComponent className="h-4 w-4" />
+                  {/* Subtle Inner Ambient Glow on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/[0.06] via-amber-400/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                  {/* Top Amber Shimmer Line on Hover */}
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                  {/* Dynamic Glowing Icon Badge */}
+                  <div className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-amber-500/25 bg-amber-500/10 text-amber-600 group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:border-amber-500 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-[0_0_16px_rgba(245,158,11,0.45)] transition-all duration-300 ease-out shadow-2xs mt-0.5">
+                    <IconComponent className="h-5 w-5 transition-transform duration-300" />
                   </div>
-                  <div className="space-y-0.5 text-left">
-                    <h4 className="text-sm font-bold text-slate-900">
-                      {capability.title}
-                    </h4>
-                    <p className="text-xs text-slate-500 leading-snug">
+
+                  {/* Content */}
+                  <div className="relative z-10 flex-1 min-w-0 text-left">
+                    <div className="flex items-center justify-between gap-1.5">
+                      <h4 className="text-sm sm:text-[15px] font-bold text-slate-900 group-hover:text-amber-800 transition-colors duration-200">
+                        {capability.title}
+                      </h4>
+                      <ArrowUpRight className="w-4 h-4 text-amber-600 opacity-0 -translate-x-1.5 translate-y-1.5 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 shrink-0" />
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-600 group-hover:text-slate-700 leading-relaxed mt-1 transition-colors duration-200">
                       {capability.detail}
                     </p>
                   </div>
