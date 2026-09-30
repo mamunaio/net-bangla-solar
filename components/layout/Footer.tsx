@@ -15,6 +15,7 @@ const companyLinks = [
   { label: "Why Choose Us", href: "/why-choose-us" },
   { label: "Solar ROI Calculator", href: "/calculator" },
   { label: "Portfolio & Case Studies", href: "/portfolio" },
+  { label: "HSE & Sustainability Policy", href: "/hse-policy" },
   { label: "FAQ & Knowledge Hub", href: "/faq" },
   { label: "Contact Us", href: "/contact" },
 ];

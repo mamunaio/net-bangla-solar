@@ -26,7 +26,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
-import { ClientsSection } from "@/components/sections/ClientsSection";
 
 export const metadata: Metadata = {
   title: "Why Choose Us | Net Bangla Solar - Engineering Excellence",
@@ -293,9 +292,6 @@ export default function WhyChooseUsPage() {
 
         {/* PARTNERS */}
         <PartnersSection />
-
-        {/* CLIENTS */}
-        <ClientsSection />
 
         {/* BOTTOM CTA */}
         <section className="py-16 sm:py-20 bg-slate-900 text-white text-center relative overflow-hidden">

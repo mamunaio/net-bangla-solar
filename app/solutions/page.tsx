@@ -1,105 +1,187 @@
 "use client";
 
 import React from "react";
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import {
-  PanelsTopLeft,
   Factory,
-  Building2,
+  PanelsTopLeft,
   Home,
   Sprout,
+  Building2,
+  Cpu,
   ShieldCheck,
   Zap,
   Calculator,
   ArrowRight,
-  Sparkles,
   CheckCircle2,
-  Award,
+  Sparkles,
+  ExternalLink,
+  PhoneCall,
+  FileText,
 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
-import { ClientsSection } from "@/components/sections/ClientsSection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
 import { cn } from "@/lib/utils";
 
-const solarSolutions = [
+interface SolutionCategory {
+  id: string;
+  title: string;
+  categoryTag: string;
+  badge: string;
+  description: string;
+  image: string;
+  features: string[];
+  primaryCta: {
+    label: string;
+    href: string;
+  };
+  secondaryCta: {
+    label: string;
+    href: string;
+  };
+}
+
+const solutionCategories: SolutionCategory[] = [
   {
-    id: "power-solaroof",
-    title: "Power Solaroof™ BIPV Integrated Roofing",
-    badge: "BIPV GRADE",
-    capacity: "Custom MWp Scale",
-    desc: "A 100% leak-proof, cyclone-rated integrated solar roof that replaces traditional CGI tin sheets. Features continuous aluminum profiles, internal drainage channels, and 25-year structural warranties.",
-    features: [
-      "Zero Roof Penetration Mounting",
-      "Replaces Corrugated Tin Sheets Entirely",
-      "Built-in Gutter & Rainwater Drainage",
-      "Reduces Factory Indoor Temperature by 4–6°C",
-    ],
-    image: "/images/power-solaroof.jpg",
-    link: "/calculator",
-  },
-  {
-    id: "industrial-solar-epc",
-    title: "Industrial Megawatt (MWp) Turnkey Solar EPC",
-    badge: "100 kWp – 5 MWp",
-    capacity: "Factory & Mills",
-    desc: "Engineered specifically for export textile mills, steel rerolling, pharmaceuticals, and manufacturing plants. Includes 33kV substation synchronization and automated SREDA net metering export.",
+    id: "industrial-commercial-solar",
+    title: "Industrial & Commercial Solar EPC",
+    categoryTag: "MEGAWATT INDUSTRIAL & COMMERCIAL",
+    badge: "100 kWp – 5+ MWp",
+    description:
+      "Turnkey Megawatt-scale solar power plants for export-oriented textile mills, steel rerolling, pharmaceuticals, corporate towers, and heavy manufacturing. Includes 33kV/11kV substation grid synchronization and SREDA bi-directional net-metering export.",
+    image: "/images/solar-industrial.jpg",
     features: [
       "Zero Production Downtime Installation",
-      "Tier-1 N-Type Bifacial Modules",
-      "Average Capex Payback: 3.1 Years",
+      "Tier-1 N-Type Bifacial Monocrystalline Modules",
+      "Average Capex Payback: 3.1 – 3.4 Years",
       "24/7 Cloud SCADA Telemetry & String Alarms",
     ],
-    image: "/images/solar-industrial.jpg",
-    link: "/calculator",
+    primaryCta: {
+      label: "Learn More",
+      href: "/solutions/industrial-solar-epc",
+    },
+    secondaryCta: {
+      label: "Estimate Factory ROI",
+      href: "/calculator",
+    },
   },
   {
-    id: "commercial-rooftop",
-    title: "Commercial Building & Corporate Solar Systems",
-    badge: "NET METERED",
-    capacity: "50 kWp – 500 kWp",
-    desc: "Designed for commercial towers, corporate headquarters, hospitals, universities, and shopping complexes to offset daytime peak HVAC and lighting loads.",
+    id: "power-solaroof-bipv",
+    title: "Power Solaroof™ & Integrated BIPV Roofing",
+    categoryTag: "PATENT-PENDING BIPV ROOFING",
+    badge: "Integrated In-Roof PV",
+    description:
+      "A 100% leak-proof, cyclone-resistant Building-Integrated Photovoltaic (BIPV) solar roof developed with global partner ZJHT. Completely replaces corrugated CGI tin sheets with heavy-duty photovoltaic panels and integrated drainage channels.",
+    image: "/images/power-solaroof.jpg",
     features: [
-      "Elevated RCC Canopy Walkways",
-      "DESCO / DPDC Net-Metering Synchronization",
-      "Architectural Aesthetic All-Black Panels",
-      "High Power Factor Correction Support",
+      "Zero Roof Penetration Mechanical Fastening",
+      "Replaces Corrugated Tin Sheets Entirely",
+      "Built-in Gutter & Heavy Rainwater Drainage",
+      "Reduces Factory Indoor Temperature by 4–6°C",
     ],
-    image: "/images/solar-commercial.jpg",
-    link: "/calculator",
+    primaryCta: {
+      label: "Learn More",
+      href: "/solutions/power-solaroof",
+    },
+    secondaryCta: {
+      label: "Request BIPV Specs",
+      href: "/contact",
+    },
   },
   {
-    id: "residential-solar",
-    title: "Residential Hybrid & Smart Rooftop Solar",
-    badge: "HYBRID / ON-GRID",
-    capacity: "5 kWp – 50 kWp",
-    desc: "High-yield smart solar systems for luxury villas, residential duplexes, and apartment buildings featuring intelligent lithium battery energy storage (ESS) for zero-delay backup.",
-    features: [
-      "Zero Noise & Zero Diesel Fumes",
-      "Lithium LiFePO4 Smart Battery Storage",
-      "Cuts Home Electricity Bills up to 80%",
-      "Integrated EV Charger Readiness",
-    ],
+    id: "residential-hybrid-solar",
+    title: "Residential & Hybrid Storage Systems",
+    categoryTag: "LUXURY RESIDENTIAL & HYBRID",
+    badge: "5 kWp – 50 kWp ESS",
+    description:
+      "High-efficiency smart on-grid and hybrid solar installations tailored for luxury villas, duplexes, and residential estates. Features smart Lithium LiFePO4 battery energy storage (ESS) for zero-delay, silent 24/7 backup power without generator noise.",
     image: "/images/solar-residential.jpg",
-    link: "/calculator",
+    features: [
+      "Zero Noise & Zero Diesel Fumes Backup",
+      "Intelligent Lithium LiFePO4 Battery Storage",
+      "Cuts Home Electricity Bills by up to 80%",
+      "DESCO / DPDC Net-Metering Synchronized",
+    ],
+    primaryCta: {
+      label: "Learn More",
+      href: "/solutions/residential-solar",
+    },
+    secondaryCta: {
+      label: "Calculate Home Savings",
+      href: "/calculator",
+    },
   },
   {
-    id: "agricultural-solar",
+    id: "agricultural-solar-irrigation",
     title: "Agricultural Solar Irrigation & Cold Storage",
-    badge: "DIRECT DC PUMP",
-    capacity: "10 HP – 100 HP",
-    desc: "Off-grid and grid-interactive solar power solutions for agricultural irrigation pumps, cold storage facilities, poultry farms, and fish hatcheries across rural Bangladesh.",
-    features: [
-      "Eliminates Expensive Diesel Pump Costs",
-      "VFD Soft-Starter Multi-Pump Control",
-      "BREB Rural Net-Metering Interconnection",
-      "Heavy Duty Storm-Resistant Ground Racks",
-    ],
+    categoryTag: "AGRI-POWER & IRRIGATION",
+    badge: "10 HP – 100 HP Pumps",
+    description:
+      "Engineered solar power systems for deep tube-well irrigation pumps, cold storage facilities, poultry farms, and agro-processing plants across rural Bangladesh. Drastically reduces operational expenditures by replacing costly diesel generators.",
     image: "/images/solar-agricultural.jpg",
-    link: "/calculator",
+    features: [
+      "Eliminates Costly Diesel Fuel Dependency",
+      "VFD Soft-Starter Multi-Pump Control",
+      "BREB Rural Grid Net-Metering Interconnection",
+      "Storm-Resistant Galvanized Ground Racks",
+    ],
+    primaryCta: {
+      label: "Learn More",
+      href: "/solutions/agricultural-solar",
+    },
+    secondaryCta: {
+      label: "Request Agri Proposal",
+      href: "/contact",
+    },
+  },
+  {
+    id: "commercial-rooftop-carpark",
+    title: "Commercial Rooftops, Solar Car Parks & EV Charging",
+    categoryTag: "COMMERCIAL & EV CANOPY",
+    badge: "50 kWp – 500 kWp",
+    description:
+      "Custom solar photovoltaic canopies and rooftop installations for corporate office towers, hospitals, universities, and commercial parking areas. Provides shade for vehicles while generating high-yield clean power and feeding EV charging ports.",
+    image: "/images/solar-commercial.jpg",
+    features: [
+      "Dual-Purpose Vehicle Shade & Clean Power Generation",
+      "Elevated Structural Canopies & RCC Walkways",
+      "High-Capacity EV Charging Station Integration",
+      "High Power Factor Support & Peak Load Shaving",
+    ],
+    primaryCta: {
+      label: "Learn More",
+      href: "/solutions/commercial-rooftop",
+    },
+    secondaryCta: {
+      label: "Book Site Inspection",
+      href: "/contact",
+    },
+  },
+  {
+    id: "it-telecom-enterprise-services",
+    title: "IT, Telecom & Enterprise Technology Services",
+    categoryTag: "IT INFRASTRUCTURE & BPO",
+    badge: "BASIS & BACCO Certified",
+    description:
+      "Mission-critical information technology segments, BPO contact center infrastructure, electronic safety & security systems, and enterprise data analytics consulting backed by Net Bangla Limited's decade of institutional IT engineering legacy.",
+    image: "/images/who-we-serve-engineering.jpg",
+    features: [
+      "General Member of BASIS (A-405) & BACCO",
+      "BTRC Registered Call Center (CC/BPO) Infrastructure",
+      "Enterprise Electronic Safety & Security Systems",
+      "Data Analytics, Business Intelligence & Visualization",
+    ],
+    primaryCta: {
+      label: "Contact IT Division",
+      href: "/contact",
+    },
+    secondaryCta: {
+      label: "View Company Profile",
+      href: "/company-profile.pdf",
+    },
   },
 ];
 
@@ -109,72 +191,61 @@ export default function SolutionsPage() {
       <Navbar />
 
       <main className="flex-grow pt-28 sm:pt-32 pb-20">
-        {/* HERO */}
-        <section className="relative py-12 sm:py-16 lg:py-20 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200/80">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-amber-500/10 blur-[120px] -z-10"
-          />
-
+        {/* 1. HERO SECTION (Clean textual header + clean standalone hero image with ZERO overlaid text) */}
+        <section className="relative pt-8 pb-12 sm:pt-12 sm:pb-16 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200/80">
           <Container>
-            <div className="max-w-4xl mx-auto text-center space-y-5">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wide uppercase">
-                <Sparkles className="w-4 h-4 text-amber-600" />
-                <span>TURNKEY EPC SOLUTIONS &bull; SREDA CERTIFIED</span>
+            <div className="max-w-4xl mx-auto text-center space-y-4 mb-8 sm:mb-10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
+                <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                <span>TURNKEY ENERGY &amp; TECHNOLOGY SOLUTIONS &bull; NET BANGLA LIMITED</span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-                Engineered Solar Solutions for <span className="gradient-text-solar">Every Sector</span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Engineered Solar &amp; Technology Solutions
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-                From patent-pending BIPV Power Solaroof™ systems and industrial textile megawatt arrays
-                to commercial towers and luxury residential hybrids.
+                Comprehensive turnkey solar EPC engineering, patent-pending BIPV roofing, residential hybrids, agricultural irrigation, and mission-critical enterprise IT services across Bangladesh.
               </p>
+            </div>
 
-              <div className="pt-3 flex flex-wrap items-center justify-center gap-4">
-                <Link
-                  href="/calculator"
-                  className="btn-primary-solar py-3 px-6 rounded-2xl flex items-center gap-2 text-sm font-bold text-slate-950 shadow-md"
-                >
-                  <Calculator className="w-4 h-4" />
-                  <span>Estimate Your Facility ROI</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="py-3 px-6 rounded-2xl border border-slate-300 hover:border-amber-400 bg-white text-slate-800 hover:text-amber-800 text-sm font-bold shadow-2xs transition-all hover:bg-amber-50/40"
-                >
-                  Request Technical Proposal
-                </Link>
-              </div>
+            {/* Clean Standalone Hero Image (STRICT RULE: NO TEXT OVERLAID ON IMAGE) */}
+            <div className="relative aspect-[21/9] sm:aspect-[24/9] max-w-6xl mx-auto rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-100">
+              <Image
+                src="/images/solar-hero.jpg"
+                alt="Net Bangla Solar Turnkey Engineering Solutions"
+                fill
+                priority
+                sizes="(max-width: 1280px) 100vw, 1200px"
+                className="object-cover"
+              />
             </div>
           </Container>
         </section>
 
-        {/* SOLUTIONS STACK */}
-        <section className="py-16 sm:py-20">
+        {/* 2. DIRECT SOLUTIONS/SERVICES GRID (Directly below Hero without any filler) */}
+        <section className="py-14 sm:py-20 bg-white">
           <Container>
-            <div className="space-y-16">
-              {solarSolutions.map((sol, index) => {
+            <div className="space-y-12 sm:space-y-16 max-w-6xl mx-auto">
+              {solutionCategories.map((sol, index) => {
                 const isEven = index % 2 === 1;
                 return (
                   <div
                     key={sol.id}
                     id={sol.id}
-                    className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center bg-white p-8 sm:p-10 lg:p-12 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300"
+                    className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-white p-7 sm:p-10 lg:p-12 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300"
                   >
                     {/* Image Column */}
                     <div className={cn("lg:col-span-6 relative", isEven && "lg:order-2")}>
-                      <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+                      <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100 group">
                         <Image
                           src={sol.image}
                           alt={sol.title}
                           fill
-                          className="object-cover"
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
                           sizes="(max-width: 1024px) 100vw, 50vw"
                         />
-                        <div className="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-amber-400 text-xs font-mono font-bold">
+                        <div className="absolute top-4 left-4 bg-slate-950/85 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-amber-400 text-xs font-mono font-bold">
                           {sol.badge}
                         </div>
                       </div>
@@ -182,38 +253,43 @@ export default function SolutionsPage() {
 
                     {/* Content Column */}
                     <div className={cn("lg:col-span-6 space-y-5 text-left", isEven && "lg:order-1")}>
-                      <span className="text-xs font-mono font-bold text-amber-700 uppercase tracking-wider">
-                        {sol.capacity}
-                      </span>
-                      <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
-                        {sol.title}
-                      </h2>
+                      <div>
+                        <span className="text-[11px] font-mono font-bold text-amber-700 uppercase tracking-wider bg-amber-50 px-2.5 py-1 rounded border border-amber-200/60 inline-block">
+                          {sol.categoryTag}
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug mt-2.5">
+                          {sol.title}
+                        </h2>
+                      </div>
+
                       <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                        {sol.desc}
+                        {sol.description}
                       </p>
 
-                      <div className="space-y-2.5 pt-2">
+                      {/* Technical Specs / Highlights */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
                         {sol.features.map((feat, fIdx) => (
-                          <div key={fIdx} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 font-semibold">
-                            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                          <div key={fIdx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-800 font-medium">
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                             <span>{feat}</span>
                           </div>
                         ))}
                       </div>
 
-                      <div className="pt-4 flex flex-wrap gap-3">
+                      {/* Action CTAs */}
+                      <div className="pt-3 flex flex-wrap items-center gap-3">
                         <Link
-                          href="/calculator"
-                          className="btn-primary-solar py-2.5 px-5 rounded-xl flex items-center gap-2 text-xs font-bold text-slate-950 shadow-sm"
+                          href={sol.primaryCta.href}
+                          className="btn-primary-solar py-2.5 px-6 rounded-xl flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-950 shadow-sm"
                         >
-                          <Calculator className="w-4 h-4" />
-                          <span>Calculate System Capex & ROI</span>
+                          <span>{sol.primaryCta.label}</span>
+                          <ArrowRight className="w-4 h-4" />
                         </Link>
                         <Link
-                          href="/contact"
-                          className="py-2.5 px-5 rounded-xl border border-slate-300 hover:border-amber-400 bg-white hover:bg-amber-50/40 text-slate-800 text-xs font-bold transition-all"
+                          href={sol.secondaryCta.href}
+                          className="py-2.5 px-5 rounded-xl border border-slate-300 hover:border-amber-400 bg-white hover:bg-amber-50/50 text-slate-800 hover:text-amber-900 text-xs sm:text-sm font-semibold transition-all shadow-2xs"
                         >
-                          Book Feasibility Audit
+                          <span>{sol.secondaryCta.label}</span>
                         </Link>
                       </div>
                     </div>
@@ -224,13 +300,10 @@ export default function SolutionsPage() {
           </Container>
         </section>
 
-        {/* PARTNERS */}
+        {/* 3. TECHNOLOGY ALLIANCES & EPC PARTNERS */}
         <PartnersSection />
 
-        {/* CLIENTS */}
-        <ClientsSection />
-
-        {/* BOTTOM CTA */}
+        {/* 4. BOTTOM ACTION CTA */}
         <section className="py-16 sm:py-20 bg-slate-900 text-white text-center relative overflow-hidden">
           <div
             aria-hidden="true"
@@ -241,15 +314,15 @@ export default function SolutionsPage() {
             <div className="max-w-3xl mx-auto space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold font-mono">
                 <Zap className="w-4 h-4" />
-                <span>CLEAN POWER FOR YOUR FACILITY</span>
+                <span>START YOUR CLEAN ENERGY JOURNEY</span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                Unlock Clean, Uninterruptible Solar Energy Today
+                Ready to Optimize Your Facility&apos;s Energy Infrastructure?
               </h2>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Connect with our certified engineers to conduct a detailed 3D LiDAR shading analysis and single-line electrical engineering layout for your site.
+                Speak directly with our certified solar engineers to receive an on-site feasibility assessment, single-line diagram, and financial ROI payback analysis.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
@@ -265,7 +338,7 @@ export default function SolutionsPage() {
                   href="/contact"
                   className="py-3.5 px-8 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/30 text-white text-sm font-bold transition-all"
                 >
-                  Speak with an Engineer
+                  Request Engineering Consultation
                 </Link>
               </div>
             </div>
