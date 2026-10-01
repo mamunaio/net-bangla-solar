@@ -18,6 +18,7 @@ import {
   Landmark,
   FileCheck,
   Sparkles,
+  ArrowUpRight,
 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -159,10 +160,17 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
               {/* Left Column: Company Particulars Card (from Page 3 of PDF) */}
               <div className="lg:col-span-5 space-y-6">
-                <div className="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm space-y-5 text-left">
-                  <div className="flex items-center gap-2.5 pb-4 border-b border-slate-200">
-                    <Building2 className="w-5 h-5 text-amber-600" />
-                    <h2 className="text-lg font-bold text-slate-900">
+                <div className="group relative p-6 sm:p-7 rounded-3xl bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-amber-400 shadow-sm hover:shadow-[0_16px_36px_-8px_rgba(245,158,11,0.18),0_4px_12px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 space-y-5 text-left overflow-hidden">
+                  {/* Top Golden Shimmer Line */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                  <div className="flex items-center gap-2.5 pb-4 border-b border-slate-200 relative z-10">
+                    <div className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                      <Building2 className="w-5 h-5" />
+                    </div>
+                    <h2 className="text-lg font-bold text-slate-900 group-hover:text-amber-900 transition-colors">
                       Company Particulars
                     </h2>
                   </div>
@@ -430,29 +438,46 @@ export default function AboutPage() {
               {mainStrategicPartners.map((partner) => (
                 <div
                   key={partner.id}
-                  className="rounded-3xl p-6 bg-white border border-slate-200/90 shadow-sm hover:border-amber-400 hover:shadow-md transition-all flex flex-col justify-between space-y-5"
+                  className="group relative rounded-3xl p-6 sm:p-7 bg-white border border-slate-200/90 hover:border-amber-400 transition-all duration-300 ease-out hover:-translate-y-1.5 flex flex-col justify-between text-left space-y-5 shadow-sm hover:shadow-[0_16px_36px_-8px_rgba(245,158,11,0.20),0_4px_12px_rgba(0,0,0,0.04)] overflow-hidden cursor-default"
                 >
-                  <div className="space-y-4">
+                  {/* Top Golden Shimmer Line on Hover */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+
+                  {/* Subtle Inner Ambient Glow on Hover */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-500/[0.04] via-amber-400/[0.01] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+
+                  <div className="space-y-4 relative z-10">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-mono uppercase font-bold text-amber-800 bg-amber-100/80 px-2.5 py-0.5 rounded border border-amber-200">
+                      <span className="text-[10px] font-mono uppercase font-bold text-amber-800 bg-amber-100/80 group-hover:bg-amber-500 group-hover:text-slate-950 px-2.5 py-0.5 rounded border border-amber-200 group-hover:border-amber-500 transition-all duration-200">
                         {partner.tag}
                       </span>
                     </div>
 
-                    <div className="h-20 flex items-center justify-center bg-slate-50 rounded-2xl p-3 border border-slate-100">
-                      <Image
-                        src={partner.logo}
-                        alt={partner.name}
-                        width={180}
-                        height={60}
-                        className="max-h-14 w-auto object-contain"
-                      />
+                    <div className="h-24 flex items-center justify-center bg-slate-50/70 group-hover:bg-white rounded-2xl p-3 border border-slate-100 group-hover:border-amber-200/70 transition-all duration-300">
+                      <div className="relative w-full h-full flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300 ease-out">
+                        <Image
+                          src={partner.logo}
+                          alt={partner.name}
+                          width={180}
+                          height={60}
+                          className="max-h-16 w-auto object-contain filter drop-shadow-2xs transition-all duration-300"
+                        />
+                      </div>
                     </div>
 
                     <div>
-                      <h3 className="text-base font-bold text-slate-900 leading-snug">
-                        {partner.name}
-                      </h3>
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className="text-base font-bold text-slate-900 group-hover:text-amber-800 transition-colors leading-snug">
+                          {partner.name}
+                        </h3>
+                        <ArrowUpRight className="w-4 h-4 text-amber-600 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 shrink-0 mt-0.5" />
+                      </div>
                       {partner.nativeName && (
                         <p className="text-xs text-slate-500 font-medium mt-0.5">
                           {partner.nativeName}
@@ -463,7 +488,7 @@ export default function AboutPage() {
                       </p>
                     </div>
 
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs text-slate-600 group-hover:text-slate-700 leading-relaxed">
                       {partner.description}
                     </p>
                   </div>
@@ -487,57 +512,75 @@ export default function AboutPage() {
             </div>
 
             {/* Mandatory Explicit Statement Box */}
-            <div className="max-w-3xl mx-auto mb-10 p-4 sm:p-5 rounded-2xl bg-amber-500/10 border-2 border-amber-500/40 text-center">
+            <div className="max-w-3xl mx-auto mb-10 p-4 sm:p-5 rounded-2xl bg-amber-500/10 border-2 border-amber-500/40 text-center shadow-xs">
               <p className="text-sm sm:text-base font-bold text-amber-950">
                 &ldquo;All our experiences are IT-related and Bangladesh-focused.&rdquo;
               </p>
             </div>
 
             {/* 6 Entities Grid: BASIS, BACCO, ITKALL, ZJHT, CMC, Huachuang Guojing */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto text-left">
               {affiliationsList.map((item) => (
                 <div
                   key={item.id}
-                  className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3.5 flex flex-col justify-between"
+                  className="group relative rounded-3xl p-6 sm:p-7 bg-white border border-slate-200/90 hover:border-amber-400 transition-all duration-300 ease-out hover:-translate-y-1.5 flex flex-col justify-between text-left space-y-5 shadow-sm hover:shadow-[0_16px_36px_-8px_rgba(245,158,11,0.20),0_4px_12px_rgba(0,0,0,0.04)] overflow-hidden cursor-default"
                 >
-                  <div className="space-y-3">
+                  {/* Top Golden Shimmer Line on Hover */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+
+                  {/* Subtle Inner Ambient Glow on Hover */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-500/[0.04] via-amber-400/[0.01] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+
+                  <div className="space-y-4 relative z-10">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-mono font-bold uppercase text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded border border-slate-200">
+                      <span className="text-[10px] font-mono uppercase font-bold text-amber-800 bg-amber-100/80 group-hover:bg-amber-500 group-hover:text-slate-950 px-2.5 py-0.5 rounded border border-amber-200 group-hover:border-amber-500 transition-all duration-200">
                         {item.tag}
                       </span>
                     </div>
 
-                    <div className="h-16 flex items-center justify-center bg-slate-50 rounded-xl p-2 border border-slate-100">
-                      {item.logo ? (
-                        <Image
-                          src={item.logo}
-                          alt={item.name}
-                          width={150}
-                          height={50}
-                          className="max-h-12 w-auto object-contain"
-                        />
-                      ) : (
-                        <div className="flex items-center gap-2 text-slate-800 font-extrabold text-lg tracking-wider">
-                          <Cpu className="w-5 h-5 text-amber-600" />
-                          <span>{item.name}</span>
-                        </div>
-                      )}
+                    {/* Logo Showcase Stage with Zoom Hover */}
+                    <div className="h-20 sm:h-24 flex items-center justify-center bg-slate-50/70 group-hover:bg-white rounded-2xl p-3 border border-slate-100 group-hover:border-amber-200/70 transition-all duration-300">
+                      <div className="relative w-full h-full flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300 ease-out">
+                        {item.logo ? (
+                          <Image
+                            src={item.logo}
+                            alt={item.name}
+                            width={160}
+                            height={60}
+                            className="max-h-14 w-auto object-contain filter drop-shadow-2xs transition-all duration-300"
+                          />
+                        ) : (
+                          <div className="flex items-center gap-2.5 text-slate-800 group-hover:text-amber-800 font-extrabold text-lg tracking-wider transition-colors">
+                            <Cpu className="w-5 h-5 text-amber-600 group-hover:rotate-12 transition-transform duration-300" />
+                            <span>{item.name}</span>
+                          </div>
+                        )}
+                      </div>
                     </div>
 
                     <div>
-                      <h3 className="text-base font-bold text-slate-900">
-                        {item.name}
-                      </h3>
-                      <p className="text-xs text-slate-500 font-medium">
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-amber-800 transition-colors leading-snug">
+                          {item.name}
+                        </h3>
+                        <ArrowUpRight className="w-4 h-4 text-amber-600 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 shrink-0 mt-0.5" />
+                      </div>
+                      <p className="text-xs text-slate-500 font-medium mt-0.5">
                         {item.fullName}
                       </p>
                     </div>
 
-                    <div className="text-xs font-semibold text-amber-800 bg-amber-50/80 p-2 rounded-lg border border-amber-200/60">
+                    <div className="text-xs font-semibold text-amber-900 bg-amber-50/80 group-hover:bg-amber-100/90 group-hover:border-amber-300/80 p-2.5 rounded-xl border border-amber-200/60 transition-all duration-200">
                       {item.identifier}
                     </div>
 
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs text-slate-600 group-hover:text-slate-700 leading-relaxed">
                       {item.role}
                     </p>
                   </div>
@@ -565,20 +608,26 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto text-left">
               {/* Health & Safety Policy Card */}
-              <div className="p-7 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600">
+              <div className="group relative rounded-3xl p-7 sm:p-8 bg-white border border-slate-200/90 hover:border-amber-400 transition-all duration-300 ease-out hover:-translate-y-1.5 shadow-sm hover:shadow-[0_16px_36px_-8px_rgba(245,158,11,0.18),0_4px_12px_rgba(0,0,0,0.04)] overflow-hidden space-y-4">
+                {/* Top Golden Shimmer Line */}
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+
+                <div className="flex items-center gap-3 relative z-10">
+                  <div className="w-11 h-11 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors shadow-2xs">
                     <HardHat className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-slate-900">
+                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-amber-900 transition-colors">
                       Health &amp; Safety Policy
                     </h3>
                     <p className="text-xs text-slate-500">Zero-Accident Workplace Standard</p>
                   </div>
                 </div>
 
-                <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600">
+                <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600 relative z-10">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span>Identifying site hazards and enforcing preventive risk management protocols.</span>
@@ -599,20 +648,26 @@ export default function AboutPage() {
               </div>
 
               {/* Environmental Policy & MFCA Card */}
-              <div className="p-7 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600">
+              <div className="group relative rounded-3xl p-7 sm:p-8 bg-white border border-slate-200/90 hover:border-emerald-400 transition-all duration-300 ease-out hover:-translate-y-1.5 shadow-sm hover:shadow-[0_16px_36px_-8px_rgba(16,185,129,0.18),0_4px_12px_rgba(0,0,0,0.04)] overflow-hidden space-y-4">
+                {/* Top Green Shimmer Line */}
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-emerald-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+
+                <div className="flex items-center gap-3 relative z-10">
+                  <div className="w-11 h-11 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-500 group-hover:text-white transition-colors shadow-2xs">
                     <Leaf className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-slate-900">
+                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-900 transition-colors">
                       Environmental Policy &amp; MFCA
                     </h3>
                     <p className="text-xs text-slate-500">Resource Optimization &amp; Sustainability</p>
                   </div>
                 </div>
 
-                <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600">
+                <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600 relative z-10">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span>Integrating environmental impact assessment into project planning and engineering design.</span>

@@ -909,6 +909,168 @@ export default function SolarCalculatorPage() {
           </div>
         </div>
 
+        {/* SOLAR FUNDING PROGRAM (OFFICIAL BROCHURE COMPONENT) */}
+        <div className="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-10 lg:p-12 shadow-sm space-y-10 text-left relative overflow-hidden">
+          {/* Subtle Ambient Background Light */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full bg-amber-400/[0.07] blur-[140px]"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-0 left-1/3 w-80 h-80 rounded-full bg-emerald-400/[0.05] blur-[120px]"
+          />
+
+          {/* Header & Intro Paragraph */}
+          <div className="max-w-4xl mx-auto text-center space-y-4">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b] animate-pulse" />
+              <span>// SOLAR FUNDING PROGRAM</span>
+            </div>
+
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Zero Upfront Capital &bull;{" "}
+              <span className="gradient-text-solar">Manageable Monthly Solar Energy</span>
+            </h3>
+
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto">
+              Going solar has never been easier. With our groundbreaking Solar Funding Program,
+              clients can now install high-quality solar panels without any upfront investment.
+              This unique service is designed to eliminate the financial hurdles traditionally
+              associated with solar energy adoption. Whether you&apos;re a homeowner looking to cut
+              electricity bills or a business aiming to reduce operational costs, Net Bangla Ltd.
+              offers a pathway to clean energy that doesn&apos;t require large capital expenditures (CAPEX).
+            </p>
+          </div>
+
+          {/* Subheader 1: Why Choose Solar Funding (5 Cards) */}
+          <div className="space-y-5">
+            <div className="text-center">
+              <span className="inline-block px-4 py-1 rounded-full bg-slate-900 text-amber-400 text-xs font-bold font-mono tracking-wider uppercase shadow-sm">
+                Why Choose Solar Funding
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {/* Card 1 */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 hover:border-amber-400 hover:bg-white hover:shadow-lg transition-all duration-300 space-y-3">
+                <div className="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+                  <DollarSign className="w-6 h-6" />
+                </div>
+                <h4 className="text-base font-bold text-slate-900">Zero Upfront Costs</h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Start using solar power immediately without paying installation fees.
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 hover:border-amber-400 hover:bg-white hover:shadow-lg transition-all duration-300 space-y-3">
+                <div className="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6" />
+                </div>
+                <h4 className="text-base font-bold text-slate-900">Lower Electricity Bills</h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Enjoy reduced utility costs from day one of installation.
+                </p>
+              </div>
+
+              {/* Card 3 */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 hover:border-amber-400 hover:bg-white hover:shadow-lg transition-all duration-300 space-y-3">
+                <div className="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+                  <Leaf className="w-6 h-6" />
+                </div>
+                <h4 className="text-base font-bold text-slate-900">Sustainable Energy</h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Power your home or business with clean, environmentally responsible renewable energy.
+                </p>
+              </div>
+
+              {/* Card 4 */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 hover:border-amber-400 hover:bg-white hover:shadow-lg transition-all duration-300 space-y-3">
+                <div className="w-11 h-11 rounded-xl bg-sky-500/10 text-sky-600 flex items-center justify-center">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <h4 className="text-base font-bold text-slate-900">Long-Term Value</h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Our solar systems are designed for durability and backed by 25-year performance guarantees.
+                </p>
+              </div>
+
+              {/* Card 5 */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 hover:border-amber-400 hover:bg-white hover:shadow-lg transition-all duration-300 space-y-3 lg:col-span-2">
+                <div className="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+                  <Zap className="w-6 h-6" />
+                </div>
+                <h4 className="text-base font-bold text-slate-900">Energy Independence</h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Reduce reliance on the utility grid and protect your bottom line from future electricity tariff hikes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Subheader 2: How It Works (5-Step Sequential Workflow) */}
+          <div className="space-y-6 pt-4 border-t border-slate-100">
+            <div className="text-center">
+              <span className="inline-block px-4 py-1 rounded-full bg-slate-900 text-emerald-400 text-xs font-bold font-mono tracking-wider uppercase shadow-sm">
+                How It Works
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              {/* Step 1 */}
+              <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200/80 space-y-2 text-left">
+                <span className="text-xs font-mono font-bold text-amber-800 bg-amber-200/60 px-2 py-0.5 rounded-md">
+                  Step 01
+                </span>
+                <p className="text-xs text-slate-700 leading-relaxed pt-1">
+                  Our experts evaluate your energy needs and site suitability.
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200/80 space-y-2 text-left">
+                <span className="text-xs font-mono font-bold text-amber-800 bg-amber-200/60 px-2 py-0.5 rounded-md">
+                  Step 02
+                </span>
+                <p className="text-xs text-slate-700 leading-relaxed pt-1">
+                  Receive a tailored solar solution with a clear financial breakdown.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200/80 space-y-2 text-left">
+                <span className="text-xs font-mono font-bold text-amber-800 bg-amber-200/60 px-2 py-0.5 rounded-md">
+                  Step 03
+                </span>
+                <p className="text-xs text-slate-700 leading-relaxed pt-1">
+                  Once approved, we handle the entire installation process—from design to execution.
+                </p>
+              </div>
+
+              {/* Step 4 */}
+              <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200/80 space-y-2 text-left">
+                <span className="text-xs font-mono font-bold text-amber-800 bg-amber-200/60 px-2 py-0.5 rounded-md">
+                  Step 04
+                </span>
+                <p className="text-xs text-slate-700 leading-relaxed pt-1">
+                  Begin paying for your system through manageable monthly payments, often lower than your current energy bills.
+                </p>
+              </div>
+
+              {/* Step 5 */}
+              <div className="p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200/90 space-y-2 text-left">
+                <span className="text-xs font-mono font-bold text-emerald-800 bg-emerald-200/60 px-2 py-0.5 rounded-md">
+                  Step 05
+                </span>
+                <p className="text-xs text-slate-700 leading-relaxed pt-1">
+                  Experience reliable solar power and long-term savings, all with dedicated support from our team.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* 5. METHODOLOGY & FAQ SECTION */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left pt-6">
           <div className="group relative overflow-hidden p-6 rounded-3xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-amber-400 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 space-y-3">

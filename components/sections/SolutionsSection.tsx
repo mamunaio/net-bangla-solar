@@ -38,16 +38,16 @@ const solutions: SolutionItem[] = [
   {
     id: "solaroof",
     index: "01",
-    title: "Power Solaroof",
+    title: "Integrated Solar Roof Systems",
     description:
-      "Integrated solar roofing engineered to serve as the structural roof while generating clean, continuous electricity.",
+      "Integrated Solar Roof Systems combine the functions of traditional roofing with high-efficiency solar power generation, built seamlessly into the roof structure itself.",
     keyPoints: [
-      "Structural roof integration",
-      "Maximum surface utilization",
-      "Weather-resistant engineering",
+      "Seamless roof integration",
+      "Optimized space & aesthetics",
+      "Long-term energy savings",
     ],
     image: "/images/power-solaroof.jpg",
-    alt: "Power Solaroof integrated solar roofing system on modern facility",
+    alt: "Integrated Solar Roof Systems on modern facility",
     icon: PanelsTopLeft,
     gridClass: "lg:col-span-7",
     heightClass: "min-h-[460px] sm:min-h-[500px] lg:min-h-[520px]",
@@ -58,7 +58,7 @@ const solutions: SolutionItem[] = [
     index: "02",
     title: "Industrial Solar Solutions",
     description:
-      "High-yield photovoltaic systems engineered for factories, manufacturing facilities, and heavy continuous power demands.",
+      "Turnkey solar EPC and storage solutions tailored for Commercial & Industrial (C&I) facilities with high continuous energy demands.",
     keyPoints: [
       "Large-scale PV deployment",
       "Peak-load reduction",
@@ -76,11 +76,11 @@ const solutions: SolutionItem[] = [
     index: "03",
     title: "Commercial Solar Solutions",
     description:
-      "Solar systems designed for offices, institutions, retail facilities, and commercial properties.",
+      "On-grid solar photovoltaic systems designed for commercial properties, taking full advantage of net metering to reduce monthly utility bills.",
     keyPoints: [
       "Net metering support",
       "Operating cost savings",
-      "Scalable system layout",
+      "Surplus energy export",
     ],
     image: "/images/solar-commercial.jpg",
     alt: "Solar-Powered Commercial Facility at Sunset Rooftop Installation",
@@ -94,11 +94,11 @@ const solutions: SolutionItem[] = [
     index: "04",
     title: "Residential Solar Solutions",
     description:
-      "Custom rooftop solar systems designed for modern homes, with on-grid, off-grid, and hybrid configurations.",
+      "Durable on-grid and hybrid solar installations tailored for modern homes, bringing reliable and cost-effective electricity to every doorstep.",
     keyPoints: [
       "Reduced monthly bills",
-      "Backup power capability",
-      "Low maintenance",
+      "Silent battery backup",
+      "Free home assessment",
     ],
     image: "/images/solar-residential.jpg",
     alt: "Solar-Powered Modern Garden Home rooftop solar installation",
@@ -112,11 +112,11 @@ const solutions: SolutionItem[] = [
     index: "05",
     title: "Agricultural Solar Solutions",
     description:
-      "Solar-powered energy systems for agricultural operations, rural irrigation pumps, and agribusiness facilities.",
+      "Solar-powered irrigation and cold storage systems delivering complete energy independence for farms, agro-processing, and rural operations.",
     keyPoints: [
       "Solar irrigation pumps",
       "Off-grid reliability",
-      "Fuel dependency reduction",
+      "Zero diesel fuel cost",
     ],
     image: "/images/solar-agricultural.jpg",
     alt: "Solar-Powered Irrigation System in Green Agricultural Fields",
@@ -130,33 +130,33 @@ const solutions: SolutionItem[] = [
 const technicalCapabilities = [
   {
     icon: PlugZap,
-    title: "On-Grid / Net Metered",
-    detail: "Grid synchronization & NEM compliant export",
+    title: "On-Grid Solar PV",
+    detail: "Direct grid connection & surplus energy net-metering export",
   },
   {
     icon: BatteryCharging,
-    title: "Off-Grid & Hybrid",
-    detail: "Reliable power independence & seamless switching",
+    title: "Off-Grid & Hybrid PV",
+    detail: "Complete energy independence & smart battery storage flexibility",
   },
   {
     icon: Cpu,
-    title: "Battery Storage",
-    detail: "LiFePO4, Hybrid ESS & Commercial Energy Storage",
+    title: "Integrated Solar Roof",
+    detail: "Seamless in-roof BIPV combining structural shelter & solar power",
   },
   {
     icon: Sprout,
     title: "Solar Water Pumping",
-    detail: "Direct DC irrigation without fuel dependency",
+    detail: "Direct DC agricultural irrigation without costly fuel dependency",
   },
   {
     icon: LampDesk,
     title: "Solar Street Lighting",
-    detail: "Standalone auto-sensor perimeter lighting",
+    detail: "Standalone auto-sensor perimeter & municipal lighting systems",
   },
   {
     icon: Wrench,
-    title: "Monitoring & Maintenance",
-    detail: "Proactive telemetry & full lifecycle support",
+    title: "Re-Commissioning & O&M",
+    detail: "Startup testing, safety compliance & lifetime maintenance for ROI",
   },
 ];
 
@@ -178,9 +178,9 @@ export function SolutionsSection() {
       <Container className="relative z-10 space-y-12 md:space-y-16">
         {/* SECTION INTRO */}
         <div className="max-w-3xl space-y-4 text-left">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase shadow-sm">
             <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
-            <span>OUR SOLUTIONS</span>
+            <span>// OUR SERVICES &amp; SOLUTIONS</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
@@ -189,9 +189,9 @@ export function SolutionsSection() {
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl leading-relaxed">
-            From integrated solar roofing to residential, commercial, industrial,
-            and agricultural systems, Net Bangla Solar designs and delivers
-            solutions around real energy requirements.
+            From turnkey EPC engineering and integrated solar roofing to commercial,
+            industrial, residential, and agricultural deployments, Net Bangla Limited delivers
+            reliable, durable solar solutions to bring clean electricity across Bangladesh.
           </p>
         </div>
 

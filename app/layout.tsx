@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Sora, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { QuoteModalProvider } from "@/components/providers/QuoteModalProvider";
@@ -58,7 +59,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${sora.variable} ${jetBrainsMono.variable}`}>
       <head>
-        <script
+        <Script
+          id="theme-initializer"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -76,8 +79,10 @@ export default function RootLayout({
             `,
           }}
         />
-        <script
+        <Script
+          id="schema-structured-data"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",

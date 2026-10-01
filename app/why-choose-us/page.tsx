@@ -10,16 +10,14 @@ import {
   Cpu,
   Wind,
   CheckCircle2,
-  XCircle,
   Clock,
   Wrench,
   BarChart3,
   Calculator,
   ArrowRight,
-  Sparkles,
-  PhoneCall,
-  Check,
   Building,
+  Leaf,
+  Headphones,
 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -32,6 +30,41 @@ export const metadata: Metadata = {
   description:
     "Discover why Bangladesh's leading industries, commercial enterprises, and institutions trust Net Bangla Solar for turnkey solar EPC, Tier-1 hardware, and 25-year performance.",
 };
+
+const brochurePillars = [
+  {
+    number: "01",
+    tag: "CUSTOMIZED SOLUTIONS",
+    title: "Tailored Solar Systems",
+    description:
+      "Whether it’s a residential home or a large commercial project, we design and install customized solar systems tailored to maximize efficiency and minimize costs. Our solutions empower you to harness renewable energy effectively while enjoying sustainable, long-term savings.",
+    icon: Sun,
+  },
+  {
+    number: "02",
+    tag: "QUALITY & DURABILITY",
+    title: "We Build Solar to Last",
+    description:
+      "We build solar systems to last. By combining cutting-edge technology with rigorous quality standards, we ensure your system delivers peak performance year after year, providing dependable energy for decades to come.",
+    icon: Award,
+  },
+  {
+    number: "03",
+    tag: "MAXIMUM ROI",
+    title: "Significant Cost Reductions",
+    description:
+      "Our expert designs help you achieve significant reductions in monthly electricity costs. Solar power is a smart investment for homes and businesses alike, and we are committed to helping you realize the maximum financial benefits from your solar system.",
+    icon: Leaf,
+  },
+  {
+    number: "04",
+    tag: "LIFECYCLE PARTNERSHIP",
+    title: "Ongoing Support & Care",
+    description:
+      "Our commitment doesn’t end with installation. We provide ongoing customer support and maintenance to ensure your solar system consistently operates at peak performance. With Net Bangla Limited, you’re more than a customer—you’re a valued partner in building a brighter, more sustainable future.",
+    icon: Headphones,
+  },
+];
 
 const engineeringPillars = [
   {
@@ -135,7 +168,7 @@ export default function WhyChooseUsPage() {
       <Navbar />
 
       <main className="flex-grow pt-28 sm:pt-32 pb-20">
-        {/* HERO */}
+        {/* HERO SECTION WITH BROCHURE COPY */}
         <section className="relative py-12 sm:py-16 lg:py-20 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200/80">
           <div
             aria-hidden="true"
@@ -144,20 +177,23 @@ export default function WhyChooseUsPage() {
 
           <Container>
             <div className="max-w-4xl mx-auto text-center space-y-5">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wide uppercase">
-                <Award className="w-4 h-4 text-amber-600" />
-                <span>ENGINEERING EXCELLENCE &bull; BANKABLE TURNKEY SOLAR</span>
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs sm:text-sm font-mono font-bold tracking-wide uppercase">
+                <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b] animate-pulse" />
+                <span>// WHY CHOOSE US?</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-                Why Industry Leaders & Institutions Choose{" "}
-                <span className="gradient-text-solar">Net Bangla Solar</span>
+                Empowering Sustainable Development with{" "}
+                <span className="gradient-text-solar">Unmatched Solar Value</span>
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-                Solar energy is a 25-year financial asset. We combine bankable Tier-1 equipment,
-                rigorous cyclone-tested structural engineering, and guaranteed net-metering approvals
-                to maximize your long-term energy yield and financial returns.
+                Our expertise sets us apart in the solar market, delivering unmatched
+                value and results for every client. Our product portfolio comprises solar
+                energy systems for private residences, commercial enterprises, and public
+                sector projects. We are committed to promoting sustainable development by
+                providing reliable, efficient, and environmentally responsible solar
+                technologies that align with national and global energy goals.
               </p>
 
               <div className="pt-3 flex flex-wrap items-center justify-center gap-4">
@@ -166,7 +202,7 @@ export default function WhyChooseUsPage() {
                   className="btn-primary-solar py-3 px-6 rounded-2xl flex items-center gap-2 text-sm font-bold text-slate-950 shadow-md"
                 >
                   <Calculator className="w-4 h-4" />
-                  <span>Check Your Facility ROI</span>
+                  <span>Calculate Solar ROI</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
@@ -180,12 +216,57 @@ export default function WhyChooseUsPage() {
           </Container>
         </section>
 
-        {/* 10 CORE ENGINEERING PILLARS */}
-        <section className="py-16 sm:py-20">
+        {/* 4 CORE BROCHURE PILLARS CARDS */}
+        <section className="py-14 sm:py-18 bg-white border-b border-slate-100">
+          <Container>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+              {brochurePillars.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={item.number}
+                    className="group relative rounded-3xl p-6 sm:p-7 bg-white border border-slate-200/90 hover:border-amber-400 transition-all duration-300 ease-out hover:-translate-y-2 flex flex-col justify-between text-left space-y-5 shadow-sm hover:shadow-[0_20px_40px_-10px_rgba(245,158,11,0.20)] overflow-hidden"
+                  >
+                    <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                    <div className="flex items-center justify-between">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-amber-500/20 bg-amber-500/10 text-amber-600 group-hover:bg-amber-500 group-hover:text-slate-950 transition-all duration-300">
+                        <Icon className="h-7 w-7" />
+                      </div>
+                      <span className="text-xs font-mono font-bold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+                        {item.number}
+                      </span>
+                    </div>
+
+                    <div className="space-y-2.5 flex-1">
+                      <span className="text-[10.5px] font-mono font-bold uppercase tracking-wider text-amber-700 block">
+                        {item.tag}
+                      </span>
+                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-amber-900 transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs sm:text-[13.5px] text-slate-600 leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
+
+                    <div className="pt-3 border-t border-slate-100 flex items-center gap-1.5 text-[11px] font-semibold text-amber-700">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>Standard EPC Guarantee</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </Container>
+        </section>
+
+        {/* 10 DETAILED TECHNICAL ENGINEERING PILLARS */}
+        <section className="py-16 sm:py-20 bg-slate-50/50">
           <Container>
             <div className="text-center max-w-3xl mx-auto space-y-3 mb-14">
               <span className="text-xs font-bold text-amber-700 uppercase tracking-wider">
-                CORE ADVANTAGES
+                DETAILED CAPABILITIES
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
                 10 Pillars of Engineering Superiority
@@ -241,99 +322,59 @@ export default function WhyChooseUsPage() {
           <Container>
             <div className="text-center max-w-3xl mx-auto space-y-3 mb-14">
               <span className="text-xs font-bold text-amber-700 uppercase tracking-wider">
-                HEAD-TO-HEAD COMPARISON
+                COMPREHENSIVE COMPARISON
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Net Bangla Solar vs Traditional Installers
+                Net Bangla Solar vs. Standard Contractors
               </h2>
               <p className="text-sm sm:text-base text-slate-600">
-                Compare our turnkey engineering standards against conventional local solar contractors.
+                Understand the engineering differences that protect your capital and ensure 25+ years of uninterrupted energy production.
               </p>
             </div>
 
-            <div className="bg-white rounded-3xl border border-slate-200/90 shadow-xl overflow-hidden max-w-5xl mx-auto">
-              {/* Table Header */}
-              <div className="grid grid-cols-12 bg-slate-900 text-white p-5 sm:p-6 text-left font-bold text-sm sm:text-base">
-                <div className="col-span-12 sm:col-span-4 text-slate-300">Engineering Parameter</div>
-                <div className="col-span-12 sm:col-span-4 text-amber-400 mt-2 sm:mt-0 flex items-center gap-2">
-                  <Sparkles className="w-4 h-4" />
-                  <span>Net Bangla Solar EPC</span>
-                </div>
-                <div className="col-span-12 sm:col-span-4 text-slate-400 mt-2 sm:mt-0">Traditional Local Installers</div>
-              </div>
-
-              {/* Table Rows */}
-              <div className="divide-y divide-slate-100 text-left">
-                {comparisonPoints.map((point, index) => (
-                  <div
-                    key={index}
-                    className="grid grid-cols-12 p-5 sm:p-6 items-center gap-4 sm:gap-2 hover:bg-amber-50/20 transition-colors"
-                  >
-                    <div className="col-span-12 sm:col-span-4 font-bold text-slate-900 text-sm">
-                      {point.feature}
-                    </div>
-                    <div className="col-span-12 sm:col-span-4 text-slate-800 text-xs sm:text-sm flex items-start gap-2 bg-emerald-50/60 p-3 sm:p-2.5 rounded-xl border border-emerald-200/70">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span className="font-semibold text-emerald-950">{point.netBangla}</span>
-                    </div>
-                    <div className="col-span-12 sm:col-span-4 text-slate-500 text-xs sm:text-sm flex items-start gap-2 bg-slate-50 p-3 sm:p-2.5 rounded-xl border border-slate-200">
-                      <XCircle className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
-                      <span>{point.traditional}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse bg-white rounded-3xl overflow-hidden border border-slate-200/90 shadow-sm">
+                <thead>
+                  <tr className="border-b border-slate-200 bg-slate-900 text-white text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    <th className="p-4 sm:p-5 w-1/3">Engineering &amp; Service Parameter</th>
+                    <th className="p-4 sm:p-5 w-1/3 bg-amber-500 text-slate-950 font-bold">
+                      Net Bangla Solar Standard
+                    </th>
+                    <th className="p-4 sm:p-5 w-1/3 text-slate-300">
+                      Conventional Market Contractor
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-200 text-xs sm:text-sm">
+                  {comparisonPoints.map((point, index) => (
+                    <tr key={index} className="hover:bg-amber-50/20 transition-colors">
+                      <td className="p-4 sm:p-5 font-bold text-slate-900 flex items-center gap-2">
+                        <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0" />
+                        <span>{point.feature}</span>
+                      </td>
+                      <td className="p-4 sm:p-5 bg-amber-500/5 font-semibold text-slate-900 border-x border-slate-200/60">
+                        <div className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                          <span>{point.netBangla}</span>
+                        </div>
+                      </td>
+                      <td className="p-4 sm:p-5 text-slate-500">
+                        <div className="flex items-start gap-2">
+                          <span className="text-rose-500 font-bold shrink-0">&times;</span>
+                          <span>{point.traditional}</span>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </Container>
         </section>
 
-        {/* TESTIMONIALS */}
-        <TestimonialsSection />
-
-        {/* PARTNERS */}
+        {/* PARTNERS & TESTIMONIALS */}
         <PartnersSection />
-
-        {/* BOTTOM CTA */}
-        <section className="py-16 sm:py-20 bg-slate-900 text-white text-center relative overflow-hidden">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/20 via-slate-900/40 to-slate-950 -z-10"
-          />
-
-          <Container>
-            <div className="max-w-3xl mx-auto space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold font-mono">
-                <Zap className="w-4 h-4" />
-                <span>ELEVATE YOUR ENERGY INDEPENDENCE</span>
-              </div>
-
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                Experience the Net Bangla Solar Difference
-              </h2>
-
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Contact our engineering headquarters today to arrange an on-site structural and shadow analysis of your factory or commercial facility.
-              </p>
-
-              <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
-                <Link
-                  href="/calculator"
-                  className="btn-primary-solar py-3.5 px-8 rounded-2xl flex items-center gap-2 text-sm font-bold text-slate-950 shadow-lg"
-                >
-                  <Calculator className="w-4 h-4" />
-                  <span>Calculate System Size & Savings</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="py-3.5 px-8 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/30 text-white text-sm font-bold transition-all"
-                >
-                  Book Free Engineering Audit
-                </Link>
-              </div>
-            </div>
-          </Container>
-        </section>
+        <TestimonialsSection />
       </main>
 
       <Footer />

@@ -51,10 +51,10 @@ const solutionCategories: SolutionCategory[] = [
     categoryTag: "MEGAWATT INDUSTRIAL & COMMERCIAL",
     badge: "100 kWp – 5+ MWp",
     description:
-      "Turnkey Megawatt-scale solar power plants for export-oriented textile mills, steel rerolling, pharmaceuticals, corporate towers, and heavy manufacturing. Includes 33kV/11kV substation grid synchronization and SREDA bi-directional net-metering export.",
+      "We extend our support exclusively in Consulting, Engineering, Contracting and Commissioning Services on a turnkey basis. We focus on delivering customized solar and storage energy solutions tailored for the Commercial and Industrial (C&I) sectors in Bangladesh, with 33kV/11kV substation grid synchronization and SREDA bi-directional net-metering export.",
     image: "/images/solar-industrial.jpg",
     features: [
-      "Zero Production Downtime Installation",
+      "Turnkey Engineering, Procurement & Commissioning (EPC)",
       "Tier-1 N-Type Bifacial Monocrystalline Modules",
       "Average Capex Payback: 3.1 – 3.4 Years",
       "24/7 Cloud SCADA Telemetry & String Alarms",
@@ -97,7 +97,7 @@ const solutionCategories: SolutionCategory[] = [
     categoryTag: "LUXURY RESIDENTIAL & HYBRID",
     badge: "5 kWp – 50 kWp ESS",
     description:
-      "High-efficiency smart on-grid and hybrid solar installations tailored for luxury villas, duplexes, and residential estates. Features smart Lithium LiFePO4 battery energy storage (ESS) for zero-delay, silent 24/7 backup power without generator noise.",
+      "Net Bangla Limited ensures reliable, durable solar solutions with advanced technology and expert installations to bring clean electricity to every doorstep. High-efficiency smart on-grid and hybrid solar installations tailored for luxury villas, duplexes, and residential estates with Lithium LiFePO4 battery energy storage (ESS).",
     image: "/images/solar-residential.jpg",
     features: [
       "Zero Noise & Zero Diesel Fumes Backup",
@@ -162,17 +162,17 @@ const solutionCategories: SolutionCategory[] = [
   },
   {
     id: "it-telecom-enterprise-services",
-    title: "IT, Telecom & Enterprise Technology Services",
+    title: "IT, Telecom, Safety & Security Services",
     categoryTag: "IT INFRASTRUCTURE & BPO",
     badge: "BASIS & BACCO Certified",
     description:
-      "Mission-critical information technology segments, BPO contact center infrastructure, electronic safety & security systems, and enterprise data analytics consulting backed by Net Bangla Limited's decade of institutional IT engineering legacy.",
+      "Net Bangla Ltd. provides services across major information technology segments, BPO contact center infrastructure, electronic safety & security systems, and data analysis services including Data Visualization, Analytics & Business Intelligence (BI), Data Mining, and Data Processing.",
     image: "/images/who-we-serve-engineering.jpg",
     features: [
       "General Member of BASIS (A-405) & BACCO",
       "BTRC Registered Call Center (CC/BPO) Infrastructure",
-      "Enterprise Electronic Safety & Security Systems",
-      "Data Analytics, Business Intelligence & Visualization",
+      "Electronic Safety & Security System Solutions",
+      "Data Visualization, Analytics & Business Intelligence (BI)",
     ],
     primaryCta: {
       label: "Contact IT Division",
