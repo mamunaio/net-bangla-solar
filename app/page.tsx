@@ -18,18 +18,18 @@ export default function Home() {
     <div className="relative min-h-screen w-full solar-ambient-bg overflow-x-hidden">
       <main>
         <Hero />
-        <ImpactStats />
+        {/* <ImpactStats /> */}
         <AboutSection />
         <SolutionsSection />
-        <TechnologySection />
+        {/* <TechnologySection /> */}
         <PartnersSection />
         <ProjectsSection />
-        <ProcessSection />
-        <WhyChooseUs />
+        {/* <ProcessSection /> */}
+        {/* <WhyChooseUs /> */}
         <TestimonialsSection />
         <ClientsSection />
-        <FAQSection />
-        <FinalCTA />
+        {/* <FAQSection /> */}
+        {/* <FinalCTA /> */}
       </main>
       <Footer />
     </div>

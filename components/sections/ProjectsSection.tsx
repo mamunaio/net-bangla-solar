@@ -122,9 +122,12 @@ export function ProjectsSection() {
         {/* SECTION INTRO */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-3xl space-y-4 text-left">
+            {/* Eyebrow badge (Hidden per user request) */}
+            {/* 
             <div className="inline-flex items-center rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-amber-700">
               <span>PROJECT APPLICATIONS</span>
-            </div>
+            </div> 
+            */}
 
             <h2 className="text-3xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
               Solar Systems Designed{" "}
@@ -138,11 +141,11 @@ export function ProjectsSection() {
             </p>
           </div>
 
-          {/* APPLICATION CATEGORY FILTER TABS */}
+          {/* APPLICATION CATEGORY FILTER TABS (Hidden on mobile per user request) */}
           <div
             role="tablist"
             aria-label="Filter solar project applications"
-            className="flex flex-wrap items-center gap-1.5 p-1.5 rounded-2xl bg-slate-100 border border-slate-200/80 self-start md:self-auto shadow-sm"
+            className="hidden md:flex flex-wrap items-center gap-1.5 p-1.5 rounded-2xl bg-slate-100 border border-slate-200/80 self-start md:self-auto shadow-sm"
           >
             {filterTabs.map((tab) => {
               const isActive = activeCategory === tab.key;
@@ -174,7 +177,7 @@ export function ProjectsSection() {
             return (
               <article
                 key={app.id}
-                className="group relative isolate flex min-h-[460px] sm:min-h-[490px] flex-col justify-between overflow-hidden rounded-3xl border border-slate-200 bg-slate-900 p-6 transition-all duration-300 ease-out hover:border-amber-500/50 hover:-translate-y-0.5 shadow-md hover:shadow-xl sm:p-8 lg:p-9"
+                className="group relative isolate flex min-h-[460px] sm:min-h-[490px] flex-col justify-end overflow-hidden rounded-3xl border border-slate-200 bg-slate-900 p-6 transition-all duration-300 ease-out hover:border-amber-500/50 hover:-translate-y-0.5 shadow-md hover:shadow-xl sm:p-8 lg:p-9"
               >
                 {/* Full Bleed Image Background */}
                 <div className="absolute inset-0 z-0 overflow-hidden">
@@ -207,7 +210,8 @@ export function ProjectsSection() {
                   />
                 </div>
 
-                {/* Top Area: Category Label, Representative Tag & Icon */}
+                {/* Top Area: Category Label, Representative Tag & Icon (Hidden per user request) */}
+                {/* 
                 <div className="relative z-10 flex items-center justify-between gap-4">
                   <div className="flex items-center gap-2">
                     <span className="rounded-full border border-white/20 bg-white/90 px-3 py-1 font-mono text-xs font-bold tracking-widest text-amber-700 backdrop-blur-md shadow-sm">
@@ -221,10 +225,11 @@ export function ProjectsSection() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-slate-900/70 text-amber-400 backdrop-blur-md group-hover:border-amber-400 group-hover:bg-amber-500/20 transition-all duration-200 shadow-sm">
                     <IconComponent className="h-5 w-5" />
                   </div>
-                </div>
+                </div> 
+                */}
 
                 {/* Bottom Area: Typical Scale, Title, Location & Inquire Link */}
-                <div className="relative z-10 space-y-4 pt-20 transition-transform duration-300 ease-out group-hover:-translate-y-0.5 text-left">
+                <div className="relative z-10 space-y-4 pt-16 transition-transform duration-300 ease-out group-hover:-translate-y-0.5 text-left">
                   {/* Typical System Scale Metadata */}
                   <div>
                     <span className="text-xs font-mono font-bold uppercase tracking-[0.18em] text-amber-300">
@@ -255,7 +260,7 @@ export function ProjectsSection() {
 
                   <div className="pt-3 flex items-center justify-between border-t border-white/15">
                     <Link
-                      href="#quote"
+                      href="/contact"
                       className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs sm:text-sm font-bold text-white transition-all hover:bg-amber-500 hover:text-slate-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 backdrop-blur-md"
                       aria-label={`Inquire about ${app.title} solar solutions`}
                     >

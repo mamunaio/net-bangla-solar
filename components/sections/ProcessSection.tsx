@@ -62,6 +62,12 @@ const stepsData: ProcessStep[] = [
 ];
 
 export function ProcessSection() {
+  // Section hidden as requested (set to false whenever you want to display it again)
+  const isHidden = true;
+  if (isHidden) {
+    return null;
+  }
+
   return (
     <section
       id="process"

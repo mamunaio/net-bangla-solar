@@ -304,7 +304,7 @@ export function Navbar() {
                                   <span>EPC GUARANTEE</span>
                                 </div>
                                 <h4 className="text-sm font-bold text-slate-900 leading-snug mb-3">
-                                  25-Year Guaranteed Performance Yield
+                                  20-Year Guaranteed Performance Yield
                                 </h4>
                                 <ul className="space-y-2 text-xs font-medium text-slate-700">
                                   <li className="flex items-center gap-2">

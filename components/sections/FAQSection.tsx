@@ -55,6 +55,12 @@ const faqData: FAQItem[] = [
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
+  // Section hidden as requested (set to false whenever you want to display it again)
+  const isHidden = true;
+  if (isHidden) {
+    return null;
+  }
+
   const toggleFAQ = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };

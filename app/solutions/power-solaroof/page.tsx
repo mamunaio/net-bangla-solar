@@ -50,9 +50,9 @@ const solaroofAdvantages = [
     icon: Award,
   },
   {
-    title: "25-Year Dual Power & Structural Warranty",
-    desc: "Backed by 25-year structural waterproofing integrity warranties and Tier-1 84.8% linear electrical generation guarantees.",
-    badge: "25-YR BANKABILITY",
+    title: "20-Year Dual Power & Structural Warranty",
+    desc: "Backed by 20-year structural waterproofing integrity warranties and Tier-1 84.8% linear electrical generation guarantees.",
+    badge: "20-YR BANKABILITY",
     icon: ShieldCheck,
   },
 ];

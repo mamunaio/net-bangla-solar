@@ -94,10 +94,12 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* LEFT COLUMN: Editorial Typography & Company Description */}
           <div ref={introRef} className="lg:col-span-7 space-y-6 text-left">
-            {/* Section Eyebrow */}
-            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase shadow-sm">
+            {/* Section Eyebrow (Temporarily hidden; easily re-enabled when needed) */}
+            {/* 
+            <div className="inline-flex items-center px-5 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-[20px] font-semibold tracking-wider uppercase shadow-sm">
               <span>ABOUT NET BANGLA SOLAR</span>
-            </div>
+            </div> 
+            */}
 
             {/* Main Heading (H2) */}
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-slate-900 leading-[1.15]">
@@ -163,16 +165,19 @@ export function AboutSection() {
                   />
                 )}
 
-                {/* Corporate Foundation Badge */}
+                {/* Corporate Foundation Badge (Hidden per user request; can be re-enabled later) */}
+                {/* 
                 <div className="absolute top-4 left-4 sm:top-5 sm:left-5 z-20 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-slate-200 text-slate-900 shadow-md">
                   <ShieldCheck className="w-3.5 h-3.5 text-amber-500" />
                   <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-amber-700">
                     Est. May 28, 2014 &bull; Turnkey Solar EPC
                   </span>
-                </div>
+                </div> 
+                */}
               </div>
 
-              {/* Leadership Block */}
+              {/* Leadership Block (Hidden per user request; can be re-enabled later) */}
+              {/* 
               <div
                 ref={leadershipRef}
                 className="p-4 sm:p-5 bg-white border-t border-slate-100 flex items-center justify-between gap-4"
@@ -206,7 +211,8 @@ export function AboutSection() {
                 >
                   <UserCheck className="w-4 h-4" />
                 </div>
-              </div>
+              </div> 
+              */}
             </div>
           </div>
         </div>

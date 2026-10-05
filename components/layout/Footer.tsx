@@ -111,15 +111,15 @@ export function Footer() {
             </div>
           </div>
 
-          {/* 2. COMPANY NAVIGATION (2 columns on Desktop) */}
+          {/* 2. COMPANY NAVIGATION (2 columns on Desktop; Centered on Mobile) */}
           <nav
             aria-label="Company Navigation"
-            className="lg:col-span-2 space-y-4 text-left"
+            className="lg:col-span-2 space-y-4 text-center md:text-left"
           >
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
               Company
             </h3>
-            <ul className="space-y-3 text-sm sm:text-base">
+            <ul className="space-y-3 text-sm sm:text-base flex flex-col items-center md:items-start">
               {companyLinks.map((item) => (
                 <li key={item.label}>
                   <Link
@@ -135,15 +135,15 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* 3. SOLUTIONS NAVIGATION (3 columns on Desktop) */}
+          {/* 3. SOLUTIONS NAVIGATION (3 columns on Desktop; Centered on Mobile) */}
           <nav
             aria-label="Solutions Navigation"
-            className="lg:col-span-3 space-y-4 text-left"
+            className="lg:col-span-3 space-y-4 text-center md:text-left"
           >
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
               Solutions
             </h3>
-            <ul className="space-y-3 text-sm sm:text-base">
+            <ul className="space-y-3 text-sm sm:text-base flex flex-col items-center md:items-start">
               {solutionLinks.map((item) => (
                 <li key={item.label}>
                   <Link
@@ -159,15 +159,15 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* 4. APPLICATIONS NAVIGATION (2 columns on Desktop) */}
+          {/* 4. APPLICATIONS NAVIGATION (2 columns on Desktop; Centered on Mobile) */}
           <nav
             aria-label="Applications Navigation"
-            className="lg:col-span-2 space-y-4 text-left"
+            className="lg:col-span-2 space-y-4 text-center md:text-left"
           >
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
               Applications
             </h3>
-            <ul className="space-y-3 text-sm sm:text-base">
+            <ul className="space-y-3 text-sm sm:text-base flex flex-col items-center md:items-start">
               {applicationLinks.map((item) => (
                 <li key={item.label}>
                   <Link
@@ -184,25 +184,25 @@ export function Footer() {
           </nav>
         </div>
 
-        {/* Institutional Memberships & Registrations Strip */}
+        {/* Institutional Memberships & Registrations Strip (Optimized for Mobile & Desktop) */}
         <div className="pt-8 pb-8 border-t border-slate-200">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-700">
-              <ShieldCheck className="w-4 h-4 text-amber-600" />
+          <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-5 md:gap-4">
+            <div className="flex items-center justify-center md:justify-start gap-2 text-xs font-semibold uppercase tracking-wider text-slate-700 text-center w-full md:w-auto">
+              <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0" />
               <span>Institutional Memberships &amp; Registrations</span>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+            <div className="w-full md:w-auto flex flex-col sm:flex-row items-center sm:justify-center md:justify-end gap-2.5 sm:gap-3">
               {institutionalCredentials.map((cred) => (
                 <div
                   key={cred.organization}
-                  className="px-3 py-1.5 rounded-lg bg-white border border-slate-200 flex items-center gap-2 text-xs shadow-xs"
+                  className="w-full max-w-sm sm:w-auto px-4 py-2.5 sm:px-3 sm:py-1.5 rounded-xl sm:rounded-lg bg-white border border-slate-200/90 flex items-center justify-between sm:justify-start gap-2.5 text-xs shadow-xs hover:border-amber-400/40 transition-colors"
                 >
                   <span className="text-slate-800 font-medium">
                     {cred.organization}
                   </span>
-                  <span className="text-slate-400" aria-hidden="true">&bull;</span>
-                  <span className="font-mono text-amber-700 font-semibold text-[11px]">
+                  <span className="hidden sm:inline text-slate-400" aria-hidden="true">&bull;</span>
+                  <span className="font-mono text-amber-700 font-semibold text-[11px] bg-amber-500/10 px-2 py-0.5 rounded-md sm:bg-transparent sm:px-0 sm:py-0 sm:rounded-none">
                     {cred.id}
                   </span>
                 </div>

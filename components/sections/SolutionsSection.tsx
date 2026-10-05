@@ -178,9 +178,12 @@ export function SolutionsSection() {
       <Container className="relative z-10 space-y-12 md:space-y-16">
         {/* SECTION INTRO */}
         <div className="max-w-3xl space-y-4 text-left">
+          {/* Eyebrow badge (Hidden per user request) */}
+          {/* 
           <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase shadow-sm">
             <span>OUR SERVICES &amp; SOLUTIONS</span>
-          </div>
+          </div> 
+          */}
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
             Solar Solutions Engineered{" "}
@@ -203,7 +206,7 @@ export function SolutionsSection() {
               <div
                 key={item.id}
                 className={cn(
-                  "group relative rounded-3xl overflow-hidden border border-slate-200 hover:border-amber-500/50 bg-white transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_16px_40px_-8px_rgba(0,0,0,0.12),0_0_20px_rgba(245,158,11,0.20)] flex flex-col justify-between p-6 sm:p-8",
+                  "group relative rounded-3xl overflow-hidden border border-slate-200 hover:border-amber-500/50 bg-white transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_16px_40px_-8px_rgba(0,0,0,0.12),0_0_20px_rgba(245,158,11,0.20)] flex flex-col justify-end p-6 sm:p-8",
                   item.gridClass,
                   item.heightClass
                 )}
@@ -239,7 +242,8 @@ export function SolutionsSection() {
                   />
                 </div>
 
-                {/* Top Area: Index Number, Tag & Icon Badge */}
+                {/* Top Area: Index Number, Tag & Icon Badge (Hidden per user request) */}
+                {/* 
                 <div className="relative z-10 flex items-center justify-between gap-4">
                   <span className="text-xs font-mono font-bold tracking-widest text-amber-800 bg-white/95 px-3 py-1 rounded-full border border-slate-200/90 backdrop-blur-md shadow-sm">
                     {item.index}
@@ -258,10 +262,11 @@ export function SolutionsSection() {
                       <IconComponent className="w-5 h-5" />
                     </div>
                   </div>
-                </div>
+                </div> 
+                */}
 
-                {/* Bottom Area: Title, Description, Key Points, and Explore Link */}
-                <div className="relative z-10 space-y-4 pt-20 transition-transform duration-300 ease-out group-hover:-translate-y-0.5">
+                {/* Bottom Area: Title, Description, and Explore Link */}
+                <div className="relative z-10 space-y-4 pt-16 transition-transform duration-300 ease-out group-hover:-translate-y-0.5">
                   <div className="space-y-2">
                     <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white group-hover:text-amber-300 transition-colors drop-shadow-md">
                       {item.title}
@@ -271,7 +276,8 @@ export function SolutionsSection() {
                     </p>
                   </div>
 
-                  {/* Key Points / Features */}
+                  {/* Key Points / Features (Hidden per user request) */}
+                  {/* 
                   {item.keyPoints && item.keyPoints.length > 0 && (
                     <div className="pt-1">
                       <ul className="flex flex-wrap gap-1.5 sm:gap-2">
@@ -286,11 +292,12 @@ export function SolutionsSection() {
                         ))}
                       </ul>
                     </div>
-                  )}
+                  )} 
+                  */}
 
                   <div className="pt-3 flex items-center justify-between border-t border-white/20">
                     <Link
-                      href="#quote"
+                      href="/contact"
                       className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-amber-300 group-hover:text-amber-200 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-lg p-0.5"
                       aria-label={`Discuss ${item.title} project`}
                     >

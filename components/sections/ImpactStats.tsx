@@ -51,6 +51,12 @@ const credentialsData: CredentialItem[] = [
 ];
 
 export function ImpactStats() {
+  // Section hidden as requested (set to false whenever you want to display it again)
+  const isHidden = true;
+  if (isHidden) {
+    return null;
+  }
+
   const sectionRef = useRef<HTMLElement>(null);
   const stripCardRef = useRef<HTMLDivElement>(null);
 

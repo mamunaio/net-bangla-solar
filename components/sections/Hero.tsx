@@ -59,22 +59,29 @@ export function Hero() {
         defaults: { ease: "power3.out" },
       });
 
-      tl.from(eyebrowRef.current, {
-        opacity: 0,
-        y: 20,
-        duration: 0.6,
-        delay: 0.1,
-      })
-        .from(
+      if (eyebrowRef.current) {
+        tl.from(eyebrowRef.current, {
+          opacity: 0,
+          y: 20,
+          duration: 0.6,
+          delay: 0.1,
+        });
+      }
+
+      if (headlineRef.current) {
+        tl.from(
           headlineRef.current,
           {
             opacity: 0,
             y: 35,
             duration: 0.85,
           },
-          "-=0.4"
-        )
-        .from(
+          eyebrowRef.current ? "-=0.4" : "0.1"
+        );
+      }
+
+      if (paragraphRef.current) {
+        tl.from(
           paragraphRef.current,
           {
             opacity: 0,
@@ -82,8 +89,10 @@ export function Hero() {
             duration: 0.7,
           },
           "-=0.55"
-        )
-        .from(
+        );
+      }
+      if (ctasRef.current) {
+        tl.from(
           ctasRef.current,
           {
             opacity: 0,
@@ -91,8 +100,11 @@ export function Hero() {
             duration: 0.65,
           },
           "-=0.45"
-        )
-        .from(
+        );
+      }
+
+      if (floatingCardRef.current) {
+        tl.from(
           floatingCardRef.current,
           {
             opacity: 0,
@@ -100,8 +112,11 @@ export function Hero() {
             duration: 0.75,
           },
           "-=0.5"
-        )
-        .from(
+        );
+      }
+
+      if (hudRef.current) {
+        tl.from(
           hudRef.current,
           {
             opacity: 0,
@@ -110,6 +125,7 @@ export function Hero() {
           },
           "-=0.4"
         );
+      }
     }, containerRef);
 
     return () => ctx.revert();
@@ -136,7 +152,7 @@ export function Hero() {
       id="home"
       ref={containerRef}
       aria-label="Hero - Net Bangla Solar"
-      className="relative min-h-[90vh] lg:min-h-[920px] flex flex-col justify-between pt-28 pb-10 md:pt-36 md:pb-14 overflow-hidden bg-slate-950 text-white scroll-mt-28"
+      className="relative min-h-[85vh] sm:min-h-[90vh] lg:min-h-[920px] flex flex-col justify-center lg:justify-between pt-24 pb-12 sm:pt-28 md:pt-36 md:pb-14 overflow-hidden bg-slate-950 text-white scroll-mt-28"
     >
       {/* =========================================================================
           1. REAL 4K AUTOMATED VIDEO PLAYLIST (Sequential Auto-Play on Video End)
@@ -202,12 +218,14 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left / Center Text Column */}
           <div className="lg:col-span-8 xl:col-span-8 space-y-6 md:space-y-8 text-left">
-            {/* Eyebrow Pill */}
+            {/* Eyebrow Pill (Hidden per user request; can be re-enabled later) */}
+            {/* 
             <div ref={eyebrowRef}>
               <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-900/80 border border-amber-500/40 backdrop-blur-md text-amber-400 text-xs font-semibold tracking-wider uppercase shadow-[0_0_20px_rgba(245,158,11,0.25)]">
                 <span>NET BANGLA SOLAR &bull; A DIVISION OF NET BANGLA LIMITED</span>
               </div>
-            </div>
+            </div> 
+            */}
 
             {/* Main Headline */}
             <h1
@@ -230,12 +248,43 @@ export function Hero() {
               Infrastructure Integrity.
             </p>
 
-            {/* Primary & Secondary Action Buttons (Clean 2-Button Layout) */}
+            {/* Mobile Trust Highlights & Consultation CTA (Enhanced for mobile balance) */}
+            <div className="space-y-4 pt-1 lg:hidden">
+              {/* Trust Badges (Slim, elegant 1-line flex wrap) */}
+              <div className="flex flex-wrap items-center gap-2">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/80 border border-amber-500/30 text-amber-400 text-[11px] font-semibold tracking-wide backdrop-blur-md shadow-xs">
+                  <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+                  <span>12+ Years Integrity</span>
+                </div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/80 border border-white/15 text-slate-200 text-[11px] font-semibold tracking-wide backdrop-blur-md shadow-xs">
+                  <Award className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Tier-1 EPC</span>
+                </div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/80 border border-white/15 text-slate-200 text-[11px] font-semibold tracking-wide backdrop-blur-md shadow-xs">
+                  <Zap className="w-3.5 h-3.5 text-amber-400" />
+                  <span>20-Yr Warranty</span>
+                </div>
+              </div>
+
+              {/* Mobile Primary Consultation Button */}
+              <div className="pt-1">
+                <Link
+                  href="/contact"
+                  className="group inline-flex items-center justify-center gap-2.5 w-full sm:w-auto px-6 py-3.5 rounded-xl text-sm font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 shadow-[0_4px_25px_rgba(245,158,11,0.35)] active:scale-[0.98] transition-all"
+                >
+                  <Zap className="w-4 h-4 fill-slate-950 text-slate-950" />
+                  <span>Request Free Consultation</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Primary & Secondary Action Buttons (Hidden on desktop per user request; can be re-enabled later) */}
+            {/* 
             <div
               ref={ctasRef}
               className="flex flex-wrap items-center gap-4 pt-2"
             >
-              {/* Primary CTA */}
               <Link
                 href="#quote"
                 className="group relative inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl text-sm font-bold text-slate-950 bg-[#F59E0B] hover:bg-[#FBBF24] shadow-[0_4px_25px_rgba(245,158,11,0.40)] hover:shadow-[0_6px_30px_rgba(245,158,11,0.60)] hover:-translate-y-[1px] active:translate-y-0 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
@@ -244,7 +293,6 @@ export function Hero() {
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
 
-              {/* Secondary CTA */}
               <Link
                 href="#projects"
                 className="group inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md shadow-sm transition-all duration-200 hover:-translate-y-[1px] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
@@ -252,13 +300,14 @@ export function Hero() {
                 <span>View Our Projects</span>
                 <ArrowUpRight className="w-4 h-4 text-slate-300 transition-transform duration-200 group-hover:text-amber-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
-            </div>
+            </div> 
+            */}
           </div>
 
-          {/* Right Floating Quick-Credibility Glass Card */}
+          {/* Right Floating Quick-Credibility Glass Card (Hidden on mobile/tablet per user request) */}
           <div
             ref={floatingCardRef}
-            className="lg:col-span-4 xl:col-span-4 flex flex-col items-start lg:items-end justify-center"
+            className="hidden lg:flex lg:col-span-4 xl:col-span-4 flex-col items-start lg:items-end justify-center"
           >
             <div className="relative w-full max-w-sm bg-slate-900/80 border border-white/15 backdrop-blur-xl p-5 sm:p-6 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] space-y-4">
               {/* EPC Engineering Badge */}
@@ -299,9 +348,9 @@ export function Hero() {
       </Container>
 
       {/* =========================================================================
-          3. BOTTOM HUD BAR (Market Sectors & Nationwide EPC Credibility)
+          3. BOTTOM HUD BAR (Market Sectors & Nationwide EPC Credibility; Hidden on mobile)
           ========================================================================= */}
-      <div ref={hudRef} className="relative z-10 w-full pt-4">
+      <div ref={hudRef} className="hidden md:block relative z-10 w-full pt-4">
         <Container>
           <div className="p-4 sm:p-5 rounded-2xl bg-slate-900/80 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
             {/* Left: Market Sectors */}
@@ -318,7 +367,7 @@ export function Hero() {
                 Turnkey EPC Engineering
               </span>
               <span className="text-white/40">&bull;</span>
-              <span className="text-slate-300">25-Year Performance Warranty</span>
+              <span className="text-slate-300">20-Year Performance Warranty</span>
             </div>
           </div>
         </Container>
