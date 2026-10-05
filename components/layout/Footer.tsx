@@ -12,6 +12,7 @@ import { Container } from "@/components/ui/Container";
 const companyLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
+  { label: "Partners & Clients", href: "/partners-and-clients" },
   { label: "Why Choose Us", href: "/why-choose-us" },
   { label: "Solar ROI Calculator", href: "/calculator" },
   { label: "Portfolio & Case Studies", href: "/portfolio" },

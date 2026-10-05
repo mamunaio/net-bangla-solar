@@ -247,6 +247,12 @@ export function ClientsSection() {
       ? clientsData
       : clientsData.filter((client) => client.category === activeCategory);
 
+  // Section hidden as requested (set to false whenever you want to display it again)
+  const isHidden = true;
+  if (isHidden) {
+    return null;
+  }
+
   return (
     <section
       id="clients"

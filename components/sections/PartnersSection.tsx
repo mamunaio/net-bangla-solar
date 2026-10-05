@@ -161,6 +161,12 @@ export function PartnersSection() {
       ? partnersData
       : partnersData.filter((p) => p.category === activeCategory);
 
+  // Section hidden as requested (set to false whenever you want to display it again)
+  const isHidden = true;
+  if (isHidden) {
+    return null;
+  }
+
   return (
     <section
       id="partners"

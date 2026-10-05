@@ -70,6 +70,12 @@ const clientSectors: SectorItem[] = [
 ];
 
 export function TestimonialsSection() {
+  // Section hidden as requested (set to false whenever you want to display it again)
+  const isHidden = true;
+  if (isHidden) {
+    return null;
+  }
+
   return (
     <section
       id="sectors"

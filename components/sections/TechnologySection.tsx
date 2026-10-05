@@ -246,7 +246,8 @@ export function TechnologySection() {
           })}
         </div>
 
-        {/* SYSTEM INTEGRATION & ENERGY ARCHITECTURE (SECONDARY ROW) */}
+        {/* SYSTEM INTEGRATION & ENERGY ARCHITECTURE (SECONDARY ROW) - Hidden as requested */}
+        {false && (
         <div className="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 lg:p-10 shadow-sm space-y-6 text-left relative overflow-hidden">
           {/* Subtle Ambient Glow */}
           <div
@@ -298,6 +299,7 @@ export function TechnologySection() {
             })}
           </div>
         </div>
+        )}
       </Container>
     </section>
   );

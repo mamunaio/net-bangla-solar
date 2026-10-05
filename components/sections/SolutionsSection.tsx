@@ -305,7 +305,8 @@ export function SolutionsSection() {
           })}
         </div>
 
-        {/* TECHNICAL CAPABILITIES (COMPACT SUPPORTING STRIP) */}
+        {/* TECHNICAL CAPABILITIES (COMPACT SUPPORTING STRIP) - Hidden as requested */}
+        {false && (
         <div className="rounded-3xl border border-slate-200 bg-[#F8FAFC] p-6 sm:p-8 md:p-10 space-y-6 shadow-sm relative overflow-hidden">
           {/* Subtle Ambient Background Light */}
           <div
@@ -363,6 +364,7 @@ export function SolutionsSection() {
             })}
           </div>
         </div>
+        )}
       </Container>
     </section>
   );

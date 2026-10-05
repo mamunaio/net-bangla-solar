@@ -88,8 +88,7 @@ const navItems: NavItem[] = [
     ],
   },
   { label: "Portfolio", href: "/portfolio", sectionId: "projects", route: "/portfolio" },
-  { label: "Why Choose Us", href: "/why-choose-us", sectionId: "why-choose-us", route: "/why-choose-us" },
-  { label: "FAQ", href: "/faq", sectionId: "faq", route: "/faq" },
+  { label: "Partners & Clients", href: "/partners-and-clients", sectionId: "partners-clients", route: "/partners-and-clients" },
   { label: "Contact", href: "/contact", sectionId: "contact", route: "/contact" },
 ];
 
@@ -218,17 +217,17 @@ export function Navbar() {
                         aria-haspopup="true"
                         aria-expanded={servicesDropdownOpen}
                         className={cn(
-                          "relative flex items-center gap-1 px-3 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold tracking-normal transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 whitespace-nowrap shrink-0",
+                          "relative flex items-center gap-1 px-3 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold tracking-normal transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 whitespace-nowrap shrink-0 border",
                           active
-                            ? "bg-amber-500 text-slate-950 font-bold shadow-xs"
-                            : "text-slate-700 hover:text-amber-800 hover:bg-amber-50/80"
+                            ? "bg-amber-500/15 text-amber-900 font-bold border-amber-500/30 shadow-2xs"
+                            : "border-transparent text-slate-700 hover:text-amber-800 hover:bg-amber-50/70"
                         )}
                       >
                         <span>{item.label}</span>
                         <ChevronDown className={cn(
                           "h-3.5 w-3.5 transition-transform duration-200",
                           servicesDropdownOpen ? "rotate-180" : "",
-                          active ? "text-slate-950" : "text-slate-400 group-hover:text-amber-700"
+                          active ? "text-amber-700" : "text-slate-400 group-hover:text-amber-700"
                         )} />
                       </Link>
 
@@ -369,10 +368,10 @@ export function Navbar() {
                     key={item.label}
                     href={item.href}
                     className={cn(
-                      "relative px-3 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold tracking-normal transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 whitespace-nowrap shrink-0",
+                      "relative px-3 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold tracking-normal transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 whitespace-nowrap shrink-0 border",
                       active
-                        ? "bg-amber-500 text-slate-950 font-bold shadow-xs"
-                        : "text-slate-700 hover:text-amber-800 hover:bg-amber-50/80"
+                        ? "bg-amber-500/15 text-amber-900 font-bold border-amber-500/30 shadow-2xs"
+                        : "border-transparent text-slate-700 hover:text-amber-800 hover:bg-amber-50/70"
                     )}
                   >
                     {item.label}

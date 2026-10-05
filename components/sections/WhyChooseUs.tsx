@@ -176,7 +176,8 @@ export function WhyChooseUs() {
           })}
         </div>
 
-        {/* BOTTOM TECHNICAL TAGS STRIP & DEEP DIVE CTA */}
+        {/* BOTTOM TECHNICAL TAGS STRIP & DEEP DIVE CTA (Full Portfolio Coverage) - Hidden as requested */}
+        {false && (
         <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2 text-xs font-mono font-bold text-amber-700 uppercase tracking-widest">
@@ -204,6 +205,7 @@ export function WhyChooseUs() {
             <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
           </Link>
         </div>
+        )}
       </Container>
     </section>
   );
