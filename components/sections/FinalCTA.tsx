@@ -232,8 +232,7 @@ export function FinalCTA() {
           <div className="lg:col-span-5 flex flex-col justify-between space-y-8 text-left">
             <div>
               {/* Eyebrow */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-widest uppercase mb-6">
-                <SunMedium className="w-3.5 h-3.5 text-amber-600" />
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-widest uppercase mb-6">
                 <span>START YOUR SOLAR PROJECT</span>
               </div>
 

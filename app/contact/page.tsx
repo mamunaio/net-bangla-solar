@@ -58,8 +58,7 @@ export default function ContactPage() {
 
           <Container>
             <div className="max-w-4xl mx-auto text-center space-y-5">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wide uppercase">
-                <Headphones className="w-4 h-4 text-amber-600" />
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wide uppercase">
                 <span>NATIONWIDE TURNKEY EPC &bull; RAPID RESPONSE</span>
               </div>
 

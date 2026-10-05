@@ -94,9 +94,8 @@ export function WhyChooseUs() {
         {/* SECTION HEADER WITH OFFICIAL BROCHURE INTRO */}
         <div className="max-w-4xl mx-auto text-center space-y-5">
           {/* Official Brochure Eyebrow */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase">
-            <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b] animate-pulse" />
-            <span>// WHY CHOOSE US?</span>
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase">
+            <span>WHY CHOOSE US</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">

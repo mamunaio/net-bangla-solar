@@ -82,11 +82,7 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
                 className="absolute inset-x-0 top-1/2 h-auto w-full -translate-y-1/2"
               />
             </div>
-            <div className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-[8.5px] font-mono font-bold">
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-500"></span>
-              </span>
+            <div className="inline-flex items-center px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-[8.5px] font-mono font-bold">
               <span>EPC LIVE</span>
             </div>
           </Link>
@@ -124,10 +120,7 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
                           : "text-slate-800 dark:text-slate-100 hover:text-amber-600 hover:bg-slate-50 dark:hover:bg-slate-800/50"
                       )}
                     >
-                      <span className="flex items-center gap-2.5">
-                        {active && <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />}
-                        {item.label}
-                      </span>
+                      <span>{item.label}</span>
                     </Link>
 
                     <button
@@ -177,10 +170,7 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
                     : "text-slate-800 dark:text-slate-100 hover:text-amber-600 hover:bg-slate-50 dark:hover:bg-slate-800/50"
                 )}
               >
-                <span className="flex items-center gap-2.5">
-                  {active && <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />}
-                  {item.label}
-                </span>
+                <span>{item.label}</span>
                 <ArrowRight className={cn("w-4 h-4", active ? "text-amber-600" : "text-slate-400 group-hover:text-amber-600 group-hover:translate-x-0.5 transition-all")} />
               </Link>
             );

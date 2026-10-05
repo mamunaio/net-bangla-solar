@@ -136,8 +136,7 @@ export default function AboutPage() {
 
           <Container>
             <div className="max-w-4xl mx-auto text-center space-y-4">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wide uppercase">
-                <Sun className="w-3.5 h-3.5 text-amber-600" />
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wide uppercase">
                 <span>ESTABLISHED MAY 28, 2014 &bull; NET BANGLA LIMITED</span>
               </div>
 
@@ -422,8 +421,7 @@ export default function AboutPage() {
         <section className="py-14 sm:py-18">
           <Container>
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-10">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
-                <Layers className="w-3.5 h-3.5 text-amber-600" />
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
                 <span>STRATEGIC GLOBAL ALLIANCES</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -694,8 +692,7 @@ export default function AboutPage() {
         <section className="py-14 sm:py-20 bg-slate-50 border-t border-slate-200/80">
           <Container>
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-10">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
-                <FileText className="w-3.5 h-3.5 text-amber-600" />
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
                 <span>DOCUMENTATION &amp; PROFILE</span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">

@@ -95,8 +95,7 @@ export function AboutSection() {
           {/* LEFT COLUMN: Editorial Typography & Company Description */}
           <div ref={introRef} className="lg:col-span-7 space-y-6 text-left">
             {/* Section Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
+            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase shadow-sm">
               <span>ABOUT NET BANGLA SOLAR</span>
             </div>
 

@@ -81,8 +81,7 @@ export function ProcessSection() {
       <Container className="relative z-10 space-y-12 md:space-y-16">
         {/* SECTION INTRO */}
         <div className="max-w-3xl space-y-4 text-left">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase">
-            <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase">
             <span>HOW WE DELIVER</span>
           </div>
 
@@ -190,8 +189,7 @@ export function ProcessSection() {
 
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-slate-100 pb-5">
             <div className="space-y-1.5 text-left">
-              <div className="inline-flex items-center gap-2 text-[11px] font-mono font-bold tracking-[0.2em] text-amber-700 uppercase">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+              <div className="inline-flex items-center text-[11px] font-mono font-bold tracking-[0.2em] text-amber-700 uppercase">
                 <span>ONGOING SUPPORT</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">

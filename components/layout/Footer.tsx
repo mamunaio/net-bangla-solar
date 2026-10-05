@@ -105,8 +105,7 @@ export function Footer() {
 
             {/* Corporate Heritage Badge */}
             <div className="pt-1">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-semibold text-amber-800">
-                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-semibold text-amber-800">
                 <span>Turnkey Solar EPC &bull; Est. May 28, 2014</span>
               </div>
             </div>

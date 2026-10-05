@@ -286,8 +286,7 @@ export default function SolarCalculatorPage() {
       <Container className="pt-8 sm:pt-10 lg:pt-12 space-y-10 lg:space-y-14">
         {/* HERO TITLE BLOCK */}
         <div className="max-w-3xl space-y-4 text-left">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase">
-            <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase">
             <span>SOLAR ROI & SAVINGS CALCULATOR</span>
           </div>
 
@@ -923,9 +922,8 @@ export default function SolarCalculatorPage() {
 
           {/* Header & Intro Paragraph */}
           <div className="max-w-4xl mx-auto text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b] animate-pulse" />
-              <span>// SOLAR FUNDING PROGRAM</span>
+            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase shadow-sm">
+              <span>SOLAR FUNDING PROGRAM</span>
             </div>
 
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">

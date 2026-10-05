@@ -170,8 +170,7 @@ export function QuoteModal() {
         {/* Modal Header */}
         <div className="p-5 sm:p-6 pb-4 border-b border-slate-100 flex items-center justify-between gap-4 shrink-0 bg-slate-50/50">
           <div className="space-y-1 text-left">
-            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-800 text-[11px] font-bold font-mono">
-              <Zap className="w-3.5 h-3.5 text-amber-600" />
+            <div className="inline-flex items-center px-3 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-800 text-[11px] font-bold font-mono">
               <span>TURNKEY SOLAR EPC &bull; SREDA APPROVED</span>
             </div>
             <h2 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">

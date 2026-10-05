@@ -502,9 +502,8 @@ export function PartnersClientsClient() {
 
           <Container>
             <div className="max-w-4xl mx-auto text-center space-y-5">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs sm:text-sm font-mono font-bold tracking-wide uppercase shadow-2xs">
-                <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b] animate-pulse" />
-                <span>// GLOBAL ALLIANCES &amp; INSTITUTIONAL TRUST NETWORK</span>
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs sm:text-sm font-mono font-bold tracking-wide uppercase shadow-2xs">
+                <span>GLOBAL ALLIANCES &amp; INSTITUTIONAL TRUST NETWORK</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
@@ -692,8 +691,7 @@ export function PartnersClientsClient() {
               {/* Section Header */}
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 text-left border-b border-amber-200/60 pb-6">
                 <div className="space-y-2.5 max-w-2xl">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
-                    <Handshake className="w-3.5 h-3.5 text-amber-600" />
+                  <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
                     <span>SECTION 01 &bull; TECHNOLOGY PARTNERS &amp; ASSOCIATIONS</span>
                   </div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -831,8 +829,7 @@ export function PartnersClientsClient() {
               {/* Section Header */}
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 text-left border-b border-slate-200/90 pb-6">
                 <div className="space-y-2.5 max-w-2xl">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold tracking-wider uppercase">
-                    <Users className="w-3.5 h-3.5 text-amber-400" />
+                  <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold tracking-wider uppercase">
                     <span>SECTION 02 &bull; PRESTIGIOUS VALUED CLIENTS</span>
                   </div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -970,8 +967,7 @@ export function PartnersClientsClient() {
           <Container>
             <div className="max-w-4xl mx-auto space-y-8 text-left">
               <div className="space-y-3 text-center">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 text-xs font-bold tracking-wider uppercase">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 text-xs font-bold tracking-wider uppercase">
                   <span>UNCOMPROMISING GOVERNANCE &amp; DELIVERY</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">

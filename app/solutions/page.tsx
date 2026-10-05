@@ -195,8 +195,7 @@ export default function SolutionsPage() {
         <section className="relative pt-8 pb-12 sm:pt-12 sm:pb-16 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200/80">
           <Container>
             <div className="max-w-4xl mx-auto text-center space-y-4 mb-8 sm:mb-10">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
-                <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
                 <span>TURNKEY ENERGY &amp; TECHNOLOGY SOLUTIONS &bull; NET BANGLA LIMITED</span>
               </div>
 

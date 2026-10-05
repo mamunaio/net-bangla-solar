@@ -177,9 +177,8 @@ export default function WhyChooseUsPage() {
 
           <Container>
             <div className="max-w-4xl mx-auto text-center space-y-5">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs sm:text-sm font-mono font-bold tracking-wide uppercase">
-                <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b] animate-pulse" />
-                <span>// WHY CHOOSE US?</span>
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs sm:text-sm font-mono font-bold tracking-wide uppercase">
+                <span>WHY CHOOSE US</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">

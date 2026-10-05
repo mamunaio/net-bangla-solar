@@ -178,9 +178,8 @@ export function SolutionsSection() {
       <Container className="relative z-10 space-y-12 md:space-y-16">
         {/* SECTION INTRO */}
         <div className="max-w-3xl space-y-4 text-left">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
-            <span>// OUR SERVICES &amp; SOLUTIONS</span>
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase shadow-sm">
+            <span>OUR SERVICES &amp; SOLUTIONS</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">

@@ -273,8 +273,7 @@ export function ClientsSection() {
         {/* SECTION HEADER */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 text-left border-b border-slate-200/80 pb-8 sm:pb-10">
           <div className="max-w-2xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase">
-              <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
+            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-semibold tracking-wider uppercase">
               <span>HAPPY CLIENTS WITH SERVICES</span>
             </div>
 

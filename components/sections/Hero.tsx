@@ -204,11 +204,7 @@ export function Hero() {
           <div className="lg:col-span-8 xl:col-span-8 space-y-6 md:space-y-8 text-left">
             {/* Eyebrow Pill */}
             <div ref={eyebrowRef}>
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/80 border border-amber-500/40 backdrop-blur-md text-amber-400 text-xs font-semibold tracking-wider uppercase shadow-[0_0_20px_rgba(245,158,11,0.25)]">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-80" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500" />
-                </span>
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-900/80 border border-amber-500/40 backdrop-blur-md text-amber-400 text-xs font-semibold tracking-wider uppercase shadow-[0_0_20px_rgba(245,158,11,0.25)]">
                 <span>NET BANGLA SOLAR &bull; A DIVISION OF NET BANGLA LIMITED</span>
               </div>
             </div>
@@ -310,7 +306,7 @@ export function Hero() {
           <div className="p-4 sm:p-5 rounded-2xl bg-slate-900/80 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
             {/* Left: Market Sectors */}
             <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-slate-300 font-semibold text-center sm:text-left">
-              <Zap className="w-4 h-4 text-amber-400 shrink-0 animate-pulse" />
+              <Zap className="w-4 h-4 text-amber-400 shrink-0" />
               <span>
                 Residential &bull; Commercial &bull; Industrial &bull; Agricultural
               </span>
@@ -318,7 +314,6 @@ export function Hero() {
 
             {/* Right: Real Corporate Value Proposition */}
             <div className="flex items-center gap-2.5 text-xs text-slate-300 font-medium">
-              <span className="inline-block w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_#f59e0b] animate-pulse" />
               <span className="text-white font-semibold">
                 Turnkey EPC Engineering
               </span>

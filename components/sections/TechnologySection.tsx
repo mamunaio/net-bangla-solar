@@ -143,9 +143,8 @@ export function TechnologySection() {
       <Container className="relative z-10 space-y-12 lg:space-y-16">
         {/* SECTION INTRO */}
         <div className="max-w-4xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase">
-            <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b] animate-pulse" />
-            <span>// PRODUCT TECHNOLOGY</span>
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase">
+            <span>TIER-1 PRODUCT TECHNOLOGY</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">

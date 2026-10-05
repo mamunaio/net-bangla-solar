@@ -41,8 +41,7 @@ export default function HSEPolicyPage() {
           <Container>
             <div className="max-w-4xl mx-auto text-center space-y-4">
               {/* Compliance Pill */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 text-xs font-bold tracking-wider uppercase">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 text-xs font-bold tracking-wider uppercase">
                 <span>CORPORATE GOVERNANCE &amp; COMPLIANCE &bull; HSE POLICY</span>
               </div>
 
@@ -66,7 +65,6 @@ export default function HSEPolicyPage() {
               <div className="p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
                 <div className="text-[11px] font-mono uppercase text-slate-500 font-semibold">Policy Status</div>
                 <div className="text-sm font-bold text-emerald-700 flex items-center gap-1.5 mt-0.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <span>Active &amp; Enforced</span>
                 </div>
               </div>

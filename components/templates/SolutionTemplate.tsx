@@ -99,8 +99,7 @@ export function SolutionTemplate({
             <div className="max-w-5xl mx-auto space-y-8 text-left">
               {/* Category Badge & Main Title */}
               <div className="space-y-3">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
                   <span>{badge}</span>
                 </div>
 
@@ -181,8 +180,7 @@ export function SolutionTemplate({
         <section className="py-14 sm:py-20 bg-slate-50 border-y border-slate-200/80">
           <Container>
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-12">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 text-xs font-bold tracking-wider uppercase">
-                <Award className="w-3.5 h-3.5 text-emerald-600" />
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 text-xs font-bold tracking-wider uppercase">
                 <span>ENGINEERING SUPERIORITY</span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -241,8 +239,7 @@ export function SolutionTemplate({
           <section className="py-14 sm:py-20 bg-white">
             <Container>
               <div className="max-w-3xl mx-auto text-center space-y-3 mb-12">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
-                  <Layers className="w-3.5 h-3.5 text-amber-600" />
+                <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
                   <span>PROJECT LIFECYCLE</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
