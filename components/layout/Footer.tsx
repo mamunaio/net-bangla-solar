@@ -12,21 +12,17 @@ import { Container } from "@/components/ui/Container";
 const companyLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Partners & Clients", href: "/partners-and-clients" },
   { label: "Why Choose Us", href: "/why-choose-us" },
-  { label: "Solar ROI Calculator", href: "/calculator" },
-  { label: "Portfolio & Case Studies", href: "/portfolio" },
-  { label: "HSE & Sustainability Policy", href: "/hse-policy" },
   { label: "FAQ & Knowledge Hub", href: "/faq" },
   { label: "Contact Us", href: "/contact" },
 ];
 
 const solutionLinks = [
-  { label: "Power Solaroof™ BIPV", href: "/solutions/power-solaroof" },
-  { label: "Industrial Megawatt Solar EPC", href: "/solutions/industrial-solar-epc" },
-  { label: "Commercial Rooftop Solar", href: "/solutions/commercial-rooftop" },
-  { label: "Residential Hybrid Solar", href: "/solutions/residential-solar" },
-  { label: "Agricultural Solar Irrigation", href: "/solutions/agricultural-solar" },
+  { label: "Power Solaroof BIPV", href: "/contact" },
+  { label: "Industrial Megawatt Solar EPC", href: "/contact" },
+  { label: "Commercial Rooftop Solar", href: "/contact" },
+  { label: "Residential Hybrid Solar", href: "/contact" },
+  { label: "Agricultural Solar Irrigation", href: "/contact" },
 ];
 
 const applicationLinks = [
@@ -72,10 +68,10 @@ export function Footer() {
       />
 
       <Container>
-        {/* Main Footer Multi-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12">
-          {/* 1. BRAND AREA (5 columns on Desktop) */}
-          <div className="lg:col-span-5 space-y-5 text-left">
+        {/* Main Footer Multi-Column Grid (3 Columns: Brand 6, Company 3, Solutions 3) */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-8 pb-12">
+          {/* 1. BRAND AREA (6 columns on Desktop) */}
+          <div className="md:col-span-6 lg:col-span-6 space-y-5 text-left">
             {/* Brand Typography */}
             <Link
               href="/"
@@ -103,18 +99,20 @@ export function Footer() {
               Delivering high-efficiency turnkey solar EPC engineering, net metering systems, and clean energy infrastructure for residential, commercial, and industrial facilities across Bangladesh.
             </p>
 
-            {/* Corporate Heritage Badge */}
+            {/* Corporate Heritage Badge (Hidden per user request; can be re-enabled later) */}
+            {/* 
             <div className="pt-1">
               <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-semibold text-amber-800">
                 <span>Turnkey Solar EPC &bull; Est. May 28, 2014</span>
               </div>
-            </div>
+            </div> 
+            */}
           </div>
 
-          {/* 2. COMPANY NAVIGATION (2 columns on Desktop; Centered on Mobile) */}
+          {/* 2. COMPANY NAVIGATION (3 columns on Desktop; Centered on Mobile) */}
           <nav
             aria-label="Company Navigation"
-            className="lg:col-span-2 space-y-4 text-center md:text-left"
+            className="md:col-span-3 lg:col-span-3 space-y-4 text-center md:text-left"
           >
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
               Company
@@ -138,7 +136,7 @@ export function Footer() {
           {/* 3. SOLUTIONS NAVIGATION (3 columns on Desktop; Centered on Mobile) */}
           <nav
             aria-label="Solutions Navigation"
-            className="lg:col-span-3 space-y-4 text-center md:text-left"
+            className="md:col-span-3 lg:col-span-3 space-y-4 text-center md:text-left"
           >
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
               Solutions
@@ -159,7 +157,8 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* 4. APPLICATIONS NAVIGATION (2 columns on Desktop; Centered on Mobile) */}
+          {/* 4. APPLICATIONS NAVIGATION (Hidden per user request; can be re-enabled later) */}
+          {/* 
           <nav
             aria-label="Applications Navigation"
             className="lg:col-span-2 space-y-4 text-center md:text-left"
@@ -181,10 +180,12 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </nav>
+          </nav> 
+          */}
         </div>
 
-        {/* Institutional Memberships & Registrations Strip (Optimized for Mobile & Desktop) */}
+        {/* Institutional Memberships & Registrations Strip (Hidden per user request; can be re-enabled later) */}
+        {/* 
         <div className="pt-8 pb-8 border-t border-slate-200">
           <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-5 md:gap-4">
             <div className="flex items-center justify-center md:justify-start gap-2 text-xs font-semibold uppercase tracking-wider text-slate-700 text-center w-full md:w-auto">
@@ -209,21 +210,24 @@ export function Footer() {
               ))}
             </div>
           </div>
-        </div>
+        </div> 
+        */}
 
         {/* Legal / Copyright Bottom Bar */}
-        <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center sm:text-left">
+        <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-500 text-center">
           {/* Copyright */}
           <p className="text-slate-600">
             &copy; {currentYear} Net Bangla Solar. A Division of Net Bangla Limited. All rights reserved.
           </p>
 
-          {/* Corporate Profile Note */}
+          {/* Corporate Profile Note (Hidden per user request; can be re-enabled later) */}
+          {/* 
           <div className="flex items-center gap-2 font-mono text-[11px] text-slate-500">
             <span>Turnkey Solar EPC</span>
             <span aria-hidden="true">&bull;</span>
             <span>Established May 28, 2014</span>
-          </div>
+          </div> 
+          */}
         </div>
       </Container>
     </footer>

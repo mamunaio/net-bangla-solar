@@ -46,12 +46,12 @@ const navItems: NavItem[] = [
   { label: "About Us", href: "/about", sectionId: "about", route: "/about" },
   {
     label: "Solutions",
-    href: "/solutions",
+    href: "#",
     sectionId: "solutions",
-    route: "/solutions",
+    route: "#",
     children: [
       {
-        label: "Power Solaroof™",
+        label: "Power Solaroof",
         href: "/solutions/power-solaroof",
         description: "Integrated solar roofing engineered for industrial durability",
         badge: "BIPV GRADE",
@@ -180,7 +180,8 @@ export function Navbar() {
                 />
               </div>
 
-              {/* Verified EPC Badge (Wide screens only to prevent cramping) */}
+              {/* Verified EPC Badge (Hidden per user request; can be re-enabled later) */}
+              {/* 
               <div className="hidden 2xl:flex flex-col items-start border-l border-slate-200 pl-2.5 shrink-0">
                 <span className="inline-flex items-center gap-1 text-[9px] font-mono font-bold tracking-wider text-amber-800 uppercase bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200/80">
                   <ShieldCheck className="w-2.5 h-2.5 text-amber-600" />
@@ -190,6 +191,7 @@ export function Navbar() {
                   A Division of Net Bangla Ltd
                 </span>
               </div>
+              */}
             </Link>
 
             {/* 2. DESKTOP NAVIGATION LINKS */}
@@ -210,15 +212,14 @@ export function Navbar() {
                       onMouseEnter={() => setServicesDropdownOpen(true)}
                       onMouseLeave={() => setServicesDropdownOpen(false)}
                     >
-                      <Link
-                        href={item.href}
-                        role="button"
-                        onClick={() => setServicesDropdownOpen(false)}
+                      <button
+                        type="button"
+                        onClick={() => setServicesDropdownOpen((prev) => !prev)}
                         aria-haspopup="true"
                         aria-expanded={servicesDropdownOpen}
                         className={cn(
-                          "relative flex items-center gap-1 px-3 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold tracking-normal transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 whitespace-nowrap shrink-0 border",
-                          active
+                          "relative flex items-center gap-1 px-3 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold tracking-normal transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 whitespace-nowrap shrink-0 border cursor-pointer",
+                          servicesDropdownOpen
                             ? "bg-amber-500/15 text-amber-900 font-bold border-amber-500/30 shadow-2xs"
                             : "border-transparent text-slate-700 hover:text-amber-800 hover:bg-amber-50/70"
                         )}
@@ -226,10 +227,9 @@ export function Navbar() {
                         <span>{item.label}</span>
                         <ChevronDown className={cn(
                           "h-3.5 w-3.5 transition-transform duration-200",
-                          servicesDropdownOpen ? "rotate-180" : "",
-                          active ? "text-amber-700" : "text-slate-400 group-hover:text-amber-700"
+                          servicesDropdownOpen ? "rotate-180 text-amber-700" : "text-slate-400 group-hover:text-amber-700"
                         )} />
-                      </Link>
+                      </button>
 
                       {/* Mega Dropdown Menu */}
                       <div
@@ -258,7 +258,7 @@ export function Navbar() {
 
                           {/* 2-Column Grid */}
                           <div className="grid grid-cols-12 gap-4">
-                            {/* Left: 5 Architecture Links (7 cols) */}
+                            {/* Left: 5 Architecture Information Links (7 cols) */}
                             <div className="col-span-7 space-y-1.5">
                               {item.children.map((child) => {
                                 const ChildIcon = child.icon;
@@ -266,16 +266,15 @@ export function Navbar() {
                                   <Link
                                     key={child.label}
                                     href={child.href}
-                                    role="menuitem"
                                     onClick={() => {
                                       setServicesDropdownOpen(false);
                                       if (typeof document !== "undefined") {
                                         (document.activeElement as HTMLElement)?.blur();
                                       }
                                     }}
-                                    className="group/item flex items-start gap-3 rounded-2xl p-2.5 transition-all duration-150 hover:bg-amber-50/80 hover:border-amber-200/80 border border-transparent focus:outline-none focus-visible:bg-amber-50"
+                                    className="group/item flex items-start gap-3 rounded-2xl p-2.5 transition-all duration-150 hover:bg-amber-50/60 border border-transparent hover:border-amber-200/70 cursor-pointer"
                                   >
-                                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-700 group-hover/item:bg-amber-500 group-hover/item:text-slate-950 transition-all duration-150 mt-0.5">
+                                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-700 group-hover/item:bg-amber-500 group-hover/item:text-slate-950 transition-all duration-150 mt-0.5 shadow-2xs">
                                       <ChildIcon className="h-5 w-5" />
                                     </div>
                                     <div className="flex-1 min-w-0">
@@ -287,7 +286,7 @@ export function Navbar() {
                                           {child.badge}
                                         </span>
                                       </div>
-                                      <p className="text-xs text-slate-600 mt-0.5 leading-snug">
+                                      <p className="text-xs text-slate-600 mt-0.5 leading-snug group-hover/item:text-slate-700">
                                         {child.description}
                                       </p>
                                     </div>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Net Bangla Solar Partners",
     "Net Bangla Clients",
     "Solar EPC Bangladesh",
-    "ZJHT",
+    "Wincle Energy",
     "China National Machinery CMC",
     "Huachuang Guojing",
     "Bangladesh Army Solar",

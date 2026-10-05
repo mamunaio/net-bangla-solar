@@ -34,15 +34,15 @@ export interface PartnerItem {
 
 export const partnersData: PartnerItem[] = [
   {
-    id: "zjht",
-    name: "ZJHT",
-    nativeName: "Zhejiang High-Tech Energy",
+    id: "wincle",
+    name: "Wincle Energy",
+    nativeName: "赢科数能 (Wenergy)",
     category: "global-epc",
-    categoryLabel: "Global EPC & Energy",
-    logo: "/images/partners/zjht.png",
-    description: "Renewable energy equipment manufacturing & engineering systems",
-    tag: "SOLAR TECH",
-    region: "GLOBAL / CHINA",
+    categoryLabel: "Tier-1 Safe BESS & Storage",
+    logo: "/images/partners/wincle-energy.png",
+    description: "Global Tier-1 energy storage pioneer & smart C&I BESS systems",
+    tag: "BESS & STORAGE",
+    region: "GLOBAL / SINGAPORE",
   },
   {
     id: "cmc",

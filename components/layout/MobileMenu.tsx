@@ -11,7 +11,7 @@ interface NavItem {
   label: string;
   href: string;
   isActive?: boolean;
-  children?: { label: string; href: string }[];
+  children?: { label: string; href: string; badge?: string }[];
 }
 
 interface MobileMenuProps {
@@ -109,35 +109,26 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
             if (item.children) {
               return (
                 <div key={item.label} className="flex flex-col">
-                  <div className="flex items-center justify-between">
-                    <Link
-                      href={item.href}
-                      onClick={onClose}
+                  <button
+                    type="button"
+                    onClick={() => setServicesExpanded(!servicesExpanded)}
+                    aria-label="Toggle services menu"
+                    aria-expanded={servicesExpanded}
+                    className={cn(
+                      "w-full flex items-center justify-between px-4 py-3 rounded-2xl text-base font-bold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 cursor-pointer",
+                      servicesExpanded
+                        ? "bg-amber-500/15 text-amber-700 dark:text-amber-400 border border-amber-500/30"
+                        : "text-slate-800 dark:text-slate-100 hover:text-amber-600 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+                    )}
+                  >
+                    <span>{item.label}</span>
+                    <ChevronDown
                       className={cn(
-                        "flex-1 flex items-center justify-between px-4 py-3 rounded-2xl text-base font-bold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400",
-                        active
-                          ? "bg-amber-500/15 text-amber-700 dark:text-amber-400 border border-amber-500/30"
-                          : "text-slate-800 dark:text-slate-100 hover:text-amber-600 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+                        "w-4 h-4 transition-transform duration-200",
+                        servicesExpanded && "rotate-180 text-amber-600"
                       )}
-                    >
-                      <span>{item.label}</span>
-                    </Link>
-
-                    <button
-                      type="button"
-                      onClick={() => setServicesExpanded(!servicesExpanded)}
-                      aria-label="Toggle services menu"
-                      aria-expanded={servicesExpanded}
-                      className="p-3 text-slate-500 hover:text-amber-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl"
-                    >
-                      <ChevronDown
-                        className={cn(
-                          "w-4 h-4 transition-transform duration-200",
-                          servicesExpanded && "rotate-180 text-amber-600"
-                        )}
-                      />
-                    </button>
-                  </div>
+                    />
+                  </button>
 
                   {servicesExpanded && (
                     <div className="ml-4 mt-1.5 grid border-l-2 border-amber-400/40 pl-3 space-y-1">
@@ -146,10 +137,12 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
                           key={child.label}
                           href={child.href}
                           onClick={onClose}
-                          className="rounded-xl px-3 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors hover:bg-amber-500/10 hover:text-amber-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 flex items-center justify-between"
+                          className="rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-amber-600 hover:bg-amber-50/50 dark:hover:bg-slate-800 flex items-center justify-between transition-colors"
                         >
                           <span>{child.label}</span>
-                          <span aria-hidden="true" className="text-amber-500 text-xs">↗</span>
+                          <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-700 dark:text-amber-400">
+                            {child.badge}
+                          </span>
                         </Link>
                       ))}
                     </div>

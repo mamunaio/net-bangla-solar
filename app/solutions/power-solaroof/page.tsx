@@ -13,9 +13,9 @@ import {
 import { SolutionTemplate } from "@/components/templates/SolutionTemplate";
 
 export const metadata: Metadata = {
-  title: "Power Solaroof™ BIPV | Net Bangla Solar - Integrated Solar Roofing",
+  title: "Power Solaroof BIPV | Net Bangla Solar - Integrated Solar Roofing",
   description:
-    "Power Solaroof™ by Net Bangla Solar is a 100% leak-proof, cyclone-resistant Building-Integrated Photovoltaic (BIPV) roofing system for industrial factories across Bangladesh.",
+    "Power Solaroof by Net Bangla Solar is a 100% leak-proof, cyclone-resistant Building-Integrated Photovoltaic (BIPV) roofing system for industrial factories across Bangladesh.",
 };
 
 const solaroofAdvantages = [
@@ -44,9 +44,9 @@ const solaroofAdvantages = [
     icon: Layers,
   },
   {
-    title: "Strategic ZJHT International Engineering",
-    desc: "Developed in direct strategic partnership with Zhongjian Hongtai (ZJHT) China, the global pioneer in integrated BIPV architecture.",
-    badge: "GLOBAL OEM ALLIANCE",
+    title: "Heavy-Duty Precision Structural Engineering",
+    desc: "Built to stringent international building codes with high-tensile anodized aluminum sub-structures, seismic resilience, and corrosion-resistant fasteners.",
+    badge: "PRECISION EPC",
     icon: Award,
   },
   {
@@ -91,10 +91,10 @@ export default function PowerSolaroofPage() {
   return (
     <SolutionTemplate
       badge="PATENT-PENDING BIPV ROOFING • 100% LEAK-PROOF"
-      title="Power Solaroof™ Integrated BIPV"
+      title="Power Solaroof Integrated BIPV"
       subtitle="The Complete Replacement for Industrial Corrugated Tin Roofing with Clean Power Generation"
       heroImageUrl="/images/power-solaroof.jpg"
-      description="Power Solaroof™ by Net Bangla Solar represents the future of industrial roofing in Bangladesh. Unlike conventional solar panels mounted on top of existing tin roofs, Power Solaroof™ is seamlessly built into the building structure itself, replacing corrugated tin sheets entirely. Developed in strategic collaboration with Zhongjian Hongtai (ZJHT) China, it provides a 100% leak-proof, cyclone-resistant, and aesthetically striking clean energy solution for modern industrial facilities."
+      description="Power Solaroof by Net Bangla Solar represents the future of industrial roofing in Bangladesh. Unlike conventional solar panels mounted on top of existing tin roofs, Power Solaroof is seamlessly built into the building structure itself, replacing corrugated tin sheets entirely. Engineered to high international standards, it provides a 100% leak-proof, cyclone-resistant, and aesthetically striking clean energy solution for modern industrial facilities."
       detailedPoints={[
         "Completely eliminates the recurring maintenance, rust, and leakages of corrugated metal roofs.",
         "Zero-penetration mechanical clamping ensures zero structural damage or water seepage.",
@@ -102,12 +102,12 @@ export default function PowerSolaroofPage() {
         "Eligible for international green factory sustainability ratings and carbon credit accreditation.",
       ]}
       specs={solaroofSpecs}
-      advantagesTitle="Why Power Solaroof™ Outperforms Conventional Solar Mounting"
+      advantagesTitle="Why Power Solaroof Outperforms Conventional Solar Mounting"
       advantagesSubtitle="Integrated architectural solar that combines lifetime weatherproofing, thermal insulation, and peak clean energy generation."
       advantagesList={solaroofAdvantages}
-      workflowTitle="Power Solaroof™ Engineering & Installation Lifecycle"
+      workflowTitle="Power Solaroof Engineering & Installation Lifecycle"
       workflowSteps={solaroofWorkflow}
-      ctaTitle="Construct Your Next Factory with Power Solaroof™"
+      ctaTitle="Construct Your Next Factory with Power Solaroof"
       ctaDescription="Contact our specialized BIPV structural engineers to review architectural roof drawings, purlin specifications, and cost comparison models."
     />
   );

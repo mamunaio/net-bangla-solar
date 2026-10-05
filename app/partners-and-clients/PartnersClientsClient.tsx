@@ -24,7 +24,6 @@ import {
   Calculator,
   Handshake,
   Users,
-  BadgeCheck,
 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -59,20 +58,54 @@ export interface ClientEntity {
   highlights: string[];
 }
 
+// 0. MAIN STRATEGIC PARTNERS & JOINT VENTURES (JV) DATA
+export const mainStrategicPartners = [
+  {
+    id: "cmc",
+    name: "China National Machinery Imp. & Exp. Corp. (CMC)",
+    nativeName: "中国机械进出口 (集团) 有限公司",
+    category: "Strategic Partner — Heavy EPC & Infrastructure",
+    description:
+      "Strategic partnership in major renewable energy and IT infrastructure projects in Bangladesh, advancing technological development and energy security.",
+    logo: "/images/partners/china-national-machinery-cmc.png",
+    tag: "POWER & EPC",
+  },
+  {
+    id: "huachuang",
+    name: "Huachuang Guojing (Hebei) New Energy Co. Ltd.",
+    nativeName: "华创国晶 (河北) 新能源",
+    category: "Authorized Distributor & Equipment Partner",
+    description:
+      "Leading manufacturer of high-efficiency monocrystalline solar panels and advanced inverters, delivering precision engineering and long-term durability.",
+    logo: "/images/partners/huachuang-guojing.png",
+    tag: "AUTHORIZED OEM",
+  },
+  {
+    id: "wincle",
+    name: "Wincle Energy Pte. Ltd.",
+    nativeName: "赢科数能 (Wenergy)",
+    category: "Strategic Partner — Battery Energy Storage Systems (BESS)",
+    description:
+      "Global Tier-1 energy storage pioneer delivering smart liquid-cooled C&I BESS (Stars Series 215–385 kWh) and 4-in-1 Solar-BESS-Diesel-EV integrated systems certified to UL9540A & IEC standards.",
+    logo: "/images/partners/wincle-energy.png",
+    tag: "BESS & STORAGE",
+  },
+];
+
 // 1. DEDICATED PARTNERS & ASSOCIATIONS DATA
 export const partnersList: PartnerEntity[] = [
   {
-    id: "zjht",
-    name: "ZJHT (Zhejiang High-Tech Energy)",
-    nativeName: "中建鸿泰通讯工程有限公司",
+    id: "wincle",
+    name: "Wincle Energy Pte. Ltd.",
+    nativeName: "赢科数能 (Wenergy)",
     category: "global-epc",
-    categoryLabel: "Global Technology & EPC Partner",
-    logo: "/images/partners/zjht.png",
+    categoryLabel: "Tier-1 Safe BESS & Storage Partner",
+    logo: "/images/partners/wincle-energy.png",
     description:
-      "Strategic OEM partner for patent-pending Power Solaroof™ BIPV integrated in-roof systems, renewable energy equipment manufacturing, and precision engineering.",
-    tag: "BIPV ROOF TECH",
-    roleOrId: "GLOBAL / CHINA",
-    highlights: ["Integrated Solar Roofing", "BIPV Water-proof Tech", "Tier-1 OEM"],
+      "Global Tier-1 energy storage pioneer delivering smart liquid-cooled C&I BESS (Stars Series 215–385 kWh) and 4-in-1 Solar-BESS-Diesel-EV integrated systems certified to UL9540A & IEC standards.",
+    tag: "BESS & STORAGE",
+    roleOrId: "GLOBAL / SINGAPORE",
+    highlights: ["Liquid-Cooled C&I BESS", "4-in-1 Solar-BESS-DG-EV", "UL9540A & IEC 62619"],
   },
   {
     id: "cmc",
@@ -502,10 +535,6 @@ export function PartnersClientsClient() {
 
           <Container>
             <div className="max-w-4xl mx-auto text-center space-y-5">
-              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs sm:text-sm font-mono font-bold tracking-wide uppercase shadow-2xs">
-                <span>GLOBAL ALLIANCES &amp; INSTITUTIONAL TRUST NETWORK</span>
-              </div>
-
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
                 Our Global Partners &amp;{" "}
                 <span className="gradient-text-solar">Prestigious Clients</span>
@@ -514,16 +543,6 @@ export function PartnersClientsClient() {
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
                 Clearly segregated into our <strong>International Technology Alliances</strong> (Tier-1 OEM hardware &amp; apex trade bodies) and our <strong>Valued Clients</strong> (defense forces, public sector ministries, telecom giants, and industries).
               </p>
-
-              {/* Mandatory Official Experience Statement Box */}
-              <div className="pt-2 max-w-2xl mx-auto">
-                <div className="p-3.5 sm:p-4 rounded-2xl bg-amber-500/10 border-2 border-amber-500/40 text-center shadow-2xs flex items-center justify-center gap-2.5">
-                  <BadgeCheck className="w-5 h-5 text-amber-700 shrink-0" />
-                  <p className="text-xs sm:text-sm font-bold text-amber-950">
-                    &ldquo;All our experiences are IT-related and Bangladesh-focused.&rdquo;
-                  </p>
-                </div>
-              </div>
 
               {/* Key Trust Metrics */}
               <div className="pt-6 grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5 max-w-4xl mx-auto text-left">
@@ -603,25 +622,101 @@ export function PartnersClientsClient() {
           </Container>
         </section>
 
-        {/* 2. PROMINENT MASTER SEGMENTATION SWITCHER */}
-        <section className="py-5 bg-white border-b border-slate-200/90 sticky top-16 sm:top-20 z-20 bg-white/95 backdrop-blur-md shadow-xs">
+        {/* 2. DEDICATED MAIN STRATEGIC PARTNERS & JV SECTION */}
+        <section id="strategic-jv-partners" className="py-14 sm:py-18 bg-white border-b border-slate-200/80">
+          <Container>
+            <div className="max-w-3xl mx-auto text-center space-y-3 mb-10">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+                Our 3 Main Strategic Partners &amp; Joint Ventures (JV)
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600">
+                Key international partnerships powering our high-efficiency solar engineering, supply chain, and turnkey project execution in Bangladesh.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left max-w-6xl mx-auto">
+              {mainStrategicPartners.map((partner) => (
+                <div
+                  key={partner.id}
+                  className="group relative rounded-3xl p-6 sm:p-7 bg-white border border-slate-200/90 hover:border-amber-400 transition-all duration-300 ease-out hover:-translate-y-1.5 flex flex-col justify-between text-left space-y-5 shadow-sm hover:shadow-[0_16px_36px_-8px_rgba(245,158,11,0.20),0_4px_12px_rgba(0,0,0,0.04)] overflow-hidden cursor-default"
+                >
+                  {/* Top Golden Shimmer Line on Hover */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+
+                  {/* Subtle Inner Ambient Glow on Hover */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-500/[0.04] via-amber-400/[0.01] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+
+                  <div className="space-y-4 relative z-10">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-mono uppercase font-bold text-amber-800 bg-amber-100/80 group-hover:bg-amber-500 group-hover:text-slate-950 px-2.5 py-0.5 rounded border border-amber-200 group-hover:border-amber-500 transition-all duration-200">
+                        {partner.tag}
+                      </span>
+                    </div>
+
+                    <div className="h-24 flex items-center justify-center bg-slate-50/70 group-hover:bg-white rounded-2xl p-3 border border-slate-100 group-hover:border-amber-200/70 transition-all duration-300">
+                      <div className="relative w-full h-full flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300 ease-out">
+                        <Image
+                          src={partner.logo}
+                          alt={partner.name}
+                          width={180}
+                          height={60}
+                          className="max-h-16 w-auto object-contain filter drop-shadow-2xs transition-all duration-300"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className="text-base font-bold text-slate-900 group-hover:text-amber-800 transition-colors leading-snug">
+                          {partner.name}
+                        </h3>
+                        <ArrowUpRight className="w-4 h-4 text-amber-600 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 shrink-0 mt-0.5" />
+                      </div>
+                      {partner.nativeName && (
+                        <p className="text-xs text-slate-500 font-medium mt-0.5">
+                          {partner.nativeName}
+                        </p>
+                      )}
+                      <p className="text-xs font-semibold text-amber-700 mt-1">
+                        {partner.category}
+                      </p>
+                    </div>
+
+                    <p className="text-xs text-slate-600 group-hover:text-slate-700 leading-relaxed">
+                      {partner.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        {/* 3. MASTER DIRECTORY SEGMENTATION SWITCHER (Static, Non-Sticky) */}
+        <section className="py-6 bg-slate-50 border-b border-slate-200/80">
           <Container>
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               {/* Primary Dual View Toggle */}
-              <div className="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200/90 shadow-inner w-full md:w-auto">
+              <div className="inline-flex p-1.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs w-full md:w-auto">
                 <button
                   type="button"
                   onClick={() => setMasterTab("all")}
                   className={cn(
                     "flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-3.5 sm:px-4.5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer",
                     masterTab === "all"
-                      ? "bg-white text-slate-950 shadow-md scale-[1.01]"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-white/60"
+                      ? "bg-amber-500 text-slate-950 shadow-md scale-[1.01]"
+                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                   )}
                 >
-                  <Sparkles className="w-4 h-4 text-amber-500" />
+                  <Sparkles className="w-4 h-4 text-slate-950" />
                   <span>View Both Distinctly</span>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-slate-200 text-slate-800 ml-1">
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-slate-950/15 text-slate-950 ml-1">
                     {partnersList.length + clientsList.length}
                   </span>
                 </button>
@@ -650,7 +745,7 @@ export function PartnersClientsClient() {
                     "flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-3.5 sm:px-4.5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer",
                     masterTab === "clients"
                       ? "bg-slate-900 text-white shadow-md scale-[1.01]"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-white/60"
+                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                   )}
                 >
                   <Users className="w-4 h-4 text-amber-400" />
@@ -669,7 +764,7 @@ export function PartnersClientsClient() {
                   placeholder="Search partner or client by name, tag..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-amber-500 focus:bg-white text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500/20 transition-all"
+                  className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-white border border-slate-200 focus:border-amber-500 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500/20 shadow-2xs transition-all"
                 />
                 {searchQuery && (
                   <button
@@ -686,14 +781,11 @@ export function PartnersClientsClient() {
 
         {/* 3. DEDICATED SECTION 1: TECHNOLOGY PARTNERS & ASSOCIATIONS */}
         {showPartnersSection && (
-          <section id="technology-partners" className="py-14 sm:py-18 bg-white border-b border-slate-200/80">
+          <section id="technology-partners" className="py-14 sm:py-18 bg-[#F8FAFC] border-b border-slate-200/80">
             <Container className="space-y-8">
               {/* Section Header */}
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 text-left border-b border-amber-200/60 pb-6">
                 <div className="space-y-2.5 max-w-2xl">
-                  <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-xs font-bold tracking-wider uppercase">
-                    <span>SECTION 01 &bull; TECHNOLOGY PARTNERS &amp; ASSOCIATIONS</span>
-                  </div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
                     Global Hardware OEMs &amp; Industry Alliances
                   </h2>
@@ -829,9 +921,6 @@ export function PartnersClientsClient() {
               {/* Section Header */}
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 text-left border-b border-slate-200/90 pb-6">
                 <div className="space-y-2.5 max-w-2xl">
-                  <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold tracking-wider uppercase">
-                    <span>SECTION 02 &bull; PRESTIGIOUS VALUED CLIENTS</span>
-                  </div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
                     Trusted by Defense, Ministries &amp; Industrial Leaders
                   </h2>
@@ -967,9 +1056,6 @@ export function PartnersClientsClient() {
           <Container>
             <div className="max-w-4xl mx-auto space-y-8 text-left">
               <div className="space-y-3 text-center">
-                <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 text-xs font-bold tracking-wider uppercase">
-                  <span>UNCOMPROMISING GOVERNANCE &amp; DELIVERY</span>
-                </div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                   Why Our Ecosystem Protects Your Capital
                 </h2>

@@ -27,7 +27,7 @@ import { Container } from "@/components/ui/Container";
 export const metadata: Metadata = {
   title: "About Us | Net Bangla Limited - Solar Energy & EPC Division",
   description:
-    "Corporate overview, mission, vision, 3 main partners, affiliations, and environmental safety policy of Net Bangla Limited. All our experiences are IT-related and Bangladesh-focused.",
+    "Corporate overview, mission, vision, international technology partners, affiliations, and sustainability policy of Net Bangla Solar. Delivering high-yield turnkey solar EPC engineering across Bangladesh.",
 };
 
 // 3 Main Strategic Partners
@@ -53,14 +53,14 @@ const mainStrategicPartners = [
     tag: "AUTHORIZED OEM",
   },
   {
-    id: "zjht",
-    name: "Zhongjian Hongtai Communication Eng. Co. Ltd. (ZJHT)",
-    nativeName: "中建鸿泰通讯工程有限公司",
-    category: "Strategic Partner — Integrated Solar Roofs (BIPV)",
+    id: "wincle",
+    name: "Wincle Energy Pte. Ltd.",
+    nativeName: "赢科数能 (Wenergy)",
+    category: "Strategic Partner — Battery Energy Storage Systems (BESS)",
     description:
-      "Strategic collaboration delivering state-of-the-art integrated in-roof solar solutions (BIPV) tailored for residential, commercial, and industrial facilities in Bangladesh.",
-    logo: "/images/partners/zjht.png",
-    tag: "BIPV ROOF TECH",
+      "Global Tier-1 energy storage pioneer delivering smart liquid-cooled C&I BESS (Stars Series 215–385 kWh) and 4-in-1 Solar-BESS-Diesel-EV integrated systems certified to UL9540A & IEC standards.",
+    logo: "/images/partners/wincle-energy.png",
+    tag: "BESS & STORAGE",
   },
 ];
 
@@ -93,13 +93,13 @@ const affiliationsList = [
     tag: "IT & TELECOM",
   },
   {
-    id: "zjht",
-    name: "ZJHT",
-    fullName: "Zhongjian Hongtai Communication Engineering Co. Ltd.",
-    identifier: "Strategic Technology Partner (China)",
-    role: "Integrated BIPV Solar Roof Technology",
-    logo: "/images/partners/zjht.png",
-    tag: "SOLAR TECH",
+    id: "wincle",
+    name: "Wincle Energy",
+    fullName: "Wincle Energy Pte. Ltd. (赢科数能)",
+    identifier: "Strategic Energy Storage Partner",
+    role: "Tier-1 Liquid-Cooled C&I BESS & Microgrid Storage",
+    logo: "/images/partners/wincle-energy.png",
+    tag: "BESS & STORAGE",
   },
   {
     id: "cmc",
@@ -496,7 +496,7 @@ export default function AboutPage() {
           </Container>
         </section>
 
-        {/* 5. AFFILIATIONS & PARTNERS (Includes BASIS, BACCO, ITKALL, ZJHT, CMC, Huachuang Guojing + Mandatory Text) */}
+        {/* 5. AFFILIATIONS & PARTNERS (Includes BASIS, BACCO, ITKALL, Wincle Energy, CMC, Huachuang Guojing) */}
         <section className="py-14 sm:py-18 bg-slate-50 border-y border-slate-200/80">
           <Container>
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-8">
@@ -509,14 +509,16 @@ export default function AboutPage() {
               </h2>
             </div>
 
-            {/* Mandatory Explicit Statement Box */}
+            {/* Experience Statement Box (Hidden per user feedback; mismatched solar niche) */}
+            {/* 
             <div className="max-w-3xl mx-auto mb-10 p-4 sm:p-5 rounded-2xl bg-amber-500/10 border-2 border-amber-500/40 text-center shadow-xs">
               <p className="text-sm sm:text-base font-bold text-amber-950">
                 &ldquo;All our experiences are IT-related and Bangladesh-focused.&rdquo;
               </p>
-            </div>
+            </div> 
+            */}
 
-            {/* 6 Entities Grid: BASIS, BACCO, ITKALL, ZJHT, CMC, Huachuang Guojing */}
+            {/* 6 Entities Grid: BASIS, BACCO, ITKALL, Wincle Energy, CMC, Huachuang Guojing */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto text-left">
               {affiliationsList.map((item) => (
                 <div

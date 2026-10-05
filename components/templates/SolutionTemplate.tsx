@@ -251,17 +251,31 @@ export function SolutionTemplate({
                 {workflowSteps.map((wf, wIdx) => (
                   <div
                     key={wIdx}
-                    className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm space-y-3 relative"
+                    className="group relative p-6 sm:p-7 rounded-3xl bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-amber-400 shadow-xs hover:shadow-[0_20px_35px_-10px_rgba(245,158,11,0.22),0_4px_12px_rgba(0,0,0,0.04)] hover:-translate-y-2 transition-all duration-300 ease-out space-y-3 overflow-hidden cursor-default"
                   >
-                    <div className="text-3xl font-extrabold font-mono text-amber-500/80">
-                      {wf.step}
+                    {/* Top Golden Shimmer Line on Hover */}
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+
+                    {/* Subtle Inner Ambient Glow on Hover */}
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-500/[0.04] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+
+                    <div className="relative z-10 space-y-3">
+                      <div className="text-3xl sm:text-4xl font-extrabold font-mono text-amber-500/80 group-hover:text-amber-500 group-hover:scale-105 transition-all duration-300 origin-left">
+                        {wf.step}
+                      </div>
+                      <h3 className="text-base font-bold text-slate-900 group-hover:text-amber-800 transition-colors duration-200 leading-snug">
+                        {wf.title}
+                      </h3>
+                      <p className="text-xs text-slate-600 group-hover:text-slate-700 leading-relaxed transition-colors duration-200">
+                        {wf.desc}
+                      </p>
                     </div>
-                    <h3 className="text-base font-bold text-slate-900 leading-snug">
-                      {wf.title}
-                    </h3>
-                    <p className="text-xs text-slate-600 leading-relaxed">
-                      {wf.desc}
-                    </p>
                   </div>
                 ))}
               </div>

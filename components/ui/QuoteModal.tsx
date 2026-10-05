@@ -65,7 +65,7 @@ const billPresets: Record<string, string[]> = {
 const roofTypes = [
   { id: "tin", label: "Tin / Metal Shed", sub: "Clip-Lock / Non-Penetrating" },
   { id: "concrete", label: "Concrete RCC", sub: "Elevated / Ballasted" },
-  { id: "solaroof", label: "Power Solaroof™", sub: "100% Leak-Proof BIPV" },
+  { id: "solaroof", label: "Power Solaroof", sub: "100% Leak-Proof BIPV" },
 ];
 
 const locationPresets = [
@@ -82,7 +82,7 @@ const locationPresets = [
 const primaryGoals = [
   { id: "savings", label: "Maximum Bill Savings (Net Metering)", icon: Zap },
   { id: "backup", label: "24/7 Silent Hybrid Power (Battery ESS)", icon: ShieldCheck },
-  { id: "solaroof", label: "Replace Leaking Tin (Power Solaroof™)", icon: Layers },
+  { id: "solaroof", label: "Replace Leaking Tin (Power Solaroof)", icon: Layers },
   { id: "payback", label: "Fastest 3-Year Capex Payback", icon: Sparkles },
 ];
 
