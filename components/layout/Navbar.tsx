@@ -52,13 +52,6 @@ const navItems: NavItem[] = [
     route: "#",
     children: [
       {
-        label: "Power Solaroof",
-        href: "/solutions/power-solaroof",
-        description: "Integrated solar roofing engineered for industrial durability",
-        badge: "BIPV GRADE",
-        icon: PanelsTopLeft,
-      },
-      {
         label: "Industrial Solar EPC",
         href: "/solutions/industrial-solar-epc",
         description: "MWp scale high-yield turnkey factory installations",
@@ -85,6 +78,13 @@ const navItems: NavItem[] = [
         description: "High-volume solar irrigation & remote farm power",
         badge: "DIRECT DC PUMP",
         icon: Sprout,
+      },
+      {
+        label: "BIPV Solar Solution",
+        href: "/solutions/power-solaroof",
+        description: "Integrated building photovoltaic roofing architecture",
+        badge: "BIPV GRADE",
+        icon: PanelsTopLeft,
       },
     ],
   },

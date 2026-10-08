@@ -19,11 +19,11 @@ const companyLinks = [
 ];
 
 const solutionLinks = [
-  { label: "Power Solaroof BIPV", href: "/contact" },
-  { label: "Industrial Megawatt Solar EPC", href: "/contact" },
-  { label: "Commercial Rooftop Solar", href: "/contact" },
-  { label: "Residential Hybrid Solar", href: "/contact" },
-  { label: "Agricultural Solar Irrigation", href: "/contact" },
+  { label: "Industrial Megawatt Solar EPC", href: "/solutions/industrial-solar-epc" },
+  { label: "Commercial Rooftop Solar", href: "/solutions/commercial-rooftop" },
+  { label: "Residential Hybrid Solar", href: "/solutions/residential-solar" },
+  { label: "Agricultural Solar Irrigation", href: "/solutions/agricultural-solar" },
+  { label: "BIPV Solar Solution", href: "/solutions/power-solaroof" },
 ];
 
 const applicationLinks = [

@@ -232,9 +232,9 @@ export function Hero() {
               ref={headlineRef}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-[clamp(44px,5.2vw,76px)] font-extrabold tracking-tight text-white leading-[1.08]"
             >
-              Empowering Bangladesh with{" "}
+              Transforming Bangladesh with{" "}
               <span className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(245,158,11,0.35)]">
-                Reliable, Sustainable Solar Energy
+                Renewable &amp; Sustainable Solar Energy
               </span>
             </h1>
 
@@ -243,9 +243,7 @@ export function Hero() {
               ref={paragraphRef}
               className="text-slate-200/95 text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed drop-shadow-sm font-normal"
             >
-              Tailored Solar PV Systems Designed for Homes, Farms, Factories, and
-              Commercial Structures. Over 12 Years of Engineering and
-              Infrastructure Integrity.
+              Years of Trusted Engineering &amp; Infrastructure Solutions. Delivering high-efficiency turnkey solar PV systems, net-metered installations, and BIPV roofing for residential, commercial, agricultural, and industrial facilities.
             </p>
 
             {/* Mobile Trust Highlights & Consultation CTA (Enhanced for mobile balance) */}

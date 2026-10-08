@@ -63,7 +63,7 @@ export default function ContactPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-                Get In Touch with Our <span className="gradient-text-solar">Solar Engineers</span>
+                Get In Touch with Our <span className="gradient-text-solar">Solar Expert</span>
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
@@ -92,11 +92,8 @@ export default function ContactPage() {
                       CORPORATE HEADQUARTERS
                     </span>
                     <h3 className="text-xl font-bold text-white">
-                      Net Bangla Limited (Solar Division)
+                      Net Bangla Limited (Solar Wing)
                     </h3>
-                    <p className="text-xs text-slate-300">
-                      Delivering clean energy engineering since May 28, 2014.
-                    </p>
                   </div>
 
                   <div className="space-y-4 pt-2 text-xs sm:text-sm text-slate-200 relative z-10">
@@ -153,19 +150,6 @@ export default function ContactPage() {
                         </div>
                       </div>
                     </div>
-                  </div>
-
-                  {/* Institutional Registrations */}
-                  <div className="pt-4 border-t border-white/10 flex flex-wrap gap-2 text-[10px] font-mono text-slate-300 relative z-10">
-                    <span className="px-2.5 py-1 rounded-lg bg-white/10 border border-white/20">
-                      BASIS Member: A-405
-                    </span>
-                    <span className="px-2.5 py-1 rounded-lg bg-white/10 border border-white/20">
-                      BACCO Member: 2018.0082
-                    </span>
-                    <span className="px-2.5 py-1 rounded-lg bg-white/10 border border-white/20">
-                      BTRC Registered CC/BPO
-                    </span>
                   </div>
                 </div>
 
