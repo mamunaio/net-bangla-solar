@@ -93,7 +93,7 @@ export default function RootLayout({
                   "name": "Net Bangla Solar",
                   "legalName": "Net Bangla Limited",
                   "url": "https://netbanglaenergy.com",
-                  "logo": "https://netbanglaenergy.com/images/Net%20Bangla%20Solar%20Logo.jpeg",
+                  "logo": "https://netbanglaenergy.com/images/net-bangla-energy-logo.svg",
                   "email": "mamun@netbanglaltd.com",
                   "foundingDate": "2014-05-28",
                   "description":

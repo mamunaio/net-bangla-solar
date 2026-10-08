@@ -7,6 +7,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 
 // Official navigation columns
 const companyLinks = [
@@ -72,25 +73,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-8 pb-12">
           {/* 1. BRAND AREA (6 columns on Desktop) */}
           <div className="md:col-span-6 lg:col-span-6 space-y-5 text-left">
-            {/* Brand Typography */}
+            {/* Brand Typography & Logo */}
             <Link
               href="/"
               className="group inline-flex items-center gap-3.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl"
-              aria-label="Net Bangla Solar - Back to top"
+              aria-label="Net Bangla Energy - Back to top"
             >
-              {/* Brand Logo Icon */}
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shadow-2xs group-hover:border-amber-400 group-hover:bg-amber-500/20 transition-all">
-                <SunMedium className="w-6 h-6 text-amber-600 group-hover:rotate-45 transition-transform duration-500" />
-              </div>
-
-              {/* Brand Typography */}
-              <div className="flex flex-col">
-                <span className="text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-amber-700 transition-colors">
-                  Net Bangla Solar
-                </span>
-                <span className="text-xs font-bold tracking-wider text-amber-700 uppercase">
-                  A Division of Net Bangla Limited
-                </span>
+              <div className="h-12 py-1 px-3 rounded-2xl bg-white border border-slate-200/90 shadow-2xs group-hover:border-amber-400 group-hover:shadow-[0_0_16px_rgba(245,158,11,0.25)] transition-all flex items-center">
+                <BrandLogo variant="light" className="h-9 w-auto" />
               </div>
             </Link>
 

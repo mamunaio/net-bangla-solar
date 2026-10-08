@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { X, ArrowRight, ChevronDown, Zap, PhoneCall, ShieldCheck } from "lucide-react";
 import { useQuoteModal } from "@/components/providers/QuoteModalProvider";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -70,17 +70,11 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
           <Link
             href="#home"
             onClick={onClose}
+            aria-label="Net Bangla Energy — Home"
             className="group flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl min-w-0"
           >
-            <div className="relative h-[32px] w-[120px] overflow-hidden rounded-xl bg-white border border-slate-200/90 shadow-2xs shrink-0">
-              <Image
-                src="/images/Net Bangla Solar Logo.jpeg"
-                alt="Net Bangla Solar Logo"
-                width={500}
-                height={500}
-                priority
-                className="absolute inset-x-0 top-1/2 h-auto w-full -translate-y-1/2"
-              />
+            <div className="h-8.5 py-0.5 px-2 rounded-xl bg-white border border-slate-200/90 shadow-2xs shrink-0 flex items-center">
+              <BrandLogo variant="light" className="h-6.5 w-auto" />
             </div>
             <div className="inline-flex items-center px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-[8.5px] font-mono font-bold">
               <span>EPC LIVE</span>
