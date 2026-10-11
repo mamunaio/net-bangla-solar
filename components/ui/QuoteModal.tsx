@@ -103,6 +103,8 @@ export function QuoteModal() {
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [notes, setNotes] = useState("");
+  const [honeypot, setHoneypot] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Sync preselected facility
   useEffect(() => {
@@ -127,10 +129,32 @@ export function QuoteModal() {
     setMonthlyBill(billPresets[id]?.[1] || billPresets[id]?.[0] || "");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !phone) return;
-    setSubmitted(true);
+    setIsSubmitting(true);
+    try {
+      await fetch("/api/audit-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          company,
+          facilityType,
+          location,
+          monthlyBill,
+          website: honeypot,
+          message: `Goal: ${goal} | Roof: ${roofType}${notes ? ` | Notes: ${notes}` : ""}`,
+        }),
+      });
+    } catch (err) {
+      console.error("Modal submission error:", err);
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+    }
   };
 
   // Rough estimation logic for preview pill
@@ -548,22 +572,36 @@ export function QuoteModal() {
                     />
                   </div>
 
+                  {/* Honeypot field for bot spam deterrence */}
+                  <div className="hidden" aria-hidden="true">
+                    <input
+                      type="text"
+                      name="website"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={honeypot}
+                      onChange={(e) => setHoneypot(e.target.value)}
+                    />
+                  </div>
+
                   {/* Final Submit Controls */}
                   <div className="flex items-center gap-3 pt-2">
                     <button
                       type="button"
+                      disabled={isSubmitting}
                       onClick={() => setStep(2)}
-                      className="w-1/3 py-3.5 px-4 rounded-2xl border border-slate-300 hover:bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+                      className="w-1/3 py-3.5 px-4 rounded-2xl border border-slate-300 hover:bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center gap-1.5 transition-all cursor-pointer disabled:opacity-50"
                     >
                       <ArrowLeft className="w-4 h-4" />
                       <span>Back</span>
                     </button>
                     <button
                       type="submit"
-                      className="w-2/3 btn-primary-solar py-3.5 px-6 rounded-2xl flex items-center justify-center gap-2 text-sm font-bold text-slate-950 cursor-pointer shadow-md"
+                      disabled={isSubmitting}
+                      className="w-2/3 btn-primary-solar py-3.5 px-6 rounded-2xl flex items-center justify-center gap-2 text-sm font-bold text-slate-950 cursor-pointer shadow-md disabled:opacity-75"
                     >
                       <Send className="w-4 h-4" />
-                      <span>Get Free 3D Feasibility Audit</span>
+                      <span>{isSubmitting ? "Dispatching..." : "Get Free 3D Feasibility Audit"}</span>
                     </button>
                   </div>
                 </div>

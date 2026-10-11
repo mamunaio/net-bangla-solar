@@ -41,6 +41,7 @@ export default function ContactPage() {
     monthlyBill: "",
     roofArea: "",
     message: "",
+    website: "", // Honeypot trap
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -56,11 +57,11 @@ export default function ContactPage() {
       if (res.ok) {
         setSubmitted(true);
       } else {
-        const data = await res.json();
-        setSubmitError(data.error || "Failed to send request. Please try again.");
+        const data = await res.json().catch(() => ({}));
+        setSubmitError(data.error || "Failed to send request. Please try again or call us directly.");
       }
     } catch {
-      setSubmitted(true);
+      setSubmitError("Network error. Please check your connection or contact our team directly via phone.");
     } finally {
       setIsSubmitting(false);
     }
@@ -265,6 +266,18 @@ export default function ContactPage() {
                         {submitError}
                       </div>
                     )}
+
+                    {/* Honeypot field for bot spam deterrence */}
+                    <div className="hidden" aria-hidden="true">
+                      <input
+                        type="text"
+                        name="website"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={formData.website}
+                        onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                      />
+                    </div>
 
                     {/* Facility Type Selector */}
                     <div className="space-y-2">
