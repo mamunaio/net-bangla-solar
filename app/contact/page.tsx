@@ -239,9 +239,7 @@ export default function ContactPage() {
                       Audit Request Received Successfully!
                     </h3>
                     <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-                      Thank you, <strong>{formData.name}</strong>. Your feasibility audit request has been dispatched directly to our engineering desk at{" "}
-                      <strong className="text-amber-600">solar@netbanglaltd.com</strong>. Our senior solar engineer will contact you at{" "}
-                      <strong>{formData.phone}</strong> within 24 hours to schedule the on-site feasibility inspection.
+                      Thank you, <strong>{formData.name}</strong>. Your feasibility audit request has been received successfully. Our engineering team will review your requirements and get in touch with you within 24 hours.
                     </p>
                     <button
                       type="button"
@@ -258,8 +256,7 @@ export default function ContactPage() {
                         Schedule a Free On-Site Feasibility Audit
                       </h3>
                       <p className="text-xs text-slate-500 leading-relaxed">
-                        Fill out the details below and our engineering team will prepare your custom 3D solar layout. Inquiries are routed directly to{" "}
-                        <strong className="text-amber-600 font-semibold">solar@netbanglaltd.com</strong>.
+                        Fill out the details below and our engineering team will prepare your custom 3D solar layout and turnkey financial proposal.
                       </p>
                     </div>
 

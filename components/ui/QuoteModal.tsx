@@ -220,7 +220,7 @@ export function QuoteModal() {
                   Feasibility Audit Confirmed!
                 </h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Thank you, <strong>{name}</strong>. Our senior solar engineer has received your <strong>{facilityType.toUpperCase()}</strong> solar request ({location}) and will call you at <strong>{phone}</strong> within 24 hours with your preliminary 3D layout.
+                  Thank you, <strong>{name}</strong>. Your solar inquiry has been received successfully. Our engineering team will review your requirements and get in touch with you within 24 hours with your preliminary solar layout.
                 </p>
               </div>
 
