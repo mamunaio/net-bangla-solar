@@ -89,17 +89,6 @@ export const partnersData: PartnerItem[] = [
     region: "MEMBER ID: 2018",
   },
   {
-    id: "goodfirms",
-    name: "GoodFirms Verified",
-    nativeName: "Top BPO & Technology Services Accreditation",
-    category: "associations",
-    categoryLabel: "National Associations",
-    logo: "/images/partners/goodfirms.png",
-    description: "Global research and accreditation platform for enterprise services",
-    tag: "ACCREDITATION",
-    region: "GLOBAL VERIFIED",
-  },
-  {
     id: "serimag",
     name: "Serimag",
     nativeName: "Cognitive AI & Document Automation",

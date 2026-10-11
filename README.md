@@ -13,7 +13,7 @@
 <p align="center">
   <b>Premier Turnkey Solar EPC Platform for Industrial, Commercial, Agricultural, and Residential Rooftops in Bangladesh.</b>
   <br />
-  <sub>Delivering SREDA-compliant clean energy engineering, 3D LiDAR feasibility audits, and Power Solaroof™ BIPV systems since May 28, 2014.</sub>
+  <sub>Delivering SREDA-compliant clean energy engineering, 3D drone feasibility audits, and Power Solaroof™ BIPV systems since May 28, 2014.</sub>
 </p>
 
 [🌐 Live Official Website](https://netbanglaenergy.com) • [📊 Interactive ROI Calculator](https://netbanglaenergy.com/calculator) • [🏢 Why Choose Us](https://netbanglaenergy.com/why-choose-us) • [📜 HSE Policies](https://netbanglaenergy.com/hse-policy)

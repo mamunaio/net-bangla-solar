@@ -70,7 +70,7 @@ export function SolutionTemplate({
   workflowTitle = "Turnkey Execution & Commissioning Process",
   workflowSteps,
   ctaTitle = "Ready to Engineer Your Clean Energy Solution?",
-  ctaDescription = "Connect with our certified solar engineers to receive an on-site structural audit, 3D shading simulation, single-line diagram, and turnkey financial proposal.",
+  ctaDescription = "Connect with our experienced solar engineers to receive an on-site structural audit, 3D shading simulation, single-line diagram, and turnkey financial proposal.",
 }: SolutionTemplateProps) {
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-900 font-sans">

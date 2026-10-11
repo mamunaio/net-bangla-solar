@@ -281,7 +281,7 @@ export function FinalCTA() {
                         Engineering Supervision:
                       </span>
                       <p className="text-slate-900 font-bold text-sm sm:text-base mt-0.5">
-                        Engr. Md. Mamunur Rahman (CEO)
+                        Engr. Md. Mamunur Rahman (Chief Executive Engineer)
                       </p>
                     </div>
                   </div>

@@ -94,7 +94,7 @@ const engineeringPillars = [
   {
     icon: BarChart3,
     title: "Bankable PVsyst 3D Shading Simulation",
-    desc: "We conduct granular 3D drone surveys, LiDAR shadow mapping, and PVsyst meteorological energy modeling to guarantee predictable, bankable kilowatt-hour yields.",
+    desc: "We conduct granular 3D drone surveys, solar shadow mapping, and PVsyst meteorological energy modeling to guarantee predictable, bankable kilowatt-hour yields.",
     badge: "PRECISION AUDIT",
   },
   {
@@ -152,7 +152,7 @@ const comparisonPoints = [
   },
   {
     feature: "Engineering Modeling & Feasibility",
-    netBangla: "3D Drone LiDAR mapping + PVsyst bankable hourly solar simulation report",
+    netBangla: "3D Drone aerial mapping + PVsyst bankable hourly solar simulation report",
     traditional: "Rough guesswork without calculating azimuth, tilt, or building shadows",
   },
   {

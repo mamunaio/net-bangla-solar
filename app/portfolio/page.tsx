@@ -44,6 +44,27 @@ interface ProjectItem {
 
 const portfolioProjects: ProjectItem[] = [
   {
+    id: "intal-technology-ashulia",
+    title: "127.4 kWp Rooftop On-Grid Solar PV Power System",
+    client: "Intal Technology",
+    category: "commercial",
+    categoryLabel: "Commercial EPC",
+    capacity: "127.4 kWp DC / 100 kW AC",
+    location: "Nayarhat, Ashulia, Savar, Dhaka",
+    annualYield: "185 MWh / Year",
+    annualSavings: "৳ 19.5 Lakh / Year",
+    image: "/images/solar-commercial.jpg",
+    panels: "Tier-1 High-Efficiency On-Grid PV Modules",
+    inverters: "100 kW Smart Grid-Tie Inverter with Web Telemetry",
+    description: "Turnkey EPC supply, installation, testing and commissioning of 127.4 kWp DC / 100 kW AC rooftop on-grid solar photovoltaic system with grid-tie inverter, hot-dip galvanized mounting structure, lightning arrestor, surge protection junction boxes, and full accessories.",
+    highlights: [
+      "127.4 kWp DC / 100 kW AC On-Grid Net-Metered",
+      "Hot-Dip Galvanized Heavy Mounting Structure",
+      "Integrated Lightning Arrestor & Grounding System",
+      "Turnkey Testing, Commissioning & Handover",
+    ],
+  },
+  {
     id: "gazipur-textile-mwp",
     title: "1.2 MWp Industrial Rooftop Solar Power Plant",
     client: "Export Oriented Textile Mill",
@@ -320,6 +341,19 @@ export default function PortfolioPage() {
                           <span>{hl}</span>
                         </div>
                       ))}
+                    </div>
+
+                    {/* Delivery & Financing Models (Feasibility Studies • Turnkey EPC • CAPEX • OPEX • PPA) */}
+                    <div className="pt-1 flex flex-wrap items-center gap-1.5 text-[10px] font-mono font-semibold">
+                      <span className="px-2 py-0.5 rounded-md bg-slate-100 border border-slate-200/90 text-slate-700">
+                        Turnkey EPC
+                      </span>
+                      <span className="px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-800">
+                        CAPEX / OPEX / PPA
+                      </span>
+                      <span className="px-2 py-0.5 rounded-md bg-amber-50 border border-amber-200 text-amber-800">
+                        Feasibility Studies
+                      </span>
                     </div>
 
                     {/* Action Button */}

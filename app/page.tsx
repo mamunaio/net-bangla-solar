@@ -2,7 +2,6 @@ import { Hero } from "@/components/sections/Hero";
 import { ImpactStats } from "@/components/sections/ImpactStats";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { SolutionsSection } from "@/components/sections/SolutionsSection";
-import { HybridSolarDiagram } from "@/components/sections/HybridSolarDiagram";
 import { TechnologySection } from "@/components/sections/TechnologySection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
@@ -11,7 +10,7 @@ import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ClientsSection } from "@/components/sections/ClientsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
-import { FinalCTA } from "@/components/sections/FinalCTA";
+import { HomeCTA } from "@/components/sections/HomeCTA";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
         {/* <ImpactStats /> */}
         <AboutSection />
         <SolutionsSection />
-        <HybridSolarDiagram />
         {/* <TechnologySection /> */}
         <PartnersSection />
         <ProjectsSection />
@@ -31,7 +29,7 @@ export default function Home() {
         <TestimonialsSection />
         <ClientsSection />
         {/* <FAQSection /> */}
-        {/* <FinalCTA /> */}
+        <HomeCTA />
       </main>
       <Footer />
     </div>

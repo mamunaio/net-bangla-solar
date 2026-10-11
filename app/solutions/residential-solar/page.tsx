@@ -76,7 +76,7 @@ export default function ResidentialSolarPage() {
         "Powers central air conditioners, refrigerators, water pumps, lighting, and elevators effortlessly.",
         "Automatic net-metering export reduces monthly electricity bills to near-zero levels.",
         "Architecturally designed elevated rooftop pergolas that preserve full rooftop garden living space.",
-        "Long-lasting Tier-1 solar modules backed by 20-year manufacturer performance warranties.",
+        "Long-lasting Tier-1 solar modules backed by 25-year manufacturer performance warranties.",
       ]}
       specs={residentialSpecs}
       advantagesTitle="Why Homeowners Choose Net Bangla Residential Solar"

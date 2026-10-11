@@ -76,12 +76,10 @@ export function Footer() {
             {/* Brand Typography & Logo */}
             <Link
               href="/"
-              className="group inline-flex items-center gap-3.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl"
-              aria-label="Net Bangla Energy - Back to top"
+              className="group inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl"
+              aria-label="Net Bangla Solar - Back to top"
             >
-              <div className="h-12 py-1 px-3 rounded-2xl bg-white border border-slate-200/90 shadow-2xs group-hover:border-amber-400 group-hover:shadow-[0_0_16px_rgba(245,158,11,0.25)] transition-all flex items-center">
-                <BrandLogo variant="light" className="h-9 w-auto" />
-              </div>
+              <BrandLogo className="h-16 sm:h-20 w-auto transition-transform duration-200 group-hover:scale-105" />
             </Link>
 
             {/* Official Description */}

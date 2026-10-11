@@ -256,6 +256,25 @@ export function ProjectsSection() {
                       <MapPin className="h-4 w-4 text-amber-400 shrink-0" />
                       <span className="font-mono text-xs sm:text-sm font-semibold">{app.location}</span>
                     </div>
+
+                    {/* Delivery & Financing Models (Feasibility Studies • Turnkey EPC • CAPEX • OPEX • PPA) */}
+                    <div className="pt-2 flex flex-wrap items-center gap-1.5 text-[10.5px] sm:text-[11px] font-mono font-semibold text-slate-200">
+                      <span className="px-2.5 py-0.5 rounded-md bg-white/15 border border-white/20 backdrop-blur-md text-amber-300">
+                        Feasibility Studies
+                      </span>
+                      <span className="px-2.5 py-0.5 rounded-md bg-white/15 border border-white/20 backdrop-blur-md text-white">
+                        Turnkey EPC
+                      </span>
+                      <span className="px-2.5 py-0.5 rounded-md bg-white/15 border border-white/20 backdrop-blur-md text-emerald-300">
+                        CAPEX
+                      </span>
+                      <span className="px-2.5 py-0.5 rounded-md bg-white/15 border border-white/20 backdrop-blur-md text-sky-300">
+                        OPEX
+                      </span>
+                      <span className="px-2.5 py-0.5 rounded-md bg-white/15 border border-white/20 backdrop-blur-md text-indigo-300">
+                        PPA
+                      </span>
+                    </div>
                   </div>
 
                   <div className="pt-3 flex items-center justify-between border-t border-white/15">

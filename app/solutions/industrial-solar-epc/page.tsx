@@ -46,7 +46,7 @@ const industrialAdvantages = [
   },
   {
     title: "Tier-1 N-Type TOPCon Bifacial Panels",
-    desc: "Ultra-high efficiency modules with 20-year 84.8% performance warranties and enhanced low-light morning/evening generation.",
+    desc: "Ultra-high efficiency modules with 25-year 84.8% linear performance warranties and enhanced low-light morning/evening generation.",
     badge: "TIER-1 OEM",
     icon: Award,
   },
@@ -61,12 +61,12 @@ const industrialAdvantages = [
 const industrialWorkflow = [
   {
     step: "01",
-    title: "Drone LiDAR & 3D Shading Simulation",
-    desc: "Millimeter-precision aerial mapping to detect rooftop obstacles, optimize pitch tilt, and simulate monthly generation.",
+    title: "Drone Survey & 3D Shading Simulation",
+    desc: "Precision aerial mapping to detect rooftop obstacles, optimize pitch tilt, and simulate monthly generation.",
   },
   {
     step: "02",
-    title: "Structural & Purlin Load Engineering",
+    title: "Structural Assessment & Purlin Load Analysis",
     desc: "STAAD.Pro load analysis to ensure rooftop tin and trusses withstand modules, walkways, and 160 km/h wind loads.",
   },
   {
@@ -85,7 +85,7 @@ const industrialSpecs = [
   { label: "Capacity Range", value: "100 kWp – 5+ MWp" },
   { label: "Avg. Payback", value: "3.1 – 3.4 Years" },
   { label: "Grid Tie-In", value: "11kV / 33kV HT" },
-  { label: "Power Warranty", value: "20-Year Linear" },
+  { label: "Power Warranty", value: "25-Year Linear" },
 ];
 
 export default function IndustrialSolarEPCPage() {
@@ -95,7 +95,7 @@ export default function IndustrialSolarEPCPage() {
       title="Industrial Megawatt (MWp) Solar EPC"
       subtitle="Heavy-Duty Turnkey Photovoltaic Engineering for Export Industries, Textile Mills & Manufacturing Plants"
       heroImageUrl="/images/solar-industrial.jpg"
-      description="Net Bangla Solar engineers bankable, multi-megawatt rooftop and ground-mounted solar photovoltaic systems designed to drastically reduce factory operating electricity costs. We handle the entire project lifecycle in-house: 3D LiDAR shading audits, structural purlin engineering, 33kV substation synchronization, SREDA net-metering approvals, and 20-year SCADA performance monitoring."
+      description="Net Bangla Solar engineers bankable, multi-megawatt rooftop and ground-mounted solar photovoltaic systems designed to drastically reduce factory operating electricity costs. We handle the entire project lifecycle in-house: 3D drone surveys & shading simulation, structural purlin engineering, 33kV substation synchronization, SREDA net-metering approvals, and 25-year performance monitoring."
       detailedPoints={[
         "Up to 70% reduction in monthly grid electricity expenditure for industrial consumers.",
         "Zero-penetration standing seam clamps protecting factory tin roofs from water leaks.",
@@ -108,8 +108,8 @@ export default function IndustrialSolarEPCPage() {
       advantagesList={industrialAdvantages}
       workflowTitle="Turnkey Industrial EPC Project Lifecycle"
       workflowSteps={industrialWorkflow}
-      ctaTitle="Ready to Cut Your Factory Electricity Bills by Up to 70%?"
-      ctaDescription="Connect with our senior EPC engineers today for an on-site structural audit, 3D LiDAR shadow analysis, and turnkey financial payback modeling."
+      ctaTitle="Reduce Your Factory Electricity Bills by 70% or More with Solar Energy"
+      ctaDescription="Connect with our senior EPC engineers today for an on-site structural audit, 3D shadow analysis, and turnkey financial payback modeling."
     />
   );
 }

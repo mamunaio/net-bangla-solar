@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { QuoteModalProvider } from "@/components/providers/QuoteModalProvider";
 import { QuoteModal } from "@/components/ui/QuoteModal";
 import { Navbar } from "@/components/layout/Navbar";
+import { PageLoader } from "@/components/ui/PageLoader";
 import "./globals.css";
 
 const sora = Sora({
@@ -93,8 +94,8 @@ export default function RootLayout({
                   "name": "Net Bangla Solar",
                   "legalName": "Net Bangla Limited",
                   "url": "https://netbanglaenergy.com",
-                  "logo": "https://netbanglaenergy.com/images/net-bangla-energy-logo.svg",
-                  "email": "mamun@netbanglaltd.com",
+                  "logo": "https://netbanglaenergy.com/images/net-bangla-solar-logo.png",
+                  "email": "solar@netbanglaltd.com",
                   "foundingDate": "2014-05-28",
                   "description":
                     "Premier Turnkey Solar EPC company in Bangladesh specializing in Industrial, Commercial, and Residential rooftop solar PV systems with Net Metering.",
@@ -171,6 +172,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-solar-bg-primary text-solar-text-primary antialiased min-h-screen relative selection:bg-amber-500/25 selection:text-amber-950 transition-colors duration-200">
+        <PageLoader />
         <ThemeProvider>
           <QuoteModalProvider>
             <Navbar />

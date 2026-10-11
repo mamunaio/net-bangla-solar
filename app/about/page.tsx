@@ -85,14 +85,6 @@ const affiliationsList = [
     tag: "APEX MEMBER",
   },
   {
-    id: "itkall",
-    name: "ITKALL",
-    fullName: "ITKALL Technology & Telecom Infrastructure",
-    identifier: "IT & Telecom Technology Partner",
-    role: "Enterprise Systems & Telecom Solutions",
-    tag: "IT & TELECOM",
-  },
-  {
     id: "wincle",
     name: "Wincle Energy",
     fullName: "Wincle Energy Pte. Ltd. (赢科数能)",
@@ -212,7 +204,7 @@ export default function AboutPage() {
                     </div>
 
                     <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
-                      <dt className="text-slate-500 font-medium">Managing Director / CEO</dt>
+                      <dt className="text-slate-500 font-medium">Chief Executive Engineer</dt>
                       <dd className="font-bold text-amber-700 text-left sm:text-right">Engr. Md. Mamunur Rahman</dd>
                     </div>
                   </dl>
@@ -490,7 +482,7 @@ export default function AboutPage() {
           </Container>
         </section>
 
-        {/* 5. AFFILIATIONS & PARTNERS (Includes BASIS, BACCO, ITKALL, Wincle Energy, CMC, Huachuang Guojing) */}
+        {/* 5. AFFILIATIONS & PARTNERS (Includes BASIS, BACCO, Wincle Energy, CMC, Huachuang Guojing) */}
         <section className="py-14 sm:py-18 bg-slate-50 border-y border-slate-200/80">
           <Container>
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-8">
@@ -512,7 +504,7 @@ export default function AboutPage() {
             </div> 
             */}
 
-            {/* 6 Entities Grid: BASIS, BACCO, ITKALL, Wincle Energy, CMC, Huachuang Guojing */}
+            {/* 5 Entities Grid: BASIS, BACCO, Wincle Energy, CMC, Huachuang Guojing */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto text-left">
               {affiliationsList.map((item) => (
                 <div

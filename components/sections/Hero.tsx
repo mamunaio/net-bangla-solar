@@ -365,7 +365,7 @@ export function Hero() {
                 Turnkey EPC Engineering
               </span>
               <span className="text-white/40">&bull;</span>
-              <span className="text-slate-300">20-Year Performance Warranty</span>
+              <span className="text-slate-300">25-Year Performance Warranty</span>
             </div>
           </div>
         </Container>

@@ -122,7 +122,7 @@ export function AboutSection() {
                 systems designed around local grid conditions, weather
                 requirements, and energy demands.
               </p>
-              <p className="text-sm lg:text-base text-slate-700 font-medium">
+              <p>
                 From site assessment and load calculation through system design,
                 installation, grid connection, and ongoing maintenance, we support
                 the project through its full lifecycle.
@@ -186,7 +186,7 @@ export function AboutSection() {
                   <div className="relative h-12 w-12 sm:h-13 sm:w-13 shrink-0 overflow-hidden rounded-xl border border-amber-500/30 bg-slate-100">
                     <Image
                       src="/images/engr-mamunur-rahman.jpg"
-                      alt="Engr. Md. Mamunur Rahman, CEO"
+                      alt="Engr. Md. Mamunur Rahman, Managing Director & Chief Executive Engineer"
                       fill
                       sizes="52px"
                       className="object-cover object-center"
@@ -200,7 +200,7 @@ export function AboutSection() {
                       Engr. Md. Mamunur Rahman
                     </p>
                     <p className="text-xs text-slate-500 mt-0.5 font-medium">
-                      CEO, Net Bangla Limited
+                      Managing Director &amp; Chief Executive Engineer
                     </p>
                   </div>
                 </div>

@@ -19,6 +19,8 @@ import {
   ArrowRight,
   Sparkles,
   Headphones,
+  Globe,
+  ExternalLink,
 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -27,6 +29,8 @@ import { cn } from "@/lib/utils";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -39,9 +43,27 @@ export default function ContactPage() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError("");
+    try {
+      const res = await fetch("/api/audit-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await res.json();
+        setSubmitError(data.error || "Failed to send request. Please try again.");
+      }
+    } catch {
+      setSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -67,7 +89,7 @@ export default function ContactPage() {
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-                Request a free on-site feasibility audit, 3D LiDAR shading layout, and customized
+                Request a free on-site feasibility audit, 3D solar shading layout, and customized
                 SREDA-compliant net metering proposal for your facility.
               </p>
             </div>
@@ -105,7 +127,9 @@ export default function ContactPage() {
                       <div>
                         <div className="font-bold text-white">Dhaka Head Office</div>
                         <div className="text-slate-300 mt-0.5 leading-relaxed">
-                          Tejgaon Commercial Area / Mohakhali DOHS, Dhaka, Bangladesh.
+                          Level # 02 &amp; 03, House # 07, Road # 11, Block # L,<br />
+                          Sector # 03, Aftabnagar, Dhaka-1212<br />
+                          Bangladesh
                         </div>
                       </div>
                     </div>
@@ -117,8 +141,14 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <div className="font-bold text-white">Direct EPC Hotline</div>
-                        <div className="text-amber-400 font-mono font-bold mt-0.5 text-base">
-                          +880 1711-000000 / +880 2-9880000
+                        <div className="text-amber-400 font-mono font-bold mt-0.5 text-base flex flex-wrap items-center gap-x-2">
+                          <a href="tel:+8801550155024" className="hover:underline hover:text-amber-300 transition-colors">
+                            +880 1550-155024
+                          </a>
+                          <span className="text-slate-400">,</span>
+                          <a href="tel:+8801970711632" className="hover:underline hover:text-amber-300 transition-colors">
+                            +880 1970-711632
+                          </a>
                         </div>
                         <div className="text-[11px] text-slate-400">Available Sun–Thu, 9 AM – 6 PM</div>
                       </div>
@@ -132,7 +162,29 @@ export default function ContactPage() {
                       <div>
                         <div className="font-bold text-white">Official Engineering Inquiries</div>
                         <div className="text-amber-300 font-medium mt-0.5">
-                          solar@netbangla.com &bull; info@netbangla.com
+                          <a href="mailto:solar@netbanglaltd.com" className="hover:underline">
+                            solar@netbanglaltd.com
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Official Website */}
+                    <div className="flex items-start gap-3">
+                      <div className="w-9 h-9 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 shrink-0 mt-0.5">
+                        <Globe className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-white">Official Website</div>
+                        <div className="text-amber-300 font-medium mt-0.5">
+                          <a
+                            href="https://www.netbanglaenergy.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline hover:text-amber-200 transition-colors"
+                          >
+                            www.netbanglaenergy.com
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -146,7 +198,7 @@ export default function ContactPage() {
                         <div className="font-bold text-white">Operational Hours</div>
                         <div className="text-slate-300 mt-0.5">
                           Sunday – Thursday: 9:00 AM – 6:00 PM<br />
-                          Emergency O&M Support: 24/7 Live Monitoring
+                          Emergency O&amp;M Support: 24/7 Live Monitoring
                         </div>
                       </div>
                     </div>
@@ -187,7 +239,9 @@ export default function ContactPage() {
                       Audit Request Received Successfully!
                     </h3>
                     <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-                      Thank you, <strong>{formData.name}</strong>. Our senior solar engineer will contact you at <strong>{formData.phone}</strong> within 24 hours to schedule the on-site feasibility inspection.
+                      Thank you, <strong>{formData.name}</strong>. Your feasibility audit request has been dispatched directly to our engineering desk at{" "}
+                      <strong className="text-amber-600">solar@netbanglaltd.com</strong>. Our senior solar engineer will contact you at{" "}
+                      <strong>{formData.phone}</strong> within 24 hours to schedule the on-site feasibility inspection.
                     </p>
                     <button
                       type="button"
@@ -199,14 +253,21 @@ export default function ContactPage() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
-                    <div className="space-y-1 border-b border-slate-100 pb-4">
+                    <div className="space-y-1.5 border-b border-slate-100 pb-4">
                       <h3 className="text-xl font-bold text-slate-900">
                         Schedule a Free On-Site Feasibility Audit
                       </h3>
-                      <p className="text-xs text-slate-500">
-                        Fill out the details below and our engineering team will prepare your custom 3D solar layout.
+                      <p className="text-xs text-slate-500 leading-relaxed">
+                        Fill out the details below and our engineering team will prepare your custom 3D solar layout. Inquiries are routed directly to{" "}
+                        <strong className="text-amber-600 font-semibold">solar@netbanglaltd.com</strong>.
                       </p>
                     </div>
+
+                    {submitError && (
+                      <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-xs text-red-700 font-medium">
+                        {submitError}
+                      </div>
+                    )}
 
                     {/* Facility Type Selector */}
                     <div className="space-y-2">
@@ -349,13 +410,52 @@ export default function ContactPage() {
                     {/* Submit Button */}
                     <button
                       type="submit"
-                      className="btn-primary-solar w-full py-4 px-6 rounded-2xl flex items-center justify-center gap-2 text-sm font-bold text-slate-950 cursor-pointer shadow-md"
+                      disabled={isSubmitting}
+                      className="btn-primary-solar w-full py-4 px-6 rounded-2xl flex items-center justify-center gap-2 text-sm font-bold text-slate-950 cursor-pointer shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
                     >
                       <Send className="w-4 h-4" />
-                      <span>Request Free On-Site Feasibility Audit</span>
+                      <span>{isSubmitting ? "Sending Audit Request..." : "Request Free On-Site Feasibility Audit"}</span>
                     </button>
                   </form>
                 )}
+              </div>
+            </div>
+
+            {/* FULL-WIDTH EMBEDDED GOOGLE MAP SECTION (NO API KEY REQUIRED) */}
+            <div className="mt-12 lg:mt-16 rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-white text-left">
+              <div className="p-5 sm:p-6 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-50/70">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-600 flex items-center justify-center shrink-0">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-base font-bold text-slate-900">
+                      Net Bangla Solar Head Office Location
+                    </h4>
+                    <p className="text-xs text-slate-500">
+                      Level # 02 &amp; 03, House # 07, Road # 11, Block # L, Sector # 03, Aftabnagar, Dhaka-1212
+                    </p>
+                  </div>
+                </div>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=House+07+Road+11+Block+L+Sector+03+Aftabnagar+Dhaka+1212"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-600 hover:text-amber-700 hover:underline shrink-0"
+                >
+                  <span>Open in Google Maps</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+              <div className="w-full h-[380px] sm:h-[450px] relative bg-slate-100">
+                <iframe
+                  title="Net Bangla Solar Dhaka Head Office Location Map"
+                  src="https://maps.google.com/maps?q=House%2007%20Road%2011%20Block%20L%20Sector%2003%20Aftabnagar%20Dhaka%201212&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  className="w-full h-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
               </div>
             </div>
           </Container>

@@ -166,13 +166,10 @@ export function Navbar() {
             {/* 1. BRAND LOGO AREA */}
             <Link
               href="/"
-              aria-label="Net Bangla Energy — Home"
-              className="group flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl shrink-0"
+              aria-label="Net Bangla Solar — Home"
+              className="group flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl shrink-0"
             >
-              {/* Logo Box */}
-              <div className="h-9 sm:h-10 lg:h-10.5 py-0.5 px-2.5 rounded-xl bg-white/95 border border-slate-200/90 shadow-2xs transition-all duration-200 ease-out group-hover:border-amber-400 group-hover:shadow-[0_0_16px_rgba(245,158,11,0.25)] shrink-0 flex items-center">
-                <BrandLogo variant="light" className="h-7 sm:h-8 lg:h-8.5 w-auto" />
-              </div>
+              <BrandLogo className="h-10 sm:h-12 lg:h-13.5 w-auto transition-transform duration-200 ease-out group-hover:scale-105" />
             </Link>
 
             {/* 2. DESKTOP NAVIGATION LINKS */}
@@ -284,7 +281,7 @@ export function Navbar() {
                                   <span>EPC GUARANTEE</span>
                                 </div>
                                 <h4 className="text-sm font-bold text-slate-900 leading-snug mb-3">
-                                  20-Year Guaranteed Performance Yield
+                                  25-Year Guaranteed Performance Yield
                                 </h4>
                                 <ul className="space-y-2 text-xs font-medium text-slate-700">
                                   <li className="flex items-center gap-2">

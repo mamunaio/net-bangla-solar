@@ -173,18 +173,6 @@ export const partnersList: PartnerEntity[] = [
     highlights: ["Real-time Cloud Messaging", "Enterprise SCADA Gateways", "Global Connectivity"],
   },
   {
-    id: "itkall",
-    name: "ITKALL Technology",
-    nativeName: "ITKALL Telecom & Systems Infrastructure",
-    category: "enterprise-tech",
-    categoryLabel: "Telecom & Systems Integration Partner",
-    description:
-      "Strategic telecom and IT infrastructure technology partner providing advanced system integration, electronic security, and server network connectivity.",
-    tag: "IT & TELECOM",
-    roleOrId: "SYSTEMS PARTNER",
-    highlights: ["Telecom Architecture", "Hardware Integration", "Network Security"],
-  },
-  {
     id: "basis",
     name: "BASIS",
     nativeName: "Bangladesh Association of Software & Information Services",
@@ -209,19 +197,6 @@ export const partnersList: PartnerEntity[] = [
     tag: "APEX MEMBER",
     roleOrId: "MEMBER ID: 2018",
     highlights: ["Member ID: 2018.0082.1000.0062", "BTRC Registered CC/BPO", "National Apex Body"],
-  },
-  {
-    id: "goodfirms",
-    name: "GoodFirms Verified",
-    nativeName: "Top BPO & Enterprise Technology Services",
-    category: "associations",
-    categoryLabel: "Global Enterprise Accreditation Platform",
-    logo: "/images/partners/goodfirms.png",
-    description:
-      "Global research, review, and accreditation platform verifying Net Bangla Limited for corporate delivery track record and technological reliability.",
-    tag: "ACCREDITATION",
-    roleOrId: "GLOBAL VERIFIED",
-    highlights: ["Verified Review Platform", "Top Technology Rating", "Enterprise Service Audit"],
   },
 ];
 
@@ -429,6 +404,18 @@ export const clientsList: ClientEntity[] = [
     sectorBadge: "INDUSTRIAL SECTOR",
     highlights: ["Industrial Roof EPC", "Peak Shaving Solar", "3-Year Payback"],
   },
+  {
+    id: "intal-technology",
+    name: "Intal Technology",
+    bnName: "ইনটাল টেকনোলজি",
+    category: "industry-rmg",
+    categoryLabel: "Technology & Industrial Enterprise",
+    description:
+      "Turnkey 127.4 kWp DC / 100 kW AC Rooftop On-Grid Solar PV system installation, grid-tie synchronization, and commissioning at Nayarhat, Ashulia, Savar.",
+    tag: "SOLAR EPC",
+    sectorBadge: "ASHULIA / SAVAR",
+    highlights: ["127.4 kWp DC / 100 kW AC System", "On-Grid Net-Metering", "Turnkey Testing & Commissioning"],
+  },
 
   // HEALTHCARE & ACADEMIC INSTITUTIONS
   {
@@ -613,8 +600,8 @@ export function PartnersClientsClient() {
                     </div>
                   </div>
                   <div className="relative z-10 mt-2.5 min-w-0">
-                    <div className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-900 transition-colors leading-snug truncate">BASIS &amp; BACCO</div>
-                    <div className="text-[11px] text-slate-500 font-medium mt-0.5 truncate">National Apex Accredited</div>
+                    <div className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-900 transition-colors leading-snug truncate">Tier-1 Hardware</div>
+                    <div className="text-[11px] text-slate-500 font-medium mt-0.5 truncate">25-Yr Performance Standard</div>
                   </div>
                 </div>
               </div>
@@ -925,7 +912,7 @@ export function PartnersClientsClient() {
                     Trusted by Defense, Ministries &amp; Industrial Leaders
                   </h2>
                   <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                    Net Bangla Solar proudly delivers turnkey photovoltaic installations, mission-critical electrical networks, and long-term O&amp;M for premier national institutions across Bangladesh.
+                    Reflecting the extensive corporate engineering pedigree of Net Bangla Group — delivering turnkey renewable energy systems, mission-critical electrical installations, and nationwide infrastructure for premier defense, public, and industrial leaders across Bangladesh.
                   </p>
                 </div>
 
@@ -1190,12 +1177,12 @@ export function PartnersClientsClient() {
                     <div className="space-y-2">
                       <div className="flex items-center justify-between gap-1.5">
                         <h3 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-amber-900 transition-colors">
-                          BASIS &amp; BACCO Governance
+                          Corporate &amp; SLA Governance
                         </h3>
                         <ArrowUpRight className="w-4 h-4 text-amber-600 opacity-0 -translate-x-1.5 translate-y-1.5 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 shrink-0" />
                       </div>
                       <p className="text-xs sm:text-[13.5px] text-slate-600 group-hover:text-slate-700 leading-relaxed">
-                        Corporate stability since May 2014 under active national apex trade memberships, ensuring stringent SLA commitments and lifecycle support.
+                        Corporate stability since May 2014 backed by proven engineering delivery, ensuring stringent SLA commitments and long-term lifecycle support.
                       </p>
                     </div>
                   </div>
@@ -1229,7 +1216,7 @@ export function PartnersClientsClient() {
               </h2>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Connect with our certified solar engineers to receive an on-site structural audit, 3D shading simulation, single-line diagram, and turnkey financial proposal.
+                Connect with our experienced solar engineers to receive an on-site structural audit, 3D shading simulation, single-line diagram, and turnkey financial proposal.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center justify-center gap-4">

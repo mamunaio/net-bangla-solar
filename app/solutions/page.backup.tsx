@@ -316,7 +316,7 @@ export default function SolutionsPageBackup() {
               </h2>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Speak directly with our certified solar engineers to receive an on-site feasibility assessment, single-line diagram, and financial ROI payback analysis.
+                Speak directly with our experienced solar engineers to receive an on-site feasibility assessment, single-line diagram, and financial ROI payback analysis.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center justify-center gap-4">

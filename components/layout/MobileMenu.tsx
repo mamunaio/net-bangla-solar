@@ -70,12 +70,10 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
           <Link
             href="#home"
             onClick={onClose}
-            aria-label="Net Bangla Energy — Home"
-            className="group flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl min-w-0"
+            aria-label="Net Bangla Solar — Home"
+            className="group flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl min-w-0"
           >
-            <div className="h-8.5 py-0.5 px-2 rounded-xl bg-white border border-slate-200/90 shadow-2xs shrink-0 flex items-center">
-              <BrandLogo variant="light" className="h-6.5 w-auto" />
-            </div>
+            <BrandLogo className="h-10 sm:h-11 w-auto transition-transform duration-200 group-hover:scale-105" />
             <div className="inline-flex items-center px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-[8.5px] font-mono font-bold">
               <span>EPC LIVE</span>
             </div>
@@ -166,14 +164,14 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
 
         {/* Bottom Hotline & Primary CTA */}
         <div className="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-3">
-          <Link
-            href="#contact"
+          <a
+            href="tel:+8801550155024"
             onClick={onClose}
             className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-amber-500/10 hover:text-amber-600 transition-all border border-slate-200/80 dark:border-slate-700"
           >
             <PhoneCall className="w-3.5 h-3.5 text-amber-500" />
-            <span>Hotline: +880 1711-000000</span>
-          </Link>
+            <span>Hotline: +880 1550-155024</span>
+          </a>
 
           <Link
             href="/calculator"

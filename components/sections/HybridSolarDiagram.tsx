@@ -196,9 +196,9 @@ export function HybridSolarDiagram() {
                 <ellipse cx="116" cy="240" rx="30" ry="8" fill="#1E293B" />
 
                 {/* Node Label */}
-                <rect x="45" y="255" width="142" height="30" rx="8" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1.5" />
+                <rect x="34" y="255" width="164" height="30" rx="8" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1.5" />
                 <text x="116" y="274" textAnchor="middle" fill="#0F172A" fontSize="12" fontWeight="800" fontFamily="sans-serif">
-                  SOLAR PANEL (DC)
+                  PV SOLAR PANEL (DC)
                 </text>
               </g>
 
@@ -389,7 +389,7 @@ export function HybridSolarDiagram() {
             <div className="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200/80 space-y-1.5">
               <div className="flex items-center gap-2 text-xs font-bold text-emerald-900">
                 <BatteryCharging className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>3. Battery ESS Storage</span>
+                <span>3. Energy Storage System (ESS / BESS)</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Stores daytime surplus energy in Tier-1 Lithium (LiFePO4) battery packs for silent, continuous nighttime power.

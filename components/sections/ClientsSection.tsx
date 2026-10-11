@@ -184,6 +184,16 @@ export const clientsData: ClientItem[] = [
     tag: "CONGLOMERATE",
   },
   {
+    id: "intal-technology",
+    name: "Intal Technology",
+    bnName: "ইনটাল টেকনোলজি",
+    category: "industrial-corporate",
+    categoryLabel: "Industry & Corporate",
+    logo: "/images/clients/mim-group.png",
+    description: "127.4 kWp Rooftop On-Grid Solar PV installation at Ashulia, Savar",
+    tag: "SOLAR EPC",
+  },
+  {
     id: "ispahani-hospital",
     name: "Ispahani Islamia Eye Institute & Hospital",
     bnName: "ইস্পাহানী ইসলামিয়া চক্ষু ইনস্টিটিউট ও হাসপাতাল",

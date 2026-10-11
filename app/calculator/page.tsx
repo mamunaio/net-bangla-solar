@@ -1093,7 +1093,7 @@ export default function SolarCalculatorPage() {
               Net Metering Policy
             </h4>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Calculations comply with Bangladesh Net Metering Guidelines 2018 (amended) under BPDB, BREB, DPDC, DESCO, and NESCO.
+              Calculations comply with Bangladesh Net Metering Guidelines 2025 under BPDB, BREB, DPDC, DESCO, and NESCO.
             </p>
           </div>
 
