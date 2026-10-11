@@ -13,7 +13,7 @@ import {
 import { SolutionTemplate } from "@/components/templates/SolutionTemplate";
 
 export const metadata: Metadata = {
-  title: "Commercial Rooftop Solar & Net-Metering | Net Bangla Solar",
+  title: "Commercial Rooftop Solar & Net-Metering | Net Bangla Solar Energy Solutions",
   description:
     "High-efficiency commercial rooftop solar systems for corporate office towers, hospitals, universities, and commercial complexes across Dhaka and Bangladesh.",
 };
@@ -71,7 +71,7 @@ export default function CommercialRooftopPage() {
       title="Commercial Rooftop & Corporate Solar"
       subtitle="Clean Power Generation for Corporate Headquarters, Hospitals, Universities & Commercial Complexes"
       heroImageUrl="/images/solar-commercial.jpg"
-      description="Commercial office buildings, private hospitals, academic institutions, and shopping malls consume substantial electricity during daytime peak hours. Net Bangla Solar engineers customized commercial rooftop solar systems that offset heavy air conditioning and elevator loads, reduce operating costs, and enhance corporate sustainability credentials under SREDA net-metering regulations."
+      description="Commercial office buildings, private hospitals, academic institutions, and shopping malls consume substantial electricity during daytime peak hours. Net Bangla Solar Energy Solutions engineers customized commercial rooftop solar systems that offset heavy air conditioning and elevator loads, reduce operating costs, and enhance corporate sustainability credentials under SREDA net-metering regulations."
       detailedPoints={[
         "Elevated canopy design allows continued use of rooftop garden, cafeteria, or recreational space.",
         "Turnkey bureaucratic liaison with DESCO, DPDC, and BPDB for fast net-metering export approval.",
@@ -79,7 +79,7 @@ export default function CommercialRooftopPage() {
         "Zero disruption to tenants, data servers, or hospital patient care during installation.",
       ]}
       specs={commercialSpecs}
-      advantagesTitle="Why Commercial Property Owners Choose Net Bangla Solar"
+      advantagesTitle="Why Commercial Property Owners Choose Net Bangla Solar Energy Solutions"
       advantagesSubtitle="Precision structural engineering, aesthetic elegance, and seamless grid synchronization tailored for metropolitan properties."
       advantagesList={commercialAdvantages}
       ctaTitle="Lower Your Commercial Building Operating Expenses Today"

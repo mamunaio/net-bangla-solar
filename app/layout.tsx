@@ -23,21 +23,21 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Net Bangla Solar Company | Clean Energy. Brighter Bangladesh.",
+  title: "Net Bangla Solar Energy Solutions | Clean Energy. Brighter Bangladesh.",
   description:
     "Leading provider of premium residential, commercial, and industrial solar energy systems in Bangladesh. Engineered for reliability, sustainability, and long-term energy savings.",
   keywords: [
     "Solar Energy Bangladesh",
-    "Net Bangla Solar",
+    "Net Bangla Solar Energy Solutions",
     "Renewable Energy",
     "Rooftop Solar",
     "Industrial Solar Bangladesh",
     "Solar Panel Installation",
     "Clean Energy",
   ],
-  authors: [{ name: "Net Bangla Solar Company" }],
+  authors: [{ name: "Net Bangla Solar Energy Solutions" }],
   openGraph: {
-    title: "Net Bangla Solar Company | Clean Energy. Brighter Bangladesh.",
+    title: "Net Bangla Solar Energy Solutions | Clean Energy. Brighter Bangladesh.",
     description:
       "Engineered for reliability, sustainability, and long-term energy savings. Premium solar solutions across Bangladesh.",
     type: "website",
@@ -91,7 +91,7 @@ export default function RootLayout({
                 {
                   "@type": "Organization",
                   "@id": "https://netbanglaenergy.com/#organization",
-                  "name": "Net Bangla Solar",
+                  "name": "Net Bangla Solar Energy Solutions",
                   "legalName": "Net Bangla Limited",
                   "url": "https://netbanglaenergy.com",
                   "logo": "https://netbanglaenergy.com/images/net-bangla-solar-logo.png",

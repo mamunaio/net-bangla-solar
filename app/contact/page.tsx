@@ -440,7 +440,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-base font-bold text-slate-900">
-                      Net Bangla Solar Head Office Location
+                      Net Bangla Solar Energy Solutions Head Office Location
                     </h4>
                     <p className="text-xs text-slate-500">
                       Level # 02 &amp; 03, House # 07, Road # 11, Block # L, Sector # 03, Aftabnagar, Dhaka-1212
@@ -459,7 +459,7 @@ export default function ContactPage() {
               </div>
               <div className="w-full h-[380px] sm:h-[450px] relative bg-slate-100">
                 <iframe
-                  title="Net Bangla Solar Dhaka Head Office Location Map"
+                  title="Net Bangla Solar Energy Solutions Dhaka Head Office Location Map"
                   src="https://maps.google.com/maps?q=House%2007%20Road%2011%20Block%20L%20Sector%2003%20Aftabnagar%20Dhaka%201212&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   className="w-full h-full border-0"
                   loading="lazy"

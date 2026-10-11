@@ -172,7 +172,7 @@ function PageLoaderInner() {
             </div>
             <div className="flex items-center gap-1.5 text-xs font-bold tracking-wide">
               <span>Loading</span>
-              <span className="text-amber-400">Net Bangla Solar</span>
+              <span className="text-amber-400">Net Bangla Solar Energy Solutions</span>
               <span className="animate-pulse text-amber-400 font-mono tracking-widest">&bull;&bull;&bull;</span>
             </div>
           </div>
@@ -184,7 +184,7 @@ function PageLoaderInner() {
         <div
           role="status"
           aria-live="polite"
-          aria-label="Loading Net Bangla Solar"
+          aria-label="Loading Net Bangla Solar Energy Solutions"
           className={`fixed inset-0 z-[99998] flex flex-col items-center justify-center bg-white/98 backdrop-blur-xl transition-all duration-300 ease-out select-none ${
             initialFading
               ? "opacity-0 scale-[0.98] pointer-events-none"
@@ -218,7 +218,7 @@ function PageLoaderInner() {
               <div className="relative w-20 h-20 sm:w-24 sm:h-24">
                 <Image
                   src="/images/net-bangla-solar-logo.png"
-                  alt="Net Bangla Solar Logo"
+                  alt="Net Bangla Solar Energy Solutions Logo"
                   fill
                   priority
                   className="object-contain drop-shadow-sm"
@@ -229,7 +229,7 @@ function PageLoaderInner() {
             {/* Typography */}
             <div className="space-y-1">
               <div className="text-base sm:text-lg font-extrabold tracking-tight text-slate-900 font-sans">
-                Net Bangla <span className="text-amber-500">Solar</span>
+                Net Bangla Solar <span className="text-amber-500">Energy Solutions</span>
               </div>
               <div className="text-[11px] font-mono font-semibold text-slate-500 tracking-wider uppercase">
                 Clean Energy &bull; Brighter Bangladesh

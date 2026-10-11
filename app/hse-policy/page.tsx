@@ -19,7 +19,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Health, Safety & Environmental (HSE) Policy | Net Bangla Solar",
+  title: "Health, Safety & Environmental (HSE) Policy | Net Bangla Solar Energy Solutions",
   description:
     "Official Health, Safety, and Environmental (HSE) Policy of Net Bangla Limited. Quality policy statement, zero-accident workplace standards, and Material Flow Cost Accounting (MFCA).",
 };
@@ -290,7 +290,7 @@ export default function HSEPolicyPage() {
                     <span>Material Flow Cost Accounting (MFCA) Standard</span>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                    By tracking the physical flow of materials and energy alongside financial costs, Net Bangla Solar reduces wasted aluminum, copper, cabling, and packaging, translating environmental stewardship into tangible cost savings for turnkey clients.
+                    By tracking the physical flow of materials and energy alongside financial costs, Net Bangla Solar Energy Solutions reduces wasted aluminum, copper, cabling, and packaging, translating environmental stewardship into tangible cost savings for turnkey clients.
                   </p>
                 </div>
               </div>

@@ -134,7 +134,7 @@ export function TestimonialsSection() {
               </h3>
 
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                Net Bangla Solar is structured to support varied technical and
+                Net Bangla Solar Energy Solutions is structured to support varied technical and
                 operational demands — from industrial manufacturing environments
                 to distributed off-grid installations.
               </p>
@@ -144,7 +144,7 @@ export function TestimonialsSection() {
             <div className="relative z-10 my-6 w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-[16/10] rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-md group">
               <Image
                 src="/images/who-we-serve-engineering.jpg"
-                alt="Industrial and institutional rooftop solar infrastructure engineered by Net Bangla Solar"
+                alt="Industrial and institutional rooftop solar infrastructure engineered by Net Bangla Solar Energy Solutions"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 550px"
                 className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"

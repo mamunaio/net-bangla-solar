@@ -27,7 +27,7 @@ import { Container } from "@/components/ui/Container";
 export const metadata: Metadata = {
   title: "About Us | Net Bangla Limited - Solar Energy & EPC Division",
   description:
-    "Corporate overview, mission, vision, international technology partners, affiliations, and sustainability policy of Net Bangla Solar. Delivering high-yield turnkey solar EPC engineering across Bangladesh.",
+    "Corporate overview, mission, vision, international technology partners, affiliations, and sustainability policy of Net Bangla Solar Energy Solutions. Delivering high-yield turnkey solar EPC engineering across Bangladesh.",
 };
 
 // 3 Main Strategic Partners
@@ -271,7 +271,7 @@ export default function AboutPage() {
             {/* Section Header */}
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-12">
               <div className="text-xs font-mono font-bold tracking-widest text-amber-700 uppercase">
-                Net Bangla Solar &bull; A wing of Net Bangla Limited
+                Net Bangla Solar Energy Solutions &bull; A wing of Net Bangla Limited
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Our Business Philosophy

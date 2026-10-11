@@ -26,9 +26,9 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
 
 export const metadata: Metadata = {
-  title: "Why Choose Us | Net Bangla Solar - Engineering Excellence",
+  title: "Why Choose Us | Net Bangla Solar Energy Solutions - Engineering Excellence",
   description:
-    "Discover why Bangladesh's leading industries, commercial enterprises, and institutions trust Net Bangla Solar for turnkey solar EPC, Tier-1 hardware, and 25-year performance.",
+    "Discover why Bangladesh's leading industries, commercial enterprises, and institutions trust Net Bangla Solar Energy Solutions for turnkey solar EPC, Tier-1 hardware, and 25-year performance.",
 };
 
 const brochurePillars = [
@@ -324,7 +324,7 @@ export default function WhyChooseUsPage() {
                 COMPREHENSIVE COMPARISON
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Net Bangla Solar vs. Standard Contractors
+                Net Bangla Solar Energy Solutions vs. Standard Contractors
               </h2>
               <p className="text-sm sm:text-base text-slate-600">
                 Understand the engineering differences that protect your capital and ensure 25+ years of uninterrupted energy production.
@@ -337,7 +337,7 @@ export default function WhyChooseUsPage() {
                   <tr className="border-b border-slate-200 bg-slate-900 text-white text-xs sm:text-sm font-semibold uppercase tracking-wider">
                     <th className="p-4 sm:p-5 w-1/3">Engineering &amp; Service Parameter</th>
                     <th className="p-4 sm:p-5 w-1/3 bg-amber-500 text-slate-950 font-bold">
-                      Net Bangla Solar Standard
+                      Net Bangla Solar Energy Solutions Standard
                     </th>
                     <th className="p-4 sm:p-5 w-1/3 text-slate-300">
                       Conventional Market Contractor

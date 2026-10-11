@@ -13,9 +13,9 @@ import {
 import { SolutionTemplate } from "@/components/templates/SolutionTemplate";
 
 export const metadata: Metadata = {
-  title: "Power Solaroof BIPV | Net Bangla Solar - Integrated Solar Roofing",
+  title: "Power Solaroof BIPV | Net Bangla Solar Energy Solutions - Integrated Solar Roofing",
   description:
-    "Power Solaroof by Net Bangla Solar is a 100% leak-proof, cyclone-resistant Building-Integrated Photovoltaic (BIPV) roofing system for industrial factories across Bangladesh.",
+    "Power Solaroof by Net Bangla Solar Energy Solutions is a 100% leak-proof, cyclone-resistant Building-Integrated Photovoltaic (BIPV) roofing system for industrial factories across Bangladesh.",
 };
 
 const solaroofAdvantages = [
@@ -94,7 +94,7 @@ export default function PowerSolaroofPage() {
       title="Power Solaroof Integrated BIPV"
       subtitle="The Complete Replacement for Industrial Corrugated Tin Roofing with Clean Power Generation"
       heroImageUrl="/images/power-solaroof.jpg"
-      description="Power Solaroof by Net Bangla Solar represents the future of industrial roofing in Bangladesh. Unlike conventional solar panels mounted on top of existing tin roofs, Power Solaroof is seamlessly built into the building structure itself, replacing corrugated tin sheets entirely. Engineered to high international standards, it provides a 100% leak-proof, cyclone-resistant, and aesthetically striking clean energy solution for modern industrial facilities."
+      description="Power Solaroof by Net Bangla Solar Energy Solutions represents the future of industrial roofing in Bangladesh. Unlike conventional solar panels mounted on top of existing tin roofs, Power Solaroof is seamlessly built into the building structure itself, replacing corrugated tin sheets entirely. Engineered to high international standards, it provides a 100% leak-proof, cyclone-resistant, and aesthetically striking clean energy solution for modern industrial facilities."
       detailedPoints={[
         "Completely eliminates the recurring maintenance, rust, and leakages of corrugated metal roofs.",
         "Zero-penetration mechanical clamping ensures zero structural damage or water seepage.",

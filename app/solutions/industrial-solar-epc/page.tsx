@@ -14,7 +14,7 @@ import {
 import { SolutionTemplate } from "@/components/templates/SolutionTemplate";
 
 export const metadata: Metadata = {
-  title: "Industrial Solar EPC (MWp Scale) | Net Bangla Solar",
+  title: "Industrial Solar EPC (MWp Scale) | Net Bangla Solar Energy Solutions",
   description:
     "Turnkey Megawatt-scale (100 kWp – 5 MWp) industrial rooftop solar EPC for export textile mills, manufacturing plants, and heavy industries in Bangladesh. 3.1 year payback.",
 };
@@ -95,7 +95,7 @@ export default function IndustrialSolarEPCPage() {
       title="Industrial Megawatt (MWp) Solar EPC"
       subtitle="Heavy-Duty Turnkey Photovoltaic Engineering for Export Industries, Textile Mills & Manufacturing Plants"
       heroImageUrl="/images/solar-industrial.jpg"
-      description="Net Bangla Solar engineers bankable, multi-megawatt rooftop and ground-mounted solar photovoltaic systems designed to drastically reduce factory operating electricity costs. We handle the entire project lifecycle in-house: 3D drone surveys & shading simulation, structural purlin engineering, 33kV substation synchronization, SREDA net-metering approvals, and 25-year performance monitoring."
+      description="Net Bangla Solar Energy Solutions engineers bankable, multi-megawatt rooftop and ground-mounted solar photovoltaic systems designed to drastically reduce factory operating electricity costs. We handle the entire project lifecycle in-house: 3D drone surveys & shading simulation, structural purlin engineering, 33kV substation synchronization, SREDA net-metering approvals, and 25-year performance monitoring."
       detailedPoints={[
         "Up to 70% reduction in monthly grid electricity expenditure for industrial consumers.",
         "Zero-penetration standing seam clamps protecting factory tin roofs from water leaks.",
@@ -103,7 +103,7 @@ export default function IndustrialSolarEPCPage() {
         "LEED green factory accreditation compliance for international buyer ESG audits.",
       ]}
       specs={industrialSpecs}
-      advantagesTitle="Why Bangladesh Industry Leaders Choose Net Bangla Solar"
+      advantagesTitle="Why Bangladesh Industry Leaders Choose Net Bangla Solar Energy Solutions"
       advantagesSubtitle="Engineered to meet rigorous industrial safety codes, withstand cyclone winds, and guarantee maximum kilowatt-hour yields."
       advantagesList={industrialAdvantages}
       workflowTitle="Turnkey Industrial EPC Project Lifecycle"

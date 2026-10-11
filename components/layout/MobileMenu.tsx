@@ -70,7 +70,7 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
           <Link
             href="#home"
             onClick={onClose}
-            aria-label="Net Bangla Solar — Home"
+            aria-label="Net Bangla Solar Energy Solutions — Home"
             className="group flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl min-w-0"
           >
             <BrandLogo className="h-10 sm:h-11 w-auto transition-transform duration-200 group-hover:scale-105" />

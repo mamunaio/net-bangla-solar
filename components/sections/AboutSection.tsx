@@ -76,7 +76,7 @@ export function AboutSection() {
     <section
       id="about"
       ref={sectionRef}
-      aria-label="About Net Bangla Solar"
+      aria-label="About Net Bangla Solar Energy Solutions"
       className="relative py-12 sm:py-16 lg:py-20 overflow-hidden scroll-mt-24 lg:scroll-mt-28 bg-[#F8FAFC]"
     >
       {/* Ambient background lighting */}
@@ -97,7 +97,7 @@ export function AboutSection() {
             {/* Section Eyebrow (Temporarily hidden; easily re-enabled when needed) */}
             {/* 
             <div className="inline-flex items-center px-5 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-[20px] font-semibold tracking-wider uppercase shadow-sm">
-              <span>ABOUT NET BANGLA SOLAR</span>
+              <span>ABOUT NET BANGLA SOLAR ENERGY SOLUTIONS</span>
             </div> 
             */}
 
@@ -112,7 +112,7 @@ export function AboutSection() {
             {/* Source-grounded Main Company Description */}
             <div className="space-y-4 text-slate-600 text-base lg:text-lg leading-relaxed">
               <p>
-                Net Bangla Solar operates as the specialized renewable energy arm
+                Net Bangla Solar Energy Solutions operates as the specialized renewable energy arm
                 of Net Bangla Limited. Founded on May 28, 2014, the company has
                 built its operational foundation around technology-driven
                 infrastructure and turnkey execution across Bangladesh.
@@ -157,7 +157,7 @@ export function AboutSection() {
                 ) : (
                   <Image
                     src="/images/about-commercial-solar.jpg"
-                    alt="Solar energy installation in Bangladesh engineered by Net Bangla Solar"
+                    alt="Solar energy installation in Bangladesh engineered by Net Bangla Solar Energy Solutions"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                     className="object-cover object-center"

@@ -43,7 +43,7 @@ const allFaqs: FAQItem[] = [
     id: "net-metering-approvals",
     category: "net-metering",
     categoryLabel: "Net Metering & SREDA",
-    question: "Does Net Bangla Solar handle government approvals and SREDA documentation?",
+    question: "Does Net Bangla Solar Energy Solutions handle government approvals and SREDA documentation?",
     answer: "Yes, 100%. We provide complete end-to-end turnkey liaison: from single-line diagram (SLD) engineering and structural vetting, through submission to your local utility distribution company (BPDB, DPDC, DESCO, BREB, NESCO) and SREDA, to final testing and bi-directional meter commissioning.",
   },
   {
@@ -59,7 +59,7 @@ const allFaqs: FAQItem[] = [
     id: "monocrystalline-vs-bifacial",
     category: "technical",
     categoryLabel: "Technical & Hardware",
-    question: "Why does Net Bangla Solar recommend N-Type Bifacial Solar Panels?",
+    question: "Why does Net Bangla Solar Energy Solutions recommend N-Type Bifacial Solar Panels?",
     answer: "N-Type Bifacial panels generate electricity from both sides. The front absorbs direct sunlight, while the rear captures reflected ambient light (albedo) from the roof surface, yielding up to 10%–25% more energy compared to traditional monofacial panels. They also offer a lower temperature coefficient (-0.30%/°C) and negligible light-induced degradation (LID).",
   },
   {
@@ -103,7 +103,7 @@ const allFaqs: FAQItem[] = [
     id: "turnkey-epc-cost",
     category: "financial",
     categoryLabel: "Financial & ROI",
-    question: "What is included in Net Bangla Solar's Turnkey EPC pricing?",
+    question: "What is included in Net Bangla Solar Energy Solutions's Turnkey EPC pricing?",
     answer: "Our turnkey EPC quote includes: 3D drone & structural audit, Tier-1 bifacial panels, European smart inverters, hot-dip galvanized mounting structures, DC/AC cabling, earthing & lightning protection, smart bi-directional net metering panels, complete installation, and SREDA liaison.",
   },
 
@@ -129,7 +129,7 @@ const allFaqs: FAQItem[] = [
     category: "maintenance",
     categoryLabel: "Maintenance & Warranty",
     question: "How often do solar panels need cleaning and maintenance in Bangladesh?",
-    answer: "During dry winter months (November to March), dust accumulation can reduce output by 5%–10%. We recommend bi-weekly or monthly automated water washing. Net Bangla Solar provides high-pressure wash systems, water pipeline engineering on rooftops, and robotic or manual cleaning services under our annual O&M contracts.",
+    answer: "During dry winter months (November to March), dust accumulation can reduce output by 5%–10%. We recommend bi-weekly or monthly automated water washing. Net Bangla Solar Energy Solutions provides high-pressure wash systems, water pipeline engineering on rooftops, and robotic or manual cleaning services under our annual O&M contracts.",
   },
   {
     id: "warranty-coverage-breakdown",

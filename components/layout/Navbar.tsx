@@ -166,7 +166,7 @@ export function Navbar() {
             {/* 1. BRAND LOGO AREA */}
             <Link
               href="/"
-              aria-label="Net Bangla Solar — Home"
+              aria-label="Net Bangla Solar Energy Solutions — Home"
               className="group flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl shrink-0"
             >
               <BrandLogo className="h-10 sm:h-12 lg:h-13.5 w-auto transition-transform duration-200 ease-out group-hover:scale-105" />
