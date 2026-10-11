@@ -6,6 +6,7 @@ import { QuoteModalProvider } from "@/components/providers/QuoteModalProvider";
 import { QuoteModal } from "@/components/ui/QuoteModal";
 import { Navbar } from "@/components/layout/Navbar";
 import { PageLoader } from "@/components/ui/PageLoader";
+import { InitialPreloader } from "@/components/ui/InitialPreloader";
 import "./globals.css";
 
 const sora = Sora({
@@ -172,6 +173,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-solar-bg-primary text-solar-text-primary antialiased min-h-screen relative selection:bg-amber-500/25 selection:text-amber-950 transition-colors duration-200">
+        <InitialPreloader />
         <PageLoader />
         <ThemeProvider>
           <QuoteModalProvider>
