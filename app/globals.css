@@ -162,6 +162,15 @@ body {
   background: var(--solar-gold);
 }
 
+/* Hide scrollbar for clean horizontal pill bars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Reusable Glassmorphism & Cinematic Utilities */
 .glass-panel {
   background: var(--glass-bg);

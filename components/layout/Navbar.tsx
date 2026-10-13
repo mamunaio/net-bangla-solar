@@ -1,5 +1,6 @@
 "use client";
 
+// Navbar component for Net Bangla Solar Energy Solutions
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,6 +16,7 @@ import {
   Factory,
   Sprout,
   PanelsTopLeft,
+  Waves,
   PhoneCall,
   ShieldCheck,
   Zap,
@@ -85,6 +87,13 @@ const navItems: NavItem[] = [
         description: "Integrated building photovoltaic roofing architecture",
         badge: "BIPV GRADE",
         icon: PanelsTopLeft,
+      },
+      {
+        label: "Floating Solar (FPV)",
+        href: "/solutions/floating-solar",
+        description: "Water-based high-efficiency PV for ponds, lakes & reservoirs",
+        badge: "WATER-BASED PV",
+        icon: Waves,
       },
     ],
   },

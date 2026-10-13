@@ -20,15 +20,15 @@ export function InitialPreloader() {
   const [fading, setFading] = useState(false);
 
   useEffect(() => {
-    // Keep visible for ~520ms for a crisp, high-end brand impression
+    // Elegant, smooth brand entrance (~800ms)
     const fadeTimer = setTimeout(() => {
       setFading(true);
-    }, 520);
+    }, 800);
 
     // Completely unmount from DOM after transition finishes
     const unmountTimer = setTimeout(() => {
       setMounted(false);
-    }, 950);
+    }, 1200);
 
     return () => {
       clearTimeout(fadeTimer);
@@ -99,7 +99,7 @@ export function InitialPreloader() {
           <div
             className="h-full rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500"
             style={{
-              animation: "solarProgress 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+              animation: "solarProgress 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards",
             }}
           />
         </div>

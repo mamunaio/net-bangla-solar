@@ -24,6 +24,7 @@ const solutionLinks = [
   { label: "Residential Hybrid Solar", href: "/solutions/residential-solar" },
   { label: "Agricultural Solar Irrigation", href: "/solutions/agricultural-solar" },
   { label: "BIPV Solar Solution", href: "/solutions/power-solaroof" },
+  { label: "Floating Solar Systems (FPV)", href: "/solutions/floating-solar" },
 ];
 
 const applicationLinks = [

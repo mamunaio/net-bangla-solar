@@ -24,7 +24,7 @@ import { cn } from "@/lib/utils";
 
 interface FAQItem {
   id: string;
-  category: "net-metering" | "technical" | "financial" | "industrial" | "maintenance";
+  category: "net-metering" | "technical" | "financial" | "industrial" | "maintenance" | "floating";
   categoryLabel: string;
   question: string;
   answer: string;
@@ -138,6 +138,29 @@ const allFaqs: FAQItem[] = [
     question: "What warranties are provided with the solar power plant?",
     answer: "Net Bangla Limited is committed to delivering reliable, high-quality solar energy solutions backed by comprehensive warranties and dependable after-sales support: (1) Solar PV Modules: 25-year linear performance warranty and 12-year product warranty. (2) Solar Inverters: 5-year manufacturer warranty, with extended coverage available subject to manufacturer terms. (3) Mounting Structures: 10-year structural warranty, with a 20-year design life. (4) Storage Systems: 5-year manufacturer warranty, subject to applicable product and performance conditions. (5) Operation & Maintenance (O&M): Comprehensive maintenance and technical support for up to 5 years, as per project requirements. (6) Installation Workmanship: Defect rectification in accordance with the contractual Defects Liability Period and agreed warranty conditions.",
   },
+
+  // 6. Floating Solar (FPV)
+  {
+    id: "floating-solar-efficiency-boost",
+    category: "floating",
+    categoryLabel: "Floating Solar (FPV)",
+    question: "How does Floating Solar achieve 10%–15% higher energy generation than ground systems?",
+    answer: "Because solar photovoltaic modules operate suspended over water, continuous evaporative cooling acts as a natural heatsink. Cooler operating temperatures mitigate thermal efficiency loss, yielding 10% to 15% more kilowatt-hours per installed watt compared to hot land-based or tin rooftop installations.",
+  },
+  {
+    id: "floating-solar-textile-factory-ponds",
+    category: "floating",
+    categoryLabel: "Floating Solar (FPV)",
+    question: "Can textile and RMG factories install floating solar on their firefighting ponds?",
+    answer: "Yes, absolutely. In Bangladesh, industrial facilities with mandatory firefighting water reservoirs or ETP retention basins can install floating solar directly on the open water. This generates clean megawatt-scale electricity for factory machinery with zero floor space occupied, and reduces reservoir water evaporation by up to 33%.",
+  },
+  {
+    id: "floating-solar-storm-anchoring",
+    category: "floating",
+    categoryLabel: "Floating Solar (FPV)",
+    question: "How are floating solar arrays protected against monsoons, tidal shifts, and cyclones in Bangladesh?",
+    answer: "Systems are engineered using food-grade, UV-stabilized High-Density Polyethylene (HDPE) pontoon floats connected with marine-grade stainless fasteners. They are anchored to the water bed using adaptive elastic mooring lines engineered to withstand 4-meter water level shifts and 160 km/h cyclone wind gusts.",
+  },
 ];
 
 const faqCategories = [
@@ -147,6 +170,7 @@ const faqCategories = [
   { id: "financial", label: "Financials & ROI" },
   { id: "industrial", label: "Industrial MWp" },
   { id: "maintenance", label: "Maintenance & Warranty" },
+  { id: "floating", label: "Floating Solar (FPV)" },
 ];
 
 export default function FAQPage() {

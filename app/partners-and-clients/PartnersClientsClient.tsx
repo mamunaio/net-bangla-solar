@@ -95,45 +95,6 @@ export const mainStrategicPartners = [
 // 1. DEDICATED PARTNERS & ASSOCIATIONS DATA
 export const partnersList: PartnerEntity[] = [
   {
-    id: "wincle",
-    name: "Wincle Energy Pte. Ltd.",
-    nativeName: "赢科数能 (Wenergy)",
-    category: "global-epc",
-    categoryLabel: "Tier-1 Safe BESS & Storage Partner",
-    logo: "/images/partners/wincle-energy.png",
-    description:
-      "Global Tier-1 energy storage pioneer delivering smart liquid-cooled C&I BESS (Stars Series 215–385 kWh) and 4-in-1 Solar-BESS-Diesel-EV integrated systems certified to UL9540A & IEC standards.",
-    tag: "BESS & STORAGE",
-    roleOrId: "GLOBAL / SINGAPORE",
-    highlights: ["Liquid-Cooled C&I BESS", "4-in-1 Solar-BESS-DG-EV", "UL9540A & IEC 62619"],
-  },
-  {
-    id: "cmc",
-    name: "China National Machinery Imp. & Exp. Corp. (CMC)",
-    nativeName: "中国机械进出口 (集团) 有限公司",
-    category: "global-epc",
-    categoryLabel: "Global Heavy EPC & Infrastructure Partner",
-    logo: "/images/partners/china-national-machinery-cmc.png",
-    description:
-      "State-owned global heavy machinery, power generation, and energy EPC conglomerate collaborating on major utility-scale and industrial infrastructure projects in Bangladesh.",
-    tag: "POWER & EPC",
-    roleOrId: "GLOBAL CONGLOMERATE",
-    highlights: ["Heavy Power Engineering", "Utility-Scale EPC", "Global State Conglomerate"],
-  },
-  {
-    id: "huachuang",
-    name: "Huachuang Guojing (Hebei) New Energy Co. Ltd.",
-    nativeName: "华创国晶 (河北) 新能源",
-    category: "global-epc",
-    categoryLabel: "Authorized Distributor & Module OEM",
-    logo: "/images/partners/huachuang-guojing.png",
-    description:
-      "Leading manufacturer of BloombergNEF Tier-1 high-efficiency monocrystalline TOPCon / PERC bifacial solar panels and advanced smart inverters with 25-year performance warranties.",
-    tag: "CRYSTALLINE OEM",
-    roleOrId: "GLOBAL / ASIA",
-    highlights: ["Tier-1 N-Type TOPCon", "Smart Grid-Tie Inverters", "25-Yr Linear Warranty"],
-  },
-  {
     id: "serimag",
     name: "Serimag",
     nativeName: "Cognitive AI & Document Automation",
@@ -774,18 +735,17 @@ export function PartnersClientsClient() {
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 text-left border-b border-amber-200/60 pb-6">
                 <div className="space-y-2.5 max-w-2xl">
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-                    Global Hardware OEMs &amp; Industry Alliances
+                    Enterprise Technology Partners &amp; Industry Alliances
                   </h2>
                   <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                    Our supply chain and technical capabilities are powered by world-leading power machinery manufacturers, solar module OEMs, and apex trade associations.
+                    Our digital operations, customer communications, and institutional credentials are supported by leading enterprise technology platforms and national apex trade bodies.
                   </p>
                 </div>
 
                 {/* Partner Subcategory Filter Pills */}
                 <div className="flex flex-wrap items-center gap-2">
                   {[
-                    { id: "all", label: "All Partners", icon: Sparkles },
-                    { id: "global-epc", label: "Global EPC & OEM", icon: Cpu },
+                    { id: "all", label: "All Alliances", icon: Sparkles },
                     { id: "enterprise-tech", label: "Cloud & AI Tech", icon: Globe },
                     { id: "associations", label: "Apex Associations", icon: Award },
                   ].map((pTab) => (

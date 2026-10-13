@@ -44,12 +44,6 @@ const PROPERTY_TYPES = [
 ];
 
 export function FinalCTA() {
-  // Section hidden as requested (set to false whenever you want to display it again)
-  const isHidden = true;
-  if (isHidden) {
-    return null;
-  }
-
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
     phone: "",
@@ -215,6 +209,12 @@ export function FinalCTA() {
     setTouched({});
     setIsSubmitted(false);
   };
+
+  // Section hidden as requested (set to false whenever you want to display it again)
+  const isHidden = true;
+  if (isHidden) {
+    return null;
+  }
 
   return (
     <section

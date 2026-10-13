@@ -1,0 +1,195 @@
+const fs = require('fs');
+const path = require('path');
+const sharp = require('sharp');
+
+// 512x512 Dedicated Net Bangla Solar Icon
+const iconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <defs>
+    <!-- Sun Core Radial Glow -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FEF08A" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#F59E0B" stop-opacity="0.98"/>
+      <stop offset="80%" stop-color="#EA580C" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#C2410C" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Sun Corona Aura -->
+    <radialGradient id="sunCorona" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDE047" stop-opacity="0.75"/>
+      <stop offset="55%" stop-color="#F59E0B" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#EA580C" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Radiant Rays Gradient -->
+    <linearGradient id="rayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+
+    <!-- 3D Bevel Rim -->
+    <linearGradient id="panelBevel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+
+    <!-- Solar Cell Gradient -->
+    <linearGradient id="cellGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111E38"/>
+      <stop offset="50%" stop-color="#070D1E"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- Solar Glass Glare Sheen -->
+    <linearGradient id="cellSheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#0284C7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Subtle Ambient Glow Filter -->
+    <filter id="coronaBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Centered Icon Group (Scaled ~3.2x to fill 512x512 canvas) -->
+  <g transform="translate(256, 260) scale(3.1) translate(-78, -56)">
+    <!-- Corona Glow -->
+    <circle cx="80" cy="46" r="48" fill="url(#sunCorona)" filter="url(#coronaBlur)"/>
+
+    <!-- Radiant Sun Rays -->
+    <g stroke="url(#rayGrad)" stroke-width="4.2" stroke-linecap="round" opacity="0.95">
+      <line x1="42" y1="30" x2="28" y2="18" />
+      <line x1="56" y1="18" x2="48" y2="4" />
+      <line x1="76" y1="12" x2="76" y2="-2" />
+      <line x1="98" y1="16" x2="106" y2="2" />
+      <line x1="116" y1="26" x2="130" y2="14" />
+      <line x1="126" y1="42" x2="142" y2="38" />
+      <line x1="128" y1="60" x2="144" y2="62" stroke-width="3.5" opacity="0.85" />
+    </g>
+
+    <!-- Sun Disc -->
+    <circle cx="80" cy="46" r="32" fill="url(#sunGlow)"/>
+
+    <!-- 3D SOLAR PANEL MATRIX -->
+    <!-- 3D Lower Extrusion / Bevel Base -->
+    <polygon points="12,68 90,98 92,106 16,76" fill="url(#panelBevel)" />
+    <polygon points="90,98 136,78 138,86 92,106" fill="#0369A1" />
+
+    <!-- Main Panel Base Plate (Cyan-Blue Rim) -->
+    <polygon points="12,68 64,48 136,72 90,98" fill="url(#panelBevel)" stroke="#38BDF8" stroke-width="1.8" stroke-linejoin="round"/>
+
+    <!-- Panel Face Inset (Deep Photovoltaic Matrix) -->
+    <polygon points="15,68 65,49 133,72.5 89,96.5" fill="#070D1E" stroke="#0284C7" stroke-width="1.2"/>
+
+    <!-- 16 CELLS (4x4 Matrix in Perspective) -->
+    <!-- Row 1 -->
+    <polygon points="65.5,50.5 80,55 67,59.5 53.5,54.5" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+    <polygon points="82.5,56 97,60.5 84,65 70,60.5" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+    <polygon points="99.5,61.5 114,66 101,70.5 87,66" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+    <polygon points="116.5,67 131,71.5 118,76 104,71.5" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+
+    <!-- Row 2 -->
+    <polygon points="51.5,55.5 65,60.5 52,65.5 39,60" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+    <polygon points="68,61.5 82,66.5 69,71.5 55.5,66.5" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+    <polygon points="85,67 99,72 86,77 72.5,72" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+    <polygon points="102,72.5 116,77.5 103,82.5 89.5,77.5" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+
+    <!-- Row 3 -->
+    <polygon points="37.5,61 50.5,66.5 37.5,72 25,66" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+    <polygon points="54,67.5 67.5,72.5 54.5,78 41.5,72.5" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+    <polygon points="71,73 84.5,78 71.5,83.5 58.5,78.5" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+    <polygon points="88,78.5 101.5,83.5 88.5,89 75.5,84" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+
+    <!-- Row 4 -->
+    <polygon points="23.5,67 36,73 23,79 11.5,72.5" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+    <polygon points="40,73.5 53,79 40,85 27.5,79" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+    <polygon points="57,79 70,84.5 57,90.5 44.5,85" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+    <polygon points="74,84.5 87,90 74,96 61.5,90.5" fill="url(#cellGrad)" stroke="#1E3A5F" stroke-width="0.9"/>
+
+    <!-- Glass Reflection Sheen -->
+    <polygon points="15,68 65,49 133,72.5 89,96.5" fill="url(#cellSheen)" pointer-events="none"/>
+  </g>
+</svg>`;
+
+async function buildIcons() {
+  const svgBuf = Buffer.from(iconSvg);
+
+  // 1. Save Vector SVG icons
+  fs.writeFileSync('public/icon.svg', iconSvg, 'utf8');
+  fs.writeFileSync('app/icon.svg', iconSvg, 'utf8');
+  console.log('Saved public/icon.svg and app/icon.svg');
+
+  // 2. Generate 512x512 PNG
+  const p512 = await sharp(svgBuf).resize(512, 512).png().toBuffer();
+  fs.writeFileSync('public/icon-512.png', p512);
+  fs.writeFileSync('app/icon.png', p512);
+  console.log('Saved public/icon-512.png and app/icon.png (512x512)');
+
+  // 3. Generate 192x192 PNG (PWA / Android standard)
+  const p192 = await sharp(svgBuf).resize(192, 192).png().toBuffer();
+  fs.writeFileSync('public/icon-192.png', p192);
+  console.log('Saved public/icon-192.png');
+
+  // 4. Generate 180x180 PNG (Apple Touch Icon)
+  const p180 = await sharp(svgBuf).resize(180, 180).png().toBuffer();
+  fs.writeFileSync('public/apple-touch-icon.png', p180);
+  fs.writeFileSync('app/apple-icon.png', p180);
+  console.log('Saved public/apple-touch-icon.png and app/apple-icon.png');
+
+  // 5. Generate Multi-Size ICO file (16x16, 32x32, 48x48)
+  const p16 = await sharp(svgBuf).resize(16, 16).png().toBuffer();
+  const p32 = await sharp(svgBuf).resize(32, 32).png().toBuffer();
+  const p48 = await sharp(svgBuf).resize(48, 48).png().toBuffer();
+
+  const icoBuf = createIco([
+    { size: 16, buffer: p16 },
+    { size: 32, buffer: p32 },
+    { size: 48, buffer: p48 },
+  ]);
+
+  fs.writeFileSync('public/favicon.ico', icoBuf);
+  fs.writeFileSync('app/favicon.ico', icoBuf);
+  console.log('Saved public/favicon.ico and app/favicon.ico');
+}
+
+// Minimal binary ICO pack function (wraps PNGs into valid Windows ICO format)
+function createIco(images) {
+  const count = images.length;
+  const headerSize = 6;
+  const dirEntrySize = 16;
+  let offset = headerSize + count * dirEntrySize;
+
+  const header = Buffer.alloc(headerSize);
+  header.writeUInt16LE(0, 0); // Reserved
+  header.writeUInt16LE(1, 2); // 1 = ICO type
+  header.writeUInt16LE(count, 4); // Number of images
+
+  const dirEntries = [];
+  const buffers = [];
+
+  for (const img of images) {
+    const entry = Buffer.alloc(dirEntrySize);
+    entry.writeUInt8(img.size >= 256 ? 0 : img.size, 0); // Width
+    entry.writeUInt8(img.size >= 256 ? 0 : img.size, 1); // Height
+    entry.writeUInt8(0, 2); // Color palette
+    entry.writeUInt8(0, 3); // Reserved
+    entry.writeUInt16LE(1, 4); // Color planes
+    entry.writeUInt16LE(32, 6); // Bits per pixel
+    entry.writeUInt32LE(img.buffer.length, 8); // Image data size
+    entry.writeUInt32LE(offset, 12); // Offset of image data
+
+    offset += img.buffer.length;
+    dirEntries.push(entry);
+    buffers.push(img.buffer);
+  }
+
+  return Buffer.concat([header, ...dirEntries, ...buffers]);
+}
+
+buildIcons().catch(err => {
+  console.error(err);
+  process.exit(1);
+});

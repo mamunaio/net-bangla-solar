@@ -28,6 +28,7 @@ import {
   Check,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { cn } from "@/lib/utils";
 
@@ -253,7 +254,8 @@ export default function SolarCalculatorPage() {
 
   return (
     <div className="min-h-screen w-full bg-white solar-ambient-bg flex flex-col justify-between overflow-x-hidden">
-      <main className="flex-1 pt-24 sm:pt-28 pb-16 lg:pb-20">
+      <Navbar />
+      <main className="flex-1 pt-28 sm:pt-32 pb-16 lg:pb-20">
         {/* TOP HEADER BREADCRUMB STRIP */}
         <div className="border-b border-slate-200/80 bg-slate-50/70 py-3.5">
         <Container>
@@ -491,7 +493,7 @@ export default function SolarCalculatorPage() {
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setRoofType(item.id as any)}
+                    onClick={() => setRoofType(item.id as "concrete" | "tin" | "shed")}
                     className={cn(
                       "p-3 rounded-2xl border text-left transition-all duration-200 cursor-pointer shadow-2xs hover:-translate-y-0.5 hover:shadow-md",
                       roofType === item.id

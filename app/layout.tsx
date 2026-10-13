@@ -26,23 +26,44 @@ const jetBrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Net Bangla Solar Energy Solutions | Clean Energy. Brighter Bangladesh.",
   description:
-    "Leading provider of premium residential, commercial, and industrial solar energy systems in Bangladesh. Engineered for reliability, sustainability, and long-term energy savings.",
+    "Transforming Bangladesh with renewable solar energy. Leading turnkey Solar EPC contractor delivering SREDA-compliant industrial rooftops, floating arrays, and utility solar with maximum ROI.",
   keywords: [
-    "Solar Energy Bangladesh",
+    "Solar EPC Contractor Bangladesh",
+    "SREDA Net Metering Solar",
+    "Industrial Rooftop Solar Bangladesh",
     "Net Bangla Solar Energy Solutions",
-    "Renewable Energy",
-    "Rooftop Solar",
-    "Industrial Solar Bangladesh",
-    "Solar Panel Installation",
-    "Clean Energy",
+    "Floating Solar Bangladesh",
+    "Utility Solar Power Plant",
+    "Commercial Solar Panels Dhaka",
+    "Renewable Energy EPC",
+    "Turnkey Solar Solutions",
+    "Clean Energy Bangladesh",
   ],
   authors: [{ name: "Net Bangla Solar Energy Solutions" }],
   openGraph: {
     title: "Net Bangla Solar Energy Solutions | Clean Energy. Brighter Bangladesh.",
     description:
-      "Engineered for reliability, sustainability, and long-term energy savings. Premium solar solutions across Bangladesh.",
+      "Transforming Bangladesh with renewable solar energy. Leading turnkey Solar EPC contractor delivering SREDA-compliant industrial rooftops, floating arrays, and utility solar with maximum ROI.",
     type: "website",
     locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Net Bangla Solar Energy Solutions | Clean Energy. Brighter Bangladesh.",
+    description:
+      "Transforming Bangladesh with renewable solar energy. Leading turnkey Solar EPC contractor delivering SREDA-compliant industrial rooftops, floating arrays, and utility solar with maximum ROI.",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
   },
 };
 

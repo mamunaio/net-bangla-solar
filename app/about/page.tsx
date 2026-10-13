@@ -64,14 +64,14 @@ const mainStrategicPartners = [
   },
 ];
 
-// Affiliations & Partners (6 Key Entities)
+// Industry Affiliations & Alliances (4 Distinct Entities)
 const affiliationsList = [
   {
     id: "basis",
     name: "BASIS",
     fullName: "Bangladesh Association of Software & Information Services",
     identifier: "General Member (A-405)",
-    role: "National Apex ICT Trade Body",
+    role: "National Apex ICT & Digital Energy Trade Body",
     logo: "/images/partners/basis.png",
     tag: "APEX MEMBER",
   },
@@ -80,36 +80,27 @@ const affiliationsList = [
     name: "BACCO",
     fullName: "Bangladesh Association of Contact Center & Outsourcing",
     identifier: "Member ID: 2018.0082.1000.0062",
-    role: "National Contact Center & BPO Association",
+    role: "National Contact Center & Infrastructure Association",
     logo: "/images/partners/bacco.png",
     tag: "APEX MEMBER",
   },
   {
-    id: "wincle",
-    name: "Wincle Energy",
-    fullName: "Wincle Energy Pte. Ltd. (赢科数能)",
-    identifier: "Strategic Energy Storage Partner",
-    role: "Tier-1 Liquid-Cooled C&I BESS & Microgrid Storage",
-    logo: "/images/partners/wincle-energy.png",
-    tag: "BESS & STORAGE",
+    id: "zjht",
+    name: "ZJHT High-Tech",
+    fullName: "Zhejiang High-Tech Smart Energy Solutions",
+    identifier: "Smart Energy Hardware Alliance",
+    role: "BOS Instrumentation, Smart Monitoring & PV Balance-of-System",
+    logo: "/images/partners/zjht.png",
+    tag: "SMART ENERGY",
   },
   {
-    id: "cmc",
-    name: "CMC",
-    fullName: "China National Machinery Import & Export Corporation",
-    identifier: "Strategic Infrastructure Partner (China)",
-    role: "Renewable Energy & Power Engineering EPC",
-    logo: "/images/partners/china-national-machinery-cmc.png",
-    tag: "GLOBAL EPC",
-  },
-  {
-    id: "huachuang",
-    name: "Huachuang Guojing",
-    fullName: "Huachuang Guojing (Hebei) New Energy Co. Ltd.",
-    identifier: "Authorized Distributor & Dealer (China)",
-    role: "Tier-1 Photovoltaic Modules & Inverters",
-    logo: "/images/partners/huachuang-guojing.png",
-    tag: "SOLAR OEM",
+    id: "serimag",
+    name: "Serimag",
+    fullName: "Serimag Cognitive AI & Process Automation",
+    identifier: "Enterprise Tech Partner (Spain/Europe)",
+    role: "Cognitive AI, SCADA Analytics & Document Intelligence",
+    logo: "/images/partners/serimag.png",
+    tag: "AI ALLIANCE",
   },
 ];
 
@@ -504,8 +495,8 @@ export default function AboutPage() {
             </div> 
             */}
 
-            {/* 5 Entities Grid: BASIS, BACCO, Wincle Energy, CMC, Huachuang Guojing */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto text-left">
+            {/* 4 Entities Grid: BASIS, BACCO, ZJHT High-Tech, Serimag */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto text-left">
               {affiliationsList.map((item) => (
                 <div
                   key={item.id}

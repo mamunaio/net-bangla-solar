@@ -10,16 +10,18 @@ import {
   Home,
   MapPin,
   Sprout,
+  SunMedium,
+  Waves,
   Zap,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 
-type ApplicationCategory = "all" | "industrial" | "commercial" | "residential" | "agricultural";
+type ApplicationCategory = "all" | "industrial" | "commercial" | "residential" | "agricultural" | "floating" | "utility";
 
 interface ApplicationItem {
   id: string;
-  category: "industrial" | "commercial" | "residential" | "agricultural";
+  category: "industrial" | "commercial" | "residential" | "agricultural" | "floating" | "utility";
   label: string;
   title: string;
   location: string;
@@ -53,8 +55,8 @@ const applicationsData: ApplicationItem[] = [
     typicalScope: "20 kWp – 1 MWp",
     description:
       "Commercial rooftop systems designed to offset utility consumption across offices, institutions, and commercial properties.",
-    image: "/images/solar-powered-campus-at-sunset.jpg",
-    alt: "Solar-Powered Commercial Campus Building at Sunset in Bangladesh",
+    image: "/images/solar-commercial-campus.jpg",
+    alt: "Modern Commercial Corporate Headquarters Rooftop Solar Array in Bangladesh",
     icon: Building2,
   },
   {
@@ -66,8 +68,8 @@ const applicationsData: ApplicationItem[] = [
     typicalScope: "5–20 kWp",
     description:
       "Rooftop solar applications designed for homes and residential properties with practical energy requirements.",
-    image: "/images/sunset-solar-industrial-campus.jpg",
-    alt: "Solar Photovoltaic Rooftop Array at Sunset",
+    image: "/images/solar-residential-villa.jpg",
+    alt: "Modern Luxury Residential Duplex Villa Rooftop Solar Pergola & Garden",
     icon: Home,
   },
   {
@@ -79,18 +81,46 @@ const applicationsData: ApplicationItem[] = [
     typicalScope: "Custom Pump & PV",
     description:
       "Solar-powered agricultural applications designed around irrigation, pumping, and rural energy requirements.",
-    image: "/images/solar-powered-warehouse-at-sunset.jpg",
-    alt: "Solar-Powered Agricultural & Logistics Facility at Sunset",
+    image: "/images/solar-agricultural-pump.jpg",
+    alt: "Solar-Powered Irrigation Pump System in Green Farmland in Bangladesh",
     icon: Sprout,
+  },
+  {
+    id: "floating-solar",
+    category: "floating",
+    label: "FLOATING FPV",
+    title: "Floating Photovoltaics (FPV)",
+    location: "Lakes • Reservoirs • Fisheries",
+    typicalScope: "50 kWp – 10+ MWp",
+    description:
+      "High-efficiency water-based solar arrays utilizing natural water cooling for higher yields on industrial retention ponds, reservoirs, and aquaculture.",
+    image: "/images/solar-floating.jpg",
+    alt: "Aerial view of high-efficiency Floating Solar Farm on water reservoir",
+    icon: Waves,
+  },
+  {
+    id: "utility-ground-mount",
+    category: "utility",
+    label: "UTILITY & GROUND-MOUNT",
+    title: "Utility-Scale Solar Parks",
+    location: "BEZA Economic Zones • Riverbank Char Lands • Solar Parks",
+    typicalScope: "5 MWp – 100+ MWp",
+    description:
+      "High-capacity ground-mounted photovoltaic power plants and utility microgrids engineered with central inverters and high-voltage transmission substation grid tie-ins.",
+    image: "/images/solar-utility-ground.jpg",
+    alt: "Aerial view of Utility-Scale Ground-Mounted Solar Park in Bangladesh",
+    icon: SunMedium,
   },
 ];
 
-const filterTabs: { key: ApplicationCategory; label: string }[] = [
-  { key: "all", label: "All" },
-  { key: "industrial", label: "Industrial" },
-  { key: "commercial", label: "Commercial" },
-  { key: "residential", label: "Residential" },
-  { key: "agricultural", label: "Agricultural" },
+const filterTabs: { key: ApplicationCategory; label: string; icon: React.ElementType }[] = [
+  { key: "all", label: "All", icon: Zap },
+  { key: "industrial", label: "Industrial", icon: Factory },
+  { key: "commercial", label: "Commercial", icon: Building2 },
+  { key: "residential", label: "Residential", icon: Home },
+  { key: "agricultural", label: "Agricultural", icon: Sprout },
+  { key: "floating", label: "Floating (FPV)", icon: Waves },
+  { key: "utility", label: "Utility & Ground", icon: SunMedium },
 ];
 
 export function ProjectsSection() {
@@ -120,52 +150,54 @@ export function ProjectsSection() {
 
       <Container className="relative z-10 space-y-10 md:space-y-14">
         {/* SECTION INTRO */}
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="space-y-6 sm:space-y-8">
           <div className="max-w-3xl space-y-4 text-left">
-            {/* Eyebrow badge (Hidden per user request) */}
-            {/* 
-            <div className="inline-flex items-center rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-amber-700">
-              <span>PROJECT APPLICATIONS</span>
-            </div> 
-            */}
-
             <h2 className="text-3xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
               Solar Systems Designed{" "}
               <span className="gradient-text-solar">Around Real Energy Demands</span>
             </h2>
 
             <p className="max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
-              From industrial rooftops and commercial facilities to residential
-              properties and agricultural applications, our solar systems are
-              engineered around site-specific energy requirements.
+              From industrial rooftops and commercial facilities to floating solar
+              and utility-scale solar parks, our systems are engineered around
+              site-specific energy requirements.
             </p>
           </div>
 
-          {/* APPLICATION CATEGORY FILTER TABS (Hidden on mobile per user request) */}
-          <div
-            role="tablist"
-            aria-label="Filter solar project applications"
-            className="hidden md:flex flex-wrap items-center gap-1.5 p-1.5 rounded-2xl bg-slate-100 border border-slate-200/80 self-start md:self-auto shadow-sm"
-          >
-            {filterTabs.map((tab) => {
-              const isActive = activeCategory === tab.key;
-              return (
-                <button
-                  key={tab.key}
-                  role="tab"
-                  aria-selected={isActive}
-                  onClick={() => setActiveCategory(tab.key)}
-                  className={cn(
-                    "px-4 py-1.5 rounded-xl text-xs font-semibold tracking-wide transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400",
-                    isActive
-                      ? "bg-amber-500 text-white shadow-sm font-bold"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-white"
-                  )}
-                >
-                  {tab.label}
-                </button>
-              );
-            })}
+          {/* APPLICATION CATEGORY FILTER TABS */}
+          <div className="flex items-center overflow-x-auto pb-1 no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
+            <div
+              role="tablist"
+              aria-label="Filter solar project applications"
+              className="inline-flex items-center gap-1.5 p-1.5 rounded-2xl bg-slate-100/90 border border-slate-200/90 shadow-xs"
+            >
+              {filterTabs.map((tab) => {
+                const isActive = activeCategory === tab.key;
+                const IconComponent = tab.icon;
+                return (
+                  <button
+                    key={tab.key}
+                    role="tab"
+                    aria-selected={isActive}
+                    onClick={() => setActiveCategory(tab.key)}
+                    className={cn(
+                      "inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 cursor-pointer",
+                      isActive
+                        ? "bg-amber-500 text-white shadow-sm font-bold"
+                        : "text-slate-600 hover:text-slate-900 hover:bg-white"
+                    )}
+                  >
+                    <IconComponent
+                      className={cn(
+                        "w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 transition-colors",
+                        isActive ? "text-white" : "text-amber-500"
+                      )}
+                    />
+                    <span>{tab.label}</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
 

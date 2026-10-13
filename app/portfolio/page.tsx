@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -18,6 +18,8 @@ import {
   ExternalLink,
   Award,
   Sparkles,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -29,7 +31,7 @@ interface ProjectItem {
   id: string;
   title: string;
   client: string;
-  category: "industrial" | "commercial" | "residential" | "agricultural" | "defense";
+  category: "industrial" | "commercial" | "residential" | "agricultural" | "defense" | "floating";
   categoryLabel: string;
   capacity: string;
   location: string;
@@ -74,7 +76,7 @@ const portfolioProjects: ProjectItem[] = [
     location: "Kashimpur, Gazipur",
     annualYield: "1,740 MWh / Year",
     annualSavings: "৳ 1.85 Crore / Year",
-    image: "/images/project-gazipur.jpg",
+    image: "/images/about-solar-facility.jpg",
     panels: "Tier-1 580W N-Type Bifacial Monocrystalline",
     inverters: "100 kW European On-Grid Smart Inverters",
     description: "Turnkey rooftop installation on tin shed structure with zero-penetration standing seam clamps, integrated with 33kV factory substation and net-metering export.",
@@ -90,7 +92,7 @@ const portfolioProjects: ProjectItem[] = [
     location: "Patenga, Chattogram",
     annualYield: "1,085 MWh / Year",
     annualSavings: "৳ 1.15 Crore / Year",
-    image: "/images/project-chattogram.jpg",
+    image: "/images/solar-powered-campus-at-sunset.jpg",
     panels: "Tier-1 550W High-Efficiency Monocrystalline",
     inverters: "European On-Grid Inverters with IP66 Marine Coating",
     description: "Designed to withstand coastal saline air and high wind loads up to 180 km/h, significantly slashing electricity bills for heavy refrigeration compressors.",
@@ -106,7 +108,7 @@ const portfolioProjects: ProjectItem[] = [
     location: "Tejgaon Commercial Area, Dhaka",
     annualYield: "510 MWh / Year",
     annualSavings: "৳ 56 Lakh / Year",
-    image: "/images/project-dhaka.jpg",
+    image: "/images/power-solaroof.jpg",
     panels: "Tier-1 All-Black Monocrystalline Modules",
     inverters: "Smart Grid Inverters with Zero Export Control",
     description: "Architecturally integrated solar system engineered on concrete RCC roof with elevated steel walkway, powering central HVAC and server rooms.",
@@ -154,7 +156,7 @@ const portfolioProjects: ProjectItem[] = [
     location: "Gulshan-2, Dhaka",
     annualYield: "43.5 MWh / Year",
     annualSavings: "৳ 5.2 Lakh / Year",
-    image: "/images/project-residential.jpg",
+    image: "/images/solar-residential-villa.jpg",
     panels: "Tier-1 550W Aesthetic All-Black Panels",
     inverters: "Smart Hybrid Inverter with Lithium LiFePO4 ESS",
     description: "Seamless on-grid solar system with instant microsecond battery backup, powering central air conditioning, elevator, lighting, and EV charger without generator noise.",
@@ -176,6 +178,70 @@ const portfolioProjects: ProjectItem[] = [
     description: "Dual-mode solar installation powering high-capacity deep irrigation pumps during the day and feeding surplus energy back to the rural grid (BREB).",
     highlights: ["VFD Soft-Start Pump Controller", "Replaces 12,000 Liters of Diesel/Yr", "Automated Water Output Telemetry", "Heavy Duty Ground Mount"],
   },
+  {
+    id: "lake-reservoir-floating-fpv",
+    title: "500 kWp Floating Photovoltaic (FPV) System",
+    client: "Industrial Water Reservoir & Fishery Project",
+    category: "floating",
+    categoryLabel: "Floating Solar (FPV)",
+    capacity: "500 kWp",
+    location: "Chattogram / Kaptai Water Basin",
+    annualYield: "780 MWh / Year",
+    annualSavings: "৳ 82 Lakh / Year",
+    image: "/images/solar-floating.jpg",
+    panels: "Tier-1 N-Type Dual-Glass Bifacial PV Modules",
+    inverters: "Water-Cooled IP68 Marine Inverter Station",
+    description: "Turnkey engineering of a 500 kWp floating solar photovoltaic system anchored on an industrial reservoir. Provides high-yield electricity while reducing water evaporation and powering facility operations.",
+    highlights: ["Natural Water Cooling (+12% Yield)", "Zero Land Footprint", "33% Evaporation Reduction", "UV-Stabilized HDPE Floats"],
+  },
+  {
+    id: "sirajganj-utility-park",
+    title: "50 MWp Utility-Scale Ground-Mounted Solar Park",
+    client: "National Grid Power Producer",
+    category: "industrial",
+    categoryLabel: "Utility Solar Park",
+    capacity: "50 MWp",
+    location: "Sirajganj / Riverbank Complex",
+    annualYield: "73,000 MWh / Year",
+    annualSavings: "৳ 74 Crore / Year",
+    image: "/images/solar-utility-ground.jpg",
+    panels: "Tier-1 600W+ High Power Dual-Glass Modules",
+    inverters: "Central Inverter Station with 132kV Step-Up Substation",
+    description: "High-capacity utility solar power plant synchronized directly with national grid substation, delivering clean megawatt-scale power to northern industrial regions.",
+    highlights: ["132kV National Grid Synchronization", "Single-Axis Solar Tracking System", "SCADA Fiber-Optic Telemetry", "Full PPA Long-Term Concession"],
+  },
+  {
+    id: "beximco-industrial-textile",
+    title: "2.5 MWp Mega Industrial Spinning & Weaving Solar Array",
+    client: "Export Apparel & Composite Textile Campus",
+    category: "industrial",
+    categoryLabel: "Industrial EPC",
+    capacity: "2,500 kWp (2.5 MWp)",
+    location: "Narayanganj Industrial Zone",
+    annualYield: "3,620 MWh / Year",
+    annualSavings: "৳ 3.85 Crore / Year",
+    image: "/images/solar-industrial.jpg",
+    panels: "Tier-1 High-Efficiency TopCon Bifacial Modules",
+    inverters: "High-Power 250 kW String Inverters with Smart Anti-PID",
+    description: "Massive industrial rooftop deployment across 4 adjacent factory sheds, delivering daytime baseload offset for spinning looms and reducing heavy diesel fuel consumption.",
+    highlights: ["2.5 MWp Zero-Downtime Installation", "SREDA Net-Metering Interconnection", "Integrated Thermal IR Drone Audits", "3.0 Year Financial Payback"],
+  },
+  {
+    id: "dhaka-bipv-glass-commercial",
+    title: "180 kWp BIPV Architectural Glass Solar Canopy",
+    client: "Commercial Center & Corporate Hub",
+    category: "commercial",
+    categoryLabel: "Commercial BIPV",
+    capacity: "180 kWp",
+    location: "Banani / Gulshan Hub, Dhaka",
+    annualYield: "260 MWh / Year",
+    annualSavings: "৳ 28.5 Lakh / Year",
+    image: "/images/solar-commercial-campus.jpg",
+    panels: "Semi-Transparent Double-Glazed BIPV Solar Glass",
+    inverters: "Architectural Smart Inverters with Micro-Inverter MPPT",
+    description: "High-end building-integrated solar glass atrium and rooftop pergola, combining natural daylighting and weatherproofing with clean solar electricity.",
+    highlights: ["100% Water-Tight Structural Seal", "Solar Heat Gain Reduction (SHGC 0.28)", "Custom Architectural Framing", "High Visibility Corporate Sustainability"],
+  },
 ];
 
 const categories = [
@@ -185,15 +251,41 @@ const categories = [
   { id: "defense", label: "Government & Defense" },
   { id: "residential", label: "Residential Villas" },
   { id: "agricultural", label: "Agricultural & Agri-Pumps" },
+  { id: "floating", label: "Floating (FPV)" },
 ];
+
+const PROJECTS_PER_PAGE = 6;
 
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const filteredProjects =
-    activeCategory === "all"
+  const filteredProjects = useMemo(() => {
+    return activeCategory === "all"
       ? portfolioProjects
       : portfolioProjects.filter((p) => p.category === activeCategory);
+  }, [activeCategory]);
+
+  const totalPages = Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE);
+  const validCurrentPage = Math.min(currentPage, Math.max(1, totalPages));
+
+  const paginatedProjects = useMemo(() => {
+    const startIndex = (validCurrentPage - 1) * PROJECTS_PER_PAGE;
+    return filteredProjects.slice(startIndex, startIndex + PROJECTS_PER_PAGE);
+  }, [filteredProjects, validCurrentPage]);
+
+  const handleCategoryChange = (categoryId: string) => {
+    setActiveCategory(categoryId);
+    setCurrentPage(1);
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    const gridElement = document.getElementById("projects-grid-section");
+    if (gridElement) {
+      gridElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-900 font-sans">
@@ -246,7 +338,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* PORTFOLIO GRID & CATEGORY FILTER */}
-        <section className="py-14 sm:py-18">
+        <section id="projects-grid-section" className="py-14 sm:py-18 scroll-mt-28">
           <Container>
             {/* Category Filter Tabs */}
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
@@ -254,7 +346,7 @@ export default function PortfolioPage() {
                 <button
                   key={cat.id}
                   type="button"
-                  onClick={() => setActiveCategory(cat.id)}
+                  onClick={() => handleCategoryChange(cat.id)}
                   className={cn(
                     "px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer shadow-2xs",
                     activeCategory === cat.id
@@ -269,7 +361,7 @@ export default function PortfolioPage() {
 
             {/* Projects Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-              {filteredProjects.map((project) => (
+              {paginatedProjects.map((project) => (
                 <div
                   key={project.id}
                   className="group relative bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-amber-400 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between overflow-hidden"
@@ -371,6 +463,68 @@ export default function PortfolioPage() {
                 </div>
               ))}
             </div>
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="mt-14 pt-8 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="text-xs sm:text-sm font-semibold text-slate-500">
+                  Showing{" "}
+                  <span className="font-bold text-slate-900">
+                    {(validCurrentPage - 1) * PROJECTS_PER_PAGE + 1}
+                  </span>{" "}
+                  to{" "}
+                  <span className="font-bold text-slate-900">
+                    {Math.min(validCurrentPage * PROJECTS_PER_PAGE, filteredProjects.length)}
+                  </span>{" "}
+                  of{" "}
+                  <span className="font-bold text-slate-900">
+                    {filteredProjects.length}
+                  </span>{" "}
+                  Projects
+                </div>
+
+                <div className="flex items-center gap-2">
+                  {/* Prev Button */}
+                  <button
+                    type="button"
+                    disabled={validCurrentPage === 1}
+                    onClick={() => handlePageChange(validCurrentPage - 1)}
+                    aria-label="Previous Page"
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-200 bg-white text-slate-700 hover:bg-slate-100 hover:text-slate-900 disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer shadow-xs"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+
+                  {/* Page Numbers */}
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                    <button
+                      key={pageNum}
+                      type="button"
+                      onClick={() => handlePageChange(pageNum)}
+                      className={cn(
+                        "w-10 h-10 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer shadow-xs",
+                        validCurrentPage === pageNum
+                          ? "bg-amber-500 text-slate-950 font-extrabold shadow-sm scale-105"
+                          : "bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                      )}
+                    >
+                      {pageNum}
+                    </button>
+                  ))}
+
+                  {/* Next Button */}
+                  <button
+                    type="button"
+                    disabled={validCurrentPage === totalPages}
+                    onClick={() => handlePageChange(validCurrentPage + 1)}
+                    aria-label="Next Page"
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-200 bg-white text-slate-700 hover:bg-slate-100 hover:text-slate-900 disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer shadow-xs"
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            )}
           </Container>
         </section>
 

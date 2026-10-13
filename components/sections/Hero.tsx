@@ -15,7 +15,6 @@ import { Container } from "@/components/ui/Container";
 import { gsap } from "@/lib/gsap";
 
 const backgroundVideos = [
-  "/videos/solar-hero-bg-more.mp4",
   "/videos/solar-hero-bg-shot.mp4",
   "/videos/solar-hero-bg.mp4",
 ] as const;
@@ -165,7 +164,7 @@ export function Hero() {
           autoPlay
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
           onEnded={handleVideoEnded}
           poster="/images/golden-hour-industrial-solar-rooftop.jpg"
           onError={() => setHasVideoError(true)}
