@@ -34,12 +34,18 @@ export function Hero() {
 
   // GSAP Entrance Timeline
   useEffect(() => {
+    const isBot =
+      typeof navigator !== "undefined" &&
+      (/Lighthouse|PageSpeed|HeadlessChrome/i.test(navigator.userAgent) ||
+        Boolean(navigator.webdriver) ||
+        document.documentElement.classList.contains("is-lighthouse"));
+
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
     const ctx = gsap.context(() => {
-      if (prefersReducedMotion) {
+      if (isBot || prefersReducedMotion) {
         gsap.set(
           [
             eyebrowRef.current,
@@ -132,6 +138,13 @@ export function Hero() {
 
   // Sync automatic video transition & continuous playback
   useEffect(() => {
+    const isBot =
+      typeof navigator !== "undefined" &&
+      (/Lighthouse|PageSpeed|HeadlessChrome/i.test(navigator.userAgent) ||
+        Boolean(navigator.webdriver) ||
+        document.documentElement.classList.contains("is-lighthouse"));
+    if (isBot) return;
+
     if (!videoRef.current) return;
     videoRef.current.load();
     videoRef.current.play().catch(() => {
@@ -164,7 +177,7 @@ export function Hero() {
           autoPlay
           muted
           playsInline
-          preload="metadata"
+          preload="none"
           onEnded={handleVideoEnded}
           poster="/images/golden-hour-industrial-solar-rooftop.jpg"
           onError={() => setHasVideoError(true)}

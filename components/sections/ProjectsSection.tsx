@@ -177,8 +177,10 @@ export function ProjectsSection() {
                 return (
                   <button
                     key={tab.key}
+                    type="button"
                     role="tab"
                     aria-selected={isActive}
+                    aria-label={`Filter by ${tab.label}`}
                     onClick={() => setActiveCategory(tab.key)}
                     className={cn(
                       "inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 cursor-pointer",

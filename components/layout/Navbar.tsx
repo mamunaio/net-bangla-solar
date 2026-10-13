@@ -372,6 +372,7 @@ export function Navbar() {
               <button
                 type="button"
                 onClick={() => openQuoteModal()}
+                aria-label="Get a Free Solar Quote"
                 className="group relative inline-flex items-center gap-1.5 px-4 sm:px-4.5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 hover:from-amber-500 hover:to-amber-600 shadow-[0_3px_12px_rgba(245,158,11,0.30)] hover:shadow-[0_4px_18px_rgba(245,158,11,0.45)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 shrink-0 overflow-hidden whitespace-nowrap cursor-pointer"
               >
                 {/* Shimmer Light Sweep on Hover */}

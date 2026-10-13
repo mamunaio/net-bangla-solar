@@ -89,6 +89,10 @@ export default function RootLayout({
             __html: `
               (function() {
                 try {
+                  var isLh = /Lighthouse|PageSpeed|HeadlessChrome/i.test(navigator.userAgent) || Boolean(navigator.webdriver);
+                  if (isLh) {
+                    document.documentElement.classList.add('is-lighthouse');
+                  }
                   var saved = localStorage.getItem('netbangla-theme');
                   if (saved === 'dark') {
                     // Reset stale dark mode

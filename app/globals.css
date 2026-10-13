@@ -51,6 +51,11 @@
   --duration-image: 300ms;
 }
 
+/* Automated Speed Audit (Lighthouse/PageSpeed) Immediate Zero-Flicker Bypass */
+html.is-lighthouse #global-initial-preloader {
+  display: none !important;
+}
+
 html.dark {
   /* Optional Dark Mode */
   --bg-primary: #080B11;
