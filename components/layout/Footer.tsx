@@ -13,8 +13,9 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
 const companyLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
+  { label: "Knowledge Hub & Downloads", href: "/knowledge" },
+  { label: "Frequently Asked Questions", href: "/faq" },
   { label: "Why Choose Us", href: "/why-choose-us" },
-  { label: "FAQ & Knowledge Hub", href: "/faq" },
   { label: "Contact Us", href: "/contact" },
 ];
 

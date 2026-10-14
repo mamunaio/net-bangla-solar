@@ -210,15 +210,15 @@ export default function AboutPage() {
                 </div>
 
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
-                  Engineering Bankable Solar Power Systems for Bangladesh
+                  Turnkey Solar EPC Solutions
                 </h2>
 
                 <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
                   <p>
-                    Net Bangla Limited was founded with a clear vision to contribute to a carbon-free environment and deliver clean, reliable electricity across Bangladesh. Through our dedicated solar energy division, we offer turnkey solutions designed to meet specific energy needs and local site conditions.
+                    Net Bangla Limited was founded with a clear vision to contribute to a carbon-free environment and deliver clean, reliable, and sustainable electricity across Bangladesh. Through our dedicated Solar Energy Division, we provide turnkey solar power solutions tailored to specific energy requirements, site conditions, and project objectives.
                   </p>
                   <p>
-                    As a competitive Solar EPC company in Bangladesh, we deliver Consulting, Engineering, Contracting, and Commissioning services on a turnkey basis. We specialize in Commercial &amp; Industrial (C&amp;I) rooftop solar, integrated in-roof solar panels (BIPV), ground-mounted open access systems, solar car parks, and hybrid micro-grid storage solutions.
+                    As a competitive, SREDA-listed Solar EPC company in Bangladesh, Net Bangla Limited provides comprehensive Consulting, Engineering, Procurement, Contracting, Installation, and Commissioning services on a turnkey basis. We specialize in Commercial &amp; Industrial (C&amp;I) rooftop solar systems, Residential Hybrid and On-Grid Solar Systems, Agricultural Solar Irrigation and Direct DC Pumping, Building-Integrated Photovoltaics (BIPV), Floating Photovoltaic (FPV) solar solutions, ground-mounted solar power plants, open-access solar systems where applicable, and BESS storage solutions.
                   </p>
                 </div>
 

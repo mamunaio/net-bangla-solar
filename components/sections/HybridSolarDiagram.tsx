@@ -3,15 +3,8 @@
 import React, { useState } from "react";
 import {
   Sun,
-  Zap,
   BatteryCharging,
-  Home,
-  ArrowRight,
   Activity,
-  Layers,
-  Sparkles,
-  ShieldCheck,
-  CheckCircle2,
   Cpu,
   RefreshCw,
 } from "lucide-react";
