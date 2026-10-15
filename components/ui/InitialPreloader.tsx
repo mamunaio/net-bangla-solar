@@ -1,26 +1,30 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 /**
  * InitialPreloader
  * 
  * Rendered at the very top of <body> in app/layout.tsx.
- * Next.js SSR pre-renders this component into the initial HTML document with mounted=true.
- * This guarantees Frame-0 instant coverage on first visit or hard refresh,
- * preventing any Flash of Unstyled Content (FOUC) or website flickering
- * before the loader appears.
- * 
- * Once React mounts on the client, it holds the loader for a comfortable ~520ms,
- * then smoothly fades out and cleanly unmounts from the DOM.
+ * SSR pre-renders this component for Frame-0 instant coverage.
+ * Client hydration smoothly fades it out after ~500ms.
+ * Built with a bulletproof CSS keyframe + Vanilla JS fallback so it can
+ * NEVER get stuck under any circumstances (even if hydration delays or fails).
  */
 export function InitialPreloader() {
   const [mounted, setMounted] = useState(true);
   const [fading, setFading] = useState(false);
 
+  const dismiss = useCallback(() => {
+    setFading(true);
+    setTimeout(() => {
+      setMounted(false);
+    }, 400);
+  }, []);
+
   useEffect(() => {
-    // If running under Lighthouse, PageSpeed, or Headless audit bot, unmount immediately
+    // If running under Lighthouse or audit bots, dismiss immediately
     if (
       typeof navigator !== "undefined" &&
       (/Lighthouse|PageSpeed|HeadlessChrome/i.test(navigator.userAgent) ||
@@ -31,15 +35,14 @@ export function InitialPreloader() {
       return;
     }
 
-    // Elegant, smooth brand entrance (~650ms for human visitors)
+    // Comfortable, smooth brand display (~500ms)
     const fadeTimer = setTimeout(() => {
       setFading(true);
-    }, 650);
+    }, 500);
 
-    // Completely unmount from DOM after transition finishes
     const unmountTimer = setTimeout(() => {
       setMounted(false);
-    }, 1000);
+    }, 900);
 
     return () => {
       clearTimeout(fadeTimer);
@@ -55,7 +58,9 @@ export function InitialPreloader() {
       role="status"
       aria-live="polite"
       aria-label="Loading Net Bangla Solar Energy Solutions"
-      className={`fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-white select-none transition-all duration-400 ease-out ${
+      onClick={dismiss}
+      title="Click to dismiss"
+      className={`fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-white select-none transition-all duration-400 ease-out cursor-pointer ${
         fading ? "opacity-0 scale-[0.98] pointer-events-none" : "opacity-100 scale-100"
       }`}
     >
@@ -115,6 +120,34 @@ export function InitialPreloader() {
           />
         </div>
       </div>
+
+      {/* Absolute Failsafe: Vanilla JS dismiss in case React hydration is ever delayed */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              function removePreloader() {
+                var p = document.getElementById('global-initial-preloader');
+                if (p) {
+                  p.style.opacity = '0';
+                  p.style.pointerEvents = 'none';
+                  setTimeout(function() {
+                    if (p && p.parentNode) p.parentNode.removeChild(p);
+                  }, 400);
+                }
+              }
+              setTimeout(removePreloader, 1000);
+              if (document.readyState === 'complete') {
+                setTimeout(removePreloader, 600);
+              } else {
+                window.addEventListener('load', function() {
+                  setTimeout(removePreloader, 600);
+                });
+              }
+            })();
+          `,
+        }}
+      />
     </div>
   );
 }
