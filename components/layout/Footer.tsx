@@ -81,7 +81,7 @@ export function Footer() {
               className="group inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl"
               aria-label="Net Bangla Solar Energy Solutions - Back to top"
             >
-              <BrandLogo className="h-16 sm:h-20 w-auto transition-transform duration-200 group-hover:scale-105" />
+              <BrandLogo priority={false} loading="lazy" decoding="async" className="h-16 sm:h-20 w-auto transition-transform duration-200 group-hover:scale-105" />
             </Link>
 
             {/* Official Description */}

@@ -109,7 +109,7 @@ export default function FloatingSolarPage() {
       badge="FLOATING PHOTOVOLTAICS (FPV) • 50 KWP – 10+ MWP"
       title="Floating Solar (FPV) Solutions"
       subtitle="High-Efficiency Water-Mounted Photovoltaic Systems for Textile Factory Fire Ponds, Reservoirs, Lakes & Aquaculture"
-      heroImageUrl="/images/solar-floating.jpg"
+      heroImageUrl="/images/solar-floating.webp"
       description="In land-scarce Bangladesh, Floating Solar (FPV) transforms open water surfaces into powerful clean energy assets without consuming an inch of valuable agricultural or industrial land. Net Bangla Solar Energy Solutions engineers turnkey floating photovoltaic arrays for textile and RMG factory firefighting reservoirs, industrial retention basins, water treatment plants, lakes, and commercial fisheries. Leveraging natural water cooling, our floating systems deliver up to 15% higher energy yield while curbing reservoir evaporation and algae growth."
       detailedPoints={[
         "Ideal for textile, RMG, and industrial plants with mandatory fire ponds and ETP retention basins.",

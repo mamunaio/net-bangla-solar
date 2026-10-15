@@ -73,7 +73,7 @@ export function MobileMenu({ isOpen, onClose, items }: MobileMenuProps) {
             aria-label="Net Bangla Solar Energy Solutions — Home"
             className="group flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl min-w-0"
           >
-            <BrandLogo className="h-10 sm:h-11 w-auto transition-transform duration-200 group-hover:scale-105" />
+            <BrandLogo priority={false} loading="lazy" decoding="async" className="h-10 sm:h-11 w-auto transition-transform duration-200 group-hover:scale-105" />
             <div className="inline-flex items-center px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-[8.5px] font-mono font-bold">
               <span>EPC LIVE</span>
             </div>

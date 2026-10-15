@@ -47,7 +47,7 @@ const solutions: SolutionItem[] = [
       "Peak-load & diesel offset",
       "SREDA net-metering synchronization",
     ],
-    image: "/images/solar-industrial.jpg",
+    image: "/images/solar-industrial.webp",
     alt: "Solar-Powered Industrial Factory Complex Rooftop Installation",
     icon: Factory,
     gridClass: "lg:col-span-7",
@@ -65,7 +65,7 @@ const solutions: SolutionItem[] = [
       "Surplus energy export",
       "Operating cost optimization",
     ],
-    image: "/images/solar-commercial.jpg",
+    image: "/images/solar-commercial.webp",
     alt: "Modern Commercial Corporate Headquarters Rooftop Solar Array in Bangladesh",
     icon: Building2,
     gridClass: "lg:col-span-5",
@@ -83,7 +83,7 @@ const solutions: SolutionItem[] = [
       "Silent battery backup option",
       "Sleek architectural aesthetic",
     ],
-    image: "/images/solar-residential.jpg",
+    image: "/images/solar-residential.webp",
     alt: "Modern Luxury Residential Duplex Villa Rooftop Solar Pergola & Terrace Garden",
     icon: Home,
     gridClass: "lg:col-span-6",
@@ -101,7 +101,7 @@ const solutions: SolutionItem[] = [
       "Zero diesel fuel cost",
       "Off-grid reliability",
     ],
-    image: "/images/solar-agricultural.jpg",
+    image: "/images/solar-agricultural.webp",
     alt: "Solar-Powered Irrigation Pump System in Green Farmland in Bangladesh",
     icon: Sprout,
     gridClass: "lg:col-span-6",
@@ -119,7 +119,7 @@ const solutions: SolutionItem[] = [
       "100% leak-proof structural barrier",
       "Long-term dual-purpose asset",
     ],
-    image: "/images/power-solaroof.jpg",
+    image: "/images/power-solaroof.webp",
     alt: "BIPV Solar Solution on modern facility rooftop",
     icon: PanelsTopLeft,
     gridClass: "lg:col-span-6",
@@ -137,7 +137,7 @@ const solutions: SolutionItem[] = [
       "Zero agricultural land acquisition required",
       "Drastic reduction in reservoir evaporation",
     ],
-    image: "/images/solar-floating.jpg",
+    image: "/images/solar-floating.webp",
     alt: "Aerial view of high-efficiency Floating Solar Photovoltaic Farm on water reservoir",
     icon: Waves,
     gridClass: "lg:col-span-6",
@@ -246,6 +246,8 @@ export function SolutionsSection() {
                       src={item.image}
                       alt={item.alt}
                       fill
+                      loading="lazy"
+                      decoding="async"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 750px"
                       className="object-cover object-center transition-transform duration-300 ease-out group-hover:scale-[1.02]"
                       onError={() =>

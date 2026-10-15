@@ -42,7 +42,7 @@ const applicationsData: ApplicationItem[] = [
     typicalScope: "100 kWp – 2+ MWp",
     description:
       "Large rooftop solar applications designed for industrial and manufacturing environments, including net-metering-oriented energy use.",
-    image: "/images/golden-hour-industrial-solar-rooftop.jpg",
+    image: "/images/golden-hour-industrial-solar-rooftop.webp",
     alt: "Golden-Hour Industrial Rooftop Solar Installation in Bangladesh",
     icon: Factory,
   },
@@ -55,7 +55,7 @@ const applicationsData: ApplicationItem[] = [
     typicalScope: "20 kWp – 1 MWp",
     description:
       "Commercial rooftop systems designed to offset utility consumption across offices, institutions, and commercial properties.",
-    image: "/images/solar-commercial-campus.jpg",
+    image: "/images/solar-commercial-campus.webp",
     alt: "Modern Commercial Corporate Headquarters Rooftop Solar Array in Bangladesh",
     icon: Building2,
   },
@@ -68,7 +68,7 @@ const applicationsData: ApplicationItem[] = [
     typicalScope: "5–20 kWp",
     description:
       "Rooftop solar applications designed for homes and residential properties with practical energy requirements.",
-    image: "/images/solar-residential-villa.jpg",
+    image: "/images/solar-residential-villa.webp",
     alt: "Modern Luxury Residential Duplex Villa Rooftop Solar Pergola & Garden",
     icon: Home,
   },
@@ -81,7 +81,7 @@ const applicationsData: ApplicationItem[] = [
     typicalScope: "Custom Pump & PV",
     description:
       "Solar-powered agricultural applications designed around irrigation, pumping, and rural energy requirements.",
-    image: "/images/solar-agricultural-pump.jpg",
+    image: "/images/solar-agricultural-pump.webp",
     alt: "Solar-Powered Irrigation Pump System in Green Farmland in Bangladesh",
     icon: Sprout,
   },
@@ -94,7 +94,7 @@ const applicationsData: ApplicationItem[] = [
     typicalScope: "50 kWp – 10+ MWp",
     description:
       "High-efficiency water-based solar arrays utilizing natural water cooling for higher yields on industrial retention ponds, reservoirs, and aquaculture.",
-    image: "/images/solar-floating.jpg",
+    image: "/images/solar-floating.webp",
     alt: "Aerial view of high-efficiency Floating Solar Farm on water reservoir",
     icon: Waves,
   },
@@ -107,7 +107,7 @@ const applicationsData: ApplicationItem[] = [
     typicalScope: "5 MWp – 100+ MWp",
     description:
       "High-capacity ground-mounted photovoltaic power plants and utility microgrids engineered with central inverters and high-voltage transmission substation grid tie-ins.",
-    image: "/images/solar-utility-ground.jpg",
+    image: "/images/solar-utility-ground.webp",
     alt: "Aerial view of Utility-Scale Ground-Mounted Solar Park in Bangladesh",
     icon: SunMedium,
   },
@@ -229,6 +229,8 @@ export function ProjectsSection() {
                       src={app.image}
                       alt={app.alt}
                       fill
+                      loading="lazy"
+                      decoding="async"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 700px"
                       className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
                       onError={() =>

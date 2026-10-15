@@ -179,7 +179,7 @@ export function Hero() {
           playsInline
           preload="none"
           onEnded={handleVideoEnded}
-          poster="/images/golden-hour-industrial-solar-rooftop.jpg"
+          poster="/images/golden-hour-industrial-solar-rooftop.webp"
           onError={() => setHasVideoError(true)}
           className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
             hasVideoError ? "opacity-0" : "opacity-100"
@@ -191,10 +191,12 @@ export function Hero() {
         {/* Fallback Sharp Image Layer if Video is Loading or Offline */}
         <div className={`absolute inset-0 -z-10 ${hasVideoError ? "opacity-100" : "opacity-100"}`}>
           <Image
-            src="/images/golden-hour-industrial-solar-rooftop.jpg"
+            src="/images/golden-hour-industrial-solar-rooftop.webp"
             alt="Megawatt industrial rooftop solar power facility in Bangladesh"
             fill
             priority
+            loading="eager"
+            decoding="async"
             sizes="100vw"
             className="object-cover object-center"
           />
@@ -242,11 +244,14 @@ export function Hero() {
             {/* Main Headline */}
             <h1
               ref={headlineRef}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-[clamp(44px,5.2vw,76px)] font-extrabold tracking-tight text-white leading-[1.08]"
+              className="text-[26px] sm:text-4xl md:text-5xl lg:text-[clamp(32px,3.1vw,48px)] xl:text-[48px] font-extrabold tracking-tight text-white leading-[1.14]"
             >
-              Transforming Bangladesh with{" "}
-              <span className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(245,158,11,0.35)]">
-                Renewable &amp; Sustainable Solar Energy
+              <span className="block">Transforming Bangladesh with</span>
+              <span className="block bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(245,158,11,0.35)]">
+                Renewable &amp; Sustainable
+              </span>
+              <span className="block bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(245,158,11,0.35)]">
+                Solar Energy
               </span>
             </h1>
 

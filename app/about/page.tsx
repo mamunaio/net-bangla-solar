@@ -39,7 +39,7 @@ const mainStrategicPartners = [
     category: "Strategic Partner — Heavy EPC & Infrastructure",
     description:
       "Strategic partnership in major renewable energy and IT infrastructure projects in Bangladesh, advancing technological development and energy security.",
-    logo: "/images/partners/china-national-machinery-cmc.png",
+    logo: "/images/partners/china-national-machinery-cmc.webp",
     tag: "POWER & EPC",
   },
   {
@@ -49,7 +49,7 @@ const mainStrategicPartners = [
     category: "Authorized Distributor & Equipment Partner",
     description:
       "Leading manufacturer of high-efficiency monocrystalline solar panels and advanced inverters, delivering precision engineering and long-term durability.",
-    logo: "/images/partners/huachuang-guojing.png",
+    logo: "/images/partners/huachuang-guojing.webp",
     tag: "AUTHORIZED OEM",
   },
   {
@@ -59,7 +59,7 @@ const mainStrategicPartners = [
     category: "Strategic Partner — Battery Energy Storage Systems (BESS)",
     description:
       "Global Tier-1 energy storage pioneer delivering smart liquid-cooled C&I BESS (Stars Series 215–385 kWh) and 4-in-1 Solar-BESS-Diesel-EV integrated systems certified to UL9540A & IEC standards.",
-    logo: "/images/partners/wincle-energy.png",
+    logo: "/images/partners/wincle-energy.webp",
     tag: "BESS & STORAGE",
   },
 ];
@@ -72,7 +72,7 @@ const affiliationsList = [
     fullName: "Bangladesh Association of Software & Information Services",
     identifier: "General Member (A-405)",
     role: "National Apex ICT & Digital Energy Trade Body",
-    logo: "/images/partners/basis.png",
+    logo: "/images/partners/basis.webp",
     tag: "APEX MEMBER",
   },
   {
@@ -81,7 +81,7 @@ const affiliationsList = [
     fullName: "Bangladesh Association of Contact Center & Outsourcing",
     identifier: "Member ID: 2018.0082.1000.0062",
     role: "National Contact Center & Infrastructure Association",
-    logo: "/images/partners/bacco.png",
+    logo: "/images/partners/bacco.webp",
     tag: "APEX MEMBER",
   },
   {
@@ -90,7 +90,7 @@ const affiliationsList = [
     fullName: "Zhejiang High-Tech Smart Energy Solutions",
     identifier: "Smart Energy Hardware Alliance",
     role: "BOS Instrumentation, Smart Monitoring & PV Balance-of-System",
-    logo: "/images/partners/zjht.png",
+    logo: "/images/partners/zjht.webp",
     tag: "SMART ENERGY",
   },
   {
@@ -99,7 +99,7 @@ const affiliationsList = [
     fullName: "Serimag Cognitive AI & Process Automation",
     identifier: "Enterprise Tech Partner (Spain/Europe)",
     role: "Cognitive AI, SCADA Analytics & Document Intelligence",
-    logo: "/images/partners/serimag.png",
+    logo: "/images/partners/serimag.webp",
     tag: "AI ALLIANCE",
   },
 ];
@@ -441,6 +441,8 @@ export default function AboutPage() {
                           alt={partner.name}
                           width={180}
                           height={60}
+                          loading="lazy"
+                          decoding="async"
                           className="max-h-16 w-auto object-contain filter drop-shadow-2xs transition-all duration-300"
                         />
                       </div>
@@ -530,6 +532,8 @@ export default function AboutPage() {
                             alt={item.name}
                             width={160}
                             height={60}
+                            loading="lazy"
+                            decoding="async"
                             className="max-h-14 w-auto object-contain filter drop-shadow-2xs transition-all duration-300"
                           />
                         ) : (

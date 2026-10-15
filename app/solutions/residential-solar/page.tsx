@@ -70,7 +70,7 @@ export default function ResidentialSolarPage() {
       badge="SMART RESIDENTIAL & HYBRID ESS • 5 KWP – 50 KWP"
       title="Residential Hybrid Solar & Battery Systems"
       subtitle="Uninterruptible Clean Energy & Silent Lithium Storage for Luxury Villas, Duplexes & Premium Homes"
-      heroImageUrl="/images/solar-residential.jpg"
+      heroImageUrl="/images/solar-residential.webp"
       description="Enjoy the comfort of uninterrupted, 24/7 electrical luxury without the noise, pollution, and recurring fuel costs of diesel generators. Net Bangla Solar Energy Solutions engineers premium hybrid solar systems with intelligent Lithium LiFePO4 battery storage, tailored for luxury private residences, duplexes, and residential estates across Dhaka, Gulshan, Banani, Uttara, and nationwide."
       detailedPoints={[
         "Powers central air conditioners, refrigerators, water pumps, lighting, and elevators effortlessly.",

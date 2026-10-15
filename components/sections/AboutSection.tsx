@@ -156,9 +156,11 @@ export function AboutSection() {
                   </div>
                 ) : (
                   <Image
-                    src="/images/about-commercial-solar.jpg"
+                    src="/images/about-commercial-solar.webp"
                     alt="Solar energy installation in Bangladesh engineered by Net Bangla Solar Energy Solutions"
                     fill
+                    loading="lazy"
+                    decoding="async"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                     className="object-cover object-center"
                     onError={() => setImageError(true)}
@@ -185,9 +187,11 @@ export function AboutSection() {
                 <div className="flex items-center gap-3.5">
                   <div className="relative h-12 w-12 sm:h-13 sm:w-13 shrink-0 overflow-hidden rounded-xl border border-amber-500/30 bg-slate-100">
                     <Image
-                      src="/images/engr-mamunur-rahman.jpg"
+                      src="/images/engr-mamunur-rahman.webp"
                       alt="Engr. Md. Mamunur Rahman, Managing Director & Chief Executive Engineer"
                       fill
+                      loading="lazy"
+                      decoding="async"
                       sizes="52px"
                       className="object-cover object-center"
                     />

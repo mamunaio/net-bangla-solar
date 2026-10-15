@@ -9,11 +9,15 @@ interface BrandLogoProps {
   variant?: "light" | "dark" | "auto";
   showText?: boolean;
   priority?: boolean;
+  loading?: "eager" | "lazy";
+  decoding?: "async" | "sync" | "auto";
 }
 
 export function BrandLogo({
   className,
   priority = true,
+  loading = "eager",
+  decoding = "async",
 }: BrandLogoProps) {
   return (
     <div
@@ -23,11 +27,13 @@ export function BrandLogo({
       )}
     >
       <Image
-        src="/images/net-bangla-solar-logo.png"
+        src="/images/net-bangla-solar-logo.webp"
         alt="Net Bangla Solar Energy Solutions"
         width={1540}
         height={1212}
         priority={priority}
+        loading={priority ? "eager" : loading}
+        decoding={decoding}
         className="h-full w-auto max-h-full object-contain"
       />
     </div>

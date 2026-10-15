@@ -67,7 +67,7 @@ export const mainStrategicPartners = [
     category: "Strategic Partner — Heavy EPC & Infrastructure",
     description:
       "Strategic partnership in major renewable energy and IT infrastructure projects in Bangladesh, advancing technological development and energy security.",
-    logo: "/images/partners/china-national-machinery-cmc.png",
+    logo: "/images/partners/china-national-machinery-cmc.webp",
     tag: "POWER & EPC",
   },
   {
@@ -77,7 +77,7 @@ export const mainStrategicPartners = [
     category: "Authorized Distributor & Equipment Partner",
     description:
       "Leading manufacturer of high-efficiency monocrystalline solar panels and advanced inverters, delivering precision engineering and long-term durability.",
-    logo: "/images/partners/huachuang-guojing.png",
+    logo: "/images/partners/huachuang-guojing.webp",
     tag: "AUTHORIZED OEM",
   },
   {
@@ -87,7 +87,7 @@ export const mainStrategicPartners = [
     category: "Strategic Partner — Battery Energy Storage Systems (BESS)",
     description:
       "Global Tier-1 energy storage pioneer delivering smart liquid-cooled C&I BESS (Stars Series 215–385 kWh) and 4-in-1 Solar-BESS-Diesel-EV integrated systems certified to UL9540A & IEC standards.",
-    logo: "/images/partners/wincle-energy.png",
+    logo: "/images/partners/wincle-energy.webp",
     tag: "BESS & STORAGE",
   },
 ];
@@ -100,7 +100,7 @@ export const partnersList: PartnerEntity[] = [
     nativeName: "Cognitive AI & Document Automation",
     category: "enterprise-tech",
     categoryLabel: "Enterprise AI & Cloud Platform",
-    logo: "/images/partners/serimag.png",
+    logo: "/images/partners/serimag.webp",
     description:
       "European technology alliance for cognitive AI, document intelligence, and automated business data systems powering our enterprise digital infrastructure.",
     tag: "AI & AUTOMATION",
@@ -113,7 +113,7 @@ export const partnersList: PartnerEntity[] = [
     nativeName: "Enterprise Omnichannel Cloud Platform",
     category: "enterprise-tech",
     categoryLabel: "Enterprise Communications Partner",
-    logo: "/images/partners/ameyo.png",
+    logo: "/images/partners/ameyo.webp",
     description:
       "Global enterprise communication platform provider powering contact center infrastructure, customer experience platforms, and telemetry dispatch.",
     tag: "CLOUD CX",
@@ -126,7 +126,7 @@ export const partnersList: PartnerEntity[] = [
     nativeName: "Global Cloud Communications",
     category: "enterprise-tech",
     categoryLabel: "Global Cloud Communications",
-    logo: "/images/partners/infobip.png",
+    logo: "/images/partners/infobip.webp",
     description:
       "Global omnichannel cloud communications and messaging backbone ensuring real-time SCADA alerts, telemetry delivery, and mission-critical notifications.",
     tag: "CLOUD NETWORK",
@@ -139,7 +139,7 @@ export const partnersList: PartnerEntity[] = [
     nativeName: "Bangladesh Association of Software & Information Services",
     category: "associations",
     categoryLabel: "National Apex ICT Trade Body",
-    logo: "/images/partners/basis.png",
+    logo: "/images/partners/basis.webp",
     description:
       "National apex body for software, ICT, and digital automation in Bangladesh. Net Bangla Limited is an active General Member in good standing.",
     tag: "APEX MEMBER",
@@ -152,7 +152,7 @@ export const partnersList: PartnerEntity[] = [
     nativeName: "Bangladesh Association of Contact Center & Outsourcing",
     category: "associations",
     categoryLabel: "National Contact Center Association",
-    logo: "/images/partners/bacco.png",
+    logo: "/images/partners/bacco.webp",
     description:
       "National apex association for contact center infrastructure, BPO, and mission-critical communications across Bangladesh.",
     tag: "APEX MEMBER",
@@ -170,7 +170,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "বাংলাদেশ সেনাবাহিনী",
     category: "defense-armed",
     categoryLabel: "National Defense & Armed Forces",
-    logo: "/images/clients/bangladesh-army.png",
+    logo: "/images/clients/bangladesh-army.webp",
     description:
       "National defense forces facility infrastructure, cantonment installations, and specialized electrical engineering project execution.",
     tag: "DEFENSE",
@@ -183,7 +183,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "ডকইয়ার্ড অ্যান্ড ইঞ্জিনিয়ারিং ওয়ার্কস (বাংলাদেশ নৌবাহিনী)",
     category: "defense-armed",
     categoryLabel: "Bangladesh Navy Marine Enterprise",
-    logo: "/images/clients/dockyard-engineering-works.png",
+    logo: "/images/clients/dockyard-engineering-works.webp",
     description:
       "Bangladesh Navy marine engineering, shipyard facilities, and industrial power infrastructure deployment at Narayanganj.",
     tag: "NAVY ENLISTED",
@@ -196,7 +196,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "মিলিটারী ইঞ্জিনিয়ার সার্ভিসেস",
     category: "defense-armed",
     categoryLabel: "Armed Forces Engineering Organization",
-    logo: "/images/clients/military-engineer-services.png",
+    logo: "/images/clients/military-engineer-services.webp",
     description:
       "Apex electrical and civil engineering organization for Bangladesh Armed Forces cantonment installations and base operations.",
     tag: "ARMED FORCES",
@@ -209,7 +209,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "বাংলাদেশ মেশিন টুলস ফ্যাক্টরী লিঃ (সেনাবাহিনী পরিচালিত)",
     category: "defense-armed",
     categoryLabel: "Army-Operated Precision Manufacturing",
-    logo: "/images/clients/bmtf.png",
+    logo: "/images/clients/bmtf.webp",
     description:
       "State-owned high-precision manufacturing, vehicle assembly, and industrial machinery enterprise operated by Bangladesh Army.",
     tag: "DEFENSE ENLISTED",
@@ -222,7 +222,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "খুলনা শিপইয়ার্ড লিমিটেড (বাংলাদেশ নৌবাহিনী)",
     category: "defense-armed",
     categoryLabel: "Bangladesh Navy Commercial & Warship Builder",
-    logo: "/images/clients/dockyard-engineering-works.png",
+    logo: "/images/clients/dockyard-engineering-works.webp",
     description:
       "Premier marine vessel construction, patrol craft building, and shipyard power engineering facility under Bangladesh Navy.",
     tag: "NAVY ENLISTED",
@@ -237,7 +237,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "বাংলাদেশ ই-গভর্নমেন্ট প্রকিউরমেন্ট (e-GP)",
     category: "govt-public",
     categoryLabel: "National Centralized Public Procurement",
-    logo: "/images/clients/bcct.png",
+    logo: "/images/clients/bcct.webp",
     description:
       "National electronic government procurement system enlistment for public-sector turnkey solar, electrical, and technology contracts.",
     tag: "E-GP ENLISTED",
@@ -250,7 +250,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "বস্ত্র ও পাট মন্ত্রণালয়",
     category: "govt-public",
     categoryLabel: "Government Ministry",
-    logo: "/images/clients/ministry-textiles-jute.png",
+    logo: "/images/clients/ministry-textiles-jute.webp",
     description:
       "Government ministry institutional facilities, administrative complexes, and public sector industrial energy efficiency initiatives.",
     tag: "MINISTRY",
@@ -263,7 +263,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "বাংলাদেশ জলবায়ু পরিবর্তন ট্রাস্ট",
     category: "govt-public",
     categoryLabel: "National Climate Fund & Trust",
-    logo: "/images/clients/bcct.png",
+    logo: "/images/clients/bcct.webp",
     description:
       "Autonomous government trust under the Ministry of Environment, Forest and Climate Change for renewable energy transition and climate resilience.",
     tag: "CLIMATE TRUST",
@@ -278,7 +278,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "রবি আজিয়াটা লিমিটেড",
     category: "telecom-energy",
     categoryLabel: "Multinational Telecom Operator",
-    logo: "/images/clients/robi.png",
+    logo: "/images/clients/robi.webp",
     description:
       "Second largest mobile network operator in Bangladesh. Solar and power engineering support for mission-critical telecom towers and transmission hubs.",
     tag: "TELECOM",
@@ -291,7 +291,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "বাংলাদেশ টেলিকমিউনিকেশন্স কোম্পানি লিমিটেড",
     category: "telecom-energy",
     categoryLabel: "National Telecom Carrier",
-    logo: "/images/clients/btcl.png",
+    logo: "/images/clients/btcl.webp",
     description:
       "State-owned telecommunications carrier providing backbone transmission, copper/fiber exchanges, and government network connectivity.",
     tag: "TELECOM",
@@ -304,7 +304,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "বাংলাদেশ সাবমেরিন ক্যাবলস পিএলসি",
     category: "telecom-energy",
     categoryLabel: "International Submarine Cable Operator",
-    logo: "/images/clients/bsccl.png",
+    logo: "/images/clients/bsccl.webp",
     description:
       "Core national gateway operator managing SMW-4 and SMW-5 submarine cable landing stations with 99.999% uninterrupted power requirements.",
     tag: "CONNECTIVITY",
@@ -317,7 +317,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "সেন্টার ফর এনভায়রনমেন্টাল অ্যান্ড জিওগ্রাফিক ইনফরমেশন সার্ভিসেস",
     category: "telecom-energy",
     categoryLabel: "Government Environmental & GIS Center",
-    logo: "/images/clients/cegis.png",
+    logo: "/images/clients/cegis.webp",
     description:
       "Public research and GIS center under the Ministry of Water Resources conducting spatial analysis, climate simulation, and environmental audits.",
     tag: "RESEARCH",
@@ -330,7 +330,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "নর্দার্ন ইলেকট্রিসিটি সাপ্লাই কোম্পানি পিএলসি",
     category: "telecom-energy",
     categoryLabel: "Regional Utility Power Grid",
-    logo: "/images/clients/nesco.png",
+    logo: "/images/clients/nesco.webp",
     description:
       "Northern Bangladesh power distribution utility managing 33kV/11kV substations, grid interconnections, and regional net-metering synchronization.",
     tag: "UTILITY GRID",
@@ -345,7 +345,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "বাংলাদেশ পোশাক প্রস্তুতকারক ও রপ্তানিকারক সমিতি",
     category: "industry-rmg",
     categoryLabel: "National Garment & RMG Apex Body",
-    logo: "/images/clients/bgmea.png",
+    logo: "/images/clients/bgmea.webp",
     description:
       "National apex association of 4,000+ ready-made garment export manufacturers leading green factory transformations and rooftop solar adoption.",
     tag: "RMG APEX",
@@ -358,7 +358,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "মিম গ্রুপ (ইন্ডাস্ট্রিয়াল কনগ্লোমারেট)",
     category: "industry-rmg",
     categoryLabel: "Diversified Industrial Conglomerate",
-    logo: "/images/clients/mim-group.png",
+    logo: "/images/clients/mim-group.webp",
     description:
       "Leading diversified industrial conglomerate with major textile, manufacturing, and heavy production plants requiring continuous factory power.",
     tag: "CONGLOMERATE",
@@ -385,7 +385,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "ইস্পাহানী ইসলামিয়া চক্ষু ইনস্টিটিউট ও হাসপাতাল",
     category: "healthcare-academic",
     categoryLabel: "Specialized Tertiary Healthcare Hospital",
-    logo: "/images/clients/ispahani-islamia-eye-hospital.png",
+    logo: "/images/clients/ispahani-islamia-eye-hospital.webp",
     description:
       "Pioneer specialized non-profit eye healthcare hospital and academic institution with high-demand continuous surgical and diagnostic power setups.",
     tag: "HEALTHCARE",
@@ -398,7 +398,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "খ্রিস্টান মেমোরিয়াল হাসপাতাল, ব্রাহ্মণবাড়িয়া",
     category: "healthcare-academic",
     categoryLabel: "Regional Multi-Specialty Hospital",
-    logo: "/images/clients/christian-memorial-hospital.png",
+    logo: "/images/clients/christian-memorial-hospital.webp",
     description:
       "Well-known regional healthcare facility delivering diagnostic, medical, and intensive surgical care with smart solar hybrid backup.",
     tag: "HEALTHCARE",
@@ -411,7 +411,7 @@ export const clientsList: ClientEntity[] = [
     bnName: "শহীদ কামারুজ্জামান টেক্সটাইল ইনস্টিটিউট, মান্দা",
     category: "healthcare-academic",
     categoryLabel: "Government Engineering Academic Campus",
-    logo: "/images/clients/shahid-kamaruzzaman-textile-institute.png",
+    logo: "/images/clients/shahid-kamaruzzaman-textile-institute.webp",
     description:
       "Government-funded engineering academic campus featuring academic buildings, student dormitories, and educational technical workshops.",
     tag: "ACADEMIC",
@@ -614,6 +614,8 @@ export function PartnersClientsClient() {
                           alt={partner.name}
                           width={180}
                           height={60}
+                          loading="lazy"
+                          decoding="async"
                           className="max-h-16 w-auto object-contain filter drop-shadow-2xs transition-all duration-300"
                         />
                       </div>
@@ -804,6 +806,8 @@ export function PartnersClientsClient() {
                               alt={`${partner.name} Logo`}
                               width={190}
                               height={90}
+                              loading="lazy"
+                              decoding="async"
                               className="max-h-20 w-auto max-w-[180px] object-contain drop-shadow-2xs filter transition-all duration-300"
                             />
                           ) : (
@@ -941,6 +945,8 @@ export function PartnersClientsClient() {
                               alt={`${client.name} Logo`}
                               width={190}
                               height={90}
+                              loading="lazy"
+                              decoding="async"
                               className="max-h-20 w-auto max-w-[180px] object-contain drop-shadow-2xs filter transition-all duration-300"
                             />
                           ) : (

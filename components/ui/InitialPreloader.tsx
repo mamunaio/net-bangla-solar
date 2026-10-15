@@ -63,6 +63,9 @@ export function InitialPreloader() {
       className={`fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-white select-none transition-all duration-400 ease-out cursor-pointer ${
         fading ? "opacity-0 scale-[0.98] pointer-events-none" : "opacity-100 scale-100"
       }`}
+      style={{
+        animation: fading ? undefined : "preloaderAutoDismiss 0.4s ease-out 1.2s forwards",
+      }}
     >
       {/* Ambient warm solar radial glow */}
       <div
@@ -90,11 +93,13 @@ export function InitialPreloader() {
           {/* Central Brand Logo */}
           <div className="relative w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
             <Image
-              src="/images/net-bangla-solar-logo.png"
+              src="/images/net-bangla-solar-logo.webp"
               alt="Net Bangla Solar Energy Solutions Logo"
               width={96}
               height={96}
               priority
+              loading="eager"
+              decoding="async"
               className="w-auto h-20 sm:h-24 object-contain drop-shadow-sm"
             />
           </div>
@@ -120,34 +125,6 @@ export function InitialPreloader() {
           />
         </div>
       </div>
-
-      {/* Absolute Failsafe: Vanilla JS dismiss in case React hydration is ever delayed */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function() {
-              function removePreloader() {
-                var p = document.getElementById('global-initial-preloader');
-                if (p) {
-                  p.style.opacity = '0';
-                  p.style.pointerEvents = 'none';
-                  setTimeout(function() {
-                    if (p && p.parentNode) p.parentNode.removeChild(p);
-                  }, 400);
-                }
-              }
-              setTimeout(removePreloader, 1000);
-              if (document.readyState === 'complete') {
-                setTimeout(removePreloader, 600);
-              } else {
-                window.addEventListener('load', function() {
-                  setTimeout(removePreloader, 600);
-                });
-              }
-            })();
-          `,
-        }}
-      />
     </div>
   );
 }

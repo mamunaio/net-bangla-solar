@@ -39,7 +39,7 @@ export const partnersData: PartnerItem[] = [
     nativeName: "赢科数能 (Wenergy)",
     category: "global-epc",
     categoryLabel: "Tier-1 Safe BESS & Storage",
-    logo: "/images/partners/wincle-energy.png",
+    logo: "/images/partners/wincle-energy.webp",
     description: "Global Tier-1 energy storage pioneer & smart C&I BESS systems",
     tag: "BESS & STORAGE",
     region: "GLOBAL / SINGAPORE",
@@ -50,7 +50,7 @@ export const partnersData: PartnerItem[] = [
     nativeName: "中国机械进出口 (集团) 有限公司",
     category: "global-epc",
     categoryLabel: "Global EPC & Energy",
-    logo: "/images/partners/china-national-machinery-cmc.png",
+    logo: "/images/partners/china-national-machinery-cmc.webp",
     description: "State-owned global heavy machinery, power & energy EPC conglomerate",
     tag: "POWER & EPC",
     region: "GLOBAL CONGLOMERATE",
@@ -61,7 +61,7 @@ export const partnersData: PartnerItem[] = [
     nativeName: "华创国晶",
     category: "global-epc",
     categoryLabel: "Global EPC & Energy",
-    logo: "/images/partners/huachuang-guojing.png",
+    logo: "/images/partners/huachuang-guojing.webp",
     description: "Advanced crystalline solar technology & precision engineering",
     tag: "CRYSTALLINE TECH",
     region: "GLOBAL / ASIA",
@@ -72,7 +72,7 @@ export const partnersData: PartnerItem[] = [
     nativeName: "Bangladesh Association of Software & Information Services",
     category: "associations",
     categoryLabel: "National Associations",
-    logo: "/images/partners/basis.png",
+    logo: "/images/partners/basis.webp",
     description: "National apex body for software, ICT & digital energy systems",
     tag: "APEX MEMBER",
     region: "MEMBER ID: A-405",
@@ -83,7 +83,7 @@ export const partnersData: PartnerItem[] = [
     nativeName: "Bangladesh Association of Contact Center & Outsourcing",
     category: "associations",
     categoryLabel: "National Associations",
-    logo: "/images/partners/bacco.png",
+    logo: "/images/partners/bacco.webp",
     description: "National association for contact center & technology infrastructure",
     tag: "APEX MEMBER",
     region: "MEMBER ID: 2018",
@@ -94,7 +94,7 @@ export const partnersData: PartnerItem[] = [
     nativeName: "Cognitive AI & Document Automation",
     category: "enterprise-tech",
     categoryLabel: "Enterprise Tech",
-    logo: "/images/partners/serimag.png",
+    logo: "/images/partners/serimag.webp",
     description: "Cognitive AI and automated business document intelligence systems",
     tag: "AI & AUTOMATION",
     region: "EUROPE / GLOBAL",
@@ -105,7 +105,7 @@ export const partnersData: PartnerItem[] = [
     nativeName: "Enterprise Omnichannel Platform",
     category: "enterprise-tech",
     categoryLabel: "Enterprise Tech",
-    logo: "/images/partners/ameyo.png",
+    logo: "/images/partners/ameyo.webp",
     description: "Enterprise communication platforms and customer experience infrastructure",
     tag: "CLOUD CX",
     region: "GLOBAL TECH",
@@ -116,7 +116,7 @@ export const partnersData: PartnerItem[] = [
     nativeName: "Global Cloud Communications",
     category: "enterprise-tech",
     categoryLabel: "Enterprise Tech",
-    logo: "/images/partners/infobip.png",
+    logo: "/images/partners/infobip.webp",
     description: "Global omnichannel cloud communications & mission-critical messaging",
     tag: "CLOUD NETWORK",
     region: "GLOBAL CLOUD",
@@ -299,6 +299,8 @@ export function PartnersSection() {
                       alt={`${partner.name} Logo`}
                       width={200}
                       height={90}
+                      loading="lazy"
+                      decoding="async"
                       className="max-h-20 w-auto max-w-[190px] object-contain drop-shadow-2xs filter transition-all duration-300"
                     />
                   </div>

@@ -164,27 +164,27 @@ export function Navbar() {
           className={cn(
             "pointer-events-auto max-w-7xl mx-auto rounded-2xl lg:rounded-full transition-all duration-300 ease-out border backdrop-blur-2xl relative bg-white/95 border-slate-200/90 shadow-[0_10px_35px_-5px_rgba(0,0,0,0.07),0_1px_3px_rgba(0,0,0,0.03)]",
             isScrolled
-              ? "py-2 sm:py-2.5 px-3.5 sm:px-6"
-              : "py-2.5 sm:py-3 px-4 sm:px-7"
+              ? "py-2 sm:py-2.5 pl-3.5 sm:pl-6 pr-2 sm:pr-3"
+              : "py-2.5 sm:py-3 pl-4 sm:pl-7 pr-2.5 sm:pr-3.5"
           )}
         >
           {/* Subtle Golden Amber Top Shimmer Line */}
           <div className="absolute inset-x-8 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-amber-400/80 to-transparent rounded-full pointer-events-none" />
 
-          <div className="flex items-center justify-between gap-2 sm:gap-4 flex-nowrap">
+          <div className="flex items-stretch justify-between gap-2 sm:gap-4 flex-nowrap">
             {/* 1. BRAND LOGO AREA */}
             <Link
               href="/"
               aria-label="Net Bangla Solar Energy Solutions — Home"
-              className="group flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl shrink-0"
+              className="group flex items-center self-center focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl shrink-0"
             >
-              <BrandLogo className="h-10 sm:h-12 lg:h-13.5 w-auto transition-transform duration-200 ease-out group-hover:scale-105" />
+              <BrandLogo priority loading="eager" className="h-10 sm:h-12 lg:h-13.5 w-auto transition-transform duration-200 ease-out group-hover:scale-105" />
             </Link>
 
             {/* 2. DESKTOP NAVIGATION LINKS */}
             <nav
               aria-label="Main Navigation"
-              className="hidden lg:flex items-center gap-0.5 xl:gap-1 shrink-0 flex-nowrap"
+              className="hidden lg:flex items-center self-center gap-0.5 xl:gap-1 shrink-0 flex-nowrap"
             >
               {navItems.map((item) => {
                 const isDedicatedRoute = item.route !== "/" && (pathname === item.route || pathname?.startsWith(item.route));
@@ -367,13 +367,13 @@ export function Navbar() {
             </nav>
 
             {/* 3. RIGHT ACTION CONTROLS */}
-            <div className="flex items-center gap-2 sm:gap-2.5 shrink-0 flex-nowrap">
+            <div className="flex items-stretch gap-2 shrink-0 flex-nowrap ml-1 sm:ml-2">
               {/* Radiant Solar Gold Primary CTA Button */}
               <button
                 type="button"
                 onClick={() => openQuoteModal()}
                 aria-label="Get a Free Solar Quote"
-                className="group relative inline-flex items-center gap-1.5 px-4 sm:px-4.5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 hover:from-amber-500 hover:to-amber-600 shadow-[0_3px_12px_rgba(245,158,11,0.30)] hover:shadow-[0_4px_18px_rgba(245,158,11,0.45)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 shrink-0 overflow-hidden whitespace-nowrap cursor-pointer"
+                className="group relative inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 rounded-full text-xs sm:text-sm font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 hover:from-amber-500 hover:to-amber-600 shadow-[0_2px_10px_rgba(245,158,11,0.28)] hover:shadow-[0_4px_16px_rgba(245,158,11,0.40)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 shrink-0 overflow-hidden whitespace-nowrap cursor-pointer"
               >
                 {/* Shimmer Light Sweep on Hover */}
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out pointer-events-none" />
@@ -389,7 +389,7 @@ export function Navbar() {
                 onClick={() => setMobileMenuOpen(true)}
                 aria-label="Open navigation menu"
                 aria-expanded={mobileMenuOpen}
-                className="lg:hidden w-8.5 h-8.5 rounded-full border border-slate-200/90 hover:border-amber-400 bg-slate-50 hover:bg-amber-50 text-slate-700 hover:text-amber-700 shadow-2xs transition-all duration-150 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 flex items-center justify-center shrink-0"
+                className="lg:hidden h-full aspect-square rounded-full border border-slate-200/90 hover:border-amber-400 bg-slate-50 hover:bg-amber-50 text-slate-700 hover:text-amber-700 shadow-2xs transition-all duration-150 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 flex items-center justify-center shrink-0"
               >
                 <Menu className="w-4 h-4" />
               </button>

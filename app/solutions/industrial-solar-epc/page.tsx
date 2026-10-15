@@ -94,7 +94,7 @@ export default function IndustrialSolarEPCPage() {
       badge="MEGAWATT INDUSTRIAL EPC • 100 KWP – 5 MWP"
       title="Industrial Megawatt (MWp) Solar EPC"
       subtitle="Heavy-Duty Turnkey Photovoltaic Engineering for Export Industries, Textile Mills & Manufacturing Plants"
-      heroImageUrl="/images/solar-industrial.jpg"
+      heroImageUrl="/images/solar-industrial.webp"
       description="Net Bangla Solar Energy Solutions engineers bankable, multi-megawatt rooftop and ground-mounted solar photovoltaic systems designed to drastically reduce factory operating electricity costs. We handle the entire project lifecycle in-house: 3D drone surveys & shading simulation, structural purlin engineering, 33kV substation synchronization, SREDA net-metering approvals, and 25-year performance monitoring."
       detailedPoints={[
         "Up to 70% reduction in monthly grid electricity expenditure for industrial consumers.",

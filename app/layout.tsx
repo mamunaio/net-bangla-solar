@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import { Sora, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { QuoteModalProvider } from "@/components/providers/QuoteModalProvider";
@@ -24,6 +23,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://netbanglaenergy.com"),
   title: "Net Bangla Solar Energy Solutions | Clean Energy. Brighter Bangladesh.",
   description:
     "Transforming Bangladesh with renewable solar energy. Leading turnkey Solar EPC contractor delivering SREDA-compliant industrial rooftops, floating arrays, and utility solar with maximum ROI.",
@@ -44,14 +44,25 @@ export const metadata: Metadata = {
     title: "Net Bangla Solar Energy Solutions | Clean Energy. Brighter Bangladesh.",
     description:
       "Transforming Bangladesh with renewable solar energy. Leading turnkey Solar EPC contractor delivering SREDA-compliant industrial rooftops, floating arrays, and utility solar with maximum ROI.",
-    type: "website",
+    url: "https://netbanglaenergy.com",
+    siteName: "Net Bangla Solar Energy Solutions",
     locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://netbanglaenergy.com/images/net-bangla-solar-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Net Bangla Solar Energy Solutions Corporate Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Net Bangla Solar Energy Solutions | Clean Energy. Brighter Bangladesh.",
     description:
       "Transforming Bangladesh with renewable solar energy. Leading turnkey Solar EPC contractor delivering SREDA-compliant industrial rooftops, floating arrays, and utility solar with maximum ROI.",
+    images: ["https://netbanglaenergy.com/images/net-bangla-solar-logo.png"],
   },
   icons: {
     icon: [
@@ -82,9 +93,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${sora.variable} ${jetBrainsMono.variable}`}>
       <head>
-        <Script
+        <meta property="og:image" content="https://netbanglaenergy.com/images/net-bangla-solar-logo.png" />
+        <meta property="og:image:secure_url" content="https://netbanglaenergy.com/images/net-bangla-solar-logo.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Net Bangla Solar Energy Solutions Corporate Logo" />
+        <meta name="twitter:image" content="https://netbanglaenergy.com/images/net-bangla-solar-logo.png" />
+        <meta name="twitter:image:alt" content="Net Bangla Solar Energy Solutions Corporate Logo" />
+        <script
           id="theme-initializer"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -106,10 +124,9 @@ export default function RootLayout({
             `,
           }}
         />
-        <Script
+        <script
           id="schema-structured-data"
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",

@@ -86,6 +86,8 @@ export function SolutionTemplate({
                 alt={title}
                 fill
                 priority
+                loading="eager"
+                decoding="async"
                 sizes="(max-width: 1280px) 100vw, 1200px"
                 className="object-cover"
               />

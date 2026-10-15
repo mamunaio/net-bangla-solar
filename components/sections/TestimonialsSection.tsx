@@ -143,9 +143,11 @@ export function TestimonialsSection() {
             {/* Realistic Solar Engineering Image with Compact Engineering Approach Overlay */}
             <div className="relative z-10 my-6 w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-[16/10] rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-md group">
               <Image
-                src="/images/who-we-serve-engineering.jpg"
+                src="/images/who-we-serve-engineering.webp"
                 alt="Industrial and institutional rooftop solar infrastructure engineered by Net Bangla Solar Energy Solutions"
                 fill
+                loading="lazy"
+                decoding="async"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 550px"
                 className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
               />

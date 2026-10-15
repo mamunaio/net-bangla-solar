@@ -70,7 +70,7 @@ export default function CommercialRooftopPage() {
       badge="COMMERCIAL SOLAR SYSTEMS • 50 KWP – 500 KWP"
       title="Commercial Rooftop & Corporate Solar"
       subtitle="Clean Power Generation for Corporate Headquarters, Hospitals, Universities & Commercial Complexes"
-      heroImageUrl="/images/solar-commercial.jpg"
+      heroImageUrl="/images/solar-commercial.webp"
       description="Commercial office buildings, private hospitals, academic institutions, and shopping malls consume substantial electricity during daytime peak hours. Net Bangla Solar Energy Solutions engineers customized commercial rooftop solar systems that offset heavy air conditioning and elevator loads, reduce operating costs, and enhance corporate sustainability credentials under SREDA net-metering regulations."
       detailedPoints={[
         "Elevated canopy design allows continued use of rooftop garden, cafeteria, or recreational space.",
