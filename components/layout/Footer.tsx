@@ -86,7 +86,7 @@ export function Footer() {
 
             {/* Official Description */}
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-sm">
-              Delivering high-efficiency turnkey solar EPC engineering, net metering systems, and clean energy infrastructure for residential, commercial, and industrial facilities across Bangladesh.
+              Delivering high-efficiency turnkey solar EPC engineering, net metering systems, and clean energy infrastructure for residential, commercial, agricultural and industrial facilities across Bangladesh.
             </p>
 
             {/* Corporate Heritage Badge (Hidden per user request; can be re-enabled later) */}
@@ -208,6 +208,10 @@ export function Footer() {
           {/* Copyright */}
           <p className="text-slate-600">
             &copy; {currentYear} Net Bangla Solar Energy Solutions. A Division of Net Bangla Limited. All rights reserved.
+          </p>
+          <span className="hidden sm:inline text-slate-300" aria-hidden="true">&bull;</span>
+          <p className="text-amber-700/80 font-medium">
+            Clean Energy. Brighter Bangladesh.
           </p>
 
           {/* Corporate Profile Note (Hidden per user request; can be re-enabled later) */}

@@ -33,9 +33,9 @@ const agriculturalAdvantages = [
     icon: Gauge,
   },
   {
-    title: "High-Discharge Water Output (10 HP – 100 HP)",
+    title: "High-Discharge Water Output",
     desc: "Engineered for high-volume deep tube-well irrigation across paddy fields, tea gardens, and large agricultural farms.",
-    badge: "10 HP – 100 HP",
+    badge: "01 HP – 25 HP",
     icon: Sprout,
   },
   {
@@ -51,7 +51,7 @@ const agriculturalAdvantages = [
     icon: Wind,
   },
   {
-    title: "Remote IoT Water Telemetry & Mobile Control",
+    title: "Remote IoT Water Telemetry & Mobile App Monitor",
     desc: "Automated pump scheduling, flow rate monitoring, and remote on/off operation via SMS and cloud mobile app.",
     badge: "REMOTE IOT",
     icon: TrendingUp,
@@ -59,24 +59,24 @@ const agriculturalAdvantages = [
 ];
 
 const agriculturalSpecs = [
-  { label: "Pump Range", value: "10 HP – 100 HP DC/AC" },
+  { label: "Pump Range", value: "01 HP–25 HP DC/AC" },
   { label: "Operating Mode", value: "Solar Direct + Grid" },
   { label: "Controller", value: "Smart MPPT VFD Drive" },
-  { label: "Mounting", value: "Elevated Galvanized" },
+  { label: "Mounting", value: "Elevated Galvanized Structure" },
 ];
 
 export default function AgriculturalSolarPage() {
   return (
     <SolutionTemplate
-      badge="AGRICULTURAL & AGRI-POWER • 10 HP – 100 HP"
+      badge="AGRICULTURAL & AGRI-POWER • 01 HP – 25 HP"
       title="Agricultural Solar Irrigation & Cold Storage"
       subtitle="Heavy-Duty Solar Pumping & Agro-Processing Systems for Farms & Rural Enterprises"
       heroImageUrl="/images/solar-agricultural.webp"
-      description="Agricultural productivity in Bangladesh relies heavily on continuous irrigation. Net Bangla Solar Energy Solutions provides high-capacity solar-powered water pumping systems (10 HP to 100 HP) and solar cold storage systems that replace expensive diesel generators, ensure reliable crop irrigation, and feed surplus power back to the national rural grid (BREB)."
+      description="Agricultural productivity in Bangladesh relies significantly on continuous irrigation. Net Bangla Solar Energy Solutions provides high-capacity solar-powered water pumping systems and solar cold storage systems that replace expensive diesel generators, ensure reliable agricultural irrigation, and feed surplus power back to the national rural grid (BREB)."
       detailedPoints={[
         "Saves thousands of liters of diesel fuel annually per tube-well installation.",
-        "Dual-season benefit: irrigates crops in dry season and exports grid power during monsoon.",
-        "Engineered for deep tube-wells, low-lift pumps, fish hatcheries, poultry farms, and cold storage.",
+        "Dual-season benefit: irrigates crops in the dry season and exports grid power during monsoon.",
+        "Designed for deep tube-wells, low-lift pumps, fish hatcheries, poultry farms, and cold storage.",
         "Eligible for agricultural renewable energy subsidies, low-interest refinancing, and SREDA incentives.",
       ]}
       specs={agriculturalSpecs}
@@ -84,7 +84,7 @@ export default function AgriculturalSolarPage() {
       advantagesSubtitle="Reliable water flow, zero diesel volatility, and rugged engineering designed for rural Bangladeshi conditions."
       advantagesList={agriculturalAdvantages}
       ctaTitle="Power Your Farm with Unlimited Solar Energy"
-      ctaDescription="Contact our agricultural solar engineering team for water discharge sizing, pump motor matching, and turnkey system proposals."
+      ctaDescription="Contact the agricultural solar engineering team for water discharge sizing, pump motor matching, and turnkey system proposals."
     />
   );
 }

@@ -61,22 +61,6 @@ const resources: ResourceDoc[] = [
     tags: ["GOV PORTAL", "ROOFTOP SOLAR", "POWER DIVISION"],
   },
   {
-    id: "special-incentives-gazette",
-    category: "policy",
-    categoryLabel: "Government Gazette",
-    titleBn: "রুফটপ সৌরবিদ্যুৎ স্থাপনে বিশেষ প্রণোদনা সংক্রান্ত প্রজ্ঞাপন",
-    titleEn: "Official Gazette on Special Incentives for Rooftop Solar Systems",
-    description:
-      "Statutory government notification detailing official regulatory facilitation, duty exemptions, and financial incentives for industrial, commercial, and residential rooftop solar adoption.",
-    authority: "Ministry of Power, Energy & Mineral Resources",
-    date: "Official Gazette",
-    fileSize: "93 KB",
-    pdfUrl: "/documents/rooftop-solar-incentives-gazette.pdf",
-    externalUrl: "https://powerdivision.gov.bd/pages/files/6aaa609b5e7e1c3a8aba06b3",
-    featured: true,
-    tags: ["OFFICIAL GAZETTE", "TAX & DUTY INCENTIVES", "SREDA COMPLIANT"],
-  },
-  {
     id: "renewable-energy-strategy",
     category: "strategy",
     categoryLabel: "National Strategic Roadmap",
@@ -97,7 +81,7 @@ const resources: ResourceDoc[] = [
     category: "guideline",
     categoryLabel: "SREDA Technical Directive",
     titleBn: "নেট মিটারিং নির্দেশিকা - ২০২৫",
-    titleEn: "Bangladesh Net Metering Guidelines 2025 (Official Directive)",
+    titleEn: "Bangladesh Net Metering Guidelines 2025",
     description:
       "Detailed technical regulations governing rooftop solar interconnection, maximum 70% transformer capacity limits, bi-directional smart meter rollback, and billing cycle credits.",
     authority: "SREDA & Ministry of Power",
@@ -107,6 +91,37 @@ const resources: ResourceDoc[] = [
     externalUrl: "https://powerdivision.gov.bd/pages/static-pages/694032be35ce18e1c0561a07",
     featured: true,
     tags: ["NET METERING 2025", "SREDA APPROVED", "BI-DIRECTIONAL METERING"],
+  },
+  {
+    id: "special-incentives-gazette",
+    category: "policy",
+    categoryLabel: "Government Gazette",
+    titleBn: "রুফটপ সৌরবিদ্যুৎ স্থাপনে বিশেষ প্রণোদনা সংক্রান্ত প্রজ্ঞাপন",
+    titleEn: "Official Gazette on Special Incentives for Rooftop Solar Systems",
+    description:
+      "Statutory government notification detailing official regulatory facilitation, duty exemptions, and financial incentives for industrial, commercial, and residential rooftop solar adoption.",
+    authority: "Ministry of Power, Energy & Mineral Resources",
+    date: "Official Gazette",
+    fileSize: "93 KB",
+    pdfUrl: "/documents/rooftop-solar-incentives-gazette.pdf",
+    externalUrl: "https://powerdivision.gov.bd/pages/files/6aaa609b5e7e1c3a8aba06b3",
+    featured: true,
+    tags: ["OFFICIAL GAZETTE", "TAX & DUTY INCENTIVES", "SREDA COMPLIANT"],
+  },
+  {
+    id: "sreda-rooftop-calculator",
+    category: "portal",
+    categoryLabel: "Official SREDA Calculator",
+    titleBn: "রুফটপ সৌরবিদ্যুৎ প্রাথমিক প্রাক্কলন ক্যালকুলেটর",
+    titleEn: "Calculator for Primary Estimate of Rooftop Solar",
+    description:
+      "Official government web calculator by SREDA for preliminary sizing, generation estimate, and net-metering feasibility calculation for rooftop solar systems.",
+    authority: "Sustainable and Renewable Energy Development Authority (SREDA)",
+    date: "Active SREDA Tool",
+    externalUrl: "https://solar.sreda.gov.bd/nemcalc/",
+    isPortal: true,
+    featured: true,
+    tags: ["SREDA CALCULATOR", "ROOFTOP SOLAR ESTIMATE", "NEM CALC", "GOV.BD"],
   },
 ];
 
@@ -195,6 +210,19 @@ export function KnowledgeClient() {
                 Official Bangladesh Power Division policy documents, SREDA Net Metering 2025
                 guidelines, government gazettes, and interactive system architectures.
               </p>
+
+              <div className="pt-2">
+                <a
+                  href="https://solar.sreda.gov.bd/nemcalc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/35 text-amber-950 font-bold text-xs sm:text-sm transition-all duration-200 shadow-xs hover:shadow-sm hover:scale-[1.02] cursor-pointer"
+                >
+                  <Calculator className="w-4 h-4 text-amber-600" />
+                  <span>Calculator for Primary Estimate of Rooftop Solar</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-amber-700" />
+                </a>
+              </div>
 
               {/* SEARCH & FILTER CONTROLS */}
               <div className="pt-4 max-w-2xl mx-auto space-y-4">
@@ -446,7 +474,7 @@ export function KnowledgeClient() {
                       <tr>
                         <td className="py-4 px-6 font-semibold text-white">Maximum System Sizing</td>
                         <td className="py-4 px-6 text-amber-400 font-bold">Up to 70% of Sanctioned Load / Transformer Rating</td>
-                        <td className="py-4 px-6">Applies to BPDB, DPDC, DESCO, BREB, NESCO</td>
+                        <td className="py-4 px-6">Applies to BPDB, BREB, DPDC, DESCO, WZPDCL, NESCO</td>
                       </tr>
                       <tr>
                         <td className="py-4 px-6 font-semibold text-white">Allowed Interconnection Level</td>
@@ -512,6 +540,16 @@ export function KnowledgeClient() {
                 >
                   <span>Request Engineering Consultation</span>
                 </Link>
+
+                <a
+                  href="https://solar.sreda.gov.bd/nemcalc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-900 font-bold text-sm shadow-xs transition-all duration-200 hover:-translate-y-0.5"
+                >
+                  <ExternalLink className="w-4 h-4 text-amber-700" />
+                  <span>SREDA Rooftop Calculator</span>
+                </a>
               </div>
             </div>
           </Container>

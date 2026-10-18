@@ -38,7 +38,7 @@ const mainStrategicPartners = [
     nativeName: "中国机械进出口 (集团) 有限公司",
     category: "Strategic Partner — Heavy EPC & Infrastructure",
     description:
-      "Strategic partnership in major renewable energy and IT infrastructure projects in Bangladesh, advancing technological development and energy security.",
+      "Strategic partnership in major renewable energy and IT infrastructure projects in Bangladesh, for advanced technological development and energy security.",
     logo: "/images/partners/china-national-machinery-cmc.webp",
     tag: "POWER & EPC",
   },
@@ -64,8 +64,17 @@ const mainStrategicPartners = [
   },
 ];
 
-// Industry Affiliations & Alliances (4 Distinct Entities)
+// Industry Affiliations & Alliances (5 Distinct Entities)
 const affiliationsList = [
+  {
+    id: "bsrea",
+    name: "BSREA",
+    fullName: "Bangladesh Sustainable and Renewable Energy Association",
+    identifier: "General Member",
+    role: "National Renewable Energy & Solar Industry Association",
+    logo: "/images/partners/bsrea.svg",
+    tag: "SOLAR ALLIANCE",
+  },
   {
     id: "basis",
     name: "BASIS",
@@ -165,7 +174,7 @@ export default function AboutPage() {
 
                     <div className="flex flex-col sm:flex-row sm:justify-between gap-1 pb-2.5 border-b border-slate-200/60">
                       <dt className="text-slate-500 font-medium">Corporate Set-up</dt>
-                      <dd className="font-semibold text-slate-800 text-left sm:text-right">Private Limited Company (RJSC)</dd>
+                      <dd className="font-semibold text-slate-800 text-left sm:text-right">Private Limited Company (RJSC Registered)</dd>
                     </div>
 
                     <div className="flex flex-col sm:flex-row sm:justify-between gap-1 pb-2.5 border-b border-slate-200/60">
@@ -215,30 +224,38 @@ export default function AboutPage() {
 
                 <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
                   <p>
-                    Net Bangla Limited was founded with a clear vision to contribute to a carbon-free environment and deliver clean, reliable, and sustainable electricity across Bangladesh. Through our dedicated Solar Energy Division, we provide turnkey solar power solutions tailored to specific energy requirements, site conditions, and project objectives.
+                    Net Bangla Limited, Solar Division emphasized to contribute to a carbon-free environment and deliver clean, reliable, and sustainable electricity across Bangladesh. Through our dedicated Solar Energy Division, we provide turnkey solar power solutions tailored to specific energy requirements, site conditions, and project objectives.
                   </p>
                   <p>
-                    As a competitive, SREDA-listed Solar EPC company in Bangladesh, Net Bangla Limited provides comprehensive Consulting, Engineering, Procurement, Contracting, Installation, and Commissioning services on a turnkey basis. We specialize in Commercial &amp; Industrial (C&amp;I) rooftop solar systems, Residential Hybrid and On-Grid Solar Systems, Agricultural Solar Irrigation and Direct DC Pumping, Building-Integrated Photovoltaics (BIPV), Floating Photovoltaic (FPV) solar solutions, ground-mounted solar power plants, open-access solar systems where applicable, and BESS storage solutions.
+                    As a competitive, SREDA-listed Solar EPC company in Bangladesh, Net Bangla Limited provides comprehensive Consulting, Engineering, Procurement, Contracting, Installation, and Commissioning services on a turnkey basis.
+                  </p>
+                  <p>
+                    We are specialized in Commercial &amp; Industrial (C&amp;I) rooftop solar systems, Residential Hybrid and On-Grid Solar Systems, Agricultural Solar Irrigation and Direct DC Pumping, Building-Integrated Photovoltaics (BIPV), Floating Photovoltaic (FPV) solar solutions, ground-mounted solar power plants, open-access solar systems where applicable, and BESS storage solutions.
                   </p>
                 </div>
 
                 {/* Core Competencies Checklist */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                  <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-800">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Turnkey EPC &amp; SREDA Compliance</span>
-                  </div>
-                  <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-800">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Integrated BIPV Solar Roofing</span>
-                  </div>
-                  <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-800">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Tier-1 Modules &amp; Certified Inverters</span>
-                  </div>
-                  <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-800">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Lifecycle O&amp;M &amp; Re-Commissioning</span>
+                <div className="pt-2 space-y-3">
+                  <h3 className="text-sm font-bold text-slate-900 tracking-wide">
+                    Our Technical Expertise
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Turnkey EPC &amp; SREDA Compliance</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Integrated BIPV Solar Roofing</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Tier-1 Modules &amp; Certified Inverters</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Lifecycle O&amp;M &amp; Re-Commissioning</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -274,46 +291,7 @@ export default function AboutPage() {
 
             {/* Asymmetrical 3-Column Bento Grid Layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-7 items-stretch max-w-6xl mx-auto text-left">
-              {/* BENTO CELL 1: MISSION CARD */}
-              <div className="lg:col-span-4 md:col-span-1 relative overflow-hidden rounded-3xl p-7 sm:p-8 bg-gradient-to-br from-amber-500/[0.08] via-amber-500/[0.03] to-white/95 backdrop-blur-md border border-amber-500/25 shadow-lg shadow-amber-500/5 hover:border-amber-400 hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300 flex flex-col justify-between group">
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute -top-12 -right-12 w-36 h-36 rounded-full bg-amber-400/20 blur-2xl"
-                />
-
-                <div className="space-y-5 relative z-10">
-                  <div className="flex items-center justify-between">
-                    <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-700 shadow-[0_0_24px_rgba(245,158,11,0.22)] group-hover:scale-105 transition-transform">
-                      <Target className="w-7 h-7" />
-                    </div>
-                    <span className="text-[10px] font-mono font-bold tracking-wider text-amber-800 uppercase bg-amber-100/90 border border-amber-200/80 px-2.5 py-1 rounded-full">
-                      OUR MISSION
-                    </span>
-                  </div>
-
-                  <div className="space-y-2.5">
-                    <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight group-hover:text-amber-900 transition-colors">
-                      Our Mission
-                    </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                      To understand our customers&apos; needs, design the right solutions, supply quality products, deliver end-to-end solar systems, and create long-term value through reliability, innovation, engineering excellence and trusted customer service.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="pt-6 mt-4 border-t border-amber-200/60 flex flex-wrap gap-2 relative z-10">
-                  <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-amber-900 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200/60">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                    <span>Engineering Excellence</span>
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-amber-900 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200/60">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                    <span>Trusted Service</span>
-                  </span>
-                </div>
-              </div>
-
-              {/* BENTO CELL 2: VISION CARD */}
+              {/* BENTO CELL 1: VISION CARD */}
               <div className="lg:col-span-4 md:col-span-1 relative overflow-hidden rounded-3xl p-7 sm:p-8 bg-gradient-to-br from-emerald-500/[0.08] via-emerald-500/[0.03] to-white/95 backdrop-blur-md border border-emerald-500/25 shadow-lg shadow-emerald-500/5 hover:border-emerald-400 hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 flex flex-col justify-between group">
                 <div
                   aria-hidden="true"
@@ -332,7 +310,7 @@ export default function AboutPage() {
 
                   <div className="space-y-2.5">
                     <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight group-hover:text-emerald-900 transition-colors">
-                      Our Vision
+                      Vision
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                       To deliver high-quality solar products and integrated energy solutions and lead the transition toward a sustainable renewable energy future.
@@ -352,6 +330,45 @@ export default function AboutPage() {
                 </div>
               </div>
 
+              {/* BENTO CELL 2: MISSION CARD */}
+              <div className="lg:col-span-4 md:col-span-1 relative overflow-hidden rounded-3xl p-7 sm:p-8 bg-gradient-to-br from-amber-500/[0.08] via-amber-500/[0.03] to-white/95 backdrop-blur-md border border-amber-500/25 shadow-lg shadow-amber-500/5 hover:border-amber-400 hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300 flex flex-col justify-between group">
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -top-12 -right-12 w-36 h-36 rounded-full bg-amber-400/20 blur-2xl"
+                />
+
+                <div className="space-y-5 relative z-10">
+                  <div className="flex items-center justify-between">
+                    <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-700 shadow-[0_0_24px_rgba(245,158,11,0.22)] group-hover:scale-105 transition-transform">
+                      <Target className="w-7 h-7" />
+                    </div>
+                    <span className="text-[10px] font-mono font-bold tracking-wider text-amber-800 uppercase bg-amber-100/90 border border-amber-200/80 px-2.5 py-1 rounded-full">
+                      OUR MISSION
+                    </span>
+                  </div>
+
+                  <div className="space-y-2.5">
+                    <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight group-hover:text-amber-900 transition-colors">
+                      Mission
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                      To understand our customers&apos; needs, design the right solutions, supply quality products, deliver end-to-end solar systems, and create long-term value through reliability, innovation, engineering excellence and trusted customer service.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-6 mt-4 border-t border-amber-200/60 flex flex-wrap gap-2 relative z-10">
+                  <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-amber-900 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200/60">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                    <span>Engineering Excellence</span>
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-amber-900 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200/60">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                    <span>Trusted Service</span>
+                  </span>
+                </div>
+              </div>
+
               {/* BENTO CELL 3: OUR CORE COMPETENCY CARD */}
               <div className="lg:col-span-4 md:col-span-2 relative overflow-hidden rounded-3xl p-7 sm:p-8 bg-gradient-to-br from-slate-900 to-slate-950 text-white border border-slate-800 shadow-xl flex flex-col justify-between group">
                 <div
@@ -365,19 +382,19 @@ export default function AboutPage() {
                       <Cpu className="w-7 h-7" />
                     </div>
                     <span className="text-[10px] font-mono font-bold tracking-wider text-amber-400 uppercase bg-white/10 px-2.5 py-1 rounded-full border border-white/15">
-                      CORE CAPABILITIES
+                      CORE COMPETENCY
                     </span>
                   </div>
 
                   <div className="space-y-2">
                     <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
-                      Our Core Competency
+                      Core Competency
                     </h3>
                     <p className="text-xs sm:text-[13px] text-slate-300 leading-relaxed">
                       Our core competencies cover the broad lifecycle of solar and renewable energy projects&mdash;from consultation, feasibility assessment, system design and engineering to procurement, installation, commissioning, and long-term operation and maintenance.
                     </p>
                     <p className="text-xs sm:text-[13px] text-amber-300/90 leading-relaxed font-medium">
-                      We specialize in high-efficiency solar PV systems, turnkey EPC solutions, grid-connected and net-metered systems, commercial and industrial rooftop solar, Building-Integrated Photovoltaics (BIPV), solar energy storage, and customized renewable energy infrastructure.
+                      We are specialized in high-efficiency solar PV systems, turnkey EPC solutions, grid-connected and net-metered systems, commercial and industrial rooftop solar, Building-Integrated Photovoltaics (BIPV), solar energy storage, and customized renewable energy infrastructure.
                     </p>
                   </div>
                 </div>
@@ -497,8 +514,8 @@ export default function AboutPage() {
             </div> 
             */}
 
-            {/* 4 Entities Grid: BASIS, BACCO, ZJHT High-Tech, Serimag */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto text-left">
+            {/* 5 Entities Grid: BSREA, BASIS, BACCO, ZJHT High-Tech, Serimag */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-6 max-w-7xl mx-auto text-left">
               {affiliationsList.map((item) => (
                 <div
                   key={item.id}

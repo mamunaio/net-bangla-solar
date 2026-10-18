@@ -66,7 +66,7 @@ export const mainStrategicPartners = [
     nativeName: "中国机械进出口 (集团) 有限公司",
     category: "Strategic Partner — Heavy EPC & Infrastructure",
     description:
-      "Strategic partnership in major renewable energy and IT infrastructure projects in Bangladesh, advancing technological development and energy security.",
+      "Strategic partnership in major renewable energy and IT infrastructure projects in Bangladesh, for advanced technological development and energy security.",
     logo: "/images/partners/china-national-machinery-cmc.webp",
     tag: "POWER & EPC",
   },
@@ -134,6 +134,19 @@ export const partnersList: PartnerEntity[] = [
     highlights: ["Real-time Cloud Messaging", "Enterprise SCADA Gateways", "Global Connectivity"],
   },
   {
+    id: "bsrea",
+    name: "BSREA",
+    nativeName: "Bangladesh Sustainable and Renewable Energy Association",
+    category: "associations",
+    categoryLabel: "National Solar & Renewable Energy Apex Association",
+    logo: "/images/partners/bsrea.svg",
+    description:
+      "National apex association for sustainable and renewable energy in Bangladesh. Net Bangla Limited is an active General Member.",
+    tag: "SOLAR ALLIANCE",
+    roleOrId: "GENERAL MEMBER",
+    highlights: ["General Member", "National Renewable Body", "Solar Industry Apex"],
+  },
+  {
     id: "basis",
     name: "BASIS",
     nativeName: "Bangladesh Association of Software & Information Services",
@@ -179,7 +192,7 @@ export const clientsList: ClientEntity[] = [
   },
   {
     id: "navy-dockyard",
-    name: "Dockyard & Engineering Works Ltd (DEW)",
+    name: "Dockyard & Engineering Works Ltd. (DEW)",
     bnName: "ডকইয়ার্ড অ্যান্ড ইঞ্জিনিয়ারিং ওয়ার্কস (বাংলাদেশ নৌবাহিনী)",
     category: "defense-armed",
     categoryLabel: "Bangladesh Navy Marine Enterprise",
@@ -205,7 +218,7 @@ export const clientsList: ClientEntity[] = [
   },
   {
     id: "bmtf",
-    name: "Bangladesh Machine Tools Factory Ltd (BMTF)",
+    name: "Bangladesh Machine Tools Factory Ltd. (BMTF)",
     bnName: "বাংলাদেশ মেশিন টুলস ফ্যাক্টরী লিঃ (সেনাবাহিনী পরিচালিত)",
     category: "defense-armed",
     categoryLabel: "Army-Operated Precision Manufacturing",
@@ -218,7 +231,7 @@ export const clientsList: ClientEntity[] = [
   },
   {
     id: "khulna-shipyard",
-    name: "Khulna Shipyard Ltd (KSY)",
+    name: "Khulna Shipyard Ltd. (KSY)",
     bnName: "খুলনা শিপইয়ার্ড লিমিটেড (বাংলাদেশ নৌবাহিনী)",
     category: "defense-armed",
     categoryLabel: "Bangladesh Navy Commercial & Warship Builder",
@@ -300,7 +313,7 @@ export const clientsList: ClientEntity[] = [
   },
   {
     id: "bsccl",
-    name: "BSCCL (Bangladesh Submarine Cables PLC)",
+    name: "Bangladesh Submarine Cables PLC (BSCCL)",
     bnName: "বাংলাদেশ সাবমেরিন ক্যাবলস পিএলসি",
     category: "telecom-energy",
     categoryLabel: "International Submarine Cable Operator",
@@ -543,7 +556,7 @@ export function PartnersClientsClient() {
                     </div>
                   </div>
                   <div className="relative z-10 mt-2.5">
-                    <div className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-900 transition-colors leading-snug">Turnkey Delivery</div>
+                    <div className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-900 transition-colors leading-snug">Turnkey Basis Delivery</div>
                     <div className="text-[11px] text-slate-500 font-medium mt-0.5 truncate">100% SREDA Compliant</div>
                   </div>
                 </div>
@@ -562,7 +575,7 @@ export function PartnersClientsClient() {
                   </div>
                   <div className="relative z-10 mt-2.5 min-w-0">
                     <div className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-900 transition-colors leading-snug truncate">Tier-1 Hardware</div>
-                    <div className="text-[11px] text-slate-500 font-medium mt-0.5 truncate">25-Yr Performance Standard</div>
+                    <div className="text-[11px] text-slate-500 font-medium mt-0.5 truncate">25-Year Performance Standard</div>
                   </div>
                 </div>
               </div>
@@ -1101,7 +1114,7 @@ export function PartnersClientsClient() {
                         <ArrowUpRight className="w-4 h-4 text-amber-600 opacity-0 -translate-x-1.5 translate-y-1.5 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 shrink-0" />
                       </div>
                       <p className="text-xs sm:text-[13.5px] text-slate-600 group-hover:text-slate-700 leading-relaxed">
-                        Full compliance with BPDB, BREB, DPDC, DESCO, and NESCO net-metering regulations, backed by institutional defense trust (Army, Navy Dockyard, MES, BMTF).
+                        Full compliance with BPDB, BREB, DPDC, DESCO, WZPDCL, and NESCO net-metering regulations, backed by institutional defense trust (Army, Navy Dockyard, MES, BMTF).
                       </p>
                     </div>
                   </div>
@@ -1182,7 +1195,7 @@ export function PartnersClientsClient() {
               </h2>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Connect with our experienced solar engineers to receive an on-site structural audit, 3D shading simulation, single-line diagram, and turnkey financial proposal.
+                Connect with the Technical team for an on-site structural audit, 3D shading simulation, single-line diagram, and turnkey financial proposal.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center justify-center gap-4">

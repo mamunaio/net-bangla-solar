@@ -42,6 +42,7 @@ interface ProjectItem {
   inverters: string;
   description: string;
   highlights: string[];
+  features?: string;
 }
 
 const portfolioProjects: ProjectItem[] = [
@@ -53,34 +54,36 @@ const portfolioProjects: ProjectItem[] = [
     categoryLabel: "Commercial EPC",
     capacity: "127.4 kWp DC / 100 kW AC",
     location: "Nayarhat, Ashulia, Savar, Dhaka",
-    annualYield: "185 MWh / Year",
-    annualSavings: "৳ 19.5 Lakh / Year",
+    annualYield: "185 MWh/year",
+    annualSavings: "৳19.5 lakh/year",
     image: "/images/solar-commercial.webp",
     panels: "Tier-1 High-Efficiency On-Grid PV Modules",
     inverters: "100 kW Smart Grid-Tie Inverter with Web Telemetry",
     description: "Turnkey EPC supply, installation, testing and commissioning of 127.4 kWp DC / 100 kW AC rooftop on-grid solar photovoltaic system with grid-tie inverter, hot-dip galvanized mounting structure, lightning arrestor, surge protection junction boxes, and full accessories.",
+    features: "Hot-dip galvanized mounting structure, grid-tie inverter, lightning arrestor, surge protection, and net metering.",
     highlights: [
-      "127.4 kWp DC / 100 kW AC On-Grid Net-Metered",
-      "Hot-Dip Galvanized Heavy Mounting Structure",
-      "Integrated Lightning Arrestor & Grounding System",
+      "Hot-dip galvanized mounting structure",
+      "Grid-tie inverter & net metering",
+      "Lightning arrestor & surge protection",
       "Turnkey Testing, Commissioning & Handover",
     ],
   },
   {
     id: "gazipur-textile-mwp",
     title: "1.2 MWp Industrial Rooftop Solar Power Plant",
-    client: "Export Oriented Textile Mill",
+    client: "Export-oriented textile mill",
     category: "industrial",
     categoryLabel: "Industrial EPC",
     capacity: "1,200 kWp (1.2 MWp)",
     location: "Kashimpur, Gazipur",
-    annualYield: "1,740 MWh / Year",
-    annualSavings: "৳ 1.85 Crore / Year",
+    annualYield: "1,740 MWh/year",
+    annualSavings: "৳1.85 crore/year",
     image: "/images/about-solar-facility.webp",
     panels: "Tier-1 580W N-Type Bifacial Monocrystalline",
     inverters: "100 kW European On-Grid Smart Inverters",
     description: "Turnkey rooftop installation on tin shed structure with zero-penetration standing seam clamps, integrated with 33kV factory substation and net-metering export.",
-    highlights: ["SREDA Approved Net-Metering", "Zero Production Downtime Installation", "3.1 Year Estimated Payback", "24/7 SCADA Live Telemetry"],
+    features: "Standing seam clamps, 33kV factory substation, and net-metering export.",
+    highlights: ["Standing seam clamps", "33kV factory substation", "Net-metering export", "24/7 SCADA Live Telemetry"],
   },
   {
     id: "chattogram-port-facility",
@@ -90,13 +93,14 @@ const portfolioProjects: ProjectItem[] = [
     categoryLabel: "Commercial Solar",
     capacity: "750 kWp",
     location: "Patenga, Chattogram",
-    annualYield: "1,085 MWh / Year",
-    annualSavings: "৳ 1.15 Crore / Year",
+    annualYield: "1,085 MWh/year",
+    annualSavings: "৳1.15 crore/year",
     image: "/images/solar-powered-campus-at-sunset.webp",
     panels: "Tier-1 550W High-Efficiency Monocrystalline",
     inverters: "European On-Grid Inverters with IP66 Marine Coating",
     description: "Designed to withstand coastal saline air and high wind loads up to 180 km/h, significantly slashing electricity bills for heavy refrigeration compressors.",
-    highlights: ["Anti-Corrosion C5 Marine Grade Mounting", "BPDB Net-Metering Connected", "3.4 Year Payback", "Active Power Factor Correction"],
+    features: "Coastal corrosion protection, wind-resistant mounting, and BPDB net metering.",
+    highlights: ["Coastal corrosion protection", "Wind-resistant mounting", "BPDB net metering", "Anti-Corrosion C5 Marine Grade Mounting"],
   },
   {
     id: "dhaka-corporate-hq",
@@ -106,155 +110,24 @@ const portfolioProjects: ProjectItem[] = [
     categoryLabel: "Commercial Solar",
     capacity: "350 kWp",
     location: "Tejgaon Commercial Area, Dhaka",
-    annualYield: "510 MWh / Year",
-    annualSavings: "৳ 56 Lakh / Year",
+    annualYield: "510 MWh/year",
+    annualSavings: "৳56 lakh/year",
     image: "/images/power-solaroof.webp",
     panels: "Tier-1 All-Black Monocrystalline Modules",
     inverters: "Smart Grid Inverters with Zero Export Control",
     description: "Architecturally integrated solar system engineered on concrete RCC roof with elevated steel walkway, powering central HVAC and server rooms.",
-    highlights: ["DESCO Bi-directional Net Meter", "Ballasted Concrete Structure", "Custom Architectural Canopy", "Real-Time Cloud Dashboard"],
-  },
-  {
-    id: "defense-bmtf-engineering",
-    title: "500 kWp Engineering Complex High-Voltage Solar Plant",
-    client: "National Defense Engineering Complex",
-    category: "defense",
-    categoryLabel: "Government & Defense",
-    capacity: "500 kWp",
-    location: "Gazipur / Dhaka Division",
-    annualYield: "725 MWh / Year",
-    annualSavings: "৳ 78 Lakh / Year",
-    image: "/images/golden-hour-industrial-solar-rooftop.webp",
-    panels: "Tier-1 High-Yield Monocrystalline Modules",
-    inverters: "Industrial Grade Inverters with Rapid Shutdown",
-    description: "High-security turnkey solar deployment engineered to rigorous military and national engineering safety protocols with reinforced cable routing.",
-    highlights: ["Military Grade Electrical Enclosures", "Lightning & Surge Protection (Class I+II)", "High Reliability Grid Tie", "Full Lifecycle O&M Contract"],
-  },
-  {
-    id: "savar-apparel-campus",
-    title: "850 kWp Green Factory LEED Certified Solar Roof",
-    client: "LEED Platinum Garments Factory",
-    category: "industrial",
-    categoryLabel: "Industrial EPC",
-    capacity: "850 kWp",
-    location: "EPZ Area, Savar",
-    annualYield: "1,230 MWh / Year",
-    annualSavings: "৳ 1.32 Crore / Year",
-    image: "/images/sunset-solar-industrial-campus.webp",
-    panels: "Tier-1 575W Bifacial Solar Glass-Glass",
-    inverters: "Distributed Multi-MPPT Smart Inverters",
-    description: "Installed to achieve renewable energy compliance for international buyer audits (H&M, Inditex, Walmart), cutting factory carbon footprint by 880 tons CO2 annually.",
-    highlights: ["LEED Renewable Energy Credits", "Certified Fire-Safe Architecture", "BREB High-Tension Net Metering", "Dust Repellent Coated Glass"],
-  },
-  {
-    id: "gulshan-luxury-residence",
-    title: "30 kWp Hybrid Smart Luxury Villa Solar System",
-    client: "Private Residential Estate",
-    category: "residential",
-    categoryLabel: "Residential Solar",
-    capacity: "30 kWp + 30 kWh Battery Storage",
-    location: "Gulshan-2, Dhaka",
-    annualYield: "43.5 MWh / Year",
-    annualSavings: "৳ 5.2 Lakh / Year",
-    image: "/images/solar-residential-villa.webp",
-    panels: "Tier-1 550W Aesthetic All-Black Panels",
-    inverters: "Smart Hybrid Inverter with Lithium LiFePO4 ESS",
-    description: "Seamless on-grid solar system with instant microsecond battery backup, powering central air conditioning, elevator, lighting, and EV charger without generator noise.",
-    highlights: ["Zero-Delay UPS Backup", "Lithium Battery Energy Storage", "DPDC Net-Metering Connected", "Silent Eco Operation"],
-  },
-  {
-    id: "bogra-agricultural-pump",
-    title: "150 kWp Solar Irrigation & Agro-Processing Plant",
-    client: "Agricultural Seed Processing & Deep Tubewell Facility",
-    category: "agricultural",
-    categoryLabel: "Agricultural Solar",
-    capacity: "150 kWp",
-    location: "Sherpur, Bogura",
-    annualYield: "220 MWh / Year",
-    annualSavings: "৳ 24 Lakh / Year",
-    image: "/images/solar-agricultural.webp",
-    panels: "Tier-1 Monocrystalline Solar Array",
-    inverters: "Solar Pump VFD & Dual On-Grid Synchronizer",
-    description: "Dual-mode solar installation powering high-capacity deep irrigation pumps during the day and feeding surplus energy back to the rural grid (BREB).",
-    highlights: ["VFD Soft-Start Pump Controller", "Replaces 12,000 Liters of Diesel/Yr", "Automated Water Output Telemetry", "Heavy Duty Ground Mount"],
-  },
-  {
-    id: "lake-reservoir-floating-fpv",
-    title: "500 kWp Floating Photovoltaic (FPV) System",
-    client: "Industrial Water Reservoir & Fishery Project",
-    category: "floating",
-    categoryLabel: "Floating Solar (FPV)",
-    capacity: "500 kWp",
-    location: "Chattogram / Kaptai Water Basin",
-    annualYield: "780 MWh / Year",
-    annualSavings: "৳ 82 Lakh / Year",
-    image: "/images/solar-floating.webp",
-    panels: "Tier-1 N-Type Dual-Glass Bifacial PV Modules",
-    inverters: "Water-Cooled IP68 Marine Inverter Station",
-    description: "Turnkey engineering of a 500 kWp floating solar photovoltaic system anchored on an industrial reservoir. Provides high-yield electricity while reducing water evaporation and powering facility operations.",
-    highlights: ["Natural Water Cooling (+12% Yield)", "Zero Land Footprint", "33% Evaporation Reduction", "UV-Stabilized HDPE Floats"],
-  },
-  {
-    id: "sirajganj-utility-park",
-    title: "50 MWp Utility-Scale Ground-Mounted Solar Park",
-    client: "National Grid Power Producer",
-    category: "industrial",
-    categoryLabel: "Utility Solar Park",
-    capacity: "50 MWp",
-    location: "Sirajganj / Riverbank Complex",
-    annualYield: "73,000 MWh / Year",
-    annualSavings: "৳ 74 Crore / Year",
-    image: "/images/solar-utility-ground.webp",
-    panels: "Tier-1 600W+ High Power Dual-Glass Modules",
-    inverters: "Central Inverter Station with 132kV Step-Up Substation",
-    description: "High-capacity utility solar power plant synchronized directly with national grid substation, delivering clean megawatt-scale power to northern industrial regions.",
-    highlights: ["132kV National Grid Synchronization", "Single-Axis Solar Tracking System", "SCADA Fiber-Optic Telemetry", "Full PPA Long-Term Concession"],
-  },
-  {
-    id: "beximco-industrial-textile",
-    title: "2.5 MWp Mega Industrial Spinning & Weaving Solar Array",
-    client: "Export Apparel & Composite Textile Campus",
-    category: "industrial",
-    categoryLabel: "Industrial EPC",
-    capacity: "2,500 kWp (2.5 MWp)",
-    location: "Narayanganj Industrial Zone",
-    annualYield: "3,620 MWh / Year",
-    annualSavings: "৳ 3.85 Crore / Year",
-    image: "/images/solar-industrial.webp",
-    panels: "Tier-1 High-Efficiency TopCon Bifacial Modules",
-    inverters: "High-Power 250 kW String Inverters with Smart Anti-PID",
-    description: "Massive industrial rooftop deployment across 4 adjacent factory sheds, delivering daytime baseload offset for spinning looms and reducing heavy diesel fuel consumption.",
-    highlights: ["2.5 MWp Zero-Downtime Installation", "SREDA Net-Metering Interconnection", "Integrated Thermal IR Drone Audits", "3.0 Year Financial Payback"],
-  },
-  {
-    id: "dhaka-bipv-glass-commercial",
-    title: "180 kWp BIPV Architectural Glass Solar Canopy",
-    client: "Commercial Center & Corporate Hub",
-    category: "commercial",
-    categoryLabel: "Commercial BIPV",
-    capacity: "180 kWp",
-    location: "Banani / Gulshan Hub, Dhaka",
-    annualYield: "260 MWh / Year",
-    annualSavings: "৳ 28.5 Lakh / Year",
-    image: "/images/solar-commercial-campus.webp",
-    panels: "Semi-Transparent Double-Glazed BIPV Solar Glass",
-    inverters: "Architectural Smart Inverters with Micro-Inverter MPPT",
-    description: "High-end building-integrated solar glass atrium and rooftop pergola, combining natural daylighting and weatherproofing with clean solar electricity.",
-    highlights: ["100% Water-Tight Structural Seal", "Solar Heat Gain Reduction (SHGC 0.28)", "Custom Architectural Framing", "High Visibility Corporate Sustainability"],
+    features: "RCC roof, elevated steel walkway, central HVAC and server-room loads, and DESCO bi-directional meter.",
+    highlights: ["RCC roof, elevated steel walkway", "Central HVAC & server-room loads", "DESCO bi-directional meter", "Custom Architectural Canopy"],
   },
 ];
 
 const categories = [
   { id: "all", label: "All Projects" },
-  { id: "industrial", label: "Industrial MWp" },
-  { id: "commercial", label: "Commercial Buildings" },
-  { id: "defense", label: "Government & Defense" },
-  { id: "residential", label: "Residential Villas" },
-  { id: "agricultural", label: "Agricultural & Agri-Pumps" },
-  { id: "floating", label: "Floating (FPV)" },
+  { id: "industrial", label: "Industrial EPC" },
+  { id: "commercial", label: "Commercial Solar" },
 ];
 
-const PROJECTS_PER_PAGE = 6;
+const PROJECTS_PER_PAGE = 4;
 
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -310,8 +183,7 @@ export default function PortfolioPage() {
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-                Explore our turnkey solar rooftop installations across Bangladesh.
-                From multi-megawatt industrial textile mills and port logistics to corporate headquarters and luxury residences.
+                Explore turnkey solar rooftop installations across Bangladesh, from multi-megawatt industrial textile mills and port logistics to corporate headquarters and residences.
               </p>
 
               {/* Top Quick Stats */}
@@ -325,11 +197,11 @@ export default function PortfolioPage() {
                   <div className="text-xs font-semibold text-slate-600 mt-0.5">SREDA Approval Rate</div>
                 </div>
                 <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-center">
-                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-sans">3.2 Yrs</div>
-                  <div className="text-xs font-semibold text-slate-600 mt-0.5">Avg. Capex Payback</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-sans">3.2 Years</div>
+                  <div className="text-xs font-semibold text-slate-600 mt-0.5">Average CAPEX Payback</div>
                 </div>
                 <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-center">
-                  <div className="text-2xl sm:text-3xl font-extrabold text-sky-600 font-sans">25 Yrs</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-sky-600 font-sans">25 Years</div>
                   <div className="text-xs font-semibold text-slate-600 mt-0.5">Linear Power Warranty</div>
                 </div>
               </div>
@@ -358,9 +230,15 @@ export default function PortfolioPage() {
                 </button>
               ))}
             </div>
+ 
+            {/* Project Count Indicator */}
+            <div className="flex items-center justify-between text-xs font-semibold text-slate-500 mb-6 px-1">
+              <span>Showing {filteredProjects.length} Flagship Projects</span>
+              {totalPages > 1 && <span>Page {validCurrentPage} of {totalPages}</span>}
+            </div>
 
-            {/* Projects Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+            {/* Projects Grid (2x2 Balanced Layout) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
               {paginatedProjects.map((project) => (
                 <div
                   key={project.id}
@@ -378,7 +256,7 @@ export default function PortfolioPage() {
                       loading="lazy"
                       decoding="async"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
 
@@ -425,6 +303,12 @@ export default function PortfolioPage() {
                         <span className="text-slate-500">Estimated Savings:</span>
                         <span className="font-extrabold text-emerald-700">{project.annualSavings}</span>
                       </div>
+                      {project.features && (
+                        <div className="pt-2 border-t border-slate-200/80 text-[11px] text-slate-600 leading-relaxed">
+                          <span className="font-semibold text-slate-700">Features: </span>
+                          <span>{project.features}</span>
+                        </div>
+                      )}
                     </div>
 
                     {/* Engineering Highlights */}
@@ -552,8 +436,7 @@ export default function PortfolioPage() {
               </h2>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Contact our engineering office to receive a custom 3D solar layout,
-                financial cash flow analysis, and turnkey EPC quotation.
+                Contact the Technical office for a custom 3D solar layout, financial cash-flow analysis, and turnkey EPC quotation.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center justify-center gap-4">

@@ -45,7 +45,7 @@ export const clientsData: ClientItem[] = [
   },
   {
     id: "navy-dockyard",
-    name: "Dockyard & Engineering Works Ltd",
+    name: "Dockyard & Engineering Works Ltd. (DEW)",
     bnName: "ডকইয়ার্ড অ্যান্ড ইঞ্জিনিয়ারিং ওয়ার্কস (বাংলাদেশ নৌবাহিনী)",
     category: "defense-public",
     categoryLabel: "Defense & Public",
@@ -65,7 +65,7 @@ export const clientsData: ClientItem[] = [
   },
   {
     id: "bmtf",
-    name: "Bangladesh Machine Tools Factory Ltd (BMTF)",
+    name: "Bangladesh Machine Tools Factory Ltd. (BMTF)",
     bnName: "বাংলাদেশ মেশিন টুলস ফ্যাক্টরী লিঃ",
     category: "defense-public",
     categoryLabel: "Defense & Public",
@@ -75,7 +75,7 @@ export const clientsData: ClientItem[] = [
   },
   {
     id: "khulna-shipyard",
-    name: "Khulna Shipyard Ltd (KSY)",
+    name: "Khulna Shipyard Ltd. (KSY)",
     bnName: "খুলনা শিপইয়ার্ড লিমিটেড (বাংলাদেশ নৌবাহিনী)",
     category: "defense-public",
     categoryLabel: "Defense & Public",
@@ -135,7 +135,7 @@ export const clientsData: ClientItem[] = [
   },
   {
     id: "bsccl",
-    name: "BSCCL",
+    name: "Bangladesh Submarine Cables PLC (BSCCL)",
     bnName: "বাংলাদেশ সাবমেরিন ক্যাবলস পিএলসি",
     category: "telecom-energy",
     categoryLabel: "Telecom & Energy",
