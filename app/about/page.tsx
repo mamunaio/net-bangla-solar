@@ -72,7 +72,7 @@ const affiliationsList = [
     fullName: "Bangladesh Sustainable and Renewable Energy Association",
     identifier: "General Member (Applied For)",
     role: "National Renewable Energy & Solar Industry Association",
-    logo: "/images/partners/bsrea.svg",
+    logo: "/images/partners/bsrea.webp",
     tag: "APPLIED FOR",
   },
   {
