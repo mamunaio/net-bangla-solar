@@ -135,16 +135,16 @@ export const partnersList: PartnerEntity[] = [
   },
   {
     id: "bsrea",
-    name: "BSREA",
+    name: "BSREA (Applied For)",
     nativeName: "Bangladesh Sustainable and Renewable Energy Association",
     category: "associations",
     categoryLabel: "National Solar & Renewable Energy Apex Association",
     logo: "/images/partners/bsrea.svg",
     description:
-      "National apex association for sustainable and renewable energy in Bangladesh. Net Bangla Limited is an active General Member.",
-    tag: "SOLAR ALLIANCE",
-    roleOrId: "GENERAL MEMBER",
-    highlights: ["General Member", "National Renewable Body", "Solar Industry Apex"],
+      "National apex association for sustainable and renewable energy in Bangladesh. Net Bangla Limited has applied for General Membership (Application in progress).",
+    tag: "APPLIED FOR",
+    roleOrId: "APPLIED FOR",
+    highlights: ["Membership in Progress", "National Renewable Body", "Solar Industry Apex"],
   },
   {
     id: "basis",

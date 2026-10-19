@@ -68,12 +68,12 @@ const mainStrategicPartners = [
 const affiliationsList = [
   {
     id: "bsrea",
-    name: "BSREA",
+    name: "BSREA (Applied For)",
     fullName: "Bangladesh Sustainable and Renewable Energy Association",
-    identifier: "General Member",
+    identifier: "General Member (Applied For)",
     role: "National Renewable Energy & Solar Industry Association",
     logo: "/images/partners/bsrea.svg",
-    tag: "SOLAR ALLIANCE",
+    tag: "APPLIED FOR",
   },
   {
     id: "basis",
