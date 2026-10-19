@@ -12,7 +12,10 @@ export default function ErrorBoundary({
   reset: () => void;
 }) {
   useEffect(() => {
-    // If it's a chunk load error or connection drop from a new deployment, auto-reload once
+    // Log unhandled error details for diagnostics
+    console.error("ErrorBoundary caught:", error);
+
+    // If it's a chunk load error or connection drop from a new deployment, auto-reload once safely
     const msg = error?.message || "";
     if (
       msg.includes("Loading chunk") ||
@@ -20,7 +23,15 @@ export default function ErrorBoundary({
       msg.includes("Failed to fetch") ||
       msg.includes("Connection closed")
     ) {
-      window.location.reload();
+      try {
+        const attempted = sessionStorage.getItem("deployment_reload_attempt");
+        if (!attempted) {
+          sessionStorage.setItem("deployment_reload_attempt", "1");
+          window.location.reload();
+        }
+      } catch {
+        window.location.reload();
+      }
     }
   }, [error]);
 

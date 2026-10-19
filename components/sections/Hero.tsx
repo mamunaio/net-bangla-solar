@@ -45,18 +45,19 @@ export function Hero() {
     ).matches;
 
     const ctx = gsap.context(() => {
+      const activeTargets = [
+        eyebrowRef.current,
+        headlineRef.current,
+        paragraphRef.current,
+        ctasRef.current,
+        hudRef.current,
+        floatingCardRef.current,
+      ].filter((el): el is NonNullable<typeof el> => Boolean(el));
+
       if (isBot || prefersReducedMotion) {
-        gsap.set(
-          [
-            eyebrowRef.current,
-            headlineRef.current,
-            paragraphRef.current,
-            ctasRef.current,
-            hudRef.current,
-            floatingCardRef.current,
-          ],
-          { opacity: 1, y: 0, scale: 1 }
-        );
+        if (activeTargets.length > 0) {
+          gsap.set(activeTargets, { opacity: 1, y: 0, scale: 1 });
+        }
         return;
       }
 
@@ -131,7 +132,7 @@ export function Hero() {
           "-=0.4"
         );
       }
-    }, containerRef);
+    }, containerRef.current || undefined);
 
     return () => ctx.revert();
   }, []);

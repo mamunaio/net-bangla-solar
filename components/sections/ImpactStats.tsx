@@ -64,25 +64,29 @@ export function ImpactStats() {
 
     const ctx = gsap.context(() => {
       if (prefersReducedMotion) {
-        gsap.set(stripCardRef.current, {
-          opacity: 1,
-          y: 0,
-        });
+        if (stripCardRef.current) {
+          gsap.set(stripCardRef.current, {
+            opacity: 1,
+            y: 0,
+          });
+        }
         return;
       }
 
-      gsap.from(stripCardRef.current, {
-        opacity: 0,
-        y: 24,
-        duration: 0.75,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: stripCardRef.current,
-          start: "top 88%",
-          once: true,
-        },
-      });
-    }, sectionRef);
+      if (stripCardRef.current) {
+        gsap.from(stripCardRef.current, {
+          opacity: 0,
+          y: 24,
+          duration: 0.75,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: stripCardRef.current,
+            start: "top 88%",
+            once: true,
+          },
+        });
+      }
+    }, sectionRef.current || undefined);
 
     return () => ctx.revert();
   }, []);

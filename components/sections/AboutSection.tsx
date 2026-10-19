@@ -19,11 +19,16 @@ export function AboutSection() {
     ).matches;
 
     const ctx = gsap.context(() => {
+      const activeTargets = [
+        introRef.current,
+        imageWrapperRef.current,
+        leadershipRef.current,
+      ].filter((el): el is NonNullable<typeof el> => Boolean(el));
+
       if (prefersReducedMotion) {
-        gsap.set(
-          [introRef.current, imageWrapperRef.current, leadershipRef.current],
-          { opacity: 1, y: 0, scale: 1 }
-        );
+        if (activeTargets.length > 0) {
+          gsap.set(activeTargets, { opacity: 1, y: 0, scale: 1 });
+        }
         return;
       }
 
@@ -67,7 +72,7 @@ export function AboutSection() {
           "-=0.3"
         );
       }
-    }, sectionRef);
+    }, sectionRef.current || undefined);
 
     return () => ctx.revert();
   }, []);
