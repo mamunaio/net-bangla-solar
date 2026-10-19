@@ -68,9 +68,10 @@ const mainStrategicPartners = [
 const affiliationsList = [
   {
     id: "bsrea",
-    name: "BSREA (Applied For)",
+    name: "BSREA",
+    statusBadge: "Applied For",
     fullName: "Bangladesh Sustainable and Renewable Energy Association",
-    identifier: "General Member (Applied For)",
+    identifier: "Membership in Progress",
     role: "National Renewable Energy & Solar Industry Association",
     logo: "/images/partners/bsrea.webp",
     tag: "APPLIED FOR",
@@ -78,6 +79,7 @@ const affiliationsList = [
   {
     id: "basis",
     name: "BASIS",
+    statusBadge: null,
     fullName: "Bangladesh Association of Software & Information Services",
     identifier: "General Member (A-405)",
     role: "National Apex ICT & Digital Energy Trade Body",
@@ -87,6 +89,7 @@ const affiliationsList = [
   {
     id: "bacco",
     name: "BACCO",
+    statusBadge: null,
     fullName: "Bangladesh Association of Contact Center & Outsourcing",
     identifier: "Member ID: 2018.0082.1000.0062",
     role: "National Contact Center & Infrastructure Association",
@@ -96,6 +99,7 @@ const affiliationsList = [
   {
     id: "zjht",
     name: "ZJHT High-Tech",
+    statusBadge: null,
     fullName: "Zhejiang High-Tech Smart Energy Solutions",
     identifier: "Smart Energy Hardware Alliance",
     role: "BOS Instrumentation, Smart Monitoring & PV Balance-of-System",
@@ -105,6 +109,7 @@ const affiliationsList = [
   {
     id: "serimag",
     name: "Serimag",
+    statusBadge: null,
     fullName: "Serimag Cognitive AI & Process Automation",
     identifier: "Enterprise Tech Partner (Spain/Europe)",
     role: "Cognitive AI, SCADA Analytics & Document Intelligence",
@@ -515,72 +520,85 @@ export default function AboutPage() {
             */}
 
             {/* 5 Entities Grid: BSREA, BASIS, BACCO, ZJHT High-Tech, Serimag */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-6 max-w-7xl mx-auto text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5 max-w-7xl mx-auto text-left">
               {affiliationsList.map((item) => (
                 <div
                   key={item.id}
-                  className="group relative rounded-3xl p-6 sm:p-7 bg-white border border-slate-200/90 hover:border-amber-400 transition-all duration-300 ease-out hover:-translate-y-1.5 flex flex-col justify-between text-left space-y-5 shadow-sm hover:shadow-[0_16px_36px_-8px_rgba(245,158,11,0.20),0_4px_12px_rgba(0,0,0,0.04)] overflow-hidden cursor-default"
+                  className="group relative rounded-2xl p-4 sm:p-5 bg-white border border-slate-200/90 hover:border-amber-400 transition-all duration-300 ease-out hover:-translate-y-1 flex flex-col justify-between text-left shadow-xs hover:shadow-[0_12px_28px_-6px_rgba(245,158,11,0.18),0_4px_10px_rgba(0,0,0,0.03)] overflow-hidden cursor-default"
                 >
                   {/* Top Golden Shimmer Line on Hover */}
                   <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="pointer-events-none absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   />
 
                   {/* Subtle Inner Ambient Glow on Hover */}
                   <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-500/[0.04] via-amber-400/[0.01] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-500/[0.03] via-amber-400/[0.01] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   />
 
-                  <div className="space-y-4 relative z-10">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-mono uppercase font-bold text-amber-800 bg-amber-100/80 group-hover:bg-amber-500 group-hover:text-slate-950 px-2.5 py-0.5 rounded border border-amber-200 group-hover:border-amber-500 transition-all duration-200">
-                        {item.tag}
-                      </span>
-                    </div>
-
-                    {/* Logo Showcase Stage with Zoom Hover */}
-                    <div className="h-20 sm:h-24 flex items-center justify-center bg-slate-50/70 group-hover:bg-white rounded-2xl p-3 border border-slate-100 group-hover:border-amber-200/70 transition-all duration-300">
-                      <div className="relative w-full h-full flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300 ease-out">
-                        {item.logo ? (
-                          <Image
-                            src={item.logo}
-                            alt={item.name}
-                            width={160}
-                            height={60}
-                            loading="lazy"
-                            decoding="async"
-                            className="max-h-14 w-auto object-contain filter drop-shadow-2xs transition-all duration-300"
-                          />
-                        ) : (
-                          <div className="flex items-center gap-2.5 text-slate-800 group-hover:text-amber-800 font-extrabold text-lg tracking-wider transition-colors">
-                            <Cpu className="w-5 h-5 text-amber-600 group-hover:rotate-12 transition-transform duration-300" />
-                            <span>{item.name}</span>
-                          </div>
+                  <div className="relative z-10 flex flex-col h-full justify-between">
+                    <div>
+                      {/* Top Tag & Optional Status Badge */}
+                      <div className="flex items-center justify-between gap-1 mb-2.5">
+                        <span className="text-[9.5px] font-mono uppercase font-bold text-amber-800 bg-amber-100/80 group-hover:bg-amber-500 group-hover:text-slate-950 px-2 py-0.5 rounded border border-amber-200/90 group-hover:border-amber-500 transition-all duration-200">
+                          {item.tag}
+                        </span>
+                        {item.statusBadge && (
+                          <span className="text-[9px] font-mono uppercase font-extrabold text-amber-800 bg-amber-500/15 border border-amber-500/30 px-1.5 py-0.5 rounded-full">
+                            {item.statusBadge}
+                          </span>
                         )}
                       </div>
+
+                      {/* Compact Logo Showcase Stage */}
+                      <div className="h-16 flex items-center justify-center bg-slate-50/70 group-hover:bg-white rounded-xl p-2 border border-slate-100 group-hover:border-amber-200/70 transition-all duration-300 mb-3">
+                        <div className="relative w-full h-full flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300 ease-out">
+                          {item.logo ? (
+                            <Image
+                              src={item.logo}
+                              alt={item.name}
+                              width={140}
+                              height={48}
+                              loading="lazy"
+                              decoding="async"
+                              className="max-h-11 w-auto object-contain filter drop-shadow-2xs transition-all duration-300"
+                            />
+                          ) : (
+                            <div className="flex items-center gap-2 text-slate-800 group-hover:text-amber-800 font-bold text-base tracking-wider transition-colors">
+                              <Cpu className="w-4 h-4 text-amber-600 group-hover:rotate-12 transition-transform duration-300" />
+                              <span>{item.name}</span>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Entity Name & Subtitle */}
+                      <div className="mb-2.5">
+                        <div className="flex items-center justify-between gap-1.5">
+                          <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-amber-800 transition-colors leading-tight">
+                            {item.name}
+                          </h3>
+                          <ArrowUpRight className="w-3.5 h-3.5 text-amber-600 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 shrink-0" />
+                        </div>
+                        <p className="text-[11px] text-slate-500 font-medium mt-0.5 line-clamp-2 leading-tight">
+                          {item.fullName}
+                        </p>
+                      </div>
                     </div>
 
-                    <div>
-                      <div className="flex items-start justify-between gap-2">
-                        <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-amber-800 transition-colors leading-snug">
-                          {item.name}
-                        </h3>
-                        <ArrowUpRight className="w-4 h-4 text-amber-600 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 shrink-0 mt-0.5" />
+                    <div className="pt-2 border-t border-slate-100/90 mt-auto space-y-1.5">
+                      {/* Membership / Credential Badge */}
+                      <div className="text-[10.5px] font-semibold text-amber-900 bg-amber-50/80 group-hover:bg-amber-100/90 px-2 py-1 rounded-md border border-amber-200/60 transition-all duration-200 leading-snug">
+                        {item.identifier}
                       </div>
-                      <p className="text-xs text-slate-500 font-medium mt-0.5">
-                        {item.fullName}
+
+                      {/* Role summary */}
+                      <p className="text-[10.5px] text-slate-600 group-hover:text-slate-700 leading-snug line-clamp-2">
+                        {item.role}
                       </p>
                     </div>
-
-                    <div className="text-xs font-semibold text-amber-900 bg-amber-50/80 group-hover:bg-amber-100/90 group-hover:border-amber-300/80 p-2.5 rounded-xl border border-amber-200/60 transition-all duration-200">
-                      {item.identifier}
-                    </div>
-
-                    <p className="text-xs text-slate-600 group-hover:text-slate-700 leading-relaxed">
-                      {item.role}
-                    </p>
                   </div>
                 </div>
               ))}
