@@ -108,7 +108,7 @@ export function AboutSection() {
 
             {/* Main Heading (H2) */}
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-slate-900 leading-[1.15]">
-              Engineering a More Reliable{" "}
+              Building a Reliable{" "}
               <span className="gradient-text-solar">
                 Solar Future for Bangladesh
               </span>
@@ -117,10 +117,10 @@ export function AboutSection() {
             {/* Source-grounded Main Company Description */}
             <div className="space-y-4 text-slate-600 text-base lg:text-lg leading-relaxed">
               <p>
-                Net Bangla Solar Energy Solutions operates as the specialized renewable energy arm
+                Net Bangla Solar Energy Solutions operates as a dedicated renewable energy arm
                 of Net Bangla Limited. Founded on May 28, 2014, the company has
                 built its operational foundation around technology-driven
-                infrastructure and turnkey execution across Bangladesh.
+                infrastructure and turnkey basis implementation across Bangladesh.
               </p>
               <p>
                 Our solar team engineers, installs, and services photovoltaic

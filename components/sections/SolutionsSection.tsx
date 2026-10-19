@@ -205,7 +205,7 @@ export function SolutionsSection() {
           */}
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
-            Solar Solutions Engineered{" "}
+            Solar Solutions Designed{" "}
             <span className="gradient-text-solar">for Every Scale</span>
           </h2>
 

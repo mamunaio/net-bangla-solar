@@ -36,7 +36,7 @@ export function HomeCTA() {
 
             {/* Subtitle */}
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-3xl">
-              Turnkey solar energy solutions for factories, industrial facilities, and commercial buildings across Bangladesh—engineered to reduce grid electricity consumption and improve long-term energy cost efficiency.
+              Turnkey solar energy solutions for factories, industrial facilities, and commercial buildings across Bangladesh custom-engineered to reduce grid electricity consumption and improve long-term energy cost efficiency.
             </p>
 
             {/* Callout section */}

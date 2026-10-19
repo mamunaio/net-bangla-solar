@@ -115,7 +115,7 @@ export default function ContactPage() {
                       CORPORATE HEADQUARTERS
                     </span>
                     <h3 className="text-xl font-bold text-white">
-                      Net Bangla Limited (Solar Wing)
+                      Net Bangla Limited (Solar Division)
                     </h3>
                   </div>
 
@@ -141,7 +141,7 @@ export default function ContactPage() {
                         <PhoneCall className="w-4 h-4" />
                       </div>
                       <div>
-                        <div className="font-bold text-white">Direct EPC Hotline</div>
+                        <div className="font-bold text-white">Hotline</div>
                         <div className="text-amber-400 font-mono font-bold mt-0.5 text-base flex flex-wrap items-center gap-x-2">
                           <a href="tel:+8801550155024" className="hover:underline hover:text-amber-300 transition-colors">
                             +880 1550-155024
@@ -151,7 +151,7 @@ export default function ContactPage() {
                             +880 1970-711632
                           </a>
                         </div>
-                        <div className="text-[11px] text-slate-400">Available Sun–Thu, 9 AM – 6 PM</div>
+                        <div className="text-[11px] text-slate-400 mt-0.5">Sun–Thu 9:00 AM–6:00 PM, Sat 9:00 AM–2:00 PM</div>
                       </div>
                     </div>
 
@@ -161,7 +161,7 @@ export default function ContactPage() {
                         <Mail className="w-4 h-4" />
                       </div>
                       <div>
-                        <div className="font-bold text-white">Official Engineering Inquiries</div>
+                        <div className="font-bold text-white">Technical Inquiries</div>
                         <div className="text-amber-300 font-medium mt-0.5">
                           <a href="mailto:solar@netbanglaltd.com" className="hover:underline">
                             solar@netbanglaltd.com
@@ -176,7 +176,7 @@ export default function ContactPage() {
                         <Globe className="w-4 h-4" />
                       </div>
                       <div>
-                        <div className="font-bold text-white">Official Website</div>
+                        <div className="font-bold text-white">Website</div>
                         <div className="text-amber-300 font-medium mt-0.5">
                           <a
                             href="https://www.netbanglaenergy.com"
@@ -197,9 +197,10 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <div className="font-bold text-white">Operational Hours</div>
-                        <div className="text-slate-300 mt-0.5">
-                          Sunday – Thursday: 9:00 AM – 6:00 PM<br />
-                          Emergency O&amp;M Support: 24/7 Live Monitoring
+                        <div className="text-slate-300 mt-0.5 leading-relaxed">
+                          Sunday–Thursday: 9:00 AM–6:00 PM<br />
+                          Saturday: 9:00 AM–2:00 PM<br />
+                          <span className="text-amber-400 font-semibold">Emergency O&amp;M Support:</span> 24/7 live monitoring
                         </div>
                       </div>
                     </div>

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 const residentialAdvantages = [
   {
-    title: "Zero Noise & Zero Diesel Fumes Backup",
+    title: "Noiseless & Fumeless Backup",
     desc: "Replaces noisy, smelly diesel generators with completely silent, instant Lithium LiFePO4 battery energy storage (ESS).",
     badge: "SILENT BACKUP",
     icon: VolumeX,
@@ -60,7 +60,7 @@ const residentialAdvantages = [
 const residentialSpecs = [
   { label: "Capacity Range", value: "5 kWp – 50 kWp" },
   { label: "Battery Type", value: "Lithium LiFePO4" },
-  { label: "Transfer Time", value: "< 10 Milliseconds" },
+  { label: "Transfer Time", value: "Less than 10 milliseconds" },
   { label: "Monitoring", value: "iOS / Android Cloud" },
 ];
 
@@ -71,19 +71,19 @@ export default function ResidentialSolarPage() {
       title="Residential Hybrid Solar & Battery Systems"
       subtitle="Uninterruptible Clean Energy & Silent Lithium Storage for Luxury Villas, Duplexes & Premium Homes"
       heroImageUrl="/images/solar-residential.webp"
-      description="Enjoy the comfort of uninterrupted, 24/7 electrical luxury without the noise, pollution, and recurring fuel costs of diesel generators. Net Bangla Solar Energy Solutions engineers premium hybrid solar systems with intelligent Lithium LiFePO4 battery storage, tailored for luxury private residences, duplexes, and residential estates across Dhaka, Gulshan, Banani, Uttara, and nationwide."
+      description="Enjoy uninterrupted electrical power without the noise, pollution, and recurring fuel costs of diesel generators. Net Bangla Solar Energy Solutions engineers hybrid solar systems with lithium LiFePO4 battery storage for private residences, duplexes, and residential estates across Dhaka, Gulshan, Banani, Uttara, and nationwide."
       detailedPoints={[
-        "Powers central air conditioners, refrigerators, water pumps, lighting, and elevators effortlessly.",
-        "Automatic net-metering export reduces monthly electricity bills to near-zero levels.",
-        "Architecturally designed elevated rooftop pergolas that preserve full rooftop garden living space.",
-        "Long-lasting Tier-1 solar modules backed by 25-year manufacturer performance warranties.",
+        "Powers central air conditioners, refrigerators, water pumps, lighting, and elevators.",
+        "Automatic net-metering export reduces monthly electricity bills.",
+        "Elevated rooftop pergolas preserve rooftop garden space.",
+        "Tier-1 solar modules backed by 25-year manufacturer performance warranties.",
       ]}
       specs={residentialSpecs}
       advantagesTitle="Why Homeowners Choose Net Bangla Solar Energy Solutions"
       advantagesSubtitle="Silent operation, zero fuel maintenance, and total energy independence tailored for modern luxury living."
       advantagesList={residentialAdvantages}
       ctaTitle="Upgrade Your Home to Silent 24/7 Solar Power"
-      ctaDescription="Contact our residential solar architects for a custom rooftop layout, lithium battery sizing proposal, and net-metering feasibility check."
+      ctaDescription="Contact the residential solar team for a custom rooftop layout, lithium battery sizing proposal, and net-metering feasibility check."
     />
   );
 }

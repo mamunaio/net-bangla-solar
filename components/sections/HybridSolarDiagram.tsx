@@ -7,6 +7,7 @@ import {
   Activity,
   Cpu,
   RefreshCw,
+  Sliders,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
@@ -42,7 +43,7 @@ export function HybridSolarDiagram() {
           </h2>
 
           <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Engineered for seamless 24/7 reliability in Bangladesh. Capturing clean sunlight, powering your daily load, charging battery storage, and exporting surplus units to the national grid through SREDA-compliant bi-directional Net Metering.
+            The system is designed to capture sunlight, power daytime loads, charge battery storage, and export surplus electricity through bi-directional net metering.
           </p>
 
           {/* Interactive Simulation Modes */}
@@ -358,44 +359,54 @@ export function HybridSolarDiagram() {
           </div>
 
           {/* Key Node Explanation Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 pt-8 border-t border-slate-100 text-left">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-8 pt-8 border-t border-slate-100 text-left">
             <div className="p-4 rounded-2xl bg-amber-50/60 border border-amber-200/80 space-y-1.5">
               <div className="flex items-center gap-2 text-xs font-bold text-amber-900">
                 <Sun className="w-4 h-4 text-amber-600 shrink-0" />
                 <span>1. Solar PV Modules</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Captures radiant solar irradiance and generates direct current (DC) electricity with up to 22.8% module efficiency.
+                Capture solar irradiance and generate DC electricity.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-orange-50/60 border border-orange-200/80 space-y-1.5">
+              <div className="flex items-center gap-2 text-xs font-bold text-orange-900">
+                <Sliders className="w-4 h-4 text-orange-600 shrink-0" />
+                <span>2. Solar Controller with MPPT</span>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Optimizes solar power generation through intelligent maximum power point tracking with efficient DC power conversion.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-sky-50/60 border border-sky-200/80 space-y-1.5">
               <div className="flex items-center gap-2 text-xs font-bold text-sky-900">
                 <Cpu className="w-4 h-4 text-sky-600 shrink-0" />
-                <span>2. Hybrid Inverter</span>
+                <span>3. Hybrid Inverter</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
-                The smart brain routing clean power between appliances, battery storage, and the national grid with micro-second transfer.
+                Routes power between appliances, battery storage, and the grid.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200/80 space-y-1.5">
               <div className="flex items-center gap-2 text-xs font-bold text-emerald-900">
                 <BatteryCharging className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>3. Energy Storage System (ESS / BESS)</span>
+                <span>4. Energy Storage System (ESS/BESS)</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Stores daytime surplus energy in Tier-1 Lithium (LiFePO4) battery packs for silent, continuous nighttime power.
+                Stores surplus energy in lithium LiFePO4 batteries.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-indigo-50/60 border border-indigo-200/80 space-y-1.5">
               <div className="flex items-center gap-2 text-xs font-bold text-indigo-900">
                 <RefreshCw className="w-4 h-4 text-indigo-600 shrink-0" />
-                <span>4. Bi-Directional Net Meter</span>
+                <span>5. Bi-Directional Net Meter</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Exports excess solar energy directly into the BPDB/NESCO/DESCO grid to offset monthly billing under SREDA guidelines.
+                Measures imported and exported electricity.
               </p>
             </div>
           </div>

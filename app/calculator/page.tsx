@@ -294,14 +294,12 @@ export default function SolarCalculatorPage() {
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
             Calculate Your{" "}
-            <span className="gradient-text-solar">Rooftop Solar ROI</span> &
+            <span className="gradient-text-solar">Solar Project ROI</span> &
             25-Year Wealth Yield
           </h1>
 
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-            Estimate your recommended solar capacity (kWp), monthly electricity
-            savings, payback timeline, and 25-year cumulative return engineered
-            for Bangladesh utility tariffs.
+          <p className="text-slate-600 text-base sm:text-lg leading-relaxed italic">
+            &ldquo;Indicative electricity tariff only. Actual savings depend on your utility, tariff category, time-of-use rates, demand charges, and solar self-consumption.&rdquo;
           </p>
         </div>
 
@@ -383,7 +381,7 @@ export default function SolarCalculatorPage() {
                 <span>Facility Parameters</span>
               </h2>
               <span className="text-xs font-mono font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">
-                TARIFF: ~৳{config.tariffPerKWh}/kWh
+                INDICATIVE TARIFF: ~৳{config.tariffPerKWh}/kWh
               </span>
             </div>
 
@@ -515,7 +513,7 @@ export default function SolarCalculatorPage() {
                   Enable Grid Net-Metering (Bi-Directional Meter)
                 </div>
                 <div className="text-xs text-slate-500">
-                  Export daytime excess solar power to national grid (BPDB, DESCO, DPDC, NESCO).
+                  Export daytime excess solar power to national grid (BPDB, BREB, DPDC, DESCO, WZPDCL, NESCO).
                 </div>
               </div>
               <button
@@ -1095,7 +1093,7 @@ export default function SolarCalculatorPage() {
               Net Metering Policy
             </h4>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Calculations comply with Bangladesh Net Metering Guidelines 2025 under BPDB, BREB, DPDC, DESCO, and NESCO.
+              Calculations comply with Bangladesh Net Metering Guidelines 2025 under BPDB, BREB, DPDC, DESCO, WZPDCL, and NESCO.
             </p>
           </div>
 

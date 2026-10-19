@@ -34,9 +34,9 @@ const floatingAdvantages = [
     icon: Waves,
   },
   {
-    title: "Zero Land Acquisition & Zero Civil Works",
+    title: "Minimum Land Acquisition & Civil Works",
     desc: "Bypasses the severe land constraints and exorbitant real estate prices of Bangladesh by utilizing open water bodies, industrial retention ponds, and lakes.",
-    badge: "ZERO LAND USE",
+    badge: "MINIMUM LAND USE",
     icon: ShieldCheck,
   },
   {
@@ -72,12 +72,12 @@ const floatingAdvantages = [
 ];
 
 const floatingSpecs = [
-  { label: "Target Water", value: "Factory Ponds, Lakes & Reservoirs" },
-  { label: "Capacity Range", value: "50 kWp – 10+ MWp" },
-  { label: "Efficiency Delta", value: "+10% to +15% Water Cooled" },
+  { label: "Target Water", value: "Factory ponds, lakes, and reservoirs" },
+  { label: "Capacity Range", value: "50 kWp–10+ MWp" },
+  { label: "Efficiency Delta", value: "+10% to +15% water-cooled" },
   { label: "Mooring System", value: "Adaptive Elastic / Taut-Leg" },
-  { label: "Wind Rating", value: "Up to 160 km/h (Cyclone Rated)" },
-  { label: "Avg. Payback", value: "3.2 – 3.7 Years" },
+  { label: "Wind Rating", value: "Up to 160 km/h" },
+  { label: "Advertised Average Payback", value: "3.2–3.7 years" },
 ];
 
 const floatingWorkflow = [
@@ -106,15 +106,15 @@ const floatingWorkflow = [
 export default function FloatingSolarPage() {
   return (
     <SolutionTemplate
-      badge="FLOATING PHOTOVOLTAICS (FPV) • 50 KWP – 10+ MWP"
+      badge="FLOATING PHOTOVOLTAICS • 50 KWP–10+ MWP"
       title="Floating Solar (FPV) Solutions"
       subtitle="High-Efficiency Water-Mounted Photovoltaic Systems for Textile Factory Fire Ponds, Reservoirs, Lakes & Aquaculture"
       heroImageUrl="/images/solar-floating.webp"
-      description="In land-scarce Bangladesh, Floating Solar (FPV) transforms open water surfaces into powerful clean energy assets without consuming an inch of valuable agricultural or industrial land. Net Bangla Solar Energy Solutions engineers turnkey floating photovoltaic arrays for textile and RMG factory firefighting reservoirs, industrial retention basins, water treatment plants, lakes, and commercial fisheries. Leveraging natural water cooling, our floating systems deliver up to 15% higher energy yield while curbing reservoir evaporation and algae growth."
+      description="In land-scarce Bangladesh, floating solar transforms open water surfaces into clean-energy assets without consuming valuable agricultural or industrial land. Net Bangla Solar Energy Solutions develops turnkey floating photovoltaic arrays for textile and RMG factory firefighting reservoirs, industrial retention basins, water treatment plants, lakes, and commercial fisheries."
       detailedPoints={[
+        "Natural water cooling can improve energy yield while helping reduce reservoir evaporation and algae growth.",
         "Ideal for textile, RMG, and industrial plants with mandatory fire ponds and ETP retention basins.",
         "Completely eliminates expensive land acquisition, boundary wall construction, and civil earthworks.",
-        "Natural water cooling delivers superior electrical yield during peak midday irradiance.",
         "Integrated anti-skid pontoon walkways enable safe on-water maintenance, cleaning, and string telemetry checks.",
         "Adaptive elastic mooring systems withstand monsoon water level changes of up to 4 meters and 160 km/h cyclone winds.",
       ]}
@@ -125,7 +125,7 @@ export default function FloatingSolarPage() {
       workflowTitle="Turnkey FPV Engineering & Commissioning Process"
       workflowSteps={floatingWorkflow}
       ctaTitle="Power Your Water Reservoir with Clean Floating Solar Energy"
-      ctaDescription="Connect with our floating solar engineering team for a bathymetric audit, hydrodynamic simulation, pontoon layout, and turnkey financial feasibility analysis."
+      ctaDescription="Connect with the floating solar engineering team for a bathymetric audit, hydrodynamic simulation, pontoon layout, and turnkey financial feasibility analysis."
     />
   );
 }

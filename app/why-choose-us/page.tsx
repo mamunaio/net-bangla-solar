@@ -34,131 +34,164 @@ export const metadata: Metadata = {
 const brochurePillars = [
   {
     number: "01",
-    tag: "CUSTOMIZED SOLUTIONS",
-    title: "Tailored Solar Systems",
+    tag: "TAILORED SOLAR DESIGN",
+    title: "Tailored Solar Design",
     description:
-      "Whether it’s a residential home or a large commercial project, we design and install customized solar systems tailored to maximize efficiency and minimize costs. Our solutions empower you to harness renewable energy effectively while enjoying sustainable, long-term savings.",
+      "Systems designed around site conditions, energy consumption, roof structure and project objectives.",
     icon: Sun,
   },
   {
     number: "02",
     tag: "QUALITY & DURABILITY",
-    title: "We Build Solar to Last",
+    title: "Quality & Durability",
     description:
-      "We build solar systems to last. By combining cutting-edge technology with rigorous quality standards, we ensure your system delivers peak performance year after year, providing dependable energy for decades to come.",
+      "Equipment selection, structural design and installation practices focused on reliability and long-term performance.",
     icon: Award,
   },
   {
     number: "03",
-    tag: "MAXIMUM ROI",
-    title: "Significant Cost Reductions",
+    tag: "ENERGY COST OPTIMIZATION",
+    title: "Energy Cost Optimization",
     description:
-      "Our expert designs help you achieve significant reductions in monthly electricity costs. Solar power is a smart investment for homes and businesses alike, and we are committed to helping you realize the maximum financial benefits from your solar system.",
+      "Generation modelling and financial analysis to assess potential savings and investment returns.",
     icon: Leaf,
   },
   {
     number: "04",
-    tag: "LIFECYCLE PARTNERSHIP",
-    title: "Ongoing Support & Care",
+    tag: "LIFECYCLE SUPPORT",
+    title: "Lifecycle Support",
     description:
-      "Our commitment doesn’t end with installation. We provide ongoing customer support and maintenance to ensure your solar system consistently operates at peak performance. With Net Bangla Limited, you’re more than a customer—you’re a valued partner in building a brighter, more sustainable future.",
+      "Commissioning, performance monitoring, maintenance and after-sales support under SLA (Service Level Agreement).",
     icon: Headphones,
   },
 ];
 
 const engineeringPillars = [
   {
+    number: "1",
     icon: Sun,
     title: "100% Tier-1 Monocrystalline Bifacial Panels",
-    desc: "We exclusively deploy BloombergNEF Tier-1 rated bifacial solar modules featuring dual-glass encapsulation, superior low-light responsiveness, and 25-year linear degradation warranties.",
+    desc: "Exclusively deploying BloombergNEF Tier-1 bifacial panels for high dual-surface generation, minimal degradation, and 25-year linear performance warranty.",
     badge: "TIER-1 HARDWARE",
   },
   {
+    number: "2",
     icon: Cpu,
-    title: "European & Tier-1 Smart Inverters",
+    title: "Global Standard Tier-1 Smart Inverters",
     desc: "State-of-the-art grid-tie inverters with multi-MPPT tracking, maximum 98.8% conversion efficiency, integrated DC arc-fault protection, and cloud monitoring telemetry.",
-    badge: "SMART GRID TECH",
+    badge: "GLOBAL STANDARD",
   },
   {
+    number: "3",
     icon: Wind,
     title: "160+ km/h Cyclone Load Mounting Structures",
     desc: "Engineered with structural-grade hot-dip galvanized steel (80+ micron zinc coating) or anodized aluminum (AL6005-T5), rigorously simulated against Bangladesh’s seasonal cyclone gusts.",
-    badge: "EXTREME WEATHER PROOF",
+    badge: "CYCLONE RESILIENT",
   },
   {
+    number: "4",
     icon: ShieldCheck,
-    title: "Guaranteed SREDA & Grid Net-Metering Compliance",
-    desc: "Full liaison and regulatory execution for bi-directional net-metering approvals under BPDB, BREB, DPDC, DESCO, and NESCO without client operational friction.",
+    title: "SREDA & Grid Net-Metering Compliance",
+    desc: "Full liaison and regulatory execution for bi-directional net-metering approvals under BPDB, BREB, DPDC, DESCO, WZPDCL, and NESCO without client operational friction.",
     badge: "100% SREDA COMPLIANT",
   },
   {
+    number: "5",
     icon: BarChart3,
-    title: "Bankable PVsyst 3D Shading Simulation",
+    title: "PVsyst 3D Shading Simulation",
     desc: "We conduct granular 3D drone surveys, solar shadow mapping, and PVsyst meteorological energy modeling to guarantee predictable, bankable kilowatt-hour yields.",
     badge: "PRECISION AUDIT",
   },
   {
+    number: "6",
     icon: Clock,
-    title: "Zero Operational Downtime Installation",
-    desc: "Pre-fabricated mounting frameworks and modular electrical switchgear allow fast installation without interrupting your factory's daily industrial production schedule.",
-    badge: "ZERO FACTORY DOWNTIME",
+    title: "Minimum Operational Downtime Installation",
+    desc: "Pre-fabricated mounting frameworks and modular electrical switchgear allow fast installation without interrupting your facility's daily production schedule.",
+    badge: "MINIMUM DOWNTIME",
   },
   {
+    number: "7",
     icon: Zap,
-    title: "24/7 Cloud IoT Telemetry & String Diagnostics",
+    title: "24/7 Cloud IoT Telemetry & String Diagnosis",
     desc: "Real-time mobile & web SCADA monitoring with automated anomaly alerts, string-level voltage checks, and predictive maintenance schedules.",
     badge: "LIVE IOT TELEMETRY",
   },
   {
+    number: "8",
     icon: TrendingUp,
-    title: "Rapid 3-Year Capex Payback & 25-Yr Free Power",
-    desc: "High solar yield combined with rising national grid tariffs enables full investment recovery in 3 to 3.5 years, generating pure free clean power for the remaining 21+ years.",
-    badge: "HIGH ROI",
+    title: "Rapid CAPEX Payback & 25-Year Free Power",
+    desc: "High solar yield combined with rising national grid tariffs enables full investment recovery in 3 to 4 years, generating pure free clean power for the remaining 21+ years.",
+    badge: "RAPID PAYBACK",
   },
   {
+    number: "9",
     icon: Wrench,
-    title: "Comprehensive 10-Year O&M SLA Guarantee",
+    title: "Comprehensive O&M SLA Assurance",
     desc: "Dedicated engineering rapid-response teams with on-site inspection guarantees, thermal drone thermography, and automated panel cleaning protocol support.",
     badge: "LIFECYCLE O&M",
-  },
-  {
-    icon: Building,
-    title: "Corporate Stability & Heritage (Est. May 2014)",
-    desc: "Operating under Net Bangla Limited, we bring over a decade of proven corporate stability, national institutional trust (Army, Navy Dockyard, BMTF), and financial solidity.",
-    badge: "ESTABLISHED 2014",
   },
 ];
 
 const comparisonPoints = [
   {
-    feature: "Solar Panel Quality & Sourcing",
-    netBangla: "Strict BloombergNEF Tier-1 Bifacial N-Type / TOPCon Modules with 25-Yr Warranty",
-    traditional: "Tier-2 or uncertified local gray market panels with rapid power loss",
+    feature: "Solar panel quality sourcing",
+    netBangla: "Strict BloombergNEF Tier-1 Monocrystalline Bifacial N-Type Modules with 25-Yr Performance Warranty",
+    traditional: "Uncertified or gray-market Tier-2/3 panels with high degradation rates",
   },
   {
-    feature: "Inverter Technology",
-    netBangla: "European / Tier-1 Smart Inverters with 98.8% efficiency & AFCI safety",
-    traditional: "Low-cost modified inverters lacking arc protection and low efficiency",
+    feature: "Inverter technology, efficiency, and electrical safety",
+    netBangla: "Global Standard Tier-1 Smart Inverters with 98.8%+ efficiency, multi-MPPT & integrated AFCI safety",
+    traditional: "Basic low-efficiency inverters lacking arc-fault protection and smart telemetry",
   },
   {
-    feature: "Mounting Structure & Wind Rating",
-    netBangla: "Hot-Dip Galvanized (80µm) / Anodized AL6005-T5 rated for 160+ km/h wind gusts",
-    traditional: "Mild steel (MS) painted pipes prone to rusting and structural collapse in 3-5 years",
+    feature: "Mounting structure design, load assessment, and wind resistance",
+    netBangla: "Engineered Hot-Dip Galvanized (80µm) / AL6005-T5 Aluminum rated for 160+ km/h cyclone loads",
+    traditional: "Mild steel painted pipes susceptible to severe rust and wind failure",
   },
   {
-    feature: "SREDA & Net-Metering Approvals",
-    netBangla: "100% Turnkey regulatory liaison, inspection prep, and bi-directional meter setup",
-    traditional: "Client is left alone to navigate complex government bureaucracy and approvals",
+    feature: "SREDA compliance, net-metering, and regulatory approvals",
+    netBangla: "Full turnkey technical liaison with BPDB, BREB, DPDC, DESCO, WZPDCL, NESCO & SREDA",
+    traditional: "Client left to handle complicated utility approvals and regulatory hurdles alone",
   },
   {
-    feature: "Engineering Modeling & Feasibility",
-    netBangla: "3D Drone aerial mapping + PVsyst bankable hourly solar simulation report",
-    traditional: "Rough guesswork without calculating azimuth, tilt, or building shadows",
+    feature: "Engineering design, energy modelling, and project feasibility",
+    netBangla: "Granular 3D drone survey, solar shadow modeling, and bankable PVsyst simulation reports",
+    traditional: "Rough visual guesswork without considering shadow angles, tilt, or meteorological data",
   },
   {
-    feature: "Long-Term Warranty & Service SLA",
-    netBangla: "10-Year Workmanship Warranty + 25-Year Performance + Rapid Response SLA",
-    traditional: "No dedicated service team; difficult to reach after installation handover",
+    feature: "CAPEX, OPEX, PPA, and bankable financing solutions",
+    netBangla: "Bankable financial modeling for IDCOL, PKSF, BIFFL, Green Refinance, CAPEX, OPEX & PPA",
+    traditional: "Rigid cash-only models with no institutional green loan or RESCO options",
+  },
+  {
+    feature: "Solar generation optimization and lifecycle cost analysis",
+    netBangla: "Optimized azimuth, tilt angle, string balancing, and 25-year LCOE financial analysis",
+    traditional: "Generic placement without optimization for maximum generation or temperature losses",
+  },
+  {
+    feature: "Electrical protection, earthing, and power quality management",
+    netBangla: "Class I+II surge protection, low-impedance copper earthing, and harmonic suppression",
+    traditional: "Sub-standard grounding and inadequate lightning protection risking facility equipment",
+  },
+  {
+    feature: "Battery energy storage and system integration",
+    netBangla: "Safe Lithium LiFePO4 (BESS) integration with seamless microsecond UPS backup",
+    traditional: "Short-lived lead-acid batteries with high maintenance and hazardous fumes",
+  },
+  {
+    feature: "Smart monitoring, performance analytics, and fault detection",
+    netBangla: "24/7 Cloud IoT SCADA monitoring, string diagnostics, and automated email/SMS fault alerts",
+    traditional: "Basic local meters with no cloud access; equipment failures go unnoticed",
+  },
+  {
+    feature: "Automated panel cleaning and water management",
+    netBangla: "Integrated rooftop piping, high-pressure wash systems, and optional robotic cleaning options",
+    traditional: "No cleaning infrastructure provided; manual dry wiping causes surface abrasion",
+  },
+  {
+    feature: "Long-term warranties, maintenance, and service-level agreements",
+    netBangla: "Comprehensive O&M SLA assurance, 25-year panel warranty, and dedicated rapid-response teams",
+    traditional: "No after-sales support or SLA once initial payment is received",
   },
 ];
 
@@ -187,12 +220,7 @@ export default function WhyChooseUsPage() {
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-                Our expertise sets us apart in the solar market, delivering unmatched
-                value and results for every client. Our product portfolio comprises solar
-                energy systems for private residences, commercial enterprises, and public
-                sector projects. We are committed to promoting sustainable development by
-                providing reliable, efficient, and environmentally responsible solar
-                technologies that align with national and global energy goals.
+                Net Bangla Solar Solutions, a division of Net Bangla Limited, provides solar engineering, procurement, construction and related services for residential, commercial, industrial and agricultural applications. Our approach combines site-specific design, appropriate equipment selection, regulatory coordination and operational support to help clients improve energy efficiency and manage electricity costs.
               </p>
 
               <div className="pt-3 flex flex-wrap items-center justify-center gap-4">
@@ -215,9 +243,21 @@ export default function WhyChooseUsPage() {
           </Container>
         </section>
 
-        {/* 4 CORE BROCHURE PILLARS CARDS */}
+        {/* 4 CORE ADVANTAGES */}
         <section className="py-14 sm:py-18 bg-white border-b border-slate-100">
           <Container>
+            <div className="text-center max-w-3xl mx-auto space-y-2 mb-10">
+              <span className="text-xs font-bold text-amber-700 uppercase tracking-wider">
+                CORE CAPABILITIES
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Four Core Advantages
+              </h2>
+              <p className="text-sm text-slate-600">
+                Foundational engineering principles guiding every solar EPC project across Bangladesh.
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
               {brochurePillars.map((item) => {
                 const Icon = item.icon;
@@ -260,15 +300,15 @@ export default function WhyChooseUsPage() {
           </Container>
         </section>
 
-        {/* 10 DETAILED TECHNICAL ENGINEERING PILLARS */}
+        {/* PILLARS OF SERVICE SUPERIORITY */}
         <section className="py-16 sm:py-20 bg-slate-50/50">
           <Container>
             <div className="text-center max-w-3xl mx-auto space-y-3 mb-14">
               <span className="text-xs font-bold text-amber-700 uppercase tracking-wider">
-                DETAILED CAPABILITIES
+                ENGINEERING PILLARS
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-                10 Pillars of Engineering Superiority
+                <span className="text-rose-600">Pillars of Service Superiority</span>
               </h2>
               <p className="text-sm sm:text-base text-slate-600">
                 Every detail of our photovoltaic systems is engineered to withstand Bangladesh’s demanding climate and deliver peak kilowatt-hours.
@@ -324,7 +364,7 @@ export default function WhyChooseUsPage() {
                 COMPREHENSIVE COMPARISON
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Net Bangla Solar Energy Solutions vs. Standard Contractors
+                Bangla Solar Division vs. Standard Contractors
               </h2>
               <p className="text-sm sm:text-base text-slate-600">
                 Understand the engineering differences that protect your capital and ensure 25+ years of uninterrupted energy production.
@@ -337,10 +377,10 @@ export default function WhyChooseUsPage() {
                   <tr className="border-b border-slate-200 bg-slate-900 text-white text-xs sm:text-sm font-semibold uppercase tracking-wider">
                     <th className="p-4 sm:p-5 w-1/3">Engineering &amp; Service Parameter</th>
                     <th className="p-4 sm:p-5 w-1/3 bg-amber-500 text-slate-950 font-bold">
-                      Net Bangla Solar Energy Solutions Standard
+                      Bangla Solar Division Standard
                     </th>
                     <th className="p-4 sm:p-5 w-1/3 text-slate-300">
-                      Conventional Market Contractor
+                      Standard Contractors
                     </th>
                   </tr>
                 </thead>

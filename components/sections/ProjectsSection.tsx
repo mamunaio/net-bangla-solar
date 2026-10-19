@@ -135,7 +135,7 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      aria-label="Project Applications - Solar Systems Designed Around Real Energy Demands"
+      aria-label="Project Applications - Solar Systems Designed For Real Energy Demands"
       className="relative overflow-hidden py-20 scroll-mt-24 lg:py-32 lg:scroll-mt-28 bg-white"
     >
       {/* Background ambient lighting */}
@@ -154,7 +154,7 @@ export function ProjectsSection() {
           <div className="max-w-3xl space-y-4 text-left">
             <h2 className="text-3xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
               Solar Systems Designed{" "}
-              <span className="gradient-text-solar">Around Real Energy Demands</span>
+              <span className="gradient-text-solar">For Real Energy Demands</span>
             </h2>
 
             <p className="max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">

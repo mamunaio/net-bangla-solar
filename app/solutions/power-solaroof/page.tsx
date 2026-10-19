@@ -13,9 +13,9 @@ import {
 import { SolutionTemplate } from "@/components/templates/SolutionTemplate";
 
 export const metadata: Metadata = {
-  title: "Power Solaroof BIPV | Net Bangla Solar Energy Solutions - Integrated Solar Roofing",
+  title: "Solar Roof Integration with BIPV | Net Bangla Solar Energy Solutions",
   description:
-    "Power Solaroof by Net Bangla Solar Energy Solutions is a 100% leak-proof, cyclone-resistant Building-Integrated Photovoltaic (BIPV) roofing system for industrial factories across Bangladesh.",
+    "Solar Roof Integration with BIPV by Net Bangla Solar Energy Solutions is a 100% leak-proof, cyclone-resistant Building-Integrated Photovoltaic (BIPV) roofing system for industrial factories across Bangladesh.",
 };
 
 const solaroofAdvantages = [
@@ -26,7 +26,7 @@ const solaroofAdvantages = [
     icon: Droplets,
   },
   {
-    title: "160 km/h Cyclone Wind Resistance",
+    title: "160 km/h Cyclone Resilience",
     desc: "Aerodynamically integrated into the building purlin framework, eliminating wind uplift risks associated with elevated mounting structures.",
     badge: "CYCLONE RATED",
     icon: Wind,
@@ -44,7 +44,7 @@ const solaroofAdvantages = [
     icon: Layers,
   },
   {
-    title: "Heavy-Duty Precision Structural Engineering",
+    title: "Heavy-Duty Precision Structural Design",
     desc: "Built to stringent international building codes with high-tensile anodized aluminum sub-structures, seismic resilience, and corrosion-resistant fasteners.",
     badge: "PRECISION EPC",
     icon: Award,
@@ -82,19 +82,19 @@ const solaroofWorkflow = [
 
 const solaroofSpecs = [
   { label: "Roof Type", value: "Integrated In-Roof BIPV" },
-  { label: "Waterproofing", value: "100% Leak-Proof EPDM" },
+  { label: "Waterproofing", value: "EPDM-based system" },
   { label: "Wind Rating", value: "Up to 160 km/h" },
-  { label: "Thermal Delta", value: "4°C – 6°C Cooling" },
+  { label: "Thermal Delta", value: "4°C–6°C cooling" },
 ];
 
 export default function PowerSolaroofPage() {
   return (
     <SolutionTemplate
       badge="PATENT-PENDING BIPV ROOFING • 100% LEAK-PROOF"
-      title="Power Solaroof Integrated BIPV"
+      title="Solar Roof Integration with BIPV"
       subtitle="The Complete Replacement for Industrial Corrugated Tin Roofing with Clean Power Generation"
       heroImageUrl="/images/power-solaroof.webp"
-      description="Power Solaroof by Net Bangla Solar Energy Solutions represents the future of industrial roofing in Bangladesh. Unlike conventional solar panels mounted on top of existing tin roofs, Power Solaroof is seamlessly built into the building structure itself, replacing corrugated tin sheets entirely. Engineered to high international standards, it provides a 100% leak-proof, cyclone-resistant, and aesthetically striking clean energy solution for modern industrial facilities."
+      description="Net Bangla Solar Energy Solutions shall build the future of industrial roofing in Bangladesh. Unlike conventional solar panels mounted on top of existing tin roofs, Solar Roof Integration with BIPV is built into the building structure itself, replacing corrugated tin sheets entirely. It is designed to provide a leak-resistant, cyclone-resistant, and aesthetically integrated clean-energy solution for industrial facilities."
       detailedPoints={[
         "Completely eliminates the recurring maintenance, rust, and leakages of corrugated metal roofs.",
         "Zero-penetration mechanical clamping ensures zero structural damage or water seepage.",
@@ -102,13 +102,13 @@ export default function PowerSolaroofPage() {
         "Eligible for international green factory sustainability ratings and carbon credit accreditation.",
       ]}
       specs={solaroofSpecs}
-      advantagesTitle="Why Power Solaroof Outperforms Conventional Solar Mounting"
+      advantagesTitle="Why Solar Roof Integration with BIPV Outperforms Conventional Solar Mounting"
       advantagesSubtitle="Integrated architectural solar that combines lifetime weatherproofing, thermal insulation, and peak clean energy generation."
       advantagesList={solaroofAdvantages}
-      workflowTitle="Power Solaroof Engineering & Installation Lifecycle"
+      workflowTitle="Solar Roof Integration with BIPV Engineering & Installation Lifecycle"
       workflowSteps={solaroofWorkflow}
-      ctaTitle="Construct Your Next Factory with Power Solaroof"
-      ctaDescription="Contact our specialized BIPV structural engineers to review architectural roof drawings, purlin specifications, and cost comparison models."
+      ctaTitle="Construct Your Next Factory with Solar Roof Integration with BIPV"
+      ctaDescription="Contact specialized BIPV structural engineers to review architectural roof drawings, purlin specifications, and cost comparison models."
     />
   );
 }
