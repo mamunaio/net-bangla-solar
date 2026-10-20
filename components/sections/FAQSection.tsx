@@ -46,7 +46,7 @@ const faqData: FAQItem[] = [
   {
     id: "full-project-support",
     number: "05",
-    question: "Does Net Bangla Solar Energy Solutions provide complete project support?",
+    question: "Does Net Bangla Solar provide complete project support?",
     answer:
       "The company provides an end-to-end project approach covering site assessment, load calculation, system design, installation, grid connection or coordination, commissioning, and ongoing maintenance and technical support.",
   },

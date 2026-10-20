@@ -13,9 +13,9 @@ import {
 import { SolutionTemplate } from "@/components/templates/SolutionTemplate";
 
 export const metadata: Metadata = {
-  title: "Solar Roof Integration with BIPV | Net Bangla Solar Energy Solutions",
+  title: "Solar Roof Integration with BIPV | Net Bangla Solar",
   description:
-    "Solar Roof Integration with BIPV by Net Bangla Solar Energy Solutions is a 100% leak-proof, cyclone-resistant Building-Integrated Photovoltaic (BIPV) roofing system for industrial factories across Bangladesh.",
+    "Solar Roof Integration with BIPV by Net Bangla Solar is a 100% leak-proof, cyclone-resistant Building-Integrated Photovoltaic (BIPV) roofing system for industrial factories across Bangladesh.",
 };
 
 const solaroofAdvantages = [
@@ -94,7 +94,7 @@ export default function PowerSolaroofPage() {
       title="Solar Roof Integration with BIPV"
       subtitle="The Complete Replacement for Industrial Corrugated Tin Roofing with Clean Power Generation"
       heroImageUrl="/images/power-solaroof.webp"
-      description="Net Bangla Solar Energy Solutions shall build the future of industrial roofing in Bangladesh. Unlike conventional solar panels mounted on top of existing tin roofs, Solar Roof Integration with BIPV is built into the building structure itself, replacing corrugated tin sheets entirely. It is designed to provide a leak-resistant, cyclone-resistant, and aesthetically integrated clean-energy solution for industrial facilities."
+      description="Net Bangla Solar shall build the future of industrial roofing in Bangladesh. Unlike conventional solar panels mounted on top of existing tin roofs, Solar Roof Integration with BIPV is built into the building structure itself, replacing corrugated tin sheets entirely. It is designed to provide a leak-resistant, cyclone-resistant, and aesthetically integrated clean-energy solution for industrial facilities."
       detailedPoints={[
         "Completely eliminates the recurring maintenance, rust, and leakages of corrugated metal roofs.",
         "Zero-penetration mechanical clamping ensures zero structural damage or water seepage.",

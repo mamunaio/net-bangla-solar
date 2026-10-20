@@ -14,7 +14,7 @@ import {
 import { SolutionTemplate } from "@/components/templates/SolutionTemplate";
 
 export const metadata: Metadata = {
-  title: "Industrial Solar EPC (MWp Scale) | Net Bangla Solar Energy Solutions",
+  title: "Industrial Solar EPC (MWp Scale) | Net Bangla Solar",
   description:
     "Turnkey Megawatt-scale (100 kWp – 5 MWp) industrial rooftop solar EPC for export textile mills, manufacturing plants, and heavy industries in Bangladesh. 3.1 year payback.",
 };
@@ -103,7 +103,7 @@ export default function IndustrialSolarEPCPage() {
         "LEED green factory accreditation compliance for international buyer ESG audits.",
       ]}
       specs={industrialSpecs}
-      advantagesTitle="Why Bangladesh Industry Leaders Choose Net Bangla Solar Energy Solutions"
+      advantagesTitle="Why Bangladesh Industry Leaders Choose Net Bangla Solar"
       advantagesSubtitle="Engineered to meet rigorous industrial safety codes, withstand cyclone winds, and guarantee maximum kilowatt-hour yields."
       advantagesList={industrialAdvantages}
       workflowTitle="Turnkey Industrial EPC Project Lifecycle"

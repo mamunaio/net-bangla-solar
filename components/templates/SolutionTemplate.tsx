@@ -65,7 +65,7 @@ export function SolutionTemplate({
   detailedPoints = [],
   specs = [],
   advantagesTitle = "Competitive Engineering Advantages",
-  advantagesSubtitle = "How Net Bangla Solar Energy Solutions out-engineers traditional contractors to deliver superior yield, reliability, and bankability.",
+  advantagesSubtitle = "How Net Bangla Solar out-engineers traditional contractors to deliver superior yield, reliability, and bankability.",
   advantagesList,
   workflowTitle = "Turnkey Execution & Commissioning Process",
   workflowSteps,

@@ -28,7 +28,7 @@ export function BrandLogo({
     >
       <Image
         src="/images/net-bangla-solar-logo.webp"
-        alt="Net Bangla Solar Energy Solutions"
+        alt="Net Bangla Solar"
         width={1540}
         height={1212}
         priority={priority}

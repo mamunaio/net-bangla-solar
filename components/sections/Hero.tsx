@@ -164,7 +164,7 @@ export function Hero() {
     <section
       id="home"
       ref={containerRef}
-      aria-label="Hero - Net Bangla Solar Energy Solutions"
+      aria-label="Hero - Net Bangla Solar"
       className="relative min-h-[85vh] sm:min-h-[90vh] lg:min-h-[920px] flex flex-col justify-center lg:justify-between pt-24 pb-12 sm:pt-28 md:pt-36 md:pb-14 overflow-hidden bg-slate-950 text-white scroll-mt-28"
     >
       {/* =========================================================================
@@ -237,7 +237,7 @@ export function Hero() {
             {/* 
             <div ref={eyebrowRef}>
               <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-900/80 border border-amber-500/40 backdrop-blur-md text-amber-400 text-xs font-semibold tracking-wider uppercase shadow-[0_0_20px_rgba(245,158,11,0.25)]">
-                <span>NET BANGLA SOLAR ENERGY SOLUTIONS &bull; A DIVISION OF NET BANGLA LIMITED</span>
+                <span>NET BANGLA SOLAR &bull; A DIVISION OF NET BANGLA LIMITED</span>
               </div>
             </div> 
             */}

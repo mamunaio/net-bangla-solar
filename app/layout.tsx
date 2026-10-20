@@ -24,14 +24,14 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://netbanglaenergy.com"),
-  title: "Net Bangla Solar Energy Solutions | Clean Energy. Brighter Bangladesh.",
+  title: "Net Bangla Solar | Clean Energy. Brighter Bangladesh.",
   description:
     "Transforming Bangladesh with renewable solar energy. Leading turnkey Solar EPC contractor delivering SREDA-compliant industrial rooftops, floating arrays, and utility solar with maximum ROI.",
   keywords: [
     "Solar EPC Contractor Bangladesh",
     "SREDA Net Metering Solar",
     "Industrial Rooftop Solar Bangladesh",
-    "Net Bangla Solar Energy Solutions",
+    "Net Bangla Solar",
     "Floating Solar Bangladesh",
     "Utility Solar Power Plant",
     "Commercial Solar Panels Dhaka",
@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     "Turnkey Solar Solutions",
     "Clean Energy Bangladesh",
   ],
-  authors: [{ name: "Net Bangla Solar Energy Solutions" }],
+  authors: [{ name: "Net Bangla Solar" }],
   openGraph: {
-    title: "Net Bangla Solar Energy Solutions | Clean Energy. Brighter Bangladesh.",
+    title: "Net Bangla Solar | Clean Energy. Brighter Bangladesh.",
     description:
       "Transforming Bangladesh with renewable solar energy. Leading turnkey Solar EPC contractor delivering SREDA-compliant industrial rooftops, floating arrays, and utility solar with maximum ROI.",
     url: "https://netbanglaenergy.com",
-    siteName: "Net Bangla Solar Energy Solutions",
+    siteName: "Net Bangla Solar",
     locale: "en_US",
     type: "website",
     images: [
@@ -53,13 +53,13 @@ export const metadata: Metadata = {
         url: "https://netbanglaenergy.com/images/net-bangla-solar-logo.png",
         width: 1200,
         height: 630,
-        alt: "Net Bangla Solar Energy Solutions Corporate Logo",
+        alt: "Net Bangla Solar Corporate Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Net Bangla Solar Energy Solutions | Clean Energy. Brighter Bangladesh.",
+    title: "Net Bangla Solar | Clean Energy. Brighter Bangladesh.",
     description:
       "Transforming Bangladesh with renewable solar energy. Leading turnkey Solar EPC contractor delivering SREDA-compliant industrial rooftops, floating arrays, and utility solar with maximum ROI.",
     images: ["https://netbanglaenergy.com/images/net-bangla-solar-logo.png"],
@@ -98,9 +98,9 @@ export default function RootLayout({
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Net Bangla Solar Energy Solutions Corporate Logo" />
+        <meta property="og:image:alt" content="Net Bangla Solar Corporate Logo" />
         <meta name="twitter:image" content="https://netbanglaenergy.com/images/net-bangla-solar-logo.png" />
-        <meta name="twitter:image:alt" content="Net Bangla Solar Energy Solutions Corporate Logo" />
+        <meta name="twitter:image:alt" content="Net Bangla Solar Corporate Logo" />
         <script
           id="theme-initializer"
           dangerouslySetInnerHTML={{
@@ -134,7 +134,7 @@ export default function RootLayout({
                 {
                   "@type": "Organization",
                   "@id": "https://netbanglaenergy.com/#organization",
-                  "name": "Net Bangla Solar Energy Solutions",
+                  "name": "Net Bangla Solar",
                   "legalName": "Net Bangla Limited",
                   "url": "https://netbanglaenergy.com",
                   "logo": "https://netbanglaenergy.com/images/net-bangla-solar-logo.png",

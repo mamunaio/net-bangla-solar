@@ -148,7 +148,41 @@ export default function AboutPage() {
           </Container>
         </section>
 
-        {/* 2. COMPANY OVERVIEW & PARTICULARS */}
+        {/* 2. CORPORATE OVERVIEW: ABOUT NET BANGLA LIMITED */}
+        <section className="py-12 sm:py-16 bg-slate-50/60 border-b border-slate-200/80">
+          <Container>
+            <div className="max-w-4xl mx-auto space-y-6 text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-800 text-xs font-bold">
+                <ShieldCheck className="w-4 h-4 text-amber-600" />
+                <span>CORPORATE PROFILE</span>
+              </div>
+
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
+                About Net Bangla Limited
+              </h2>
+
+              <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+                <p>
+                  <strong className="text-slate-900 font-semibold">Net Bangla Limited</strong> is a Bangladesh-based diversified technology and engineering company delivering integrated solutions across Information Technology (IT), Telecommunications, Safety &amp; Security, Business Process Outsourcing (BPO), Power, and Renewable Energy.
+                </p>
+                <p>
+                  With a commitment to innovation, quality, and customer satisfaction, the company combines technical expertise, project management capabilities, and strategic partnerships to deliver reliable, cost-effective, and sustainable solutions for government institutions, corporate clients, industrial establishments, and commercial organizations.
+                </p>
+                <p>
+                  In the renewable energy sector, Net Bangla Solar of Net Bangla Limited provides comprehensive <strong className="text-slate-900 font-semibold">Solar EPC (Engineering, Procurement &amp; Construction)</strong> and <strong className="text-slate-900 font-semibold">OPEX-based solar solutions</strong>, including industrial and commercial rooftop solar power systems, net-metering integration, Battery Energy Storage Systems (BESS), ground-mounted solar installations, floating solar, and operations and maintenance (O&amp;M) services. The company aims to help businesses reduce electricity costs, improve energy efficiency, and accelerate their transition toward clean energy.
+                </p>
+                <p>
+                  Beyond renewable energy, Net Bangla Limited supports digital transformation through IT infrastructure, telecommunications, customer experience management, BPO services, finance and accounting support, data analytics, and emerging AI-enabled business solutions.
+                </p>
+                <p>
+                  Through a customer-focused approach, responsible business practices, and a commitment to long-term partnerships, Net Bangla Limited strives to contribute to Bangladesh&apos;s technological advancement, industrial development, and sustainable economic growth.
+                </p>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* 3. COMPANY PARTICULARS & TURNKEY SOLAR EPC */}
         <section className="py-14 sm:py-18">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -218,28 +252,22 @@ export default function AboutPage() {
               <div className="lg:col-span-7 space-y-6 text-left">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-800 text-xs font-bold">
                   <ShieldCheck className="w-4 h-4 text-amber-600" />
-                  <span>ABOUT US</span>
+                  <span>NET BANGLA SOLAR</span>
                 </div>
 
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
-                  About Net Bangla Limited
+                  Turnkey Solar EPC Solutions
                 </h2>
 
                 <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
                   <p>
-                    <strong className="text-slate-900 font-semibold">Net Bangla Limited</strong> is a Bangladesh-based diversified technology and engineering company delivering integrated solutions across Information Technology (IT), Telecommunications, Safety &amp; Security, Business Process Outsourcing (BPO), Power, and Renewable Energy.
+                    <strong className="text-slate-900 font-semibold">Net Bangla Solar Division of Net Bangla Limited</strong> emphasized to contribute to a carbon-free environment and deliver clean, reliable, and sustainable electricity across Bangladesh. Through our dedicated Solar Energy Division, we provide turnkey solar power solutions tailored to specific energy requirements, site conditions, and project objectives.
                   </p>
                   <p>
-                    With a commitment to innovation, quality, and customer satisfaction, the company combines technical expertise, project management capabilities, and strategic partnerships to deliver reliable, cost-effective, and sustainable solutions for government institutions, corporate clients, industrial establishments, and commercial organizations.
+                    As a competitive, SREDA-listed Solar EPC company in Bangladesh, Net Bangla Limited provides comprehensive Consulting, Engineering, Procurement, Contracting, Installation, and Commissioning services on a turnkey basis.
                   </p>
                   <p>
-                    In the renewable energy sector, Net Bangla Solar of Net Bangla Limited provides comprehensive <strong className="text-slate-900 font-semibold">Solar EPC (Engineering, Procurement &amp; Construction)</strong> and <strong className="text-slate-900 font-semibold">OPEX-based solar solutions</strong>, including industrial and commercial rooftop solar power systems, net-metering integration, Battery Energy Storage Systems (BESS), ground-mounted solar installations, floating solar, and operations and maintenance (O&amp;M) services. The company aims to help businesses reduce electricity costs, improve energy efficiency, and accelerate their transition toward clean energy.
-                  </p>
-                  <p>
-                    Beyond renewable energy, Net Bangla Limited supports digital transformation through IT infrastructure, telecommunications, customer experience management, BPO services, finance and accounting support, data analytics, and emerging AI-enabled business solutions.
-                  </p>
-                  <p>
-                    Through a customer-focused approach, responsible business practices, and a commitment to long-term partnerships, Net Bangla Limited strives to contribute to Bangladesh&apos;s technological advancement, industrial development, and sustainable economic growth.
+                    We are specialized in Commercial &amp; Industrial (C&amp;I) rooftop solar systems, Residential Hybrid and On-Grid Solar Systems, Agricultural Solar Irrigation and Direct DC Pumping, Building-Integrated Photovoltaics (BIPV), Floating Photovoltaic (FPV) solar solutions, ground-mounted solar power plants, open-access solar systems where applicable, and BESS storage solutions.
                   </p>
                 </div>
 
@@ -288,7 +316,7 @@ export default function AboutPage() {
             {/* Section Header */}
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-12">
               <div className="text-xs font-mono font-bold tracking-widest text-amber-700 uppercase">
-                Net Bangla Solar Energy Solutions &bull; A wing of Net Bangla Limited
+                Net Bangla Solar &bull; A wing of Net Bangla Limited
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Our Business Philosophy

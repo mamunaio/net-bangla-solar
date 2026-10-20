@@ -18,7 +18,7 @@ import {
 import { SolutionTemplate } from "@/components/templates/SolutionTemplate";
 
 export const metadata: Metadata = {
-  title: "Commercial Rooftop Solar & Net-Metering | Net Bangla Solar Energy Solutions",
+  title: "Commercial Rooftop Solar & Net-Metering | Net Bangla Solar",
   description:
     "High-efficiency commercial rooftop solar systems for corporate office towers, hospitals, universities, and commercial complexes across Dhaka and Bangladesh.",
 };
@@ -106,7 +106,7 @@ export default function CommercialRooftopPage() {
       title="Commercial Rooftop & Corporate Solar"
       subtitle="Clean Power Generation for Corporate Headquarters, Hospitals, Universities & Commercial Complexes"
       heroImageUrl="/images/solar-commercial.webp"
-      description="Commercial office buildings, private hospitals, academic institutions, and shopping malls consume substantial electricity during daytime peak hours. Net Bangla Solar Energy Solutions engineers customized commercial rooftop solar systems that offset heavy air-conditioning and elevator loads, reduce operating costs, and enhance corporate sustainability credentials under SREDA net-metering regulations."
+      description="Commercial office buildings, private hospitals, academic institutions, and shopping malls consume substantial electricity during daytime peak hours. Net Bangla Solar engineers customized commercial rooftop solar systems that offset heavy air-conditioning and elevator loads, reduce operating costs, and enhance corporate sustainability credentials under SREDA net-metering regulations."
       detailedPoints={[
         "Elevated canopy design allows continued use of rooftop gardens, cafeterias, or recreational spaces.",
         "Turnkey coordination with BPDB, BREB, DPDC, DESCO, WZPDCL, and NESCO for net-metering approvals.",

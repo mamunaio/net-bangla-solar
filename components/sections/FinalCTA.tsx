@@ -182,7 +182,7 @@ export function FinalCTA() {
       `Solar Project Consultation: ${formData.propertyType} - ${formData.fullName}`
     );
     const body = encodeURIComponent(
-      `Net Bangla Solar Energy Solutions Consultation Inquiry Details:\n\n` +
+      `Net Bangla Solar Consultation Inquiry Details:\n\n` +
         `• Full Name: ${formData.fullName}\n` +
         `• Phone: ${formData.phone}\n` +
         `• Email: ${formData.email}\n` +
@@ -191,7 +191,7 @@ export function FinalCTA() {
         `• Message / Energy Requirements:\n${
           formData.message.trim() ? formData.message : "None provided"
         }\n\n` +
-        `Sent via Net Bangla Solar Energy Solutions Official Web Consultation Form`
+        `Sent via Net Bangla Solar Official Web Consultation Form`
     );
     window.location.href = `mailto:mamun@netbanglaltd.com?cc=info@netbanglaltd.com&subject=${subject}&body=${body}`;
   };
@@ -263,7 +263,7 @@ export function FinalCTA() {
                   </div>
                   <div>
                     <h3 className="text-slate-900 text-lg sm:text-xl font-extrabold tracking-tight leading-snug">
-                      NET BANGLA SOLAR ENERGY SOLUTIONS
+                      NET BANGLA SOLAR
                     </h3>
                     <p className="text-slate-500 text-sm font-medium mt-0.5">
                       A Division of Net Bangla Limited

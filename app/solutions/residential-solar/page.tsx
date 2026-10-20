@@ -13,7 +13,7 @@ import {
 import { SolutionTemplate } from "@/components/templates/SolutionTemplate";
 
 export const metadata: Metadata = {
-  title: "Residential Solar & Hybrid Battery Systems | Net Bangla Solar Energy Solutions",
+  title: "Residential Solar & Hybrid Battery Systems | Net Bangla Solar",
   description:
     "Smart on-grid and hybrid rooftop solar systems with Lithium battery backup for luxury villas, duplexes, and premium homes across Bangladesh.",
 };
@@ -71,7 +71,7 @@ export default function ResidentialSolarPage() {
       title="Residential Hybrid Solar & Battery Systems"
       subtitle="Uninterruptible Clean Energy & Silent Lithium Storage for Luxury Villas, Duplexes & Premium Homes"
       heroImageUrl="/images/solar-residential.webp"
-      description="Enjoy uninterrupted electrical power without the noise, pollution, and recurring fuel costs of diesel generators. Net Bangla Solar Energy Solutions engineers hybrid solar systems with lithium LiFePO4 battery storage for private residences, duplexes, and residential estates across Dhaka, Gulshan, Banani, Uttara, and nationwide."
+      description="Enjoy uninterrupted electrical power without the noise, pollution, and recurring fuel costs of diesel generators. Net Bangla Solar engineers hybrid solar systems with lithium LiFePO4 battery storage for private residences, duplexes, and residential estates across Dhaka, Gulshan, Banani, Uttara, and nationwide."
       detailedPoints={[
         "Powers central air conditioners, refrigerators, water pumps, lighting, and elevators.",
         "Automatic net-metering export reduces monthly electricity bills.",
@@ -79,7 +79,7 @@ export default function ResidentialSolarPage() {
         "Tier-1 solar modules backed by 25-year manufacturer performance warranties.",
       ]}
       specs={residentialSpecs}
-      advantagesTitle="Why Homeowners Choose Net Bangla Solar Energy Solutions"
+      advantagesTitle="Why Homeowners Choose Net Bangla Solar"
       advantagesSubtitle="Silent operation, zero fuel maintenance, and total energy independence tailored for modern luxury living."
       advantagesList={residentialAdvantages}
       ctaTitle="Upgrade Your Home to Silent 24/7 Solar Power"

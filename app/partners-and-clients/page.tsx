@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Explore Net Bangla Limited's global technology partners, EPC alliances, apex industry associations, and prestigious defense, government, telecom, and industrial clients across Bangladesh.",
   keywords: [
-    "Net Bangla Solar Energy Solutions Partners",
+    "Net Bangla Solar Partners",
     "Net Bangla Clients",
     "Solar EPC Bangladesh",
     "Wincle Energy",

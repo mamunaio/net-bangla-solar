@@ -14,7 +14,7 @@ import {
 import { SolutionTemplate } from "@/components/templates/SolutionTemplate";
 
 export const metadata: Metadata = {
-  title: "Agricultural Solar Irrigation & Agro-Power | Net Bangla Solar Energy Solutions",
+  title: "Agricultural Solar Irrigation & Agro-Power | Net Bangla Solar",
   description:
     "High-yield solar irrigation pumps (10 HP – 100 HP), agro-processing solar, and cold storage solar solutions for farms and rural enterprises across Bangladesh.",
 };
@@ -72,7 +72,7 @@ export default function AgriculturalSolarPage() {
       title="Agricultural Solar Irrigation & Cold Storage"
       subtitle="Heavy-Duty Solar Pumping & Agro-Processing Systems for Farms & Rural Enterprises"
       heroImageUrl="/images/solar-agricultural.webp"
-      description="Agricultural productivity in Bangladesh relies significantly on continuous irrigation. Net Bangla Solar Energy Solutions provides high-capacity solar-powered water pumping systems and solar cold storage systems that replace expensive diesel generators, ensure reliable agricultural irrigation, and feed surplus power back to the national rural grid (BREB)."
+      description="Agricultural productivity in Bangladesh relies significantly on continuous irrigation. Net Bangla Solar provides high-capacity solar-powered water pumping systems and solar cold storage systems that replace expensive diesel generators, ensure reliable agricultural irrigation, and feed surplus power back to the national rural grid (BREB)."
       detailedPoints={[
         "Saves thousands of liters of diesel fuel annually per tube-well installation.",
         "Dual-season benefit: irrigates crops in the dry season and exports grid power during monsoon.",
@@ -80,7 +80,7 @@ export default function AgriculturalSolarPage() {
         "Eligible for agricultural renewable energy subsidies, low-interest refinancing, and SREDA incentives.",
       ]}
       specs={agriculturalSpecs}
-      advantagesTitle="Why Agricultural Enterprises Choose Net Bangla Solar Energy Solutions"
+      advantagesTitle="Why Agricultural Enterprises Choose Net Bangla Solar"
       advantagesSubtitle="Reliable water flow, zero diesel volatility, and rugged engineering designed for rural Bangladeshi conditions."
       advantagesList={agriculturalAdvantages}
       ctaTitle="Power Your Farm with Unlimited Solar Energy"

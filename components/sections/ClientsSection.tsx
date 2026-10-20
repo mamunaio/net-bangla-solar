@@ -296,7 +296,7 @@ export function ClientsSection() {
             </h2>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-              Net Bangla Solar Energy Solutions proudly delivers mission-critical solar and
+              Net Bangla Solar proudly delivers mission-critical solar and
               electrical infrastructure for Bangladesh’s defense forces,
               government ministries, telecom operators, and industrial leaders.
             </p>

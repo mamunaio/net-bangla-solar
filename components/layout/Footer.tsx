@@ -79,7 +79,7 @@ export function Footer() {
             <Link
               href="/"
               className="group inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl"
-              aria-label="Net Bangla Solar Energy Solutions - Back to top"
+              aria-label="Net Bangla Solar - Back to top"
             >
               <BrandLogo priority={false} loading="lazy" decoding="async" className="h-16 sm:h-20 w-auto transition-transform duration-200 group-hover:scale-105" />
             </Link>
@@ -207,7 +207,7 @@ export function Footer() {
         <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-500 text-center">
           {/* Copyright */}
           <p className="text-slate-600">
-            &copy; {currentYear} Net Bangla Solar Energy Solutions. A Division of Net Bangla Limited. All rights reserved.
+            &copy; {currentYear} Net Bangla Solar. A Division of Net Bangla Limited. All rights reserved.
           </p>
           <span className="hidden sm:inline text-slate-300" aria-hidden="true">&bull;</span>
           <p className="text-amber-700/80 font-medium">

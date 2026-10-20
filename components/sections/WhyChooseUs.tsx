@@ -83,7 +83,7 @@ export function WhyChooseUs() {
   return (
     <section
       id="why-choose-us"
-      aria-label="Why Choose Net Bangla Solar Energy Solutions"
+      aria-label="Why Choose Net Bangla Solar"
       className="relative py-16 sm:py-20 lg:py-24 overflow-hidden scroll-mt-24 lg:scroll-mt-28 bg-[#F8FAFC]"
     >
       {/* Background ambient lighting */}

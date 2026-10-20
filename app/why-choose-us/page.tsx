@@ -26,9 +26,9 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
 
 export const metadata: Metadata = {
-  title: "Why Choose Us | Net Bangla Solar Energy Solutions - Engineering Excellence",
+  title: "Why Choose Us | Net Bangla Solar - Engineering Excellence",
   description:
-    "Discover why Bangladesh's leading industries, commercial enterprises, and institutions trust Net Bangla Solar Energy Solutions for turnkey solar EPC, Tier-1 hardware, and 25-year performance.",
+    "Discover why Bangladesh's leading industries, commercial enterprises, and institutions trust Net Bangla Solar for turnkey solar EPC, Tier-1 hardware, and 25-year performance.",
 };
 
 const brochurePillars = [

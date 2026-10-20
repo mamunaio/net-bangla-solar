@@ -57,7 +57,7 @@ export function InitialPreloader() {
       id="global-initial-preloader"
       role="status"
       aria-live="polite"
-      aria-label="Loading Net Bangla Solar Energy Solutions"
+      aria-label="Loading Net Bangla Solar"
       onClick={dismiss}
       title="Click to dismiss"
       className={`fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-white select-none transition-all duration-400 ease-out cursor-pointer ${
@@ -94,7 +94,7 @@ export function InitialPreloader() {
           <div className="relative w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
             <Image
               src="/images/net-bangla-solar-logo.webp"
-              alt="Net Bangla Solar Energy Solutions Logo"
+              alt="Net Bangla Solar Logo"
               width={96}
               height={96}
               priority

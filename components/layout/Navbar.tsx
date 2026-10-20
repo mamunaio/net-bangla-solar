@@ -1,6 +1,6 @@
 "use client";
 
-// Navbar component for Net Bangla Solar Energy Solutions
+// Navbar component for Net Bangla Solar
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -175,7 +175,7 @@ export function Navbar() {
             {/* 1. BRAND LOGO AREA */}
             <Link
               href="/"
-              aria-label="Net Bangla Solar Energy Solutions — Home"
+              aria-label="Net Bangla Solar — Home"
               className="group flex items-center self-center focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-xl shrink-0"
             >
               <BrandLogo priority loading="eager" className="h-10 sm:h-12 lg:h-13.5 w-auto transition-transform duration-200 ease-out group-hover:scale-105" />

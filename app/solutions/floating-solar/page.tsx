@@ -15,7 +15,7 @@ import {
 import { SolutionTemplate } from "@/components/templates/SolutionTemplate";
 
 export const metadata: Metadata = {
-  title: "Floating Solar Systems (FPV) | Net Bangla Solar Energy Solutions",
+  title: "Floating Solar Systems (FPV) | Net Bangla Solar",
   description:
     "High-efficiency Floating Photovoltaic (FPV) solar systems for lakes, reservoirs, industrial retention ponds, and aquaculture fisheries across Bangladesh.",
 };
@@ -110,7 +110,7 @@ export default function FloatingSolarPage() {
       title="Floating Solar (FPV) Solutions"
       subtitle="High-Efficiency Water-Mounted Photovoltaic Systems for Textile Factory Fire Ponds, Reservoirs, Lakes & Aquaculture"
       heroImageUrl="/images/solar-floating.webp"
-      description="In land-scarce Bangladesh, floating solar transforms open water surfaces into clean-energy assets without consuming valuable agricultural or industrial land. Net Bangla Solar Energy Solutions develops turnkey floating photovoltaic arrays for textile and RMG factory firefighting reservoirs, industrial retention basins, water treatment plants, lakes, and commercial fisheries."
+      description="In land-scarce Bangladesh, floating solar transforms open water surfaces into clean-energy assets without consuming valuable agricultural or industrial land. Net Bangla Solar develops turnkey floating photovoltaic arrays for textile and RMG factory firefighting reservoirs, industrial retention basins, water treatment plants, lakes, and commercial fisheries."
       detailedPoints={[
         "Natural water cooling can improve energy yield while helping reduce reservoir evaporation and algae growth.",
         "Ideal for textile, RMG, and industrial plants with mandatory fire ponds and ETP retention basins.",

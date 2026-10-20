@@ -131,7 +131,7 @@ export async function POST(req: Request) {
     const htmlContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff;">
         <div style="background: #0f172a; padding: 20px; border-radius: 8px; color: #ffffff; text-align: center;">
-          <h2 style="margin: 0; color: #fbbf24; font-size: 20px;">Net Bangla Solar Energy Solutions</h2>
+          <h2 style="margin: 0; color: #fbbf24; font-size: 20px;">Net Bangla Solar</h2>
           <p style="margin: 5px 0 0; color: #cbd5e1; font-size: 14px;">New Feasibility Audit Request</p>
         </div>
 
@@ -196,7 +196,7 @@ export async function POST(req: Request) {
       });
 
       await transporter.sendMail({
-        from: `"Net Bangla Solar Energy Solutions" <${process.env.SMTP_USER}>`,
+        from: `"Net Bangla Solar" <${process.env.SMTP_USER}>`,
         to: recipientEmail,
         replyTo: cleanEmail || undefined,
         subject: safeSubject,

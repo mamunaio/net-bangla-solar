@@ -155,7 +155,7 @@ function NavigationLoaderInner() {
             </div>
             <div className="flex items-center gap-1.5 text-xs font-bold tracking-wide">
               <span>Loading</span>
-              <span className="text-amber-400">Net Bangla Solar Energy Solutions</span>
+              <span className="text-amber-400">Net Bangla Solar</span>
               <span className="animate-pulse text-amber-400 font-mono tracking-widest">&bull;&bull;&bull;</span>
             </div>
           </div>
