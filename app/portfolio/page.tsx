@@ -189,7 +189,7 @@ export default function PortfolioPage() {
               {/* Top Quick Stats */}
               <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
                 <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-center">
-                  <div className="text-2xl sm:text-3xl font-extrabold text-amber-600 font-sans">15+ MWp</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-amber-600 font-sans">05+ MWp</div>
                   <div className="text-xs font-semibold text-slate-600 mt-0.5">Total Capacity Engineered</div>
                 </div>
                 <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-center">

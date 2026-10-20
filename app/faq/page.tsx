@@ -56,7 +56,7 @@ const allFaqs: FAQItem[] = [
     category: "net-metering",
     categoryLabel: "Net Metering & SREDA",
     question: "What is the maximum solar capacity allowed under net metering?",
-    answer: "Permitted capacity depends on the applicable 2025 guideline, the consumer’s sanctioned load, transformer capacity, system configuration and the relevant utility’s approval. Bangla Solar Division assesses these parameters before finalizing the proposed system capacity. The applicable limit should be verified for each project rather than assumed for individual case.",
+    answer: "Permitted capacity depends on the applicable 2025 guideline, the consumer’s sanctioned load, transformer capacity, system configuration and the relevant utility’s approval. Net Bangla Solar Division assesses these parameters before finalizing the proposed system capacity. The applicable limit should be verified for each project rather than assumed for individual case.",
   },
 
   // B. Technical & Hardware
@@ -64,7 +64,7 @@ const allFaqs: FAQItem[] = [
     id: "monocrystalline-vs-bifacial",
     category: "technical",
     categoryLabel: "Technical & Hardware",
-    question: "Why does Bangla Solar Division recommend N-Type bifacial solar panels?",
+    question: "Why does Net Bangla Solar Division recommend N-Type bifacial solar panels?",
     answer: "N-Type bifacial modules can generate electricity from both the front and rear surfaces. Their additional energy yield depends on reflected sunlight, mounting height, surface reflectivity, shading and installation geometry. Module selection considers efficiency, temperature behaviour, degradation characteristics, certifications, manufacturer warranty and lifecycle performance.",
   },
   {
@@ -86,7 +86,7 @@ const allFaqs: FAQItem[] = [
     category: "technical",
     categoryLabel: "Technical & Hardware",
     question: "How does solar perform during monsoon and cloudy winter days?",
-    answer: "Solar panels generate electricity from daylight even when direct sunshine is limited. However, heavy cloud, rain, shading, temperature, orientation and seasonal solar irradiation affect output. Bangla Solar Division uses site-specific energy modelling to estimate monthly and annual generation rather than promising a fixed percentage of rated output on cloudy days.",
+    answer: "Solar panels generate electricity from daylight even when direct sunshine is limited. However, heavy cloud, rain, shading, temperature, orientation and seasonal solar irradiation affect output. Net Bangla Solar Division uses site-specific energy modelling to estimate monthly and annual generation rather than promising a fixed percentage of rated output on cloudy days.",
   },
 
   // C. Financial & Return on Investment
@@ -95,7 +95,7 @@ const allFaqs: FAQItem[] = [
     category: "financial",
     categoryLabel: "Financial & ROI",
     question: "What is the typical CAPEX payback period for an industrial or commercial solar plant?",
-    answer: "Payback depends on installed cost, daytime consumption, electricity tariff, annual solar generation, export-credit treatment, financing costs, maintenance and future tariff changes. Some projects may achieve payback within approximately 3–4 years, but this should be confirmed through a project-specific financial model. Bangla Solar Division can prepare an estimated payback period and life-long cost analysis for the proposed installation.",
+    answer: "Payback depends on installed cost, daytime consumption, electricity tariff, annual solar generation, export-credit treatment, financing costs, maintenance and future tariff changes. Some projects may achieve payback within approximately 3–4 years, but this should be confirmed through a project-specific financial model. Net Bangla Solar Division can prepare an estimated payback period and life-long cost analysis for the proposed installation.",
   },
   {
     id: "bank-financing-idcol",
@@ -118,7 +118,7 @@ const allFaqs: FAQItem[] = [
     category: "industrial",
     categoryLabel: "Industrial & Commercial",
     question: "Will solar installation disrupt factory production?",
-    answer: "Bangla Solar Division plans installation to minimize disruption to factory operations. Roof works, cable routing, equipment installation and electrical interconnection are scheduled in coordination with the facility team. Any shutdown required for safe grid interconnection is agreed in advance; zero downtime cannot be guaranteed for every site.",
+    answer: "Net Bangla Solar Division plans installation to minimize disruption to factory operations. Roof works, cable routing, equipment installation and electrical interconnection are scheduled in coordination with the facility team. Any shutdown required for safe grid interconnection is agreed in advance; zero downtime cannot be guaranteed for every site.",
   },
   {
     id: "tin-shed-integrity-leakage",
@@ -134,7 +134,7 @@ const allFaqs: FAQItem[] = [
     category: "maintenance",
     categoryLabel: "Maintenance & Warranty",
     question: "How often do solar panels need cleaning in Bangladesh?",
-    answer: "Cleaning frequency depends on dust, rainfall, nearby industrial emissions, bird activity, panel tilt and measured soiling losses. Periodic inspection and generation monitoring help determine the appropriate schedule. Bangla Solar Division can provide manual, water-based or suitable automated cleaning options under an agreed O&M arrangement.",
+    answer: "Cleaning frequency depends on dust, rainfall, nearby industrial emissions, bird activity, panel tilt and measured soiling losses. Periodic inspection and generation monitoring help determine the appropriate schedule. Net Bangla Solar Division can provide manual, water-based or suitable automated cleaning options under an agreed O&M arrangement.",
   },
   {
     id: "warranty-coverage-breakdown",

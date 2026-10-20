@@ -513,7 +513,7 @@ export function PartnersClientsClient() {
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-500/[0.05] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="relative z-10 flex items-center justify-between">
                     <div className="text-2xl sm:text-3xl font-extrabold font-mono text-slate-900 group-hover:text-amber-800 transition-colors">
-                      10<span className="text-amber-500">+</span>
+                      05<span className="text-amber-500">+</span>
                     </div>
                     <div className="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:scale-110 transition-all duration-300 shadow-2xs">
                       <Cpu className="w-4 h-4" />
@@ -531,7 +531,7 @@ export function PartnersClientsClient() {
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-500/[0.05] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="relative z-10 flex items-center justify-between">
                     <div className="text-2xl sm:text-3xl font-extrabold font-mono text-slate-900 group-hover:text-amber-800 transition-colors">
-                      18<span className="text-amber-500">+</span>
+                      10<span className="text-amber-500">+</span>
                     </div>
                     <div className="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:scale-110 transition-all duration-300 shadow-2xs">
                       <Users className="w-4 h-4" />

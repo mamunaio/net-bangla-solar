@@ -364,7 +364,7 @@ export default function WhyChooseUsPage() {
                 COMPREHENSIVE COMPARISON
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Bangla Solar Division vs. Standard Contractors
+                Net Bangla Solar Division vs. Standard Contractors
               </h2>
               <p className="text-sm sm:text-base text-slate-600">
                 Understand the engineering differences that protect your capital and ensure 25+ years of uninterrupted energy production.
@@ -377,7 +377,7 @@ export default function WhyChooseUsPage() {
                   <tr className="border-b border-slate-200 bg-slate-900 text-white text-xs sm:text-sm font-semibold uppercase tracking-wider">
                     <th className="p-4 sm:p-5 w-1/3">Engineering &amp; Service Parameter</th>
                     <th className="p-4 sm:p-5 w-1/3 bg-amber-500 text-slate-950 font-bold">
-                      Bangla Solar Division Standard
+                      Net Bangla Solar Division Standard
                     </th>
                     <th className="p-4 sm:p-5 w-1/3 text-slate-300">
                       Standard Contractors
