@@ -46,6 +46,22 @@ interface ResourceDoc {
 
 const resources: ResourceDoc[] = [
   {
+    id: "special-solar-power-ordinance-2026",
+    category: "policy",
+    categoryLabel: "Government Gazette",
+    titleBn: "বিশেষ সৌরবিদ্যুৎ স্থাপন অধ্যাদেশ, ২০২৬ (গেজেট নং ৩৯)",
+    titleEn: "Special Solar Power Installation Ordinance 2026 (Gazette No. 39)",
+    description:
+      "সর্বোচ্চ ৫ মেগাওয়াট পর্যন্ত ওপেক্স ও ক্যাপেক্স মডেলে সৌরবিদ্যুৎ স্থাপন, ফাস্ট-ট্র্যাক প্রকিউরমেন্ট এবং আইনি সুরক্ষায় গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের সরকারি গেজেট।",
+    authority: "গণপ্রজাতন্ত্রী বাংলাদেশ সরকার",
+    date: "১৯ অক্টোবর, ২০২৬",
+    fileSize: "215 KB",
+    pdfUrl: "/documents/special-solar-power-ordinance-2026.pdf",
+    externalUrl: "https://www.bgpress.gov.bd",
+    featured: true,
+    tags: ["OFFICIAL GAZETTE", "5 MWP SOLAR", "OPEX & CAPEX", "ORDINANCE 2026"],
+  },
+  {
     id: "national-rooftop-portal",
     category: "portal",
     categoryLabel: "National Solar Portal",
