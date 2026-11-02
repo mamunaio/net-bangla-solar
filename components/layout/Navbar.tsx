@@ -151,6 +151,10 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
+  if (pathname === "/maintenance") {
+    return null;
+  }
+
   return (
     <>
       <header
